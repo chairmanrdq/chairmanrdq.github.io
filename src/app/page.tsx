@@ -84,18 +84,19 @@ const carouselImages = [
 export default function Home() {
   return (
     <div className="relative">
-      {/* Hero Section with Luxury Animated Gradient */}
+      {/* Hero Section with Ultra Luxury Animated Gradient */}
       <section className="relative overflow-hidden animated-luxury-gradient-light rounded-3xl mb-16 p-8 md:p-12 luxury-border luxury-corner">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-secondary/3 to-accent/3 opacity-60"></div>
-        <div className="absolute top-0 left-0 w-72 h-72 bg-primary/15 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 luxury-pulse"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary/15 rounded-full blur-3xl translate-x-1/2 translate-y-1/2 luxury-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-accent/15 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 luxury-pulse delay-500"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/4 via-secondary/4 to-accent/4 opacity-70"></div>
+        <div className="absolute top-0 left-0 w-80 h-80 bg-primary/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 luxury-pulse"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary/20 rounded-full blur-3xl translate-x-1/2 translate-y-1/2 luxury-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-accent/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 luxury-pulse delay-500"></div>
+        <div className="absolute top-1/4 right-1/4 w-48 h-48 bg-secondary/15 rounded-full blur-2xl luxury-sparkle"></div>
         
         <div className="relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-            {/* Enhanced Avatar with Luxury Effects */}
+            {/* Enhanced Avatar with Ultra Luxury Effects */}
             <div className="relative group">
-              <div className="absolute inset-0 animated-luxury-gradient rounded-none blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-700"></div>
+              <div className="absolute inset-0 animated-luxury-gradient rounded-none blur-lg opacity-40 group-hover:opacity-60 transition-opacity duration-700"></div>
               <div className="relative">
                 <Image
                   src={scholarData.avatarUrl}
@@ -106,9 +107,10 @@ export default function Home() {
                   data-ai-hint={scholarData.dataAiHint}
                   priority
                 />
-                <div className="absolute -bottom-2 -right-2 animated-luxury-gradient text-white p-3 rounded-none shadow-lg luxury-glow">
+                <div className="absolute -bottom-2 -right-2 animated-luxury-gradient text-white p-3 rounded-none shadow-lg luxury-glow luxury-sparkle">
                   <Crown className="h-6 w-6" />
                 </div>
+                <div className="absolute -top-1 -left-1 w-4 h-4 bg-secondary rounded-full luxury-shimmer"></div>
               </div>
             </div>
 
