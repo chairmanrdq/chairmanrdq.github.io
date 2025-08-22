@@ -106,7 +106,7 @@ export default function Home() {
             <div className="flex-1 text-center lg:text-left">
               <div className="inline-flex items-center gap-2 luxury-badge mb-4">
                 <Diamond className="h-4 w-4 text-accent" />
-                <span className="text-sm font-medium">Leading AI Innovation</span>
+                <span className="text-sm font-medium">Leading Computing Power Network Innovation</span>
               </div>
               
               <h1 className="text-4xl lg:text-6xl font-bold text-gradient-luxury mb-4">
