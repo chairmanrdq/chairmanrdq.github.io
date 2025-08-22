@@ -2,7 +2,7 @@
 "use client";
 
 import Link from 'next/link';
-import { Home, FlaskConical, Newspaper, FolderGit2, Users, GraduationCap, Download as DownloadIcon, MessageSquare, Menu, X, Cpu, Leaf, Battery, Sparkles } from 'lucide-react';
+import { Home, FlaskConical, Newspaper, FolderGit2, Users, GraduationCap, Download as DownloadIcon, MessageSquare, Menu, X, Cpu, Leaf, Battery, Sparkles, Crown, Diamond } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
@@ -28,13 +28,13 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 
   return (
-    <header className="bg-background/95 backdrop-blur-md sticky top-0 z-50 w-full border-b border-primary/20 shadow-lg">
+    <header className="bg-background/95 backdrop-blur-md sticky top-0 z-50 w-full border-b border-primary/20 shadow-2xl">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 text-xl sm:text-2xl font-bold hover:opacity-80 transition-opacity" onClick={() => setIsMobileMenuOpen(false)}>
-          <div className="animated-gradient p-2 rounded-lg">
-            <Sparkles className="h-6 w-6 text-white" />
+          <div className="animated-luxury-gradient p-2 rounded-lg luxury-glow">
+            <Crown className="h-6 w-6 text-white" />
           </div>
-          <span className="text-gradient-premium">
+          <span className="text-gradient-luxury">
             {SCHOLAR_NAME}
           </span>
         </Link>
@@ -47,10 +47,10 @@ export default function Header() {
               variant="ghost"
               asChild
               className={cn(
-                "text-sm font-medium transition-all duration-300 rounded-xl",
+                "text-sm font-medium transition-all duration-500 rounded-2xl",
                 pathname === item.href
-                  ? "bg-gradient-to-r from-primary/10 via-secondary/10 to-accent/10 text-primary font-semibold hover:from-primary/20 hover:via-secondary/20 hover:to-accent/20 premium-border" // Active state
-                  : "text-foreground/70 hover:text-gradient-premium hover:bg-gradient-to-r hover:from-primary/5 hover:via-secondary/5 hover:to-accent/5" // Inactive state
+                  ? "bg-gradient-to-r from-primary/8 via-secondary/8 to-accent/8 text-primary font-semibold hover:from-primary/15 hover:via-secondary/15 hover:to-accent/15 luxury-border" // Active state
+                  : "text-foreground/70 hover:text-gradient-luxury hover:bg-gradient-to-r hover:from-primary/3 hover:via-secondary/3 hover:to-accent/3" // Inactive state
               )}
             >
               <Link href={item.href}>
@@ -73,10 +73,10 @@ export default function Header() {
               <div className="flex flex-col h-full">
                 <div className="p-6 flex justify-between items-center border-b border-primary/20">
                     <Link href="/" className="flex items-center gap-2 text-lg font-bold" onClick={() => setIsMobileMenuOpen(false)}>
-                      <div className="animated-gradient p-2 rounded-lg">
-                        <Sparkles className="h-5 w-5 text-white" />
+                      <div className="animated-luxury-gradient p-2 rounded-lg luxury-glow">
+                        <Crown className="h-5 w-5 text-white" />
                       </div>
-                      <span className="text-gradient-premium">
+                      <span className="text-gradient-luxury">
                         {SCHOLAR_NAME}
                       </span>
                     </Link>
@@ -92,10 +92,10 @@ export default function Header() {
                        <Link
                         href={item.href}
                         className={cn(
-                          "flex items-center space-x-3 text-md font-medium transition-all duration-300 rounded-xl px-3 py-3",
+                          "flex items-center space-x-3 text-md font-medium transition-all duration-500 rounded-2xl px-3 py-3",
                           pathname === item.href
-                            ? "bg-gradient-to-r from-primary/10 via-secondary/10 to-accent/10 text-primary font-semibold premium-border" // Active state
-                            : "text-foreground/70 hover:text-gradient-premium hover:bg-gradient-to-r hover:from-primary/5 hover:via-secondary/5 hover:to-accent/5" // Inactive state
+                            ? "bg-gradient-to-r from-primary/8 via-secondary/8 to-accent/8 text-primary font-semibold luxury-border" // Active state
+                            : "text-foreground/70 hover:text-gradient-luxury hover:bg-gradient-to-r hover:from-primary/3 hover:via-secondary/3 hover:to-accent/3" // Inactive state
                         )}
                       >
                         <item.icon className="h-5 w-5" />
@@ -106,7 +106,7 @@ export default function Header() {
                 </nav>
                 <div className="p-6 border-t border-primary/20">
                   <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <Sparkles className="h-4 w-4 text-accent" />
+                    <Diamond className="h-4 w-4 text-accent" />
                     <span>Leading AI Innovation</span>
                   </div>
                 </div>

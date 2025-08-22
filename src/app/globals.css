@@ -8,113 +8,113 @@ body {
 
 @layer base {
   :root {
-    /* Premium Dynamic Color Theme - Light Mode */
+    /* Luxury Premium Color Theme - Light Mode */
     --background: 0 0% 100%; /* Pure White #FFFFFF */
-    --foreground: 0 0% 12%; /* Deep Charcoal #1F1F1F for premium text */
+    --foreground: 0 0% 10%; /* Deep Charcoal #1A1A1A for luxury text */
 
     --gradient-start-color: 0 0% 100%; /* Pure White */
-    --gradient-end-color: 0 0% 97%;   /* Premium Light Gray */
+    --gradient-end-color: 0 0% 96%;   /* Luxury Light Gray */
 
-    --card: 0 0% 99%; /* Premium Off-White #FCFCFC for cards */
-    --card-foreground: 0 0% 12%; /* Deep Charcoal */
+    --card: 0 0% 99%; /* Luxury Off-White #FDFDFD for cards */
+    --card-foreground: 0 0% 10%; /* Deep Charcoal */
 
     --popover: 0 0% 100%; /* Pure White */
-    --popover-foreground: 0 0% 12%; /* Deep Charcoal */
+    --popover-foreground: 0 0% 10%; /* Deep Charcoal */
 
-    /* Primary: Dynamic Tech Blue - Premium */
-    --primary: 210 100% 48%; /* Rich Blue #0066D6 - for premium tech focus */
+    /* Primary: Luxury Tech Blue - Premium */
+    --primary: 210 100% 50%; /* Rich Blue #0066FF - for luxury tech focus */
     --primary-foreground: 0 0% 100%; /* White */
 
-    /* Secondary: Vibrant Green - Eco Innovation */
-    --secondary: 142 76% 44%; /* Vibrant Green #16A34A - for eco innovation */
+    /* Secondary: Luxury Green - Innovation */
+    --secondary: 142 76% 46%; /* Luxury Green #16A34A - for innovation */
     --secondary-foreground: 0 0% 100%; /* White */
 
-    --muted: 0 0% 97%; /* Premium Light Gray #F7F7F7 for muted backgrounds */
-    --muted-foreground: 0 0% 42%; /* Sophisticated Gray #6B6B6B for secondary text */
+    --muted: 0 0% 98%; /* Luxury Light Gray #FAFAFA for muted backgrounds */
+    --muted-foreground: 0 0% 40%; /* Sophisticated Gray #666666 for secondary text */
 
-    /* Accent: Dynamic Purple - Innovation */
-    --accent: 262 83% 58%; /* Dynamic Purple #8B5CF6 - for innovation highlights */
+    /* Accent: Luxury Purple - Innovation */
+    --accent: 262 83% 60%; /* Luxury Purple #9333EA - for innovation highlights */
     --accent-foreground: 0 0% 100%; /* White */
 
     --destructive: 0 84% 60%; /* Standard vivid red for errors */
     --destructive-foreground: 0 0% 100%; /* White text on destructive */
 
-    --border: 0 0% 92%; /* Premium Light Gray Separator #EBEBEB */
+    --border: 0 0% 94%; /* Luxury Light Gray Separator #F0F0F0 */
     --input: 0 0% 100%; /* White, with border */
-    --ring: 210 100% 48%; /* Blue for focus rings */
+    --ring: 210 100% 50%; /* Blue for focus rings */
 
-    --link-hover: 210 100% 38%; /* Deeper Blue #0052B3 for link hover */
+    --link-hover: 210 100% 40%; /* Deeper Blue #0052CC for link hover */
 
-    /* Premium Chart colors with dynamic theme */
-    --chart-1: 210 100% 48%;  /* Primary Blue - Tech */
-    --chart-2: 142 76% 44%;   /* Secondary Green - Eco */
-    --chart-3: 262 83% 58%;   /* Accent Purple - Innovation */
-    --chart-4: 45 93% 47%;    /* Gold #EAB308 - Premium */
-    --chart-5: 0 0% 55%;      /* Sophisticated Gray */
+    /* Luxury Chart colors with premium theme */
+    --chart-1: 210 100% 50%;  /* Primary Blue - Tech */
+    --chart-2: 142 76% 46%;   /* Secondary Green - Innovation */
+    --chart-3: 262 83% 60%;   /* Accent Purple - Innovation */
+    --chart-4: 45 93% 50%;    /* Gold #EAB308 - Luxury */
+    --chart-5: 0 0% 50%;      /* Sophisticated Gray */
     
-    --radius: 1rem; /* More rounded for premium look */
+    --radius: 1.25rem; /* More rounded for luxury look */
 
     /* Sidebar for Light Theme */
-    --sidebar-background: 0 0% 99%; /* Premium Off-White */
-    --sidebar-foreground: 0 0% 12%; /* Deep Charcoal */
-    --sidebar-primary: 210 100% 48%; /* Blue for active items */
+    --sidebar-background: 0 0% 99%; /* Luxury Off-White */
+    --sidebar-foreground: 0 0% 10%; /* Deep Charcoal */
+    --sidebar-primary: 210 100% 50%; /* Blue for active items */
     --sidebar-primary-foreground: 0 0% 100%; /* White */
-    --sidebar-accent: 0 0% 95%; /* Hover bg for sidebar items */
-    --sidebar-accent-foreground: 210 100% 48%; /* Blue for active/hover text */
-    --sidebar-border: 0 0% 92%; /* Premium Light Gray Separator */
-    --sidebar-ring: 210 100% 48%; /* Blue for focus rings */
+    --sidebar-accent: 0 0% 96%; /* Hover bg for sidebar items */
+    --sidebar-accent-foreground: 210 100% 50%; /* Blue for active/hover text */
+    --sidebar-border: 0 0% 94%; /* Luxury Light Gray Separator */
+    --sidebar-ring: 210 100% 50%; /* Blue for focus rings */
   }
 
   .dark {
-    /* Dark Theme variation - Premium */
-    --background: 0 0% 6%; /* Deep Charcoal */
-    --foreground: 0 0% 96%; /* Premium Off-White */
+    /* Dark Theme variation - Luxury */
+    --background: 0 0% 4%; /* Deep Charcoal */
+    --foreground: 0 0% 98%; /* Luxury Off-White */
 
-    --gradient-start-color: 0 0% 4%;
-    --gradient-end-color: 0 0% 8%;
+    --gradient-start-color: 0 0% 2%;
+    --gradient-end-color: 0 0% 6%;
 
-    --card: 0 0% 10%; /* Dark Gray */
-    --card-foreground: 0 0% 96%;
+    --card: 0 0% 8%; /* Dark Gray */
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 8%; 
-    --popover-foreground: 0 0% 96%;
+    --popover: 0 0% 6%; 
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 210 100% 58%; /* Brighter Blue */
-    --primary-foreground: 0 0% 8%; /* Dark text for contrast */
+    --primary: 210 100% 60%; /* Brighter Blue */
+    --primary-foreground: 0 0% 6%; /* Dark text for contrast */
 
-    --secondary: 142 76% 54%; /* Brighter Green */
-    --secondary-foreground: 0 0% 8%; /* Dark text for contrast */
+    --secondary: 142 76% 56%; /* Brighter Green */
+    --secondary-foreground: 0 0% 6%; /* Dark text for contrast */
 
-    --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 68%; /* Lighter Gray text */
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 70%; /* Lighter Gray text */
 
-    --accent: 262 83% 68%; /* Brighter Purple */
-    --accent-foreground: 0 0% 8%; /* Dark text for contrast */
+    --accent: 262 83% 70%; /* Brighter Purple */
+    --accent-foreground: 0 0% 6%; /* Dark text for contrast */
 
     --destructive: 0 75% 65%; /* Brighter red */
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 18%;
-    --input: 0 0% 12%;
-    --ring: 210 100% 68%; 
+    --border: 0 0% 16%;
+    --input: 0 0% 10%;
+    --ring: 210 100% 70%; 
 
-    --link-hover: 210 100% 78%; /* Brighter Blue for link hover */
+    --link-hover: 210 100% 80%; /* Brighter Blue for link hover */
     
-    --chart-1: 210 100% 58%;
-    --chart-2: 142 76% 54%;
-    --chart-3: 262 83% 68%;
-    --chart-4: 45 93% 57%;
-    --chart-5: 0 0% 72%;
+    --chart-1: 210 100% 60%;
+    --chart-2: 142 76% 56%;
+    --chart-3: 262 83% 70%;
+    --chart-4: 45 93% 60%;
+    --chart-5: 0 0% 75%;
 
     /* Sidebar for Dark Theme */
-    --sidebar-background: 0 0% 4%;
-    --sidebar-foreground: 0 0% 92%;
-    --sidebar-primary: 210 100% 58%;
-    --sidebar-primary-foreground: 0 0% 8%;
-    --sidebar-accent: 0 0% 16%;
-    --sidebar-accent-foreground: 210 100% 58%;
-    --sidebar-border: 0 0% 22%;
-    --sidebar-ring: 210 100% 68%;
+    --sidebar-background: 0 0% 2%;
+    --sidebar-foreground: 0 0% 94%;
+    --sidebar-primary: 210 100% 60%;
+    --sidebar-primary-foreground: 0 0% 6%;
+    --sidebar-accent: 0 0% 14%;
+    --sidebar-accent-foreground: 210 100% 60%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 210 100% 70%;
   }
 }
 
@@ -155,93 +155,120 @@ body {
   @apply mx-2 h-5 w-5 text-primary;
 }
 
-/* Premium card styles */
-.premium-card {
-  @apply bg-card border border-border rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 backdrop-blur-sm;
+/* Luxury card styles */
+.luxury-card {
+  @apply bg-card border border-border rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-700 backdrop-blur-md;
 }
 
-/* Dynamic gradient backgrounds */
-.dynamic-gradient {
+/* Luxury gradient backgrounds */
+.luxury-gradient {
   background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 50%, hsl(var(--accent)) 100%);
 }
 
-.dynamic-gradient-light {
-  background: linear-gradient(135deg, hsl(var(--primary)/0.1) 0%, hsl(var(--secondary)/0.1) 50%, hsl(var(--accent)/0.1) 100%);
+.luxury-gradient-light {
+  background: linear-gradient(135deg, hsl(var(--primary)/0.08) 0%, hsl(var(--secondary)/0.08) 50%, hsl(var(--accent)/0.08) 100%);
 }
 
-.dynamic-gradient-hover {
-  background: linear-gradient(135deg, hsl(var(--primary)/0.15) 0%, hsl(var(--secondary)/0.15) 50%, hsl(var(--accent)/0.15) 100%);
+.luxury-gradient-hover {
+  background: linear-gradient(135deg, hsl(var(--primary)/0.12) 0%, hsl(var(--secondary)/0.12) 50%, hsl(var(--accent)/0.12) 100%);
 }
 
-/* Premium accent styles */
-.premium-accent {
-  @apply text-secondary bg-secondary/10 border-secondary/20;
+/* Luxury accent styles */
+.luxury-accent {
+  @apply text-secondary bg-secondary/8 border-secondary/15;
 }
 
 .tech-accent {
-  @apply text-primary bg-primary/10 border-primary/20;
+  @apply text-primary bg-primary/8 border-primary/15;
 }
 
 .innovation-accent {
-  @apply text-accent bg-accent/10 border-accent/20;
+  @apply text-accent bg-accent/8 border-accent/15;
 }
 
-/* Premium button styles */
-.btn-premium {
-  @apply bg-gradient-to-r from-primary via-secondary to-accent text-white hover:from-primary/90 hover:via-secondary/90 hover:to-accent/90 transition-all duration-300 rounded-xl font-medium shadow-lg hover:shadow-xl transform hover:scale-105;
+/* Luxury button styles */
+.btn-luxury {
+  @apply bg-gradient-to-r from-primary via-secondary to-accent text-white hover:from-primary/90 hover:via-secondary/90 hover:to-accent/90 transition-all duration-500 rounded-2xl font-medium shadow-2xl hover:shadow-3xl transform hover:scale-105 hover:-translate-y-1;
 }
 
-.btn-eco-premium {
-  @apply bg-gradient-to-r from-secondary to-accent text-white hover:from-secondary/90 hover:to-accent/90 transition-all duration-300 rounded-xl font-medium shadow-lg hover:shadow-xl transform hover:scale-105;
+.btn-eco-luxury {
+  @apply bg-gradient-to-r from-secondary to-accent text-white hover:from-secondary/90 hover:to-accent/90 transition-all duration-500 rounded-2xl font-medium shadow-2xl hover:shadow-3xl transform hover:scale-105 hover:-translate-y-1;
 }
 
-/* Dynamic theme elements */
-.dynamic-card {
-  @apply bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 border border-primary/20 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 backdrop-blur-sm;
+/* Luxury theme elements */
+.luxury-card {
+  @apply bg-gradient-to-br from-primary/3 via-secondary/3 to-accent/3 border border-primary/15 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-700 backdrop-blur-md;
 }
 
-.premium-badge {
-  @apply bg-gradient-to-r from-primary/10 via-secondary/10 to-accent/10 text-primary border border-primary/20 px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm;
+.luxury-badge {
+  @apply bg-gradient-to-r from-primary/8 via-secondary/8 to-accent/8 text-primary border border-primary/15 px-5 py-2.5 rounded-full text-sm font-medium backdrop-blur-md shadow-lg;
 }
 
-/* Animated gradients */
-@keyframes gradient-shift {
+/* Sophisticated animated gradients */
+@keyframes luxury-gradient-shift {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-.animated-gradient {
+@keyframes luxury-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes luxury-pulse {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.05); }
+}
+
+@keyframes luxury-glow {
+  0%, 100% { box-shadow: 0 0 20px hsl(var(--primary)/0.3); }
+  50% { box-shadow: 0 0 40px hsl(var(--primary)/0.6); }
+}
+
+.animated-luxury-gradient {
   background: linear-gradient(-45deg, hsl(var(--primary)), hsl(var(--secondary)), hsl(var(--accent)), hsl(var(--primary)));
   background-size: 400% 400%;
-  animation: gradient-shift 15s ease infinite;
+  animation: luxury-gradient-shift 20s ease infinite;
 }
 
-.animated-gradient-light {
-  background: linear-gradient(-45deg, hsl(var(--primary)/0.1), hsl(var(--secondary)/0.1), hsl(var(--accent)/0.1), hsl(var(--primary)/0.1));
+.animated-luxury-gradient-light {
+  background: linear-gradient(-45deg, hsl(var(--primary)/0.08), hsl(var(--secondary)/0.08), hsl(var(--accent)/0.08), hsl(var(--primary)/0.08));
   background-size: 400% 400%;
-  animation: gradient-shift 20s ease infinite;
+  animation: luxury-gradient-shift 25s ease infinite;
 }
 
-/* Premium hover effects */
-.premium-hover {
-  @apply transition-all duration-300 hover:scale-105 hover:shadow-2xl;
+/* Luxury hover effects */
+.luxury-hover {
+  @apply transition-all duration-500 hover:scale-105 hover:shadow-3xl hover:-translate-y-2;
 }
 
-.premium-glow {
-  box-shadow: 0 0 20px hsl(var(--primary)/0.3);
+.luxury-glow {
+  box-shadow: 0 0 30px hsl(var(--primary)/0.4);
+  animation: luxury-glow 3s ease-in-out infinite;
 }
 
-.premium-glow-hover:hover {
-  box-shadow: 0 0 30px hsl(var(--primary)/0.5);
+.luxury-glow-hover:hover {
+  box-shadow: 0 0 50px hsl(var(--primary)/0.7);
+  animation: luxury-glow 2s ease-in-out infinite;
+}
+
+.luxury-float {
+  animation: luxury-float 6s ease-in-out infinite;
+}
+
+.luxury-pulse {
+  animation: luxury-pulse 4s ease-in-out infinite;
 }
 
 /* Sophisticated text gradients */
-.text-gradient-premium {
+.text-gradient-luxury {
   background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)), hsl(var(--accent)));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  animation: luxury-gradient-shift 8s ease infinite;
 }
 
 .text-gradient-tech {
@@ -251,13 +278,77 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-/* Premium borders */
-.premium-border {
+/* Luxury borders */
+.luxury-border {
   border: 2px solid transparent;
   background: linear-gradient(white, white) padding-box, linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)), hsl(var(--accent))) border-box;
 }
 
-.premium-border-dark {
+.luxury-border-dark {
   border: 2px solid transparent;
   background: linear-gradient(hsl(var(--background)), hsl(var(--background))) padding-box, linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)), hsl(var(--accent))) border-box;
+}
+
+/* Luxury glassmorphism */
+.luxury-glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.luxury-glass-dark {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Luxury decorative elements */
+.luxury-divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, hsl(var(--primary)), hsl(var(--secondary)), hsl(var(--accent)), transparent);
+  margin: 2rem 0;
+}
+
+.luxury-corner {
+  position: relative;
+}
+
+.luxury-corner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-top: 2px solid hsl(var(--primary));
+  border-left: 2px solid hsl(var(--primary));
+}
+
+.luxury-corner::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  border-bottom: 2px solid hsl(var(--accent));
+  border-right: 2px solid hsl(var(--accent));
+}
+
+/* Luxury scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, hsl(var(--primary)), hsl(var(--secondary)));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, hsl(var(--primary)/0.8), hsl(var(--secondary)/0.8));
 }
