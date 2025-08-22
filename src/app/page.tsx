@@ -90,8 +90,8 @@ export default function Home() {
                 <Image
                   src={scholarData.avatarUrl}
                   alt={`Profile picture of ${scholarData.name}`}
-                  width={200}
-                  height={300}
+                  width={260}
+                  height={400}
                   className="rounded-none object-cover h-72 w-48 lg:h-96 lg:w-64 border-4 border-background shadow-2xl group-hover:scale-105 transition-transform duration-700 luxury-glow-hover luxury-float"
                   data-ai-hint={scholarData.dataAiHint}
                   priority
