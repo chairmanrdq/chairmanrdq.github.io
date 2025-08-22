@@ -8,7 +8,7 @@ import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
   title: 'Resources & Links',
-  description: 'Shared resources including software, datasets, presentations, and useful links from Dr. Eleanor Vance.', // Replace
+  description: 'Shared resources including software, datasets, presentations, and useful links from Dr. RuiDong Qi（祁瑞东）.', // Replace
 };
 
 // Define a more specific type for items used in ResourceCard
