@@ -6,20 +6,20 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Contact',
-  description: 'Contact information for Dr. Eleanor Vance, including email, office address, and office hours.', // Replace
+  description: 'Contact information for Dr. RuiDong Qi（祁瑞东）, including email, office address, and office hours.', // Replace
 };
 
 // Mock Data - Replace with actual data
 const contactData = {
-  name: "Dr. Eleanor Vance", // Replace
-  position: "Professor of Computational Linguistics", // Replace
-  affiliation: "Department of Computer Science", // Replace
-  university: "University of Innovation", // Replace
-  email: "eleanor.vance@university.edu", // Replace
+  name: "Dr. RuiDong Qi（祁瑞东）", // Replace
+  position: "Distinguished Lecturer in Computing Power Networks", // Replace
+  affiliation: "School of Computer Science (School of Software)", // Replace
+  university: "Inner Mongolia University", // Replace
+  email: "imucsrdq@163.com", // Replace
   phone: "+1-234-567-8900", // Replace (optional)
-  office: "Room 404, Tech Innovation Building", // Replace
-  addressLine1: "123 Innovation Drive", // Replace
-  addressLine2: "Tech City, TC 54321", // Replace
+  office: "Room 303, BeiZheng Building", // Replace
+  addressLine1: "235 West University Road", // Replace
+  addressLine2: "Saihan District, Hohhot, Inner Mongolia, China", // Replace
   // Replace with actual map placeholder or embed for your location service.
   // For Google Maps, get an embed URL. For a static image, provide a URL.
   mapPlaceholderUrl: "https://picsum.photos/seed/maplocation/800/450",
