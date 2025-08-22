@@ -5,32 +5,32 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Research',
-  description: 'Detailed research interests and focus areas of Dr. Eleanor Vance.', // Replace
+  description: 'Detailed research interests and focus areas of Dr. RuiDong Qi（祁瑞东）.', // Replace
 };
 
 // Mock Data - Replace with actual data
 const researchData = {
-  introduction: "My research program is dedicated to advancing the frontiers of Natural Language Processing (NLP) and Machine Learning (ML). I focus on developing intelligent systems that can understand, interpret, and generate human language with greater accuracy, fairness, and efficiency. Key themes in my work include enhancing model robustness, ensuring ethical AI practices, and applying NLP/ML to solve real-world problems in domains such as healthcare, education, and social sciences.", // Replace
+  introduction: "Our research spans cloud computing, big data, and service computing, with a focus on cloud–edge collaboration, predictive analytics, and intelligent service recommendation. We also develop system platforms that integrate cloud and data-driven applications.", // Replace
   detailedFocus: [
     {
-      title: "Advanced Natural Language Understanding",
-      description: "Developing novel deep learning architectures (e.g., advanced Transformer models, graph neural networks) for complex NLU tasks such as nuanced question answering, multi-document summarization, and fine-grained sentiment analysis. Emphasis is placed on improving model interpretability and few-shot learning capabilities.",
-      keywords: ["Deep Learning", "Transformers", "Interpretability", "NLU", "Question Answering", "Summarization"]
+      title: "Cloud Computing",
+      description: "Focus on cloud–edge collaboration, cross-cloud resource scheduling, and task scheduling methods to improve resource utilization and system performance.",
+      keywords: ["Cloud–edge Collaboration", "Cross-cloud Resource Scheduling", "Task Scheduling"]
     },
     {
-      title: "Machine Learning for Semantic Technologies",
-      description: "Applying machine learning techniques to extract, represent, and reason with knowledge graphs and semantic web data. This includes research on automated knowledge base construction, link prediction, ontology alignment, and integrating symbolic reasoning with neural approaches for more robust AI.",
-      keywords: ["Knowledge Graphs", "Semantic Web", "Link Prediction", "Ontology Learning", "Neuro-Symbolic AI"]
+      title: "Big Data",
+      description: "Specialize in predictive analytics and user behavior analysis in cloud environments, as well as ecosystem service assessment and forecasting.",
+      keywords: ["Predictive analytics", "User behavior analysis", "Ecosystem service forecasting"]
     },
     {
-      title: "Ethical AI and Fairness in NLP",
-      description: "Investigating and mitigating biases in language models and NLP applications across various demographic groups. Developing novel frameworks and metrics for fairness, accountability, and transparency in AI systems, particularly in sensitive domains such as healthcare, legal tech, and hiring.",
-      keywords: ["AI Ethics", "Fairness", "Bias Mitigation", "Transparency", "Accountability", "Responsible AI"]
+      title: "Service Computing",
+      description: "Investigate advanced recommendation methods, including retrieval-augmented cold-start recommendation, large-model-based recommendation, multimodal recommendation, and elastic recommendation.",
+      keywords: ["Cold-start recommendation", "Large-model-based Recommendation", "Multimodal Recommendation"]
     },
     {
-      title: "Computational Pragmatics and Dialogue Systems",
-      description: "Exploring how computational models can capture the nuances of human communication, including implicature, common ground, and context. Building more natural, engaging, and goal-oriented dialogue systems that can handle complex conversational flows and user intents.",
-      keywords: ["Dialogue Systems", "Conversational AI", "Pragmatics", "Reinforcement Learning for Dialogue"]
+      title: "System Development",
+      description: "Develop system platforms for cloud computing and big data applications, as well as intelligent and efficient service recommendation systems.",
+      keywords: ["Cloud Computing Applications", "Big Data Platforms", "Intelligent Service Recommendation Systems"]
     },
   ],
 };
