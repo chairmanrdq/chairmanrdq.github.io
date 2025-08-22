@@ -42,7 +42,7 @@ const scholarData = {
       date: "2025-08-13", 
       title: "🏆 Our group participated in CCF HPC China 2025, held in Ordos, Inner Mongolia.", 
       description: "During the conference, we presented our research on green computing power scheduling and HPC optimization, and engaged in in-depth discussions with scholars from China and abroad.", 
-      icon: <Award className="h-5 w-5 text-yellow-500 flex-shrink-0" />,
+             icon: <Award className="h-5 w-5 flex-shrink-0" style={{color: '#FFC107'}} />,
       badge: "Award"
     },
     { 
@@ -50,7 +50,7 @@ const scholarData = {
       date: "2024-10-24", 
       title: "🎤 Our group participated in the China National Computer Congress (CNCC 2024)", 
       description: "During the congress, we engaged in academic exchanges on computing power networks, green computing, and service computing, and explored collaborations with industry and academia.", 
-      icon: <Rss className="h-5 w-5 text-blue-500 flex-shrink-0" />,
+             icon: <Rss className="h-5 w-5 flex-shrink-0" style={{color: '#1E3A8A'}} />,
       badge: "Keynote"
     },
     //{ 
@@ -86,11 +86,11 @@ export default function Home() {
     <div className="relative">
       {/* Hero Section with Ultra Luxury Animated Gradient */}
       <section className="relative overflow-hidden animated-luxury-gradient-light rounded-3xl mb-16 p-8 md:p-12 luxury-border luxury-corner">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/4 via-secondary/4 to-accent/4 opacity-70"></div>
-        <div className="absolute top-0 left-0 w-80 h-80 bg-primary/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 luxury-pulse"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary/20 rounded-full blur-3xl translate-x-1/2 translate-y-1/2 luxury-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-accent/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 luxury-pulse delay-500"></div>
-        <div className="absolute top-1/4 right-1/4 w-48 h-48 bg-secondary/15 rounded-full blur-2xl luxury-sparkle"></div>
+                 <div className="absolute inset-0 bg-gradient-to-r from-[#5B2C6F]/4 via-[#1E3A8A]/4 to-[#1B5E20]/4 opacity-70"></div>
+                 <div className="absolute top-0 left-0 w-80 h-80 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 luxury-pulse" style={{backgroundColor: 'rgba(91, 44, 111, 0.2)'}}></div>
+         <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full blur-3xl translate-x-1/2 translate-y-1/2 luxury-pulse delay-1000" style={{backgroundColor: 'rgba(30, 58, 138, 0.2)'}}></div>
+         <div className="absolute top-1/2 left-1/2 w-72 h-72 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 luxury-pulse delay-500" style={{backgroundColor: 'rgba(27, 94, 32, 0.2)'}}></div>
+         <div className="absolute top-1/4 right-1/4 w-48 h-48 rounded-full blur-2xl luxury-sparkle" style={{backgroundColor: 'rgba(255, 193, 7, 0.15)'}}></div>
         
         <div className="relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
@@ -107,19 +107,19 @@ export default function Home() {
                   data-ai-hint={scholarData.dataAiHint}
                   priority
                 />
-                <div className="absolute -bottom-2 -right-2 animated-luxury-gradient text-white p-3 rounded-none shadow-lg luxury-glow luxury-sparkle">
-                  <Crown className="h-6 w-6" />
-                </div>
-                <div className="absolute -top-1 -left-1 w-4 h-4 bg-secondary rounded-full luxury-shimmer"></div>
+                                 <div className="absolute -bottom-2 -right-2 animated-luxury-gradient text-white p-3 rounded-none shadow-lg luxury-glow luxury-sparkle">
+                   <Crown className="h-6 w-6" style={{color: '#FFC107'}} />
+                 </div>
+                 <div className="absolute -top-1 -left-1 w-4 h-4 rounded-full luxury-shimmer" style={{backgroundColor: '#FFC107'}}></div>
               </div>
             </div>
 
             {/* Enhanced Bio Content with Luxury Effects */}
             <div className="flex-1 text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 luxury-badge mb-4">
-                <Diamond className="h-4 w-4 text-accent" />
-                <span className="text-sm font-medium">Leading Computing Power Network Innovation</span>
-              </div>
+                             <div className="inline-flex items-center gap-2 luxury-badge mb-4">
+                 <Diamond className="h-4 w-4" style={{color: '#FFC107'}} />
+                 <span className="text-sm font-medium">Leading Computing Power Network Innovation</span>
+               </div>
               
               <h1 className="text-4xl lg:text-6xl font-bold text-gradient-luxury mb-4">
                 {scholarData.name}
@@ -137,9 +137,11 @@ export default function Home() {
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
                 {scholarData.stats.map((stat, index) => (
                   <div key={index} className="luxury-card p-4 text-center luxury-hover">
-                    <div className="text-gradient-tech mb-2 flex justify-center">
-                      {stat.icon}
-                    </div>
+                                         <div className="text-gradient-tech mb-2 flex justify-center">
+                       <div style={{color: '#1E3A8A'}}>
+                         {stat.icon}
+                       </div>
+                     </div>
                     <div className="text-2xl font-bold text-gradient-luxury">{stat.value}</div>
                     <div className="text-xs text-muted-foreground">{stat.label}</div>
                   </div>
@@ -149,25 +151,25 @@ export default function Home() {
               {/* Enhanced Contact Info */}
               <div className="space-y-3 text-sm mb-6">
                 <div className="flex items-center justify-center lg:justify-start gap-3">
-                  <div className="tech-accent p-2 rounded-lg">
-                    <Mail className="h-4 w-4 text-primary" />
-                  </div>
+                                     <div className="tech-accent p-2 rounded-lg">
+                     <Mail className="h-4 w-4" style={{color: '#1E3A8A'}} />
+                   </div>
                   <a href={`mailto:${scholarData.contact.email}`} className="text-foreground/90 hover:text-primary transition-colors">
                     {scholarData.contact.email}
                   </a>
                 </div>
                 {scholarData.contact.phone && (
                   <div className="flex items-center justify-center lg:justify-start gap-3">
-                    <div className="tech-accent p-2 rounded-lg">
-                      <Phone className="h-4 w-4 text-primary" />
-                    </div>
+                                       <div className="tech-accent p-2 rounded-lg">
+                     <Phone className="h-4 w-4" style={{color: '#1E3A8A'}} />
+                   </div>
                     <span className="text-foreground/90">{scholarData.contact.phone}</span>
                   </div>
                 )}
                 <div className="flex items-center justify-center lg:justify-start gap-3">
-                  <div className="tech-accent p-2 rounded-lg">
-                    <MapPin className="h-4 w-4 text-primary" />
-                  </div>
+                                     <div className="tech-accent p-2 rounded-lg">
+                     <MapPin className="h-4 w-4" style={{color: '#1E3A8A'}} />
+                   </div>
                   <span className="text-foreground/90">{scholarData.contact.office}</span>
                 </div>
               </div>
@@ -180,7 +182,11 @@ export default function Home() {
                     variant="outline" 
                     size="sm" 
                     asChild 
-                    className="luxury-border hover:bg-gradient-to-r hover:from-primary/8 hover:via-secondary/8 hover:to-accent/8 transition-all duration-500 group"
+                                         className="luxury-border transition-all duration-500 group"
+                     style={{
+                       border: '2px solid transparent',
+                       background: 'linear-gradient(white, white) padding-box, linear-gradient(135deg, #5B2C6F, #1E3A8A, #1B5E20) border-box'
+                     }}
                   >
                     <a href={link.url} target="_blank" rel="noopener noreferrer">
                       {link.icon}
@@ -203,13 +209,15 @@ export default function Home() {
 
       {/* Research Focus Section with Luxury Effects */}
       <section id="research-focus" aria-labelledby="research-focus-title" className="mb-16">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gradient-luxury mb-4">Research Focus</h2>
-          <div className="w-24 h-1 luxury-gradient mx-auto rounded-full"></div>
-        </div>
+                 <div className="text-center mb-8">
+           <h2 className="text-3xl lg:text-4xl font-bold text-gradient-luxury mb-4">Research Focus</h2>
+           <div className="w-24 h-1 mx-auto rounded-full" style={{
+             background: 'linear-gradient(90deg, #5B2C6F, #1E3A8A, #1B5E20)'
+           }}></div>
+         </div>
         
         <Card className="luxury-card overflow-hidden luxury-hover">
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-secondary/3 to-accent/3 opacity-60"></div>
+                     <div className="absolute inset-0 bg-gradient-to-r from-[#5B2C6F]/3 via-[#1E3A8A]/3 to-[#1B5E20]/3 opacity-60"></div>
           <CardContent className="relative z-10 pt-8">
             <p className="text-lg lg:text-xl text-foreground/80 mb-6 leading-relaxed">
               {scholarData.researchFocusSummary}
@@ -217,12 +225,17 @@ export default function Home() {
             
             <div className="flex flex-wrap gap-3 mb-6">
               {scholarData.researchKeywords.map((keyword, index) => (
-                <span 
-                  key={index} 
-                  className="luxury-badge hover:from-primary/15 hover:via-secondary/15 hover:to-accent/15 transition-all duration-500 cursor-default"
-                >
-                  {keyword}
-                </span>
+                                 <span 
+                   key={index} 
+                   className="luxury-badge transition-all duration-500 cursor-default"
+                   style={{
+                     color: '#1B5E20',
+                     background: 'linear-gradient(135deg, rgba(27, 94, 32, 0.08) 0%, rgba(27, 94, 32, 0.12) 100%)',
+                     border: '1px solid rgba(27, 94, 32, 0.2)'
+                   }}
+                 >
+                   {keyword}
+                 </span>
               ))}
             </div>
             
@@ -245,10 +258,12 @@ export default function Home() {
 
       {/* Enhanced News & Updates Section */}
       <section id="news" aria-labelledby="news-title" className="mb-16">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gradient-luxury mb-4">Latest News & Updates</h2>
-          <div className="w-24 h-1 luxury-gradient mx-auto rounded-full"></div>
-        </div>
+                 <div className="text-center mb-8">
+           <h2 className="text-3xl lg:text-4xl font-bold text-gradient-luxury mb-4">Latest News & Updates</h2>
+           <div className="w-24 h-1 mx-auto rounded-full" style={{
+             background: 'linear-gradient(90deg, #5B2C6F, #1E3A8A, #1B5E20)'
+           }}></div>
+         </div>
         
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {scholarData.news.map(item => (
@@ -256,22 +271,37 @@ export default function Home() {
               key={item.id} 
               className="luxury-card group overflow-hidden luxury-hover"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/3 via-secondary/3 to-accent/3 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                             <div className="absolute inset-0 bg-gradient-to-br from-[#5B2C6F]/3 via-[#1E3A8A]/3 to-[#1B5E20]/3 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
               <CardContent className="relative z-10 pt-6">
                 <div className="flex items-start gap-4">
-                  <div className="innovation-accent p-3 rounded-xl">
-                    {item.icon}
-                  </div>
+                                       <div className="innovation-accent p-3 rounded-xl">
+                       <div style={{color: '#1B5E20'}}>
+                         {item.icon}
+                       </div>
+                     </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
-                      <span className="luxury-badge">
-                        {item.badge}
-                      </span>
+                                             <span className="luxury-badge" style={{
+                         color: item.badge === 'Award' ? '#FFC107' : '#1E3A8A',
+                         background: item.badge === 'Award' 
+                           ? 'linear-gradient(135deg, rgba(255, 193, 7, 0.08) 0%, rgba(255, 193, 7, 0.12) 100%)'
+                           : 'linear-gradient(135deg, rgba(30, 58, 138, 0.08) 0%, rgba(30, 58, 138, 0.12) 100%)',
+                         border: item.badge === 'Award' 
+                           ? '1px solid rgba(255, 193, 7, 0.2)'
+                           : '1px solid rgba(30, 58, 138, 0.2)'
+                       }}>
+                         {item.badge}
+                       </span>
                       <span className="text-xs text-muted-foreground">{item.date}</span>
                     </div>
-                    <h3 className="text-lg font-semibold text-gradient-tech mb-2 group-hover:text-gradient-luxury transition-all duration-500">
-                      {item.title}
-                    </h3>
+                                         <h3 className="text-lg font-semibold mb-2 group-hover:text-gradient-luxury transition-all duration-500" style={{
+                       background: 'linear-gradient(135deg, #5B2C6F, #1E3A8A)',
+                       backgroundClip: 'text',
+                       WebkitBackgroundClip: 'text',
+                       WebkitTextFillColor: 'transparent'
+                     }}>
+                       {item.title}
+                     </h3>
                     <p className="text-sm text-foreground/80 leading-relaxed">
                       {item.description}
                     </p>
@@ -288,10 +318,12 @@ export default function Home() {
 
       {/* Enhanced Image Carousel Section */}
       <section id="image-carousel" aria-labelledby="carousel-title" className="mb-16">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gradient-luxury mb-4">Research Highlights</h2>
-          <div className="w-24 h-1 luxury-gradient mx-auto rounded-full"></div>
-        </div>
+                 <div className="text-center mb-8">
+           <h2 className="text-3xl lg:text-4xl font-bold text-gradient-luxury mb-4">Research Highlights</h2>
+           <div className="w-24 h-1 mx-auto rounded-full" style={{
+             background: 'linear-gradient(90deg, #5B2C6F, #1E3A8A, #1B5E20)'
+           }}></div>
+         </div>
         
         <div className="luxury-card overflow-hidden luxury-hover">
           <ImageCarousel images={carouselImages} interval={5000} />
