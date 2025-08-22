@@ -6,17 +6,17 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Teaching & Courses',
-  description: 'Information on courses taught by Dr. Eleanor Vance, including syllabi and resources.', // Replace
+  description: 'Information on courses taught by Dr. RuiDong Qi（祁瑞东）, including syllabi and resources.', // Replace
 };
 
 // Mock Data - Replace with actual data
 const coursesData = [
   {
     id: "cs501",
-    title: "CS 501: Advanced Natural Language Processing",
-    term: "Fall 2024",
+    title: "Room 0212, Excellence Building: Object-Oriented Analysis and Design",
+    term: "Fall 2025",
     level: "Graduate",
-    description: "This course delves into state-of-the-art techniques in natural language processing, including advanced deep learning models (Transformers, GNNs) for various NLP tasks, ethical considerations in language technology, and current research frontiers. Students will engage in a semester-long research project.",
+    description: "This course introduces the fundamental principles and applications of object-oriented methods in software development. Topics include object-oriented concepts, UML modeling, requirements analysis, system design, design patterns, and case studies. By the end of the course, students will be able to apply object-oriented modeling and design techniques to analyze, design, and implement medium-scale software systems.",
     syllabusUrl: "#", // Replace with actual URL or path to PDF
     coursePageUrl: "#", // Replace with actual URL to Canvas/Moodle/etc.
     resources: [
@@ -24,7 +24,7 @@ const coursesData = [
       { name: "Core Reading List", url: "#" },
     ]
   },
-  {
+  /*{
     id: "cs305",
     title: "CS 305: Introduction to Artificial Intelligence",
     term: "Spring 2024",
@@ -47,7 +47,7 @@ const coursesData = [
       { name: "Guest Lecture Slides: NLP", url: "#" },
       { name: "Guest Lecture Slides: Ethics", url: "#" },
     ]
-  },
+  },*/
 ];
 
 export default function CoursesPage() {
