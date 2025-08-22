@@ -188,23 +188,26 @@ body {
   animation: luxury-gradient-shift 12s ease infinite;
 }
 
-/* Luxury accent styles */
+/* Ultra Luxury accent styles */
 .luxury-accent {
   color: hsl(var(--secondary));
-  background-color: hsl(var(--secondary)/0.08);
-  border: 1px solid hsl(var(--secondary)/0.15);
+  background: linear-gradient(135deg, hsl(var(--secondary)/0.08) 0%, hsl(var(--secondary)/0.12) 100%);
+  border: 1px solid hsl(var(--secondary)/0.2);
+  box-shadow: 0 4px 12px hsl(var(--secondary)/0.1);
 }
 
 .tech-accent {
   color: hsl(var(--primary));
-  background-color: hsl(var(--primary)/0.08);
-  border: 1px solid hsl(var(--primary)/0.15);
+  background: linear-gradient(135deg, hsl(var(--primary)/0.08) 0%, hsl(var(--primary)/0.12) 100%);
+  border: 1px solid hsl(var(--primary)/0.2);
+  box-shadow: 0 4px 12px hsl(var(--primary)/0.1);
 }
 
 .innovation-accent {
   color: hsl(var(--accent));
-  background-color: hsl(var(--accent)/0.08);
-  border: 1px solid hsl(var(--accent)/0.15);
+  background: linear-gradient(135deg, hsl(var(--accent)/0.08) 0%, hsl(var(--accent)/0.12) 100%);
+  border: 1px solid hsl(var(--accent)/0.2);
+  box-shadow: 0 4px 12px hsl(var(--accent)/0.1);
 }
 
 /* Luxury button styles */
