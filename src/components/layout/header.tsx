@@ -2,7 +2,7 @@
 "use client";
 
 import Link from 'next/link';
-import { Home, FlaskConical, Newspaper, FolderGit2, Users, GraduationCap, Download as DownloadIcon, MessageSquare, Menu, X } from 'lucide-react';
+import { Home, FlaskConical, Newspaper, FolderGit2, Users, GraduationCap, Download as DownloadIcon, MessageSquare, Menu, X, Cpu, Leaf } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
@@ -28,10 +28,15 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 
   return (
-    <header className="bg-background sticky top-0 z-50 w-full border-b border-primary/30 backdrop-blur supports-[backdrop-filter]:bg-background/80 shadow-sm">
+    <header className="bg-background/95 backdrop-blur-md sticky top-0 z-50 w-full border-b border-primary/20 shadow-sm">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        <Link href="/" className="text-xl sm:text-2xl font-bold text-primary hover:text-primary/80 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
-          {SCHOLAR_NAME}
+        <Link href="/" className="flex items-center gap-2 text-xl sm:text-2xl font-bold hover:opacity-80 transition-opacity" onClick={() => setIsMobileMenuOpen(false)}>
+          <div className="tech-gradient p-2 rounded-lg">
+            <Cpu className="h-6 w-6 text-white" />
+          </div>
+          <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            {SCHOLAR_NAME}
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -42,14 +47,14 @@ export default function Header() {
               variant="ghost"
               asChild
               className={cn(
-                "text-sm font-medium transition-colors",
+                "text-sm font-medium transition-all duration-200 rounded-lg",
                 pathname === item.href
-                  ? "bg-primary/10 text-primary font-semibold hover:bg-primary/20" // Active state
-                  : "text-primary/80 hover:text-primary hover:bg-secondary" // Inactive state
+                  ? "bg-primary/10 text-primary font-semibold hover:bg-primary/20 border border-primary/20" // Active state
+                  : "text-foreground/70 hover:text-primary hover:bg-primary/5" // Inactive state
               )}
             >
               <Link href={item.href}>
-                {/* <item.icon className="h-4 w-4 mr-2 hidden lg:inline-block" /> */}
+                <item.icon className="h-4 w-4 mr-2" />
                 {item.label}
               </Link>
             </Button>
@@ -64,11 +69,16 @@ export default function Header() {
                 <Menu className="h-6 w-6" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-full max-w-xs bg-background p-0 text-foreground">
+            <SheetContent side="right" className="w-full max-w-xs bg-background/95 backdrop-blur-md p-0 text-foreground border-l border-primary/20">
               <div className="flex flex-col h-full">
-                <div className="p-6 flex justify-between items-center border-b border-primary/30">
-                    <Link href="/" className="text-lg font-bold text-primary" onClick={() => setIsMobileMenuOpen(false)}>
+                <div className="p-6 flex justify-between items-center border-b border-primary/20">
+                    <Link href="/" className="flex items-center gap-2 text-lg font-bold" onClick={() => setIsMobileMenuOpen(false)}>
+                      <div className="tech-gradient p-2 rounded-lg">
+                        <Cpu className="h-5 w-5 text-white" />
+                      </div>
+                      <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                         {SCHOLAR_NAME}
+                      </span>
                     </Link>
                     <SheetClose asChild>
                         <Button variant="ghost" size="icon" aria-label="Close menu" className="text-primary hover:text-primary/80">
@@ -82,18 +92,24 @@ export default function Header() {
                        <Link
                         href={item.href}
                         className={cn(
-                          "flex items-center space-x-3 text-md font-medium transition-colors rounded-md px-3 py-2",
+                          "flex items-center space-x-3 text-md font-medium transition-all duration-200 rounded-lg px-3 py-3",
                           pathname === item.href
-                            ? "bg-primary/10 text-primary font-semibold" // Active state
-                            : "text-primary/80 hover:text-primary hover:bg-secondary" // Inactive state
+                            ? "bg-primary/10 text-primary font-semibold border border-primary/20" // Active state
+                            : "text-foreground/70 hover:text-primary hover:bg-primary/5" // Inactive state
                         )}
                       >
-                        <item.icon className="h-5 w-5 text-primary/80 group-hover:text-primary" />
+                        <item.icon className="h-5 w-5" />
                         <span>{item.label}</span>
                       </Link>
                     </SheetClose>
                   ))}
                 </nav>
+                <div className="p-6 border-t border-primary/20">
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <Leaf className="h-4 w-4 text-secondary" />
+                    <span>Leading Sustainable AI Research</span>
+                  </div>
+                </div>
               </div>
             </SheetContent>
           </Sheet>

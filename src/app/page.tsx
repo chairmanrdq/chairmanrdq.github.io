@@ -2,10 +2,10 @@ import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { SectionTitle } from "@/components/ui/section-title";
-import { Mail, Phone, Link as LinkIcon, MapPin, Award, Rss, BookOpen, Star, TrendingUp, Users, Globe, Zap, ArrowRight, ChevronRight } from 'lucide-react';
+import { Mail, Phone, Link as LinkIcon, MapPin, Award, Rss, BookOpen, Star, TrendingUp, Users, Globe, Zap, ArrowRight, ChevronRight, Leaf, Cpu, Database } from 'lucide-react';
 import ImageCarousel from '@/components/home/image-carousel';
 
-// Enhanced Mock Data with more premium content
+// Enhanced Mock Data with tech and sustainability focus
 const scholarData = {
   name: "Dr. Eleanor Vance",
   position: "Distinguished Professor of Computational Linguistics",
@@ -65,7 +65,7 @@ const scholarData = {
   ],
 };
 
-// Enhanced carousel data
+// Enhanced carousel data with tech focus
 const carouselImages = [
   { src: "https://picsum.photos/seed/carouselA/1400/600", alt: "State-of-the-Art Research Facility", dataAiHint: "modern laboratory with advanced equipment" },
   { src: "https://picsum.photos/seed/carouselB/1400/600", alt: "AI Neural Network Visualization", dataAiHint: "complex neural network visualization" },
@@ -76,17 +76,17 @@ const carouselImages = [
 export default function Home() {
   return (
     <div className="relative">
-      {/* Hero Section with Gradient Background */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-accent/5 rounded-3xl mb-16 p-8 md:p-12">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-accent/10 opacity-50"></div>
+      {/* Hero Section with Tech Blue & Green Gradient */}
+      <section className="relative overflow-hidden tech-gradient-light rounded-3xl mb-16 p-8 md:p-12 border border-primary/10">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-secondary/5 opacity-50"></div>
         <div className="absolute top-0 left-0 w-72 h-72 bg-primary/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/20 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary/20 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
         
         <div className="relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-            {/* Enhanced Avatar */}
+            {/* Enhanced Avatar with Tech Theme */}
             <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-full blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 tech-gradient rounded-full blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
               <div className="relative">
                 <Image
                   src={scholarData.avatarUrl}
@@ -97,20 +97,20 @@ export default function Home() {
                   data-ai-hint={scholarData.dataAiHint}
                   priority
                 />
-                <div className="absolute -bottom-2 -right-2 bg-gradient-to-r from-primary to-accent text-white p-3 rounded-full shadow-lg">
-                  <Star className="h-6 w-6" />
+                <div className="absolute -bottom-2 -right-2 tech-gradient text-white p-3 rounded-full shadow-lg">
+                  <Cpu className="h-6 w-6" />
                 </div>
               </div>
             </div>
 
-            {/* Enhanced Bio Content */}
+            {/* Enhanced Bio Content with Tech Theme */}
             <div className="flex-1 text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary/10 to-accent/10 px-4 py-2 rounded-full mb-4">
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary/10 to-secondary/10 px-4 py-2 rounded-full mb-4 border border-primary/20">
                 <Zap className="h-4 w-4 text-primary" />
                 <span className="text-sm font-medium text-primary">Leading AI Research</span>
               </div>
               
-              <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-4">
+              <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-4">
                 {scholarData.name}
               </h1>
               
@@ -122,15 +122,15 @@ export default function Home() {
                 {scholarData.affiliation}
               </p>
 
-              {/* Stats Grid */}
+              {/* Stats Grid with Modern Cards */}
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
                 {scholarData.stats.map((stat, index) => (
-                  <div key={index} className="bg-background/50 backdrop-blur-sm border border-primary/20 rounded-xl p-4 text-center hover:bg-background/70 transition-colors duration-300">
+                  <div key={index} className="modern-card p-4 text-center hover:scale-105 transition-all duration-300">
                     <div className="text-primary mb-2 flex justify-center">
                       {stat.icon}
                     </div>
                     <div className="text-2xl font-bold text-primary">{stat.value}</div>
-                    <div className="text-xs text-foreground/70">{stat.label}</div>
+                    <div className="text-xs text-muted-foreground">{stat.label}</div>
                   </div>
                 ))}
               </div>
@@ -138,7 +138,7 @@ export default function Home() {
               {/* Enhanced Contact Info */}
               <div className="space-y-3 text-sm mb-6">
                 <div className="flex items-center justify-center lg:justify-start gap-3">
-                  <div className="bg-primary/10 p-2 rounded-lg">
+                  <div className="bg-primary/10 p-2 rounded-lg border border-primary/20">
                     <Mail className="h-4 w-4 text-primary" />
                   </div>
                   <a href={`mailto:${scholarData.contact.email}`} className="text-foreground/90 hover:text-primary transition-colors">
@@ -147,14 +147,14 @@ export default function Home() {
                 </div>
                 {scholarData.contact.phone && (
                   <div className="flex items-center justify-center lg:justify-start gap-3">
-                    <div className="bg-primary/10 p-2 rounded-lg">
+                    <div className="bg-primary/10 p-2 rounded-lg border border-primary/20">
                       <Phone className="h-4 w-4 text-primary" />
                     </div>
                     <span className="text-foreground/90">{scholarData.contact.phone}</span>
                   </div>
                 )}
                 <div className="flex items-center justify-center lg:justify-start gap-3">
-                  <div className="bg-primary/10 p-2 rounded-lg">
+                  <div className="bg-primary/10 p-2 rounded-lg border border-primary/20">
                     <MapPin className="h-4 w-4 text-primary" />
                   </div>
                   <span className="text-foreground/90">{scholarData.contact.office}</span>
@@ -187,15 +187,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Research Focus Section with Glassmorphism */}
+      {/* Research Focus Section with Tech Theme */}
       <section id="research-focus" aria-labelledby="research-focus-title" className="mb-16">
         <div className="text-center mb-8">
           <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">Research Focus</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
+          <div className="w-24 h-1 tech-gradient mx-auto rounded-full"></div>
         </div>
         
-        <Card className="bg-background/50 backdrop-blur-sm border-primary/20 shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5 opacity-50"></div>
+        <Card className="modern-card overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-secondary/5 opacity-50"></div>
           <CardContent className="relative z-10 pt-8">
             <p className="text-lg lg:text-xl text-foreground/80 mb-6 leading-relaxed">
               {scholarData.researchFocusSummary}
@@ -205,7 +205,7 @@ export default function Home() {
               {scholarData.researchKeywords.map((keyword, index) => (
                 <span 
                   key={index} 
-                  className="px-4 py-2 bg-gradient-to-r from-primary/10 to-accent/10 text-primary text-sm rounded-full font-medium border border-primary/20 hover:from-primary/20 hover:to-accent/20 transition-all duration-300 cursor-default"
+                  className="px-4 py-2 bg-gradient-to-r from-primary/10 to-secondary/10 text-primary text-sm rounded-full font-medium border border-primary/20 hover:from-primary/20 hover:to-secondary/20 transition-all duration-300 cursor-default"
                 >
                   {keyword}
                 </span>
@@ -215,7 +215,7 @@ export default function Home() {
             <Button 
               variant="default" 
               asChild 
-              className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white px-6 py-3 rounded-xl transition-all duration-300 group"
+              className="btn-modern px-6 py-3 rounded-xl group"
             >
               <a href="/research" className="flex items-center gap-2">
                 Explore my research
@@ -230,24 +230,24 @@ export default function Home() {
       <section id="news" aria-labelledby="news-title" className="mb-16">
         <div className="text-center mb-8">
           <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">Latest News & Updates</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
+          <div className="w-24 h-1 tech-gradient mx-auto rounded-full"></div>
         </div>
         
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {scholarData.news.map(item => (
             <Card 
               key={item.id} 
-              className="bg-background/50 backdrop-blur-sm border-primary/20 shadow-lg hover:shadow-xl transition-all duration-500 group overflow-hidden hover:scale-105"
+              className="modern-card group overflow-hidden hover:scale-105"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <CardContent className="relative z-10 pt-6">
                 <div className="flex items-start gap-4">
-                  <div className="bg-gradient-to-r from-primary/10 to-accent/10 p-3 rounded-xl">
+                  <div className="bg-gradient-to-r from-primary/10 to-secondary/10 p-3 rounded-xl border border-primary/20">
                     {item.icon}
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
-                      <span className="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded-full">
+                      <span className="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded-full border border-primary/20">
                         {item.badge}
                       </span>
                       <span className="text-xs text-muted-foreground">{item.date}</span>
@@ -270,10 +270,10 @@ export default function Home() {
       <section id="image-carousel" aria-labelledby="carousel-title" className="mb-16">
         <div className="text-center mb-8">
           <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">Research Highlights</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
+          <div className="w-24 h-1 tech-gradient mx-auto rounded-full"></div>
         </div>
         
-        <div className="bg-background/50 backdrop-blur-sm border border-primary/20 rounded-2xl overflow-hidden shadow-xl">
+        <div className="modern-card overflow-hidden">
           <ImageCarousel images={carouselImages} interval={5000} />
         </div>
       </section>
