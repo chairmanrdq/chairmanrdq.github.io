@@ -8,49 +8,49 @@ body {
 
 @layer base {
   :root {
-    /* Luxury Premium Color Theme - Light Mode */
+    /* Ultra Luxury Premium Color Theme - Light Mode */
     --background: 0 0% 100%; /* Pure White #FFFFFF */
-    --foreground: 0 0% 10%; /* Deep Charcoal #1A1A1A for luxury text */
+    --foreground: 0 0% 8%; /* Ultra Deep Charcoal #141414 for luxury text */
 
     --gradient-start-color: 0 0% 100%; /* Pure White */
-    --gradient-end-color: 0 0% 96%;   /* Luxury Light Gray */
+    --gradient-end-color: 0 0% 98%;   /* Ultra Luxury Light Gray */
 
-    --card: 0 0% 99%; /* Luxury Off-White #FDFDFD for cards */
-    --card-foreground: 0 0% 10%; /* Deep Charcoal */
+    --card: 0 0% 99.5%; /* Ultra Luxury Off-White #FEFEFE for cards */
+    --card-foreground: 0 0% 8%; /* Ultra Deep Charcoal */
 
     --popover: 0 0% 100%; /* Pure White */
-    --popover-foreground: 0 0% 10%; /* Deep Charcoal */
+    --popover-foreground: 0 0% 8%; /* Ultra Deep Charcoal */
 
-    /* Primary: Luxury Tech Blue - Premium */
-    --primary: 210 100% 50%; /* Rich Blue #0066FF - for luxury tech focus */
+    /* Primary: Ultra Luxury Deep Blue - Premium */
+    --primary: 220 100% 45%; /* Ultra Rich Deep Blue #1E40AF - for luxury tech focus */
     --primary-foreground: 0 0% 100%; /* White */
 
-    /* Secondary: Luxury Green - Innovation */
-    --secondary: 142 76% 46%; /* Luxury Green #16A34A - for innovation */
-    --secondary-foreground: 0 0% 100%; /* White */
+    /* Secondary: Ultra Luxury Gold - Innovation */
+    --secondary: 45 100% 55%; /* Ultra Luxury Gold #F59E0B - for innovation */
+    --secondary-foreground: 0 0% 8%; /* Dark text for contrast */
 
-    --muted: 0 0% 98%; /* Luxury Light Gray #FAFAFA for muted backgrounds */
-    --muted-foreground: 0 0% 40%; /* Sophisticated Gray #666666 for secondary text */
+    --muted: 0 0% 99%; /* Ultra Luxury Light Gray #FDFDFD for muted backgrounds */
+    --muted-foreground: 0 0% 35%; /* Ultra Sophisticated Gray #595959 for secondary text */
 
-    /* Accent: Luxury Purple - Innovation */
-    --accent: 262 83% 60%; /* Luxury Purple #9333EA - for innovation highlights */
+    /* Accent: Ultra Luxury Deep Purple - Innovation */
+    --accent: 270 85% 55%; /* Ultra Luxury Deep Purple #7C3AED - for innovation highlights */
     --accent-foreground: 0 0% 100%; /* White */
 
     --destructive: 0 84% 60%; /* Standard vivid red for errors */
     --destructive-foreground: 0 0% 100%; /* White text on destructive */
 
-    --border: 0 0% 94%; /* Luxury Light Gray Separator #F0F0F0 */
+    --border: 0 0% 96%; /* Ultra Luxury Light Gray Separator #F5F5F5 */
     --input: 0 0% 100%; /* White, with border */
-    --ring: 210 100% 50%; /* Blue for focus rings */
+    --ring: 220 100% 45%; /* Deep Blue for focus rings */
 
-    --link-hover: 210 100% 40%; /* Deeper Blue #0052CC for link hover */
+    --link-hover: 220 100% 35%; /* Ultra Deeper Blue #1E3A8A for link hover */
 
-    /* Luxury Chart colors with premium theme */
-    --chart-1: 210 100% 50%;  /* Primary Blue - Tech */
-    --chart-2: 142 76% 46%;   /* Secondary Green - Innovation */
-    --chart-3: 262 83% 60%;   /* Accent Purple - Innovation */
-    --chart-4: 45 93% 50%;    /* Gold #EAB308 - Luxury */
-    --chart-5: 0 0% 50%;      /* Sophisticated Gray */
+    /* Ultra Luxury Chart colors with premium theme */
+    --chart-1: 220 100% 45%;  /* Primary Deep Blue - Tech */
+    --chart-2: 45 100% 55%;   /* Secondary Gold - Innovation */
+    --chart-3: 270 85% 55%;   /* Accent Deep Purple - Innovation */
+    --chart-4: 30 100% 60%;   /* Ultra Gold #F97316 - Luxury */
+    --chart-5: 0 0% 45%;      /* Ultra Sophisticated Gray */
     
     --radius: 1.25rem; /* More rounded for luxury look */
 
@@ -66,45 +66,45 @@ body {
   }
 
   .dark {
-    /* Dark Theme variation - Luxury */
-    --background: 0 0% 4%; /* Deep Charcoal */
-    --foreground: 0 0% 98%; /* Luxury Off-White */
+    /* Dark Theme variation - Ultra Luxury */
+    --background: 0 0% 3%; /* Ultra Deep Charcoal */
+    --foreground: 0 0% 99%; /* Ultra Luxury Off-White */
 
-    --gradient-start-color: 0 0% 2%;
-    --gradient-end-color: 0 0% 6%;
+    --gradient-start-color: 0 0% 1%;
+    --gradient-end-color: 0 0% 5%;
 
-    --card: 0 0% 8%; /* Dark Gray */
-    --card-foreground: 0 0% 98%;
+    --card: 0 0% 6%; /* Ultra Dark Gray */
+    --card-foreground: 0 0% 99%;
 
-    --popover: 0 0% 6%; 
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 4%; 
+    --popover-foreground: 0 0% 99%;
 
-    --primary: 210 100% 60%; /* Brighter Blue */
-    --primary-foreground: 0 0% 6%; /* Dark text for contrast */
+    --primary: 220 100% 65%; /* Ultra Bright Deep Blue */
+    --primary-foreground: 0 0% 3%; /* Dark text for contrast */
 
-    --secondary: 142 76% 56%; /* Brighter Green */
-    --secondary-foreground: 0 0% 6%; /* Dark text for contrast */
+    --secondary: 45 100% 65%; /* Ultra Bright Gold */
+    --secondary-foreground: 0 0% 3%; /* Dark text for contrast */
 
-    --muted: 0 0% 10%;
-    --muted-foreground: 0 0% 70%; /* Lighter Gray text */
+    --muted: 0 0% 8%;
+    --muted-foreground: 0 0% 75%; /* Ultra Lighter Gray text */
 
-    --accent: 262 83% 70%; /* Brighter Purple */
-    --accent-foreground: 0 0% 6%; /* Dark text for contrast */
+    --accent: 270 85% 75%; /* Ultra Bright Deep Purple */
+    --accent-foreground: 0 0% 3%; /* Dark text for contrast */
 
     --destructive: 0 75% 65%; /* Brighter red */
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 16%;
-    --input: 0 0% 10%;
-    --ring: 210 100% 70%; 
+    --border: 0 0% 12%;
+    --input: 0 0% 8%;
+    --ring: 220 100% 75%; 
 
-    --link-hover: 210 100% 80%; /* Brighter Blue for link hover */
+    --link-hover: 220 100% 85%; /* Ultra Brighter Deep Blue for link hover */
     
-    --chart-1: 210 100% 60%;
-    --chart-2: 142 76% 56%;
-    --chart-3: 262 83% 70%;
-    --chart-4: 45 93% 60%;
-    --chart-5: 0 0% 75%;
+    --chart-1: 220 100% 65%;
+    --chart-2: 45 100% 65%;
+    --chart-3: 270 85% 75%;
+    --chart-4: 30 100% 70%;
+    --chart-5: 0 0% 80%;
 
     /* Sidebar for Dark Theme */
     --sidebar-background: 0 0% 2%;
@@ -169,17 +169,23 @@ body {
   box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
 }
 
-/* Luxury gradient backgrounds */
+/* Ultra Luxury gradient backgrounds */
 .luxury-gradient {
-  background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 50%, hsl(var(--accent)) 100%);
+  background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 25%, hsl(var(--accent)) 50%, hsl(var(--secondary)) 75%, hsl(var(--primary)) 100%);
+  background-size: 200% 200%;
+  animation: luxury-gradient-shift 15s ease infinite;
 }
 
 .luxury-gradient-light {
-  background: linear-gradient(135deg, hsl(var(--primary)/0.08) 0%, hsl(var(--secondary)/0.08) 50%, hsl(var(--accent)/0.08) 100%);
+  background: linear-gradient(135deg, hsl(var(--primary)/0.06) 0%, hsl(var(--secondary)/0.06) 25%, hsl(var(--accent)/0.06) 50%, hsl(var(--secondary)/0.06) 75%, hsl(var(--primary)/0.06) 100%);
+  background-size: 200% 200%;
+  animation: luxury-gradient-shift 20s ease infinite;
 }
 
 .luxury-gradient-hover {
-  background: linear-gradient(135deg, hsl(var(--primary)/0.12) 0%, hsl(var(--secondary)/0.12) 50%, hsl(var(--accent)/0.12) 100%);
+  background: linear-gradient(135deg, hsl(var(--primary)/0.15) 0%, hsl(var(--secondary)/0.15) 25%, hsl(var(--accent)/0.15) 50%, hsl(var(--secondary)/0.15) 75%, hsl(var(--primary)/0.15) 100%);
+  background-size: 200% 200%;
+  animation: luxury-gradient-shift 12s ease infinite;
 }
 
 /* Luxury accent styles */
