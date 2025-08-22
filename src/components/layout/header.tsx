@@ -10,7 +10,7 @@ import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/s
 import React from 'react';
 
 // Replace with actual scholar name
-const SCHOLAR_NAME = "Dr. Eleanor Vance";
+const SCHOLAR_NAME = "Dr. RuiDong Qi（祁瑞东）";
 
 const navItems = [
   { href: '/', label: 'Home', icon: Home },
