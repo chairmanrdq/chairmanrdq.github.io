@@ -33,22 +33,22 @@ const resourcesData: {
   friendlyLinks: Array<{ id: string; name: string; url: string; category: string; icon: React.ReactNode; }>;
 } = {
   software: [
-    { id: "s1", name: "NLP Toolkit v2.1", description: "A Python library for common NLP tasks, optimized for research and education. Includes modules for text preprocessing, feature extraction, and model evaluation.", link: "#github-nlp-toolkit", lastUpdated: "2024-05-01", icon: <Github className="mr-2 h-4 w-4"/>, buttonText: "View on GitHub" },
-    { id: "s2", name: "EthiCheck: Bias Detection Suite", description: "A suite of tools for analyzing and mitigating various types of bias in language models and text data. Supports multiple fairness metrics.", link: "#gitlab-ethicheck", lastUpdated: "2023-11-15", icon: <Github className="mr-2 h-4 w-4"/>, buttonText: "View on GitLab" },
+    /*{ id: "s1", name: "NLP Toolkit v2.1", description: "A Python library for common NLP tasks, optimized for research and education. Includes modules for text preprocessing, feature extraction, and model evaluation.", link: "#github-nlp-toolkit", lastUpdated: "2024-05-01", icon: <Github className="mr-2 h-4 w-4"/>, buttonText: "View on GitHub" },
+    { id: "s2", name: "EthiCheck: Bias Detection Suite", description: "A suite of tools for analyzing and mitigating various types of bias in language models and text data. Supports multiple fairness metrics.", link: "#gitlab-ethicheck", lastUpdated: "2023-11-15", icon: <Github className="mr-2 h-4 w-4"/>, buttonText: "View on GitLab" },*/
   ],
   datasets: [
-    { id: "d1", name: "Anonymized Clinical Notes Corpus (ACNC-2023)", description: "A large, curated dataset of anonymized clinical notes for NLP research, particularly for tasks like named entity recognition and relation extraction in the medical domain.", link: "#dataverse-acnc", size: "10GB", format: "JSON, TXT", icon: <Database className="mr-2 h-4 w-4"/>, buttonText: "Access on Dataverse" },
-    { id: "d2", name: "Cross-Lingual Sentiment Lexicon (CLSL v1.2)", description: "A lexicon of sentiment scores for over 100,000 words and phrases across 10 major languages, useful for cross-lingual sentiment analysis.", link: "#zenodo-clsl", size: "50MB", format: "CSV", icon: <Database className="mr-2 h-4 w-4"/>, buttonText: "Download from Zenodo" },
+    /*{ id: "d1", name: "Anonymized Clinical Notes Corpus (ACNC-2023)", description: "A large, curated dataset of anonymized clinical notes for NLP research, particularly for tasks like named entity recognition and relation extraction in the medical domain.", link: "#dataverse-acnc", size: "10GB", format: "JSON, TXT", icon: <Database className="mr-2 h-4 w-4"/>, buttonText: "Access on Dataverse" },
+    { id: "d2", name: "Cross-Lingual Sentiment Lexicon (CLSL v1.2)", description: "A lexicon of sentiment scores for over 100,000 words and phrases across 10 major languages, useful for cross-lingual sentiment analysis.", link: "#zenodo-clsl", size: "50MB", format: "CSV", icon: <Database className="mr-2 h-4 w-4"/>, buttonText: "Download from Zenodo" },*/
   ],
   slides: [
-    { id: "sl1", name: "Keynote: The Future of Interpretable NLP", description: "Slides from my keynote presentation at ACL 2023, discussing challenges and opportunities in making NLP models more transparent and understandable.", link: "#slideshare-acl2023", event: "ACL 2023", icon: <Presentation className="mr-2 h-4 w-4"/>, buttonText: "View on SlideShare" },
-    { id: "sl2", name: "Tutorial: Practical Ethical AI for Developers", description: "Tutorial slides covering practical steps and tools for implementing ethical AI principles in software development lifecycles.", link: "#googledrive-ethaidev", event: "AI Developer Summit 2024", icon: <Presentation className="mr-2 h-4 w-4"/>, buttonText: "Access on Google Drive" },
+    /*{ id: "sl1", name: "Keynote: The Future of Interpretable NLP", description: "Slides from my keynote presentation at ACL 2023, discussing challenges and opportunities in making NLP models more transparent and understandable.", link: "#slideshare-acl2023", event: "ACL 2023", icon: <Presentation className="mr-2 h-4 w-4"/>, buttonText: "View on SlideShare" },
+    { id: "sl2", name: "Tutorial: Practical Ethical AI for Developers", description: "Tutorial slides covering practical steps and tools for implementing ethical AI principles in software development lifecycles.", link: "#googledrive-ethaidev", event: "AI Developer Summit 2024", icon: <Presentation className="mr-2 h-4 w-4"/>, buttonText: "Access on Google Drive" },*/
   ],
   friendlyLinks: [
-    { id: "fl1", name: "AI Research Lab @ University of Innovation", url: "#", category: "Labs & Institutions", icon: <Users className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> },
+    /*{ id: "fl1", name: "AI Research Lab @ University of Innovation", url: "#", category: "Labs & Institutions", icon: <Users className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> },
     { id: "fl2", name: "ACL Anthology - NLP Publications", url: "https://aclanthology.org/", category: "Conferences & Journals", icon: <BookOpenCheck className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> },
     { id: "fl3", name: "Dr. Jane Doe's Research Group", url: "#", category: "Collaborators", icon: <Users className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> },
-    { id: "fl4", name: "AI Ethics Initiative", url: "#", category: "Organizations", icon: <Globe className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> },
+    { id: "fl4", name: "AI Ethics Initiative", url: "#", category: "Organizations", icon: <Globe className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> },*/
   ]
 };
 
