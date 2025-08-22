@@ -10,7 +10,7 @@ const scholarData = {
   name: "Dr. RuiDong Qi（祁瑞东）",
   position: "Distinguished Professor of Computational Linguistics",
   affiliation: "Collage of Computer Science, Inner Mongolia University",
-  avatarUrl: "https://picsum.photos/seed/scholarvance/400/400",
+  avatarUrl: "https://github.com/chairmanrdq/chairmanrdq.github.io/blob/main/images/rdq2.jpg",
   dataAiHint: "professional portrait",
   contact: {
     email: "imucsrdq@163.com",
