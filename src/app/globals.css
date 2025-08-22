@@ -157,7 +157,7 @@ body {
 
 /* Luxury card styles */
 .luxury-card {
-  @apply bg-card border border-border rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-700 backdrop-blur-md;
+  @apply bg-card border border-border rounded-3xl shadow-2xl hover:shadow-[0_35px_60px_-12px_rgba(0,0,0,0.25)] transition-all duration-700 backdrop-blur-md;
 }
 
 /* Luxury gradient backgrounds */
@@ -188,16 +188,16 @@ body {
 
 /* Luxury button styles */
 .btn-luxury {
-  @apply bg-gradient-to-r from-primary via-secondary to-accent text-white hover:from-primary/90 hover:via-secondary/90 hover:to-accent/90 transition-all duration-500 rounded-2xl font-medium shadow-2xl hover:shadow-3xl transform hover:scale-105 hover:-translate-y-1;
+  @apply bg-gradient-to-r from-primary via-secondary to-accent text-white hover:from-primary/90 hover:via-secondary/90 hover:to-accent/90 transition-all duration-500 rounded-2xl font-medium shadow-2xl hover:shadow-[0_35px_60px_-12px_rgba(0,0,0,0.25)] transform hover:scale-105 hover:-translate-y-1;
 }
 
 .btn-eco-luxury {
-  @apply bg-gradient-to-r from-secondary to-accent text-white hover:from-secondary/90 hover:to-accent/90 transition-all duration-500 rounded-2xl font-medium shadow-2xl hover:shadow-3xl transform hover:scale-105 hover:-translate-y-1;
+  @apply bg-gradient-to-r from-secondary to-accent text-white hover:from-secondary/90 hover:to-accent/90 transition-all duration-500 rounded-2xl font-medium shadow-2xl hover:shadow-[0_35px_60px_-12px_rgba(0,0,0,0.25)] transform hover:scale-105 hover:-translate-y-1;
 }
 
 /* Luxury theme elements */
 .luxury-card {
-  @apply bg-gradient-to-br from-primary/3 via-secondary/3 to-accent/3 border border-primary/15 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-700 backdrop-blur-md;
+  @apply bg-gradient-to-br from-primary/3 via-secondary/3 to-accent/3 border border-primary/15 rounded-3xl shadow-2xl hover:shadow-[0_35px_60px_-12px_rgba(0,0,0,0.25)] transition-all duration-700 backdrop-blur-md;
 }
 
 .luxury-badge {
@@ -240,7 +240,7 @@ body {
 
 /* Luxury hover effects */
 .luxury-hover {
-  @apply transition-all duration-500 hover:scale-105 hover:shadow-3xl hover:-translate-y-2;
+  @apply transition-all duration-500 hover:scale-105 hover:shadow-[0_35px_60px_-12px_rgba(0,0,0,0.25)] hover:-translate-y-2;
 }
 
 .luxury-glow {
