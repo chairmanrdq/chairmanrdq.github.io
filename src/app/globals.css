@@ -157,7 +157,16 @@ body {
 
 /* Luxury card styles */
 .luxury-card {
-  @apply bg-card border border-border rounded-3xl shadow-2xl hover:shadow-[0_35px_60px_-12px_rgba(0,0,0,0.25)] transition-all duration-700 backdrop-blur-md;
+  background-color: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: 1.875rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transition: all 0.7s ease;
+  backdrop-filter: blur(12px);
+}
+
+.luxury-card:hover {
+  box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
 }
 
 /* Luxury gradient backgrounds */
@@ -194,16 +203,49 @@ body {
 
 /* Luxury button styles */
 .btn-luxury {
-  @apply bg-gradient-to-r from-primary via-secondary to-accent text-white hover:from-primary/90 hover:via-secondary/90 hover:to-accent/90 transition-all duration-500 rounded-2xl font-medium shadow-2xl hover:shadow-[0_35px_60px_-12px_rgba(0,0,0,0.25)] transform hover:scale-105 hover:-translate-y-1;
+  background: linear-gradient(to right, hsl(var(--primary)), hsl(var(--secondary)), hsl(var(--accent)));
+  color: white;
+  transition: all 0.5s ease;
+  border-radius: 1rem;
+  font-weight: 500;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transform: scale(1);
+}
+
+.btn-luxury:hover {
+  background: linear-gradient(to right, hsl(var(--primary)/0.9), hsl(var(--secondary)/0.9), hsl(var(--accent)/0.9));
+  box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
+  transform: scale(1.05) translateY(-0.25rem);
 }
 
 .btn-eco-luxury {
-  @apply bg-gradient-to-r from-secondary to-accent text-white hover:from-secondary/90 hover:to-accent/90 transition-all duration-500 rounded-2xl font-medium shadow-2xl hover:shadow-[0_35px_60px_-12px_rgba(0,0,0,0.25)] transform hover:scale-105 hover:-translate-y-1;
+  background: linear-gradient(to right, hsl(var(--secondary)), hsl(var(--accent)));
+  color: white;
+  transition: all 0.5s ease;
+  border-radius: 1rem;
+  font-weight: 500;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transform: scale(1);
+}
+
+.btn-eco-luxury:hover {
+  background: linear-gradient(to right, hsl(var(--secondary)/0.9), hsl(var(--accent)/0.9));
+  box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
+  transform: scale(1.05) translateY(-0.25rem);
 }
 
 /* Luxury theme elements */
 .luxury-card {
-  @apply bg-gradient-to-br from-primary/3 via-secondary/3 to-accent/3 border border-primary/15 rounded-3xl shadow-2xl hover:shadow-[0_35px_60px_-12px_rgba(0,0,0,0.25)] transition-all duration-700 backdrop-blur-md;
+  background: linear-gradient(to bottom right, hsl(var(--primary)/0.03), hsl(var(--secondary)/0.03), hsl(var(--accent)/0.03));
+  border: 1px solid hsl(var(--primary)/0.15);
+  border-radius: 1.875rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transition: all 0.7s ease;
+  backdrop-filter: blur(12px);
+}
+
+.luxury-card:hover {
+  box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
 }
 
 .luxury-badge {
@@ -254,7 +296,12 @@ body {
 
 /* Luxury hover effects */
 .luxury-hover {
-  @apply transition-all duration-500 hover:scale-105 hover:shadow-[0_35px_60px_-12px_rgba(0,0,0,0.25)] hover:-translate-y-2;
+  transition: all 0.5s ease;
+}
+
+.luxury-hover:hover {
+  transform: scale(1.05) translateY(-0.5rem);
+  box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
 }
 
 .luxury-glow {
