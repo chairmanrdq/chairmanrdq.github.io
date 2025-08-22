@@ -65,12 +65,21 @@ const scholarData = {
 
 // Enhanced carousel data with luxury focus
 const carouselImages = [
+  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/blob/main/images/202501.jpg", alt: "Inner Mongolia University Image1", dataAiHint: "Illustration of Inner Mongolia University" },
+  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/blob/main/images/202502.jpg", alt: "Inner Mongolia University Image2", dataAiHint: "Illustration of Inner Mongolia University" },
+  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/blob/main/images/202503.jpg", alt: "Inner Mongolia University Image3", dataAiHint: "Illustration of Inner Mongolia University" },
+  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/blob/main/images/202504.jpg", alt: "Inner Mongolia University Image4", dataAiHint: "Illustration of Inner Mongolia University" },
+  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/blob/main/images/202505.jpg", alt: "Inner Mongolia University Image5", dataAiHint: "Illustration of Inner Mongolia University" },
+  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/blob/main/images/202506.jpg", alt: "Inner Mongolia University Image6", dataAiHint: "Illustration of Inner Mongolia University" },
+  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/blob/main/images/202507.jpg", alt: "Inner Mongolia University Image7", dataAiHint: "Illustration of Inner Mongolia University" },
+  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/blob/main/images/202508.jpg", alt: "Inner Mongolia University Image8", dataAiHint: "Illustration of Inner Mongolia University" },
+  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/blob/main/images/202509.jpg", alt: "Inner Mongolia University Image9", dataAiHint: "Illustration of Inner Mongolia University" },
+  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/blob/main/images/202510.jpg", alt: "Inner Mongolia University Image10", dataAiHint: "Illustration of Inner Mongolia University" },
   { src: "https://picsum.photos/seed/carouselA/1400/600", alt: "State-of-the-Art Research Facility", dataAiHint: "modern laboratory with advanced equipment" },
   { src: "https://picsum.photos/seed/carouselB/1400/600", alt: "AI Neural Network Visualization", dataAiHint: "complex neural network visualization" },
   { src: "https://picsum.photos/seed/carouselC/1400/600", alt: "International Research Collaboration", dataAiHint: "diverse team collaboration" },
   { src: "https://picsum.photos/seed/carouselD/1400/600", alt: "Advanced Computing Infrastructure", dataAiHint: "high-performance computing center" },
 ];
-
 export default function Home() {
   return (
     <div className="relative">
