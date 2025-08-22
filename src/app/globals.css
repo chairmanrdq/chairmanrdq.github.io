@@ -175,15 +175,21 @@ body {
 
 /* Luxury accent styles */
 .luxury-accent {
-  @apply text-secondary bg-secondary/8 border-secondary/15;
+  color: hsl(var(--secondary));
+  background-color: hsl(var(--secondary)/0.08);
+  border: 1px solid hsl(var(--secondary)/0.15);
 }
 
 .tech-accent {
-  @apply text-primary bg-primary/8 border-primary/15;
+  color: hsl(var(--primary));
+  background-color: hsl(var(--primary)/0.08);
+  border: 1px solid hsl(var(--primary)/0.15);
 }
 
 .innovation-accent {
-  @apply text-accent bg-accent/8 border-accent/15;
+  color: hsl(var(--accent));
+  background-color: hsl(var(--accent)/0.08);
+  border: 1px solid hsl(var(--accent)/0.15);
 }
 
 /* Luxury button styles */
@@ -201,7 +207,15 @@ body {
 }
 
 .luxury-badge {
-  @apply bg-gradient-to-r from-primary/8 via-secondary/8 to-accent/8 text-primary border border-primary/15 px-5 py-2.5 rounded-full text-sm font-medium backdrop-blur-md shadow-lg;
+  color: hsl(var(--primary));
+  background: linear-gradient(to right, hsl(var(--primary)/0.08), hsl(var(--secondary)/0.08), hsl(var(--accent)/0.08));
+  border: 1px solid hsl(var(--primary)/0.15);
+  padding: 0.625rem 1.25rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 /* Sophisticated animated gradients */
