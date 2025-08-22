@@ -7,7 +7,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Publications',
-  description: 'A comprehensive list of publications by Dr. Eleanor Vance, including journal articles, conference papers, and books.', // Replace
+  description: 'A comprehensive list of publications by Dr. RuiDong Qi（祁瑞东）, including journal articles, conference papers, and books.', // Replace
 };
 
 // Mock Data - Replace with actual data
@@ -29,18 +29,18 @@ interface Publication {
 const publicationsData: Publication[] = [
   { 
     id: "p1", 
-    title: "Advanced Techniques in Neural Machine Translation with Low-Resource Languages", 
-    authors: "Eleanor Vance, John Smith, Jane Doe", 
-    venue: "Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (ACL 2024)", 
-    year: 2024, 
+    title: "An Adaptive Density Peak Clustering Algorithm Based on N-ary Bézier Reverse Curve Optimization", 
+    authors: "Le Yang, Rui-dong Qi & Jian-tao Zhou", 
+    venue: "Proceedings of the 21nd Annual Meeting of International Conference on Intelligent Computing (ICIC 2025)", 
+    year: 2025, 
     type: "Conference Paper", 
-    doi: "10.1234/acl.2024.001", 
+    doi: "10.1007/978-981-96-9884-4_25", 
     pdfUrl: "#", 
     arxivUrl: "#",
-    abstract: "This paper explores novel attention mechanisms and transfer learning strategies to significantly improve neural machine translation performance for language pairs with limited parallel data.",
-    keywords: ["NMT", "Low-Resource Languages", "Attention Mechanisms", "Transfer Learning"],
+    abstract: "Clustering is a fundamental technique in unsupervised learning, grouping unlabeled data based on similarity metrics. Nevertheless, the Clustering by Fast Search and Find of Density Peaks (CFSFDP) algorithm requires manual selection of cluster centers, limiting its automation. To address this issue, this paper proposes an Adaptive Density Peak Clustering Algorithm optimized using an N-ary Bézier inverse curve to achieve automatic cluster center determination. By performing data point inversion, the method enhances the distinction between cluster centers and non-center points, simplifying their identification. Additionally, the algorithm integrates gamma processing and information entropy weighting significantly reducing computational complexity. The results demonstrate that the proposed algorithm outperforms other automatic clustering methods in terms of AMI, ARI, FMI, and the number of automatically selected cluster centers. Furthermore, the findings validate its effectiveness in clustering accuracy while enhancing the robustness of density peak-based clustering.",
+    keywords: ["Reverse curve optimization", "Adaptive density clustering", "Automatic cluster center"],
   },
-  { 
+  /*{ 
     id: "p2", 
     title: "Ethical Considerations in the Deployment of Large Language Models for Healthcare", 
     authors: "Eleanor Vance, Alice Chen", 
@@ -94,7 +94,7 @@ const publicationsData: Publication[] = [
     pdfUrl: "#",
     arxivUrl: "#",
     keywords: ["Fairness", "Text Classification", "Adversarial Learning", "Bias Mitigation"],
-  },
+  },*/
 ];
 
 const categories: Publication["type"][] = ["Journal Article", "Conference Paper", "Workshop Paper", "Book", "Preprint"];
