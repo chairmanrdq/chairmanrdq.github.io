@@ -32,14 +32,14 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, interval = 5000, 
 
     if (!images || images.length === 0) {
         return (
-            <div className={cn("relative w-full h-64 md:h-96 flex items-center justify-center bg-secondary rounded-lg shadow-md", className)}>
+            <div className={cn("relative w-full h-64 md:h-96 flex items-center justify-center bg-secondary rounded-none shadow-md", className)}>
                 <p className="text-muted-foreground">No images to display.</p>
             </div>
         );
     }
 
     return (
-        <div className={cn("relative w-full h-64 md:h-96 overflow-hidden rounded-lg shadow-xl group border border-border", className)}>
+        <div className={cn("relative w-full h-64 md:h-96 overflow-hidden rounded-none shadow-xl group border border-border", className)}>
             {images.map((image, index) => (
                 <div
                     key={index}
@@ -55,7 +55,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, interval = 5000, 
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         style={{ objectFit: 'cover' }}
-                        className="rounded-lg"
+                        className="rounded-none"
                         data-ai-hint={image.dataAiHint}
                         priority={index === 0} // Prioritize loading the first image
                     />

@@ -85,18 +85,18 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
             {/* Enhanced Avatar with Luxury Effects */}
             <div className="relative group">
-              <div className="absolute inset-0 animated-luxury-gradient rounded-full blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-700"></div>
+              <div className="absolute inset-0 animated-luxury-gradient rounded-none blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-700"></div>
               <div className="relative">
                 <Image
                   src={scholarData.avatarUrl}
                   alt={`Profile picture of ${scholarData.name}`}
                   width={300}
                   height={300}
-                  className="rounded-full object-cover h-64 w-64 lg:h-80 lg:w-80 border-4 border-background shadow-2xl group-hover:scale-105 transition-transform duration-700 luxury-glow-hover luxury-float"
+                  className="rounded-none object-cover h-64 w-64 lg:h-80 lg:w-80 border-4 border-background shadow-2xl group-hover:scale-105 transition-transform duration-700 luxury-glow-hover luxury-float"
                   data-ai-hint={scholarData.dataAiHint}
                   priority
                 />
-                <div className="absolute -bottom-2 -right-2 animated-luxury-gradient text-white p-3 rounded-full shadow-lg luxury-glow">
+                <div className="absolute -bottom-2 -right-2 animated-luxury-gradient text-white p-3 rounded-none shadow-lg luxury-glow">
                   <Crown className="h-6 w-6" />
                 </div>
               </div>
