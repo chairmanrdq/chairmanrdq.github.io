@@ -71,7 +71,7 @@ const carouselImages = [
   { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/202503.jpg", alt: "Inner Mongolia University Image3", dataAiHint: "Illustration of Inner Mongolia University" },
   { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/202504.png", alt: "Inner Mongolia University Image4", dataAiHint: "Illustration of Inner Mongolia University" },
   { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/202505.jpg", alt: "Inner Mongolia University Image5", dataAiHint: "Illustration of Inner Mongolia University" },
-  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/202506.webp", alt: "Inner Mongolia University Image6", dataAiHint: "Illustration of Inner Mongolia University" },
+  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/202506.jpg", alt: "Inner Mongolia University Image6", dataAiHint: "Illustration of Inner Mongolia University" },
   { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/202507.jpg", alt: "Inner Mongolia University Image7", dataAiHint: "Illustration of Inner Mongolia University" },
   { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/202508.jpg", alt: "Inner Mongolia University Image8", dataAiHint: "Illustration of Inner Mongolia University" },
   { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/202509.jpg", alt: "Inner Mongolia University Image9", dataAiHint: "Illustration of Inner Mongolia University" },
