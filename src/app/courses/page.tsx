@@ -15,7 +15,7 @@ const coursesData = [
     id: "cs501",
     title: "Room 0212, Excellence Building: Object-Oriented Analysis and Design",
     term: "Fall 2025",
-    level: "Graduate",
+    level: "Senior undergraduate student",
     description: "This course introduces the fundamental principles and applications of object-oriented methods in software development. Topics include object-oriented concepts, UML modeling, requirements analysis, system design, design patterns, and case studies. By the end of the course, students will be able to apply object-oriented modeling and design techniques to analyze, design, and implement medium-scale software systems.",
     syllabusUrl: "#", // Replace with actual URL or path to PDF
     coursePageUrl: "#", // Replace with actual URL to Canvas/Moodle/etc.
