@@ -12,10 +12,10 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: 'ScholarSite | Dr. Eleanor Vance', // Replace with actual scholar name
-    template: '%s | Dr. Eleanor Vance', // Replace with actual scholar name
+    default: 'ScholarSite | Dr. RuiDong Qi（祁瑞东）', // Replace with actual scholar name
+    template: '%s | Dr. RuiDong Qi（祁瑞东）', // Replace with actual scholar name
   },
-  description: 'Personal academic website of Dr. Eleanor Vance, showcasing research, publications, and professional activities.', // Replace
+  description: 'Personal academic website of Dr. RuiDong Qi（祁瑞东）, showcasing research, publications, and professional activities.', // Replace
 };
 
 export default function RootLayout({
