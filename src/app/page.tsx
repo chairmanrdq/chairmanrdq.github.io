@@ -10,7 +10,7 @@ const scholarData = {
   name: "Dr. RuiDong Qi（祁瑞东）",
   position: "Distinguished Professor of Computational Linguistics",
   affiliation: "Collage of Computer Science, Inner Mongolia University",
-  avatarUrl: "https://github.com/chairmanrdq/chairmanrdq.github.io/blob/main/images/rdq2.jpg",
+  avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/rdq2.jpg",
   dataAiHint: "professional portrait",
   contact: {
     email: "imucsrdq@163.com",
@@ -92,7 +92,7 @@ export default function Home() {
                   alt={`Profile picture of ${scholarData.name}`}
                   width={200}
                   height={300}
-                  className="rounded-none object-cover h-80 w-56 lg:h-96 lg:w-64 border-4 border-background shadow-2xl group-hover:scale-105 transition-transform duration-700 luxury-glow-hover luxury-float"
+                  className="rounded-none object-cover h-72 w-48 lg:h-96 lg:w-64 border-4 border-background shadow-2xl group-hover:scale-105 transition-transform duration-700 luxury-glow-hover luxury-float"
                   data-ai-hint={scholarData.dataAiHint}
                   priority
                 />
