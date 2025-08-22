@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 // Mock Data - Replace with actual data
 const researchData = {
-  introduction: "Our research spans cloud computing, big data, and service computing, with a focus on cloud–edge collaboration, predictive analytics, and intelligent service recommendation. We also develop system platforms that integrate cloud and data-driven applications.", // Replace
+  introduction: "Our research focuses on cloud computing, big data, service computing, and system development. In cloud computing, we emphasize cloud–edge collaboration, cross-cloud resource scheduling, and task scheduling methods. In big data, we conduct predictive analytics and user behavior analysis within cloud environments, as well as ecosystem service assessment and forecasting. In service computing, we explore advanced recommendation approaches, including retrieval-augmented cold-start, large-model-based, multimodal, and elastic recommendation methods. We also develop system platforms that integrate cloud computing and big data applications, along with intelligent service recommendation systems.", // Replace
   detailedFocus: [
     {
       title: "Cloud Computing",
