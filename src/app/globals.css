@@ -8,49 +8,49 @@ body {
 
 @layer base {
   :root {
-    /* Ultra Luxury Premium Color Theme - Light Mode */
-    --background: 0 0% 100%; /* Pure White #FFFFFF */
-    --foreground: 0 0% 8%; /* Ultra Deep Charcoal #141414 for luxury text */
+    /* 高端学术 + 科技风配色方案 - Light Mode */
+    --background: 0 0% 98%; /* 浅灰白 #F9FAFB - 简洁大气 */
+    --foreground: 0 0% 13%; /* 深灰黑 #212121 - 保证可读性 */
 
-    --gradient-start-color: 0 0% 100%; /* Pure White */
-    --gradient-end-color: 0 0% 98%;   /* Ultra Luxury Light Gray */
+    --gradient-start-color: 0 0% 98%; /* 浅灰白 */
+    --gradient-end-color: 0 0% 96%;   /* 更浅的灰白 */
 
-    --card: 0 0% 99.5%; /* Ultra Luxury Off-White #FEFEFE for cards */
-    --card-foreground: 0 0% 8%; /* Ultra Deep Charcoal */
+    --card: 0 0% 100%; /* 纯白 #FFFFFF for cards */
+    --card-foreground: 0 0% 13%; /* 深灰黑 */
 
-    --popover: 0 0% 100%; /* Pure White */
-    --popover-foreground: 0 0% 8%; /* Ultra Deep Charcoal */
+    --popover: 0 0% 100%; /* 纯白 */
+    --popover-foreground: 0 0% 13%; /* 深灰黑 */
 
-    /* Primary: Ultra Luxury Deep Blue - Premium */
-    --primary: 220 100% 45%; /* Ultra Rich Deep Blue #1E40AF - for luxury tech focus */
-    --primary-foreground: 0 0% 100%; /* White */
+    /* Primary: 皇家紫 Royal Purple - 学术身份色 */
+    --primary: 280 40% 30%; /* 皇家紫 #5B2C6F - 用于教授姓名、主要标题、学术身份板块 */
+    --primary-foreground: 0 0% 100%; /* 白色文字 */
 
-    /* Secondary: Ultra Luxury Gold - Innovation */
-    --secondary: 45 100% 55%; /* Ultra Luxury Gold #F59E0B - for innovation */
-    --secondary-foreground: 0 0% 8%; /* Dark text for contrast */
+    /* Secondary: 深蓝 Sapphire Blue - 科技色 */
+    --secondary: 220 65% 35%; /* 深蓝 #1E3A8A - 用于导航栏、交互按钮、链接 */
+    --secondary-foreground: 0 0% 100%; /* 白色文字 */
 
-    --muted: 0 0% 99%; /* Ultra Luxury Light Gray #FDFDFD for muted backgrounds */
-    --muted-foreground: 0 0% 35%; /* Ultra Sophisticated Gray #595959 for secondary text */
+    --muted: 0 0% 97%; /* 浅灰 #F7F7F7 for muted backgrounds */
+    --muted-foreground: 0 0% 36%; /* 次级文字 #5C5C5C - 副标题、说明文字 */
 
-    /* Accent: Ultra Luxury Deep Purple - Innovation */
-    --accent: 270 85% 55%; /* Ultra Luxury Deep Purple #7C3AED - for innovation highlights */
-    --accent-foreground: 0 0% 100%; /* White */
+    /* Accent: 深绿 Emerald Green - 支撑色 */
+    --accent: 120 55% 25%; /* 深绿 #1B5E20 - 用于研究方向关键词、图标、绿色算力相关模块 */
+    --accent-foreground: 0 0% 100%; /* 白色文字 */
 
-    --destructive: 0 84% 60%; /* Standard vivid red for errors */
-    --destructive-foreground: 0 0% 100%; /* White text on destructive */
+    --destructive: 0 84% 60%; /* 标准红色 for errors */
+    --destructive-foreground: 0 0% 100%; /* 白色文字 */
 
-    --border: 0 0% 96%; /* Ultra Luxury Light Gray Separator #F5F5F5 */
-    --input: 0 0% 100%; /* White, with border */
-    --ring: 220 100% 45%; /* Deep Blue for focus rings */
+    --border: 0 0% 92%; /* 浅灰分隔线 #EBEBEB */
+    --input: 0 0% 100%; /* 白色输入框 */
+    --ring: 280 40% 30%; /* 皇家紫 focus rings */
 
-    --link-hover: 220 100% 35%; /* Ultra Deeper Blue #1E3A8A for link hover */
+    --link-hover: 220 65% 45%; /* 浅蓝 #3B82F6 for link hover */
 
-    /* Ultra Luxury Chart colors with premium theme */
-    --chart-1: 220 100% 45%;  /* Primary Deep Blue - Tech */
-    --chart-2: 45 100% 55%;   /* Secondary Gold - Innovation */
-    --chart-3: 270 85% 55%;   /* Accent Deep Purple - Innovation */
-    --chart-4: 30 100% 60%;   /* Ultra Gold #F97316 - Luxury */
-    --chart-5: 0 0% 45%;      /* Ultra Sophisticated Gray */
+    /* 高端学术 Chart colors */
+    --chart-1: 280 40% 30%;  /* 皇家紫 - 学术身份 */
+    --chart-2: 220 65% 35%;  /* 深蓝 - 科技 */
+    --chart-3: 120 55% 25%;  /* 深绿 - 绿色算力 */
+    --chart-4: 45 100% 55%;  /* 金色 #FFC107 - 荣誉与亮点 */
+    --chart-5: 0 0% 36%;     /* 次级文字色 */
     
     --radius: 1.25rem; /* More rounded for luxury look */
 
@@ -66,45 +66,45 @@ body {
   }
 
   .dark {
-    /* Dark Theme variation - Ultra Luxury */
-    --background: 0 0% 3%; /* Ultra Deep Charcoal */
-    --foreground: 0 0% 99%; /* Ultra Luxury Off-White */
+    /* Dark Theme variation - 高端学术 + 科技风 */
+    --background: 0 0% 8%; /* 深灰背景 */
+    --foreground: 0 0% 95%; /* 浅灰文字 */
 
-    --gradient-start-color: 0 0% 1%;
-    --gradient-end-color: 0 0% 5%;
+    --gradient-start-color: 0 0% 6%;
+    --gradient-end-color: 0 0% 10%;
 
-    --card: 0 0% 6%; /* Ultra Dark Gray */
-    --card-foreground: 0 0% 99%;
+    --card: 0 0% 12%; /* 深灰卡片 */
+    --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 4%; 
-    --popover-foreground: 0 0% 99%;
+    --popover: 0 0% 10%; 
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 220 100% 65%; /* Ultra Bright Deep Blue */
-    --primary-foreground: 0 0% 3%; /* Dark text for contrast */
+    --primary: 280 50% 60%; /* 亮皇家紫 */
+    --primary-foreground: 0 0% 8%; /* 深色文字 */
 
-    --secondary: 45 100% 65%; /* Ultra Bright Gold */
-    --secondary-foreground: 0 0% 3%; /* Dark text for contrast */
+    --secondary: 220 70% 60%; /* 亮深蓝 */
+    --secondary-foreground: 0 0% 8%; /* 深色文字 */
 
-    --muted: 0 0% 8%;
-    --muted-foreground: 0 0% 75%; /* Ultra Lighter Gray text */
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 70%; /* 中灰文字 */
 
-    --accent: 270 85% 75%; /* Ultra Bright Deep Purple */
-    --accent-foreground: 0 0% 3%; /* Dark text for contrast */
+    --accent: 120 60% 45%; /* 亮深绿 */
+    --accent-foreground: 0 0% 8%; /* 深色文字 */
 
-    --destructive: 0 75% 65%; /* Brighter red */
+    --destructive: 0 75% 65%; /* 亮红色 */
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 12%;
-    --input: 0 0% 8%;
-    --ring: 220 100% 75%; 
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 280 50% 60%; 
 
-    --link-hover: 220 100% 85%; /* Ultra Brighter Deep Blue for link hover */
+    --link-hover: 220 70% 70%; /* 更亮的深蓝 */
     
-    --chart-1: 220 100% 65%;
-    --chart-2: 45 100% 65%;
-    --chart-3: 270 85% 75%;
-    --chart-4: 30 100% 70%;
-    --chart-5: 0 0% 80%;
+    --chart-1: 280 50% 60%;
+    --chart-2: 220 70% 60%;
+    --chart-3: 120 60% 45%;
+    --chart-4: 45 100% 65%;
+    --chart-5: 0 0% 70%;
 
     /* Sidebar for Dark Theme */
     --sidebar-background: 0 0% 2%;
@@ -188,7 +188,7 @@ body {
   animation: luxury-gradient-shift 12s ease infinite;
 }
 
-/* Ultra Luxury accent styles */
+/* 高端学术 accent styles */
 .luxury-accent {
   color: hsl(var(--secondary));
   background: linear-gradient(135deg, hsl(var(--secondary)/0.08) 0%, hsl(var(--secondary)/0.12) 100%);
@@ -197,10 +197,10 @@ body {
 }
 
 .tech-accent {
-  color: hsl(var(--primary));
-  background: linear-gradient(135deg, hsl(var(--primary)/0.08) 0%, hsl(var(--primary)/0.12) 100%);
-  border: 1px solid hsl(var(--primary)/0.2);
-  box-shadow: 0 4px 12px hsl(var(--primary)/0.1);
+  color: hsl(var(--secondary));
+  background: linear-gradient(135deg, hsl(var(--secondary)/0.08) 0%, hsl(var(--secondary)/0.12) 100%);
+  border: 1px solid hsl(var(--secondary)/0.2);
+  box-shadow: 0 4px 12px hsl(var(--secondary)/0.1);
 }
 
 .innovation-accent {
@@ -210,7 +210,15 @@ body {
   box-shadow: 0 4px 12px hsl(var(--accent)/0.1);
 }
 
-/* Ultra Luxury button styles */
+/* 金色强调色 - 用于荣誉、奖项、重要数字 */
+.gold-accent {
+  color: #FFC107;
+  background: linear-gradient(135deg, rgba(255, 193, 7, 0.08) 0%, rgba(255, 193, 7, 0.12) 100%);
+  border: 1px solid rgba(255, 193, 7, 0.2);
+  box-shadow: 0 4px 12px rgba(255, 193, 7, 0.1);
+}
+
+/* 高端学术 button styles */
 .btn-luxury {
   background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 25%, hsl(var(--accent)) 50%, hsl(var(--secondary)) 75%, hsl(var(--primary)) 100%);
   background-size: 200% 200%;
@@ -229,6 +237,27 @@ body {
   box-shadow: 0 35px 70px -12px rgba(0, 0, 0, 0.4), 0 0 30px hsl(var(--primary)/0.5);
   transform: scale(1.08) translateY(-0.5rem);
   animation: luxury-gradient-shift 4s ease infinite;
+}
+
+/* 金色按钮 - 用于荣誉、奖项 */
+.btn-gold {
+  background: linear-gradient(135deg, #FFC107 0%, #FFD54F 50%, #FFC107 100%);
+  background-size: 200% 200%;
+  color: #212121;
+  transition: all 0.6s ease;
+  border-radius: 1.25rem;
+  font-weight: 600;
+  box-shadow: 0 25px 50px -12px rgba(255, 193, 7, 0.3), 0 0 20px rgba(255, 193, 7, 0.3);
+  transform: scale(1);
+  animation: luxury-gradient-shift 6s ease infinite;
+}
+
+.btn-gold:hover {
+  background: linear-gradient(135deg, #FFD54F 0%, #FFC107 50%, #FFD54F 100%);
+  background-size: 200% 200%;
+  box-shadow: 0 35px 70px -12px rgba(255, 193, 7, 0.4), 0 0 30px rgba(255, 193, 7, 0.5);
+  transform: scale(1.08) translateY(-0.5rem);
+  animation: luxury-gradient-shift 3s ease infinite;
 }
 
 .btn-eco-luxury {
@@ -304,8 +333,8 @@ body {
 }
 
 @keyframes luxury-glow {
-  0%, 100% { box-shadow: 0 0 25px hsl(var(--primary)/0.4), 0 0 15px hsl(var(--secondary)/0.3); }
-  50% { box-shadow: 0 0 50px hsl(var(--primary)/0.7), 0 0 30px hsl(var(--secondary)/0.5); }
+  0%, 100% { box-shadow: 0 0 25px rgba(91, 44, 111, 0.4), 0 0 15px rgba(255, 193, 7, 0.3); }
+  50% { box-shadow: 0 0 50px rgba(91, 44, 111, 0.7), 0 0 30px rgba(255, 193, 7, 0.5); }
 }
 
 @keyframes luxury-sparkle {
@@ -321,13 +350,13 @@ body {
 }
 
 .animated-luxury-gradient {
-  background: linear-gradient(-45deg, hsl(var(--primary)), hsl(var(--secondary)), hsl(var(--accent)), hsl(var(--primary)));
+  background: linear-gradient(-45deg, #5B2C6F, #1E3A8A, #1B5E20, #5B2C6F);
   background-size: 400% 400%;
   animation: luxury-gradient-shift 20s ease infinite;
 }
 
 .animated-luxury-gradient-light {
-  background: linear-gradient(-45deg, hsl(var(--primary)/0.08), hsl(var(--secondary)/0.08), hsl(var(--accent)/0.08), hsl(var(--primary)/0.08));
+  background: linear-gradient(-45deg, rgba(91, 44, 111, 0.08), rgba(30, 58, 138, 0.08), rgba(27, 94, 32, 0.08), rgba(91, 44, 111, 0.08));
   background-size: 400% 400%;
   animation: luxury-gradient-shift 25s ease infinite;
 }
@@ -343,12 +372,12 @@ body {
 }
 
 .luxury-glow {
-  box-shadow: 0 0 35px hsl(var(--primary)/0.5), 0 0 20px hsl(var(--secondary)/0.4);
+  box-shadow: 0 0 35px rgba(91, 44, 111, 0.5), 0 0 20px rgba(255, 193, 7, 0.4);
   animation: luxury-glow 4s ease-in-out infinite;
 }
 
 .luxury-glow-hover:hover {
-  box-shadow: 0 0 60px hsl(var(--primary)/0.8), 0 0 35px hsl(var(--secondary)/0.6);
+  box-shadow: 0 0 60px rgba(91, 44, 111, 0.8), 0 0 35px rgba(255, 193, 7, 0.6);
   animation: luxury-glow 2.5s ease-in-out infinite;
 }
 
@@ -357,7 +386,7 @@ body {
 }
 
 .luxury-shimmer {
-  background: linear-gradient(90deg, transparent, hsl(var(--secondary)/0.3), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 193, 7, 0.3), transparent);
   background-size: 200% 100%;
   animation: luxury-shimmer 2s ease-in-out infinite;
 }
@@ -370,9 +399,9 @@ body {
   animation: luxury-pulse 4s ease-in-out infinite;
 }
 
-/* Sophisticated text gradients */
+/* 高端学术 text gradients */
 .text-gradient-luxury {
-  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)), hsl(var(--accent)));
+  background: linear-gradient(135deg, #5B2C6F, #1E3A8A, #1B5E20);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -381,7 +410,14 @@ body {
 }
 
 .text-gradient-tech {
-  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+  background: linear-gradient(135deg, #5B2C6F, #1E3A8A);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-green {
+  background: linear-gradient(135deg, #1B5E20, #2E7D32);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -411,10 +447,10 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Luxury decorative elements */
+/* 高端学术 decorative elements */
 .luxury-divider {
   height: 2px;
-  background: linear-gradient(90deg, transparent, hsl(var(--primary)), hsl(var(--secondary)), hsl(var(--accent)), transparent);
+  background: linear-gradient(90deg, transparent, #5B2C6F, #1E3A8A, #1B5E20, transparent);
   margin: 2rem 0;
 }
 
@@ -429,8 +465,8 @@ body {
   left: 0;
   width: 20px;
   height: 20px;
-  border-top: 2px solid hsl(var(--primary));
-  border-left: 2px solid hsl(var(--primary));
+  border-top: 2px solid #5B2C6F;
+  border-left: 2px solid #5B2C6F;
 }
 
 .luxury-corner::after {
@@ -440,11 +476,11 @@ body {
   right: 0;
   width: 20px;
   height: 20px;
-  border-bottom: 2px solid hsl(var(--accent));
-  border-right: 2px solid hsl(var(--accent));
+  border-bottom: 2px solid #1B5E20;
+  border-right: 2px solid #1B5E20;
 }
 
-/* Luxury scrollbar */
+/* 高端学术 scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -454,10 +490,10 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, hsl(var(--primary)), hsl(var(--secondary)));
+  background: linear-gradient(180deg, #5B2C6F, #1E3A8A);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, hsl(var(--primary)/0.8), hsl(var(--secondary)/0.8));
+  background: linear-gradient(180deg, rgba(91, 44, 111, 0.8), rgba(30, 58, 138, 0.8));
 }
