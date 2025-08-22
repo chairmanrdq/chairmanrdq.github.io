@@ -7,7 +7,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Research Team',
-  description: 'Meet the talented research team members working with Dr. Eleanor Vance.', // Replace
+  description: 'Meet the talented research team members working with Dr. RuiDong Qi（祁瑞东）.', // Replace
 };
 
 // Mock Data - Replace with actual data
