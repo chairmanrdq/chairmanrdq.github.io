@@ -8,24 +8,24 @@ import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: 'Projects & Grants',
-  description: 'Overview of funded research projects and grants led by Dr. Eleanor Vance.', // Replace
+  description: 'Overview of funded research projects and grants led by Dr. RuiDong Qi（祁瑞东）.', // Replace
 };
 
 // Mock Data - Replace with actual data
 const projectsData = [
   {
     id: "proj1",
-    title: "Advanced NLP for Personalized Healthcare Analytics",
+    title: "User-Perceived Computing Power Scheduling Based on the Inner Mongolia Computing Hub Node",
     role: "Principal Investigator",
-    fundingAgency: "National Science Foundation (NSF) - Future of Health Program",
-    period: "2023 - 2026",
+    fundingAgency: "Industry/Enterprise Collaboration Projects - China Mobile Communications Group Inner Mongolia Co., Ltd",
+    period: "2024 - 2026",
     amount: "$500,000",
-    description: "This project aims to develop novel natural language processing techniques to extract meaningful insights from diverse clinical texts (EHRs, patient forums), enabling personalized risk prediction and treatment recommendations. Focus on fairness and interpretability.",
-    collaborators: ["City General Hospital Research Wing", "TechBio Corp AI Division"],
+    description: "This research focuses on the Inner Mongolia computing hub node, aiming to design efficient and intelligent computing power scheduling methods driven by user perception and dynamic resource matching. Key topics include perception and modeling of heterogeneous resources, user experience–oriented scheduling mechanisms, cross-domain resource coordination and optimization, and green, low-carbon scheduling strategies.",
+    collaborators: ["China Mobile Communications Group Inner Mongolia Co., Ltd"],
     status: "Ongoing",
-    keywords: ["NLP", "Healthcare AI", "Personalized Medicine", "Machine Learning", "NSF"]
+    keywords: ["Computing Power Scheduling", "User Perception", "Cross-domain Coordination", "Green and Low-carbon Computing"]
   },
-  {
+  /*{
     id: "proj2",
     title: "A Comprehensive Ethical AI Framework for Language Technologies",
     role: "Co-Principal Investigator",
@@ -48,7 +48,7 @@ const projectsData = [
     collaborators: ["The Grand National Library - Digital Collections", "Digital Archive Heritage Initiative"],
     status: "Completed",
     keywords: ["Semantic Search", "Digital Humanities", "Knowledge Graphs", "NLP", "NEH"]
-  },
+  },*/
 ];
 
 export default function ProjectsPage() {
