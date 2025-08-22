@@ -7,15 +7,15 @@ import ImageCarousel from '@/components/home/image-carousel';
 
 // Enhanced Mock Data with luxury focus
 const scholarData = {
-  name: "Dr. Eleanor Vance",
+  name: "Dr. RuiDong Qi（祁瑞东）",
   position: "Distinguished Professor of Computational Linguistics",
-  affiliation: "Department of Computer Science, University of Innovation",
+  affiliation: "Collage of Computer Science, Inner Mongolia University",
   avatarUrl: "https://picsum.photos/seed/scholarvance/400/400",
   dataAiHint: "professional portrait",
   contact: {
-    email: "eleanor.vance@university.edu",
+    email: "imucsrdq@163.com",
     phone: "+1-234-567-8900",
-    office: "Room 404, Tech Building, Innovation Drive",
+    office: "Room 303, BeiZheng Building, School of Computer Science (School of Software), Inner Mongolia University",
   },
   academicLinks: [
     { name: "Google Scholar", url: "#", icon: <BookOpen className="h-4 w-4" />, stats: "2.3k+ citations" },
@@ -24,44 +24,42 @@ const scholarData = {
   ],
   researchFocusSummary: "Pioneering research in Natural Language Processing and Machine Learning, with groundbreaking contributions to computational semantics, AI ethics, and applications in healthcare and education. Leading the development of robust, interpretable, and fair AI systems that transform how we understand and interact with technology.",
   researchKeywords: [
-    "Natural Language Processing",
-    "Machine Learning",
-    "AI Ethics",
-    "Computational Semantics",
-    "Neural Networks",
-    "Deep Learning",
+    "Cloud Computing and Big Data",
+    "Services Computing",
+    "Computing Power Networks and Green Scheduling",
+    "Service Recommendation",
   ],
   stats: [
-    { label: "Publications", value: "150+", icon: <BookOpen className="h-5 w-5" /> },
-    { label: "Citations", value: "2.3k+", icon: <TrendingUp className="h-5 w-5" /> },
-    { label: "Students", value: "45+", icon: <Users className="h-5 w-5" /> },
-    { label: "Countries", value: "12", icon: <Globe className="h-5 w-5" /> },
+    { label: "Publications", value: "More to come", icon: <BookOpen className="h-5 w-5" /> },
+    { label: "Citations", value: "To be continued", icon: <TrendingUp className="h-5 w-5" /> },
+    { label: "Students", value: "Growing team", icon: <Users className="h-5 w-5" /> },
+    { label: "Countries", value: "Growing global reach", icon: <Globe className="h-5 w-5" /> },
   ],
   news: [
     { 
       id: 1, 
-      date: "2024-07-15", 
-      title: "🏆 Best Paper Award at ACL 2024", 
-      description: "Our revolutionary work on multilingual transformers was recognized for its innovative approach and significant impact on the field.", 
+      date: "2025-08-13", 
+      title: "🏆 Our group participated in CCF HPC China 2025, held in Ordos, Inner Mongolia.", 
+      description: "During the conference, we presented our research on green computing power scheduling and HPC optimization, and engaged in in-depth discussions with scholars from China and abroad.", 
       icon: <Award className="h-5 w-5 text-yellow-500 flex-shrink-0" />,
       badge: "Award"
     },
     { 
       id: 2, 
-      date: "2024-06-01", 
-      title: "🎤 Keynote at Stanford NLP Seminar", 
-      description: "Presented cutting-edge research on AI ethics in language models, influencing the next generation of responsible AI development.", 
+      date: "2024-10-24", 
+      title: "🎤 Our group participated in the China National Computer Congress (CNCC 2024)", 
+      description: "During the congress, we engaged in academic exchanges on computing power networks, green computing, and service computing, and explored collaborations with industry and academia.", 
       icon: <Rss className="h-5 w-5 text-blue-500 flex-shrink-0" />,
       badge: "Keynote"
     },
-    { 
-      id: 3, 
-      date: "2024-05-20", 
-      title: "🎓 PhD Recruitment Open", 
-      description: "Seeking exceptional students passionate about NLP and ML. Join our world-class research team and shape the future of AI.", 
-      icon: <Users className="h-5 w-5 text-green-500 flex-shrink-0" />,
-      badge: "Opportunity"
-    },
+    //{ 
+     // id: 3, 
+     // date: "2024-05-20", 
+      //title: "🎓 PhD Recruitment Open", 
+      //description: "Seeking exceptional students passionate about NLP and ML. Join our world-class research team and shape the future of AI.", 
+     // icon: <Users className="h-5 w-5 text-green-500 flex-shrink-0" />,
+     // badge: "Opportunity"
+    //},
   ],
 };
 
