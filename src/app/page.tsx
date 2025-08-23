@@ -8,7 +8,7 @@ import ImageCarousel from '@/components/home/image-carousel';
 // Enhanced Mock Data with luxury focus
 const scholarData = {
   name: "Dr. RuiDong Qi（祁瑞东）",
-  position: "Distinguished Professor of Computational Linguistics",
+  position: "Distinguished Lecturer in Computing Power Networks | Researcher in Green Computing",
   affiliation: "Collage of Computer Science, Inner Mongolia University",
   avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/rdq2.jpg",
   dataAiHint: "professional portrait",
