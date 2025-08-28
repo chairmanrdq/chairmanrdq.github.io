@@ -14,6 +14,126 @@ export const metadata: Metadata = {
 const teamMembers = [
   {
     id: 1,
+    name: "CongRonG Wu（吴从荣）",
+    role: "Masters Student",
+    avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/wcr.jpg", // Increased size
+    dataAiHint: "student headshot",
+    researchInterests: ["Time Series Prediction", "Reinforcement Learning", "Task Scheduling","Computing Power Networks"],
+    bio: "Current research is shifting from cloud computing towards the establishment of a new computing-power network paradigm, focusing on enhancing the intelligent scheduling capability of the Computing Network Brain to improve the utilization efficiency of global computing resources.",
+    email: "david.green@university.edu", // Replace
+  },
+  {
+    id: 2,
+    name: "Zhibo Zhang（张志博）",
+    role: "Masters Student",
+    avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/zzb.jpg", // Increased size
+    dataAiHint: "student headshot",
+    researchInterests: ["Multi-Objective Optimization", "Task Scheduling", "Computing Power Networks"],
+    bio: "Aiming to address the core challenge of how to intelligently allocate computing tasks in a distributed heterogeneous computing node environment. The core objective is to construct a multi-objective optimization model to simultaneously minimize the end-to-end delay of task execution and the overall system energy consumption. By introducing heuristic algorithms or machine learning methods,adaptive scheduling algorithms are designed to seek the best balance between delay sensitivity and energy saving.Ultimately,it is hoped to provide key scheduling theory and technological support for the realization of efficient and low-carbon computing power infrastructure.",
+    email: "david.green@university.edu", // Replace
+  },
+  {
+    id: 3,
+    name: "Lei Yuan（袁磊）",
+    role: "Masters Student",
+    avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/yl.jpg", // Increased size
+    dataAiHint: "student headshot",
+    researchInterests: ["Task scheduling", "Generative Models", "Computing Power Networks"],
+    bio: "The goal is to allocate and manage distributed, heterogeneous computing resources efficiently so that tasks are executed optimally. The core objective is to design an adaptive scheduling policy that leverages intelligent decision-making techniques such as reinforcement learning and generative algorithms. This policy must jointly consider real-time network conditions, resource availability, and the Quality-of-Service (QoS) requirements inherent to generative workloads (e.g., text-to-image and video synthesis). Ultimately, we aim to build a scheduling framework that dynamically maximizes throughput, minimizes latency, and optimizes resource utilization.",
+    email: "david.green@university.edu", // Replace
+  },
+  {
+    id: 4,
+    name: "XueMei Deng（邓雪梅）",
+    role: "Masters Student",
+    avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/dxm.jpg", // Increased size
+    dataAiHint: "student headshot",
+    researchInterests: ["Cloud-Edge-Device Collaborative Inference", "Computing Power Networks"],
+    bio: "Focusing on cloud-edge-device collaborative inference systems, dedicated to addressing the efficient inference of deep learning models in resource-constrained terminal scenarios. By intelligently partitioning and scheduling inference tasks among the cloud, edge, and device, and integrating model compression, dynamic offloading, and adaptive decision-making mechanisms, the overall system's real-time performance, energy efficiency, and scalability are enhanced.",
+    email: "david.green@university.edu", // Replace
+  },
+  {
+    id: 5,
+    name: "Ao Sun（孙奥）",
+    role: "Masters Student",
+    avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/sa.jpg", // Increased size
+    dataAiHint: "student headshot",
+    researchInterests: ["Cold Start Problem","Service Recommendation", "Computing Power Networks"],
+    bio: "My research goal is to optimize the cold-start of cloud service recommendation through meta-learning, graph neural networks and various technologies under data scarcity, so as to improve the recommendation performance for new services/users.",
+    email: "david.green@university.edu", // Replace
+  },
+  {
+    id: 6,
+    name: "Ao Sun（吴明杰）",
+    role: "Masters Student",
+    avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/wmj.jpg", // Increased size
+    dataAiHint: "student headshot",
+    researchInterests: ["Recommendation system","LLM", "Service recommendation","Computing Power Networks"],
+    bio: "Wu Mingjie is currently researching the content related to service recommendation, especially how to use large language models to enhance the performance of service recommendation.",
+    email: "david.green@university.edu", // Replace
+  },
+  {
+    id: 7,
+    name: "YunShen Zhao（赵昀森）",
+    role: "Masters Student",
+    avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/zys.jpg", // Increased size
+    dataAiHint: "student headshot",
+    researchInterests: ["Multimodal Fusion","Power Forecasting"],
+    bio: "I am committed to exploring how to effectively fuse multi-source heterogeneous information, such as numerical weather forecasts, satellite cloud images, ground observations, and historical power data, and utilize advanced deep learning models to construct a more accurate and reliable spatio-temporal prediction framework for green power, thereby supporting the stable operation of power grids and the high-proportion consumption of green power.",
+    email: "david.green@university.edu", // Replace
+  },
+  {
+    id: 8,
+    name: "LanLan Yang（杨兰兰）",
+    role: "Masters Student",
+    avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/yll.jpg", // Increased size
+    dataAiHint: "student headshot",
+    researchInterests: ["Green power Scheduling","Data Analysis", "Computing Power Networks"],
+    bio: "Online Job Scheduling for Low-Carbon Data Center Operation，Low-Carbon Operation of Resources Based on Deep Reinforcement Learning",
+    email: "david.green@university.edu", // Replace
+  },
+  {
+    id: 9,
+    name: "LiJun Dong（董利军）",
+    role: "Masters Student",
+    avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/dlj.jpg", // Increased size
+    dataAiHint: "student headshot",
+    researchInterests: ["Task Scheduling","Computing Power Networks"],
+    bio: "Focus on using task scheduling methods to improve the utilization of resources and green power in data centers. A reader immersed in a fantasy world and a amateur writers who do not write most of the time.",
+    email: "david.green@university.edu", // Replace
+  },
+  {
+    id: 10,
+    name: "PengHui Feng（冯鹏辉）", 
+    role: "Masters Student",
+    avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/fph.jpg", // Increased size
+    dataAiHint: "student headshot",
+    researchInterests: ["Task Scheduling","Computing Power Networks"],
+    bio: "Addressing the challenges of edge collaborative algorithms through a feedback-diffusion model scheduling method. Spending time in the virtual world to relax both mentally and physically.",
+    email: "david.green@university.edu", // Replace
+  },
+  {
+    id: 11,
+    name: "PengHui Feng（马浩）", 
+    role: "Masters Student",
+    avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/mh.jpg", // Increased size
+    dataAiHint: "student headshot",
+    researchInterests: ["Task Offloading","Task Recommendation","Computing Power Networks"],
+    bio: "My research focuses on task offloading and recommendation in computing power networks, aiming to optimize resource allocation and enhance service efficiency. Reading for cozy stories, gaming for epic wins! Swap books for controllers after dark—my perfect kind of fun.",
+    email: "david.green@university.edu", // Replace
+  },
+    {
+    id: 12,
+    name: "RuoShen Jia（贾若森）", 
+    role: "Masters Student",
+    avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/jrs.jpg", // Increased size
+    dataAiHint: "student headshot",
+    researchInterests: ["Recommendation system","Task Recommendation","Computing Power Networks"],
+    bio: "My research optimizes machine learning recommendation algorithms to boost performance and user experience, advancing intelligent recommendation. Focused on machine learning recommendation algorithms to uncover user needs and offer personalized recommendations. ",
+    email: "david.green@university.edu", // Replace
+  },
+  /*{
+    id: 1,
     name: "Dr. Alice Chen",
     role: "Postdoctoral Fellow",
     avatarUrl: "https://picsum.photos/seed/alicechen/220/220", // Increased size
@@ -57,7 +177,7 @@ const teamMembers = [
     researchInterests: ["Fairness in ML", "Interpretability", "NLP Applications"],
     bio: "David is investigating fairness metrics and bias mitigation techniques in machine learning models, with a specific focus on their impact in natural language processing applications such as text classification and generation.",
     email: "david.green@university.edu", // Replace
-  },
+  },*/
 ];
 
 const alumni = [
@@ -142,6 +262,37 @@ export default function TeamPage() {
           ))}
         </div>
       </section>
+	  
+	 /* <section id="alumni" aria-labelledby="alumni-title">
+        <SectionTitle id="alumni-title">Lab Alumni</SectionTitle>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {alumni.map(member => (
+             <Card key={member.id} className="shadow-md hover:shadow-lg transition-shadow duration-300 border-primary/10">
+               <CardContent className="pt-6 flex flex-col items-center text-center">
+                <Image
+                    src={member.avatarUrl}
+                    alt={`Photo of ${member.name}`}
+                    width={120} // Increased width
+                    height={120} // Increased height
+                    className="rounded-full border-2 border-background shadow-sm object-cover aspect-square mb-3"
+                    data-ai-hint={member.dataAiHint}
+                  />
+                  <h3 className="text-lg font-semibold text-primary">{member.name}</h3>
+                  <p className="text-sm text-accent/90 font-medium">{member.role}</p>
+                  <p className="text-xs text-muted-foreground mt-0.5">Focus: {member.researchFocus}</p>
+                  <p className="text-sm text-foreground/80 mt-2">Now: {member.currentPosition}</p>
+                   {member.website && (
+                    <Button variant="link" size="sm" asChild className="mt-2 text-accent px-0 h-auto">
+                      <a href={member.website} target="_blank" rel="noopener noreferrer" aria-label={`Website of ${member.name}`}>
+                        <Globe size={14} className="mr-1" /> Profile
+                      </a>
+                    </Button>
+                  )}
+               </CardContent>
+             </Card>
+          ))}
+        </div>
+      </section>*/
 
       <section id="alumni" aria-labelledby="alumni-title">
         <SectionTitle id="alumni-title">Lab Alumni</SectionTitle>
