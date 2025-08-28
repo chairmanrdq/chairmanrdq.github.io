@@ -122,7 +122,7 @@ const teamMembers = [
     bio: "My research focuses on task offloading and recommendation in computing power networks, aiming to optimize resource allocation and enhance service efficiency. Reading for cozy stories, gaming for epic wins! Swap books for controllers after dark—my perfect kind of fun.",
     email: "david.green@university.edu", // Replace
   },
-    {
+  {
     id: 12,
     name: "RuoShen Jia（贾若森）", 
     role: "Masters Student",
@@ -132,54 +132,6 @@ const teamMembers = [
     bio: "My research optimizes machine learning recommendation algorithms to boost performance and user experience, advancing intelligent recommendation. Focused on machine learning recommendation algorithms to uncover user needs and offer personalized recommendations. ",
     email: "david.green@university.edu", // Replace
   },
-  /*
-  {
-    id: 1,
-    name: "Dr. Alice Chen",
-    role: "Postdoctoral Fellow",
-    avatarUrl: "https://picsum.photos/seed/alicechen/220/220", // Increased size
-    dataAiHint: "professional headshot woman",
-    researchInterests: ["Machine Translation", "Low-Resource NLP", "Cross-lingual Transfer"],
-    bio: "Alice is exploring novel techniques for improving translation quality for languages with limited data resources. Her work focuses on transfer learning, multilingual models, and incorporating linguistic typology into neural architectures.",
-    email: "alice.chen@university.edu", // Replace
-    linkedin: "#", // Replace
-    website: "#", // Replace
-    googleScholar: "#" // Replace
-  },
-  {
-    id: 2,
-    name: "Bob G. Lee",
-    role: "PhD Candidate",
-    avatarUrl: "https://picsum.photos/seed/boblee/220/220", // Increased size
-    dataAiHint: "professional headshot man",
-    researchInterests: ["Dialogue Systems", "Reinforcement Learning", "Commonsense Reasoning"],
-    bio: "Bob's research aims to build more engaging, coherent, and knowledgeable conversational AI agents. He is currently working on applying deep reinforcement learning and integrating commonsense knowledge for open-domain dialogue.",
-    email: "bob.lee@university.edu", // Replace
-    linkedin: "#", // Replace
-  },
-  {
-    id: 3,
-    name: "Carol Davis, M.Sc.",
-    role: "PhD Student",
-    avatarUrl: "https://picsum.photos/seed/caroldavis/220/220", // Increased size
-    dataAiHint: "professional headshot person",
-    researchInterests: ["Computational Social Science", "NLP for Healthcare", "Ethical AI"],
-    bio: "Carol is passionate about using NLP to understand and address societal challenges. Her current projects involve analyzing social media data for public health insights and developing fair and interpretable NLP tools for clinical text.",
-    email: "carol.davis@university.edu", // Replace
-    website: "#", // Replace
-    googleScholar: "#" // Replace
-  },
-  {
-    id: 4,
-    name: "David Green",
-    role: "Masters Student",
-    avatarUrl: "https://picsum.photos/seed/davidgreen/220/220", // Increased size
-    dataAiHint: "student headshot",
-    researchInterests: ["Fairness in ML", "Interpretability", "NLP Applications"],
-    bio: "David is investigating fairness metrics and bias mitigation techniques in machine learning models, with a specific focus on their impact in natural language processing applications such as text classification and generation.",
-    email: "david.green@university.edu", // Replace
-  },
-  */
 ];
 
 const alumni = [
