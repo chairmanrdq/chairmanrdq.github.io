@@ -29,7 +29,7 @@ const teamMembers = [
     avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/zzb.jpg", // Increased size
     dataAiHint: "student headshot",
     researchInterests: ["Multi-Objective Optimization", "Task Scheduling", "Computing Power Networks"],
-    bio: "Aiming to address the core challenge of how to intelligently allocate computing tasks in a distributed heterogeneous computing node environment. The core objective is to construct a multi-objective optimization model to simultaneously minimize the end-to-end delay of task execution and the overall system energy consumption. By introducing heuristic algorithms or machine learning methods,adaptive scheduling algorithms are designed to seek the best balance between delay sensitivity and energy saving.Ultimately,it is hoped to provide key scheduling theory and technological support for the realization of efficient and low-carbon computing power infrastructure.",
+    bio: "Develops multi-objective models and adaptive scheduling algorithms for distributed heterogeneous computing. Leverages heuristic and ML methods to minimize execution delay and energy consumption, enabling low-carbon computing infrastructure.",
     email: "david.green@university.edu", // Replace
   },
   {
@@ -39,7 +39,7 @@ const teamMembers = [
     avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/yl.jpg", // Increased size
     dataAiHint: "student headshot",
     researchInterests: ["Task scheduling", "Generative Models", "Computing Power Networks"],
-    bio: "The goal is to allocate and manage distributed, heterogeneous computing resources efficiently so that tasks are executed optimally. The core objective is to design an adaptive scheduling policy that leverages intelligent decision-making techniques such as reinforcement learning and generative algorithms. This policy must jointly consider real-time network conditions, resource availability, and the Quality-of-Service (QoS) requirements inherent to generative workloads (e.g., text-to-image and video synthesis). Ultimately, we aim to build a scheduling framework that dynamically maximizes throughput, minimizes latency, and optimizes resource utilization.",
+    bio: "Develops intelligent scheduling for heterogeneous computing using ML/RL to optimize task allocation, throughput, and latency under real-time and QoS constraints. Enhances resource efficiency for generative workloads and low-carbon infrastructure.",
     email: "david.green@university.edu", // Replace
   },
   {
@@ -49,7 +49,7 @@ const teamMembers = [
     avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/dxm.jpg", // Increased size
     dataAiHint: "student headshot",
     researchInterests: ["Cloud-Edge-Device Collaborative Inference", "Computing Power Networks"],
-    bio: "Focusing on cloud-edge-device collaborative inference systems, dedicated to addressing the efficient inference of deep learning models in resource-constrained terminal scenarios. By intelligently partitioning and scheduling inference tasks among the cloud, edge, and device, and integrating model compression, dynamic offloading, and adaptive decision-making mechanisms, the overall system's real-time performance, energy efficiency, and scalability are enhanced.",
+    bio: "Designs intelligent adaptive scheduling policies for distributed heterogeneous computing. Leverages reinforcement learning and generative algorithms to dynamically optimize task allocation, balancing low latency and energy efficiency for sustainable computing infrastructure.",
     email: "david.green@university.edu", // Replace
   },
   {
@@ -79,7 +79,7 @@ const teamMembers = [
     avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/zys.jpg", // Increased size
     dataAiHint: "student headshot",
     researchInterests: ["Multimodal Fusion","Power Forecasting"],
-    bio: "I am committed to exploring how to effectively fuse multi-source heterogeneous information, such as numerical weather forecasts, satellite cloud images, ground observations, and historical power data, and utilize advanced deep learning models to construct a more accurate and reliable spatio-temporal prediction framework for green power, thereby supporting the stable operation of power grids and the high-proportion consumption of green power.",
+    bio: "Develops spatiotemporal forecasting frameworks for green power by fusing multi-source data (NWP, satellite, ground observations) with deep learning to enhance grid stability and renewable energy integration.",
     email: "david.green@university.edu", // Replace
   },
   {
@@ -132,7 +132,8 @@ const teamMembers = [
     bio: "My research optimizes machine learning recommendation algorithms to boost performance and user experience, advancing intelligent recommendation. Focused on machine learning recommendation algorithms to uncover user needs and offer personalized recommendations. ",
     email: "david.green@university.edu", // Replace
   },
-  /*{
+  /*
+  {
     id: 1,
     name: "Dr. Alice Chen",
     role: "Postdoctoral Fellow",
@@ -177,7 +178,8 @@ const teamMembers = [
     researchInterests: ["Fairness in ML", "Interpretability", "NLP Applications"],
     bio: "David is investigating fairness metrics and bias mitigation techniques in machine learning models, with a specific focus on their impact in natural language processing applications such as text classification and generation.",
     email: "david.green@university.edu", // Replace
-  },*/
+  },
+  */
 ];
 
 const alumni = [
