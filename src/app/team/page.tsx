@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const teamMembers = [
   {
     id: 1,
-    name: "CongRonG Wu（吴从荣）",
+    name: "CongRong Wu（吴从荣）",
     role: "Masters Student",
     avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/wcr.jpg", // Increased size
     dataAiHint: "student headshot",
@@ -24,7 +24,7 @@ const teamMembers = [
   },
   {
     id: 2,
-    name: "Zhibo Zhang（张志博）",
+    name: "ZhiBo Zhang（张志博）",
     role: "Masters Student",
     avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/zzb.jpg", // Increased size
     dataAiHint: "student headshot",
