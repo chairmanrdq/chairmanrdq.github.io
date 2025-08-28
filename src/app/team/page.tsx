@@ -170,8 +170,8 @@ export default function TeamPage() {
                 <Image
                   src={member.avatarUrl}
                   alt={`Photo of ${member.name}`}
-                  width={300} // Increased width
-                  height={300} // Increased height
+                  width={400} // Increased width
+                  height={400} // Increased height
                   className="rounded-full border-[6px] border-background shadow-md object-cover aspect-square"
                   data-ai-hint={member.dataAiHint}
                 />
