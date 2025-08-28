@@ -184,7 +184,7 @@ const teamMembers = [
 
 const alumni = [
  {
-    id: 5,
+    id: 13,
     name: "Dr. Samuel Cho",
     role: "Former Postdoc (2020-2022)",
     currentPosition: "Research Scientist @ BigTech AI",
@@ -194,7 +194,7 @@ const alumni = [
     website: "#" // Replace
   },
   {
-    id: 6,
+    id: 14,
     name: "Eva Rodriguez, PhD",
     role: "Former PhD Student (Graduated 2021)",
     currentPosition: "Assistant Professor @ State University",
@@ -265,37 +265,6 @@ export default function TeamPage() {
         </div>
       </section>
 	  
-	 /* <section id="alumni" aria-labelledby="alumni-title">
-        <SectionTitle id="alumni-title">Lab Alumni</SectionTitle>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {alumni.map(member => (
-             <Card key={member.id} className="shadow-md hover:shadow-lg transition-shadow duration-300 border-primary/10">
-               <CardContent className="pt-6 flex flex-col items-center text-center">
-                <Image
-                    src={member.avatarUrl}
-                    alt={`Photo of ${member.name}`}
-                    width={120} // Increased width
-                    height={120} // Increased height
-                    className="rounded-full border-2 border-background shadow-sm object-cover aspect-square mb-3"
-                    data-ai-hint={member.dataAiHint}
-                  />
-                  <h3 className="text-lg font-semibold text-primary">{member.name}</h3>
-                  <p className="text-sm text-accent/90 font-medium">{member.role}</p>
-                  <p className="text-xs text-muted-foreground mt-0.5">Focus: {member.researchFocus}</p>
-                  <p className="text-sm text-foreground/80 mt-2">Now: {member.currentPosition}</p>
-                   {member.website && (
-                    <Button variant="link" size="sm" asChild className="mt-2 text-accent px-0 h-auto">
-                      <a href={member.website} target="_blank" rel="noopener noreferrer" aria-label={`Website of ${member.name}`}>
-                        <Globe size={14} className="mr-1" /> Profile
-                      </a>
-                    </Button>
-                  )}
-               </CardContent>
-             </Card>
-          ))}
-        </div>
-      </section>*/
-
       <section id="alumni" aria-labelledby="alumni-title">
         <SectionTitle id="alumni-title">Lab Alumni</SectionTitle>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
