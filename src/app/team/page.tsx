@@ -64,7 +64,7 @@ const teamMembers = [
   },
   {
     id: 6,
-    name: "Ao Sun（吴明杰）",
+    name: "MingJie Wu（吴明杰）",
     role: "Masters Student",
     avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/wmj.jpg", // Increased size
     dataAiHint: "student headshot",
@@ -170,8 +170,8 @@ export default function TeamPage() {
                 <Image
                   src={member.avatarUrl}
                   alt={`Photo of ${member.name}`}
-                  width={400} // Increased width
-                  height={400} // Increased height
+                  width={300} // Increased width
+                  height={300} // Increased height
                   className="rounded-full border-[6px] border-background shadow-md object-cover aspect-square"
                   data-ai-hint={member.dataAiHint}
                 />
