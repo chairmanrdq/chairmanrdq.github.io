@@ -139,7 +139,7 @@ const collegeMembers = [
 	  id: 13,
 	  name: "Le Yang（杨乐）",   
       role: "College Student",
-      avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/yl.jpg", // Increased size
+      avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/yln.jpg", // Increased size
       dataAiHint: "student headshot",
       researchInterests: ["Clustering","Multimodal Sentiment Analysis,", "Big Data Processing"],
       bio: "Computer Science undergraduate with strong academic record and research experience. First-author paper at CCF-C conference on clustering algorithms; led provincial project on multimodal depression prediction. Awarded multiple national and provincial competition awards and scholarships. Demonstrated leadership as Vice Secretary of the College Youth League Committee. Proficient in English technical reading.",
@@ -219,7 +219,7 @@ const collegeMembers = [
 	  id: 21,
 	  name: "ShouTing Fan（樊首廷）",  
       role: "College Student",
-      avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/fst.jpg", // Increased size
+      avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/pst.jpg", // Increased size
       dataAiHint: "student headshot",
       researchInterests: ["Service Recommendation","Computing Power Networks"],
       bio: "Specializes in architecting and implementing AI-driven recommendation platforms. Combines expertise in service design and artificial intelligence to build scalable systems that deliver precise, personalized recommendations and create tangible business value.",
@@ -239,7 +239,7 @@ const collegeMembers = [
 	  id: 23,
 	  name: "Shuo liu（刘硕）",  
       role: "College Student",
-      avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/lpf.jpg", // Increased size
+      avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/ls.jpg", // Increased size
       dataAiHint: "student headshot",
       researchInterests: ["Computing Power Networks"],
       bio: "Research focuses on software performance optimization and computational efficiency. Designing innovative approaches to accelerate code execution, reduce computational overhead, and enhance overall system performance through advanced optimization techniques.",
