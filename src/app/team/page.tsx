@@ -114,7 +114,7 @@ const teamMembers = [
   },
   {
     id: 11,
-    name: "PengHui Feng（马浩）", 
+    name: "Hao Ma（马浩）", 
     role: "Masters Student",
     avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/mh.jpg", // Increased size
     dataAiHint: "student headshot",
