@@ -249,7 +249,7 @@ const collegeMembers = [
 
 const alumni = [
  {
-    id: 13,
+    id: 24,
     name: "Dr. Samuel Cho",
     role: "Former Postdoc (2020-2022)",
     currentPosition: "Research Scientist @ BigTech AI",
@@ -259,7 +259,7 @@ const alumni = [
     website: "#" // Replace
   },
   {
-    id: 14,
+    id: 25,
     name: "Eva Rodriguez, PhD",
     role: "Former PhD Student (Graduated 2021)",
     currentPosition: "Assistant Professor @ State University",
