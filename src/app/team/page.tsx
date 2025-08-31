@@ -134,6 +134,119 @@ const teamMembers = [
   },
 ];
 
+const collegeMembers = [
+	{ 
+	  id: 13,
+	  name: "Le Yang（杨乐）",   
+      role: "College Student",
+      avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/yl.jpg", // Increased size
+      dataAiHint: "student headshot",
+      researchInterests: ["Clustering","Multimodal Sentiment Analysis,", "Big Data Processing"],
+      bio: "Computer Science undergraduate with strong academic record and research experience. First-author paper at CCF-C conference on clustering algorithms; led provincial project on multimodal depression prediction. Awarded multiple national and provincial competition awards and scholarships. Demonstrated leadership as Vice Secretary of the College Youth League Committee. Proficient in English technical reading.",
+      email: "david.green@university.edu", // Replace
+	},
+	{ 
+	  id: 14,
+	  name: "YueQi Wang（王玥祁）",   
+      role: "College Student",
+      avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/wyq.jpg", // Increased size
+      dataAiHint: "student headshot",
+      researchInterests: ["Artificial Intelligence","Data Intelligence,", "Interpretable Machine Learning"],
+      bio: "Focuses on AI and data intelligence applications, specializing in optimized clustering algorithms, deep learning for medical data processing, and intelligent analytics in education. Committed to enhancing interpretability and cross-domain applications of intelligent algorithms, aiming to drive theoretical innovation and practical impact in healthcare, education, and smart society.",
+      email: "david.green@university.edu", // Replace
+	},
+	{ 
+	  id: 15,
+	  name: "WenBin Zhao（赵文斌）",  
+      role: "College Student",
+      avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/zwb.jpg", // Increased size
+      dataAiHint: "student headshot",
+      researchInterests: ["Edge-Cloud Computing","Tasking Scheduling", " Reinforcement Learning"],
+      bio: "Research focuses on resource optimization and task scheduling in cloud-edge computing systems. Develops dynamic scheduling models using reinforcement learning and heuristic algorithms to balance computing power and latency, addressing challenges such as task blocking, high energy consumption, and unstable service quality in multi-device environments.",
+      email: "david.green@university.edu", // Replace
+	},
+	{ 
+	  id: 16,
+	  name: "FuCheng Zhang（张甫丞）",  
+      role: "College Student",
+      avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/zfc.jpg", // Increased size
+      dataAiHint: "student headshot",
+      researchInterests: ["Cross-Domain Scheduling","Resource Optimization", "Computing Force Network"], 
+      bio: "Research focuses on computing force network architecture and cross-domain resource scheduling. Develops intelligent scheduling mechanisms to enable efficient and coordinated allocation of distributed computing resources across heterogeneous domains, optimizing overall network utilization and service performance.",
+      email: "david.green@university.edu", // Replace
+	},
+	{ 
+	  id: 17,
+	  name: "Yue Liu（刘岳）",  
+      role: "College Student",
+      avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/ly.jpg", // Increased size
+      dataAiHint: "student headshot",
+      researchInterests: ["Computing Force Network","Clustering Algorithms", "Distributed Machine Learning"],
+      bio: "Research focuses on optimizing and innovating clustering algorithms in computing force networks to enhance their performance, efficiency, and robustness on complex data. Explores the integration of machine learning, data analysis, and cloud computing technologies to develop scalable and adaptive clustering solutions for distributed and data-intensive environments.",
+      email: "david.green@university.edu", // Replace
+	},
+	{ 
+	  id: 18,
+	  name: "YuDa Cheng（程宇达）",  
+      role: "College Student",
+      avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/cyd.jpg", // Increased size
+      dataAiHint: "student headshot",
+      researchInterests: ["Computing Force Network","Clustering Algorithms", "Unsupervised Learning"],  
+      bio: "Research focuses on clustering algorithms and unsupervised learning in computing force networks, with an emphasis on algorithm optimization and practical applications in data analysis. Explores innovative approaches to enhance the performance and adaptability of clustering methods in complex, real-world data scenarios.",
+      email: "david.green@university.edu", // Replace
+	},
+	{ 
+	  id: 19,
+	  name: "JingHe Tian（田敬赫）", 
+      role: "College Student",
+      avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/tjh.jpg", // Increased size
+      dataAiHint: "student headshot",
+      researchInterests: ["Cold Start Problem","Service Recommendation", "Computing Power Networks"],
+      bio: "Research focuses on cold-start recommendation systems, integrating multimodal features (text/image) and contextual information to reduce dependency on traditional interaction data. Develops personalized strategies for long-tail items and new users, while optimizing lightweight model architectures for efficient deployment in high-concurrency scenarios.",
+      email: "david.green@university.edu", // Replace
+	},
+	{ 
+	  id: 20,
+	  name: "WenBo Xue（薛文博）", 
+      role: "College Student",
+      avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/xwb.jpg", // Increased size
+      dataAiHint: "student headshot",
+      researchInterests: ["Service Recommendation","Computing Power Networks"],
+      bio: "Specializes in user demand analysis and intelligent recommendation. Utilizes qualitative/quantitative research and data-driven strategies to deeply understand user behavior, building accurate and scalable recommendation systems that enhance product experience and business outcomes. ",
+      email: "david.green@university.edu", // Replace
+	},
+	{ 
+	  id: 21,
+	  name: "ShouTing Fan（樊首廷）",  
+      role: "College Student",
+      avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/fst.jpg", // Increased size
+      dataAiHint: "student headshot",
+      researchInterests: ["Service Recommendation","Computing Power Networks"],
+      bio: "Specializes in architecting and implementing AI-driven recommendation platforms. Combines expertise in service design and artificial intelligence to build scalable systems that deliver precise, personalized recommendations and create tangible business value.",
+      email: "david.green@university.edu", // Replace
+	},
+	{ 
+	  id: 22,
+	  name: "PengFei liu（刘鹏飞）",  
+      role: "College Student",
+      avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/lpf.jpg", // Increased size
+      dataAiHint: "student headshot",
+      researchInterests: ["Service Recommendation","Computing Power Networks"],
+      bio: "Research focuses on big data technologies and their applications in service recommendation systems. Developing innovative recommendation algorithms and data processing frameworks to improve recommendation quality and system performance.",
+      email: "david.green@university.edu", // Replace
+	},
+	{ 
+	  id: 23,
+	  name: "Shuo liu（刘硕）",  
+      role: "College Student",
+      avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/lpf.jpg", // Increased size
+      dataAiHint: "student headshot",
+      researchInterests: ["Computing Power Networks"],
+      bio: "Research focuses on software performance optimization and computational efficiency. Designing innovative approaches to accelerate code execution, reduce computational overhead, and enhance overall system performance through advanced optimization techniques.",
+      email: "david.green@university.edu", // Replace
+	},
+];
+
 const alumni = [
  {
     id: 13,
@@ -217,6 +330,62 @@ export default function TeamPage() {
         </div>
       </section>
 	  
+	   <section id="current-team" aria-labelledby="current-team-title">
+        <SectionTitle id="current-team-title">Undergraduate Student</SectionTitle>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {collegeMembers.map(member => (
+            <Card key={member.id} className="shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col sm:flex-row overflow-hidden border-primary/10">
+              <div className="sm:shrink-0 sm:w-1/3 bg-secondary/30 flex items-center justify-center p-4">
+                <Image
+                  src={member.avatarUrl}
+                  alt={`Photo of ${member.name}`}
+                  width={220} // Increased width
+                  height={220} // Increased height
+                  className="rounded-full border-[6px] border-background shadow-md object-cover aspect-square"
+                  data-ai-hint={member.dataAiHint}
+                />
+              </div>
+              <CardContent className="p-6 flex-grow sm:w-2/3">
+                <h3 className="text-xl md:text-2xl font-semibold text-primary">{member.name}</h3>
+                <p className="text-md text-accent font-medium">{member.role}</p>
+                <p className="text-sm text-muted-foreground mt-1">
+                  Interests: {member.researchInterests.join(', ')}
+                </p>
+                <p className="text-sm text-foreground/80 mt-3 mb-4 leading-relaxed">{member.bio}</p>
+                <div className="flex flex-wrap gap-x-3 gap-y-2 items-center">
+                  <Button variant="ghost" size="sm" asChild className="text-muted-foreground hover:text-accent p-1 h-auto">
+                    <a href={`mailto:${member.email}`} aria-label={`Email ${member.name}`}>
+                      <Mail size={18} className="mr-1" /> Email
+                    </a>
+                  </Button>
+                  {member.linkedin && (
+                    <Button variant="ghost" size="sm" asChild className="text-muted-foreground hover:text-accent p-1 h-auto">
+                      <a href={member.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`LinkedIn profile of ${member.name}`}>
+                        <Linkedin size={18} className="mr-1" /> LinkedIn
+                      </a>
+                    </Button>
+                  )}
+                  {member.website && (
+                    <Button variant="ghost" size="sm" asChild className="text-muted-foreground hover:text-accent p-1 h-auto">
+                      <a href={member.website} target="_blank" rel="noopener noreferrer" aria-label={`Website of ${member.name}`}>
+                        <Globe size={18} className="mr-1" /> Website
+                      </a>
+                    </Button>
+                  )}
+                   {member.googleScholar && (
+                    <Button variant="ghost" size="sm" asChild className="text-muted-foreground hover:text-accent p-1 h-auto">
+                      <a href={member.googleScholar} target="_blank" rel="noopener noreferrer" aria-label={`Google Scholar of ${member.name}`}>
+                        <BookUser size={18} className="mr-1" /> Scholar
+                      </a>
+                    </Button>
+                  )}
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
       <section id="alumni" aria-labelledby="alumni-title">
         <SectionTitle id="alumni-title">Lab Alumni</SectionTitle>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
