@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     template: '%s | Dr. RuiDong Qi（祁瑞东）', // Replace with actual scholar name
   },
   description: 'Personal academic website of Dr. RuiDong Qi（祁瑞东）, showcasing research, publications, and professional activities.', // Replace
+  verification: {
+    google: '9adTvMEmfFATov8HAuYaYB9QK_tOM2trq8dGqcdRvi8',
+  },
 };
 
 export default function RootLayout({
