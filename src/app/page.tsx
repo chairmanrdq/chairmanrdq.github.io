@@ -68,7 +68,7 @@ const scholarData = {
       description: "During the congress, we engaged in academic exchanges on computing power networks, green computing, and service computing, and explored collaborations with industry and academia.", 
              icon: <Rss className="h-5 w-5 flex-shrink-0" style={{color: '#1E3A8A'}} />,
       badge: "Keynote"
-    },
+    }
     //{ 
      // id: 3, 
      // date: "2024-05-20", 

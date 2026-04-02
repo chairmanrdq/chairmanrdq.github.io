@@ -38,7 +38,7 @@ const publicationsData: Publication[] = [
     pdfUrl: "#", 
     arxivUrl: "#",
     abstract: "Clustering is a fundamental technique in unsupervised learning, grouping unlabeled data based on similarity metrics. Nevertheless, the Clustering by Fast Search and Find of Density Peaks (CFSFDP) algorithm requires manual selection of cluster centers, limiting its automation. To address this issue, this paper proposes an Adaptive Density Peak Clustering Algorithm optimized using an N-ary Bézier inverse curve to achieve automatic cluster center determination. By performing data point inversion, the method enhances the distinction between cluster centers and non-center points, simplifying their identification. Additionally, the algorithm integrates gamma processing and information entropy weighting significantly reducing computational complexity. The results demonstrate that the proposed algorithm outperforms other automatic clustering methods in terms of AMI, ARI, FMI, and the number of automatically selected cluster centers. Furthermore, the findings validate its effectiveness in clustering accuracy while enhancing the robustness of density peak-based clustering.",
-    keywords: ["Reverse curve optimization", "Adaptive density clustering", "Automatic cluster center"],
+    keywords: ["Reverse curve optimization", "Adaptive density clustering", "Automatic cluster center"]
   },
   { 
     id: "p2", 
@@ -50,7 +50,7 @@ const publicationsData: Publication[] = [
     doi: "10.1109/ISPA67752.2025.00193", 
     pdfUrl: "#",
     abstract: "With the rapid development of Web services, complex service-oriented platforms offer users a wide range of choices. Accurate Quality of Service (QoS) prediction is crucial for users to select the best service option. Despite advances in QoS prediction methods, two key challenges remain: insufficient context utilization and privacy threats. Motivated by these observations, we propose a novel approach called Personalized Hierarchical Topology-Aware Federated Learning (pHTAFed). This approach introduces network topology path and employs a multi-layer neural network model with hierarchical parameter aggregation to balance functional requirements and privacy protection needs. It ensures local retention of certain parameters for enhanced security while enabling personalized aggregation of other parameters in the cloud. Experimental results on two real-world datasets show that pHTAFed outperforms both distributed and centralized baseline algorithms in QoS prediction accuracy, offering an effective solution to existing challenges while enhancing service quality and protecting user privacy.",
-    keywords: ["Web service, QoS prediction, Personalized federated learning, Multi-layer model, Network topology path"],
+    keywords: ["Web service, QoS prediction, Personalized federated learning, Multi-layer model, Network topology path"]
   },
   { 
     id: "p3", 
@@ -62,8 +62,8 @@ const publicationsData: Publication[] = [
     doi: "10.1109/ISPA67752.2025.00129", 
     pdfUrl: "#",
 	abstract: "Density-based clustering can discover clusters of arbitrary shapes without knowing the number in advance. Decision graph methods, combining local density and relative distance, give intuitive guidance but their γ-curves often lack clear transitions, especially under noise or smooth densities, making automatic detection difficult. To solve this, we propose GIDC, which applies (1) a contrast-weighted filter to suppress noise and enhance center contrast, and (2) Gaussian fitting with second-derivative analysis to locate meaningful inflection points. This probabilistic framework improves detection stability, and experiments show GIDC achieves higher accuracy and robustness than state-of-the-art methods."
-    keywords: ["Density-based clustering, cluster center detection, decision graph, Gaussian fitting, inflection point analysis, unsupervised learning"],
-  },
+    keywords: ["Density-based clustering, cluster center detection, decision graph, Gaussian fitting, inflection point analysis, unsupervised learning"]
+  }
   /*{ 
     id: "p4", 
     title: "Multimodal Learning for Enhanced Sentiment Analysis in Social Media Content", 
