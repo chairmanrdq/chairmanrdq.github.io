@@ -13,16 +13,6 @@ export const metadata: Metadata = {
 // Mock Data - Replace with actual data
 const teamMembers = [
   {
-    id: 1,
-    name: "CongRong Wu（吴从荣）",
-    role: "Masters Student",
-    avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/wcr.jpg", // Increased size
-    dataAiHint: "student headshot",
-    researchInterests: ["Time Series Prediction", "Reinforcement Learning", "Task Scheduling","Computing Power Networks"],
-    bio: "Current research is shifting from cloud computing towards the establishment of a new computing-power network paradigm, focusing on enhancing the intelligent scheduling capability of the Computing Network Brain to improve the utilization efficiency of global computing resources.",
-    email: "david.green@university.edu", // Replace
-  },
-  {
     id: 2,
     name: "ZhiBo Zhang（张志博）",
     role: "Masters Student",
@@ -136,26 +126,6 @@ const teamMembers = [
 
 const collegeMembers = [
 	{ 
-	  id: 13,
-	  name: "Le Yang（杨乐）",   
-      role: "College Student",
-      avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/yln.jpg", // Increased size
-      dataAiHint: "student headshot",
-      researchInterests: ["Clustering","Multimodal Sentiment Analysis,", "Big Data Processing"],
-      bio: "Computer Science undergraduate with strong academic record and research experience. First-author paper at CCF-C conference on clustering algorithms; led provincial project on multimodal depression prediction. Awarded multiple national and provincial competition awards and scholarships. Demonstrated leadership as Vice Secretary of the College Youth League Committee. Proficient in English technical reading.",
-      email: "david.green@university.edu", // Replace
-	},
-	{ 
-	  id: 14,
-	  name: "YueQi Wang（王玥祁）",   
-      role: "College Student",
-      avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/wyq.jpg", // Increased size
-      dataAiHint: "student headshot",
-      researchInterests: ["Artificial Intelligence","Data Intelligence,", "Interpretable Machine Learning"],
-      bio: "Focuses on AI and data intelligence applications, specializing in optimized clustering algorithms, deep learning for medical data processing, and intelligent analytics in education. Committed to enhancing interpretability and cross-domain applications of intelligent algorithms, aiming to drive theoretical innovation and practical impact in healthcare, education, and smart society.",
-      email: "david.green@university.edu", // Replace
-	},
-	{ 
 	  id: 15,
 	  name: "WenBin Zhao（赵文斌）",  
       role: "College Student",
@@ -249,6 +219,19 @@ const collegeMembers = [
 
 const alumni = [
  {
+    id: 1,
+    name: "CongRong Wu（吴从荣）",
+    role: "Former Master student (Graduated 2026)",
+	currentPosition: "Technology Position @ Bank of China Shandong Branch",
+    avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/wcr.jpg", // Increased size
+    dataAiHint: "student headshot",
+	researchFocus: "Task Scheduling for Computing Power Networks"
+    //researchInterests: ["Time Series Prediction", "Reinforcement Learning", "Task Scheduling","Computing Power Networks"],
+    //bio: "Current research is shifting from cloud computing towards the establishment of a new computing-power network paradigm, focusing on enhancing the intelligent scheduling capability of the Computing Network Brain to improve the utilization efficiency of global computing resources.",
+    //email: "david.green@university.edu", // Replace
+	website: "#" // Replace
+  }
+ /*{
     id: 24,
     name: "Dr. Samuel Cho",
     role: "Former Postdoc (2020-2022)",
@@ -267,7 +250,70 @@ const alumni = [
     dataAiHint: "academic headshot",
     researchFocus: "Computational Semantics",
     website: "#" // Replace
-  }
+  }*/
+];
+
+const alumni_collegeMembers = [
+	{ 
+	  id: 13,
+	  name: "Le Yang（杨乐）",   
+      //role: "College Student",
+	  role: "Former Undergraduate student (Graduated 2026)",
+	  currentPosition: "Study for a Doctorate @ The Elite Program of Inner Mongolia University（内蒙古大学）",
+      avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/yln.jpg", // Increased size
+      dataAiHint: "student headshot",
+	  researchFocus: "Clustering",
+      //researchInterests: ["Clustering","Multimodal Sentiment Analysis,", "Big Data Processing"],
+      //bio: "Computer Science undergraduate with strong academic record and research experience. First-author paper at CCF-C conference on clustering algorithms; led provincial project on multimodal depression prediction. Awarded multiple national and provincial competition awards and scholarships. Demonstrated leadership as Vice Secretary of the College Youth League Committee. Proficient in English technical reading.",
+      //email: "david.green@university.edu" // Replace
+	  website: "#" // Replace
+	},
+ 	{ 
+	  id: 14,
+	  name: "YueQi Wang（王玥祁）",   
+      //role: "College Student",
+	  role: "Former Undergraduate student (Graduated 2026)",
+	  currentPosition: "Study for a Master’s Degree @ Northeastern University （东北大学）",
+      avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/wyq.jpg", // Increased size
+      dataAiHint: "student headshot",
+	  researchFocus: "Clustering",
+      //researchInterests: ["Artificial Intelligence","Data Intelligence,", "Interpretable Machine Learning"],
+      //bio: "Focuses on AI and data intelligence applications, specializing in optimized clustering algorithms, deep learning for medical data processing, and intelligent analytics in education. Committed to enhancing interpretability and cross-domain applications of intelligent algorithms, aiming to drive theoretical innovation and practical impact in healthcare, education, and smart society.",
+      //email: "david.green@university.edu", // Replace
+	},
+ 	{ 
+	  id: 14,
+	  name: "YiXuan Dai（戴轶轩）",   
+      //role: "College Student",
+	  role: "Former Undergraduate student (Graduated 2026)",
+	  currentPosition: "Study for a Master’s Degree @ University of Science and Technology of China（中国科学技术大学）",
+      avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/dyx.jpg", // Increased size
+      dataAiHint: "student headshot",
+	  researchFocus: "Clustering",
+      //researchInterests: ["Artificial Intelligence","Data Intelligence,", "Interpretable Machine Learning"],
+      //bio: "Focuses on AI and data intelligence applications, specializing in optimized clustering algorithms, deep learning for medical data processing, and intelligent analytics in education. Committed to enhancing interpretability and cross-domain applications of intelligent algorithms, aiming to drive theoretical innovation and practical impact in healthcare, education, and smart society.",
+      //email: "david.green@university.edu", // Replace
+	}	
+ /*{
+    id: 24,
+    name: "Dr. Samuel Cho",
+    role: "Former Postdoc (2020-2022)",
+    currentPosition: "Research Scientist @ BigTech AI",
+    avatarUrl: "https://picsum.photos/seed/samuelcho/120/120", // Increased size
+    dataAiHint: "professional headshot",
+    researchFocus: "Deep Learning for NLP",
+    website: "#" // Replace
+  },
+  {
+    id: 25,
+    name: "Eva Rodriguez, PhD",
+    role: "Former PhD Student (Graduated 2021)",
+    currentPosition: "Assistant Professor @ State University",
+    avatarUrl: "https://picsum.photos/seed/evarodriguez/120/120", // Increased size
+    dataAiHint: "academic headshot",
+    researchFocus: "Computational Semantics",
+    website: "#" // Replace
+  }*/
 ];
 
 
@@ -416,6 +462,38 @@ export default function TeamPage() {
           ))}
         </div>
       </section>
+	                               
+	  <section id="alumni_collegeMembers" aria-labelledby="alumni-title">
+        <SectionTitle id="alumni-title">Lab Alumni Undergraduate</SectionTitle>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {alumni.map(member => (
+             <Card key={member.id} className="shadow-md hover:shadow-lg transition-shadow duration-300 border-primary/10">
+               <CardContent className="pt-6 flex flex-col items-center text-center">
+                <Image
+                    src={member.avatarUrl}
+                    alt={`Photo of ${member.name}`}
+                    width={120} // Increased width
+                    height={120} // Increased height
+                    className="rounded-full border-2 border-background shadow-sm object-cover aspect-square mb-3"
+                    data-ai-hint={member.dataAiHint}
+                  />
+                  <h3 className="text-lg font-semibold text-primary">{member.name}</h3>
+                  <p className="text-sm text-accent/90 font-medium">{member.role}</p>
+                  <p className="text-xs text-muted-foreground mt-0.5">Focus: {member.researchFocus}</p>
+                  <p className="text-sm text-foreground/80 mt-2">Now: {member.currentPosition}</p>
+                   {member.website && (
+                    <Button variant="link" size="sm" asChild className="mt-2 text-accent px-0 h-auto">
+                      <a href={member.website} target="_blank" rel="noopener noreferrer" aria-label={`Website of ${member.name}`}>
+                        <Globe size={14} className="mr-1" /> Profile
+                      </a>
+                    </Button>
+                  )}
+               </CardContent>
+             </Card>
+          ))}
+        </div>
+      </section>
+	  
     </div>
   );
 }

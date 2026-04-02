@@ -24,12 +24,12 @@ const coursesData = [
       { name: "Core Reading List", url: "#" },
     ]
   },
-  /*{
+  {
     id: "cs305",
-    title: "CS 305: Introduction to Artificial Intelligence",
-    term: "Spring 2024",
+    title: "Room 309, Graduate Student Building: Software System Analysis and Design",
+    term: "Spring 2026",
     level: "Undergraduate",
-    description: "A foundational course in Artificial Intelligence, covering core concepts such as search algorithms, knowledge representation and reasoning, machine learning fundamentals, and an introduction to specialized AI areas like NLP and computer vision. Includes hands-on programming assignments.",
+    description: "Software System Analysis and Design is the essential course that takes you from writing code to building architectures. It goes beyond syntax and feature implementation, systematically teaching you how to transform vague business requirements into stable, scalable software designs. The course integrates traditional structured methods with mainstream object-oriented approaches (OOA/OOD), guiding you hands-on through UML modeling (use case diagrams, class diagrams, sequence diagrams, etc.), requirements analysis, system architecture design (MVC/microservices), database design, and UI design, while introducing agile development practices to handle changing requirements. Whether you are preparing for your graduation project, interviewing at top tech companies, or aspiring to become a system analyst or software architect, this course will equip you with holistic vision and engineering thinking — design defines your ceiling, architecture shapes your future. Choose this course, and take the first step toward becoming a true software engineer.",
     syllabusUrl: "#", // Replace
     coursePageUrl: "#", // Replace
     resources: [
@@ -37,7 +37,7 @@ const coursesData = [
       { name: "Assignment Guidelines", url: "#" },
     ]
   },
-  {
+  /*{
     id: "ds101",
     title: "DS 101: Data Science Fundamentals (Guest Lectures)",
     term: "Fall 2023",

@@ -38,7 +38,23 @@ const scholarData = {
   ],
   news: [
     { 
+      id: 2, 
+      date: "2026-04-01", 
+      title: "🏆 Two Teams from Our University Win Awards in AI+Data Track of the 5th Jiutian·Wutong Cup National Finals", 
+      description: "The national finals of the AI+Data Track of the 2026 5th China Mobile Jiutian·Wutong Cup recently concluded. Featuring 18 elite teams from 22 universities worldwide, our Intelligent Computing Pioneer Team and Neida Meow Meow Team won first and second prizes respectively, showcasing our students' excellence in digital intelligence innovation.", 
+             icon: <Award className="h-5 w-5 flex-shrink-0" style={{color: '#FFC107'}} />,
+      badge: "Award"
+    },   
+   { 
       id: 1, 
+      date: "2025-10-24", 
+      title: "🎤 Our group participated in the China National Computer Congress (CNCC 2025)", 
+      description: "During the congress, we engaged in academic exchanges on computing power network scheduling, heterogeneous resource orchestration, and cross-domain intelligent dispatching, and explored collaborations with industry and academia.", 
+             icon: <Rss className="h-5 w-5 flex-shrink-0" style={{color: '#1E3A8A'}} />,
+      badge: "Keynote"
+    },
+    { 
+      id: 2, 
       date: "2025-08-13", 
       title: "🏆 Our group participated in CCF HPC China 2025, held in Ordos, Inner Mongolia.", 
       description: "During the conference, we presented our research on green computing power scheduling and HPC optimization, and engaged in in-depth discussions with scholars from China and abroad.", 
@@ -46,7 +62,7 @@ const scholarData = {
       badge: "Award"
     },
     { 
-      id: 2, 
+      id: 3, 
       date: "2024-10-24", 
       title: "🎤 Our group participated in the China National Computer Congress (CNCC 2024)", 
       description: "During the congress, we engaged in academic exchanges on computing power networks, green computing, and service computing, and explored collaborations with industry and academia.", 
@@ -66,13 +82,13 @@ const scholarData = {
 
 // Enhanced carousel data with luxury focus
 const carouselImages = [
-  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/202501.jpg", alt: "Inner Mongolia University Image1", dataAiHint: "Illustration of Inner Mongolia University" },
-  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/202502.jpg", alt: "Inner Mongolia University Image2", dataAiHint: "Illustration of Inner Mongolia University" },
-  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/202503.jpg", alt: "Inner Mongolia University Image3", dataAiHint: "Illustration of Inner Mongolia University" },
-  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/202504.png", alt: "Inner Mongolia University Image4", dataAiHint: "Illustration of Inner Mongolia University" },
-  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/202505.jpg", alt: "Inner Mongolia University Image5", dataAiHint: "Illustration of Inner Mongolia University" },
-  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/202506.jpg", alt: "Inner Mongolia University Image6", dataAiHint: "Illustration of Inner Mongolia University" },
-  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/202507.jpg", alt: "Inner Mongolia University Image7", dataAiHint: "Illustration of Inner Mongolia University" },
+  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/26wt.jpg", alt: "Inner Mongolia University Image1", dataAiHint: "Illustration of Inner Mongolia University" },
+  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/zsxf.jpg", alt: "Inner Mongolia University Image2", dataAiHint: "Illustration of Inner Mongolia University" },
+  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/zsxf1.jpg", alt: "Inner Mongolia University Image3", dataAiHint: "Illustration of Inner Mongolia University" },
+  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/zsxf2.png", alt: "Inner Mongolia University Image4", dataAiHint: "Illustration of Inner Mongolia University" },
+  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/mmhy.jpg", alt: "Inner Mongolia University Image5", dataAiHint: "Illustration of Inner Mongolia University" },
+  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/ndmm.jpg", alt: "Inner Mongolia University Image6", dataAiHint: "Illustration of Inner Mongolia University" },
+  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/dbxc.jpg", alt: "Inner Mongolia University Image7", dataAiHint: "Illustration of Inner Mongolia University" },
   { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/202508.jpg", alt: "Inner Mongolia University Image8", dataAiHint: "Illustration of Inner Mongolia University" },
   { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/202509.jpg", alt: "Inner Mongolia University Image9", dataAiHint: "Illustration of Inner Mongolia University" },
   { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/202510.jpg", alt: "Inner Mongolia University Image10", dataAiHint: "Illustration of Inner Mongolia University" },
