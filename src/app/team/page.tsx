@@ -225,7 +225,7 @@ const alumni = [
 	currentPosition: "Technology Position @ Bank of China Shandong Branch",
     avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/wcr.jpg", // Increased size
     dataAiHint: "student headshot",
-	researchFocus: "Task Scheduling for Computing Power Networks"
+	researchFocus: "Task Scheduling for Computing Power Networks",
     //researchInterests: ["Time Series Prediction", "Reinforcement Learning", "Task Scheduling","Computing Power Networks"],
     //bio: "Current research is shifting from cloud computing towards the establishment of a new computing-power network paradigm, focusing on enhancing the intelligent scheduling capability of the Computing Network Brain to improve the utilization efficiency of global computing resources.",
     //email: "david.green@university.edu", // Replace
