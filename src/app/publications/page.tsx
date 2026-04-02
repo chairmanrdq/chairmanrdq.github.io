@@ -61,7 +61,7 @@ const publicationsData: Publication[] = [
     type: "Conference Paper", 
     doi: "10.1109/ISPA67752.2025.00129", 
     pdfUrl: "#",
-	abstract: "Density-based clustering can discover clusters of arbitrary shapes without knowing the number in advance. Decision graph methods, combining local density and relative distance, give intuitive guidance but their γ-curves often lack clear transitions, especially under noise or smooth densities, making automatic detection difficult. To solve this, we propose GIDC, which applies (1) a contrast-weighted filter to suppress noise and enhance center contrast, and (2) Gaussian fitting with second-derivative analysis to locate meaningful inflection points. This probabilistic framework improves detection stability, and experiments show GIDC achieves higher accuracy and robustness than state-of-the-art methods."
+	abstract: "Density-based clustering can discover clusters of arbitrary shapes without knowing the number in advance. Decision graph methods, combining local density and relative distance, give intuitive guidance but their γ-curves often lack clear transitions, especially under noise or smooth densities, making automatic detection difficult. To solve this, we propose GIDC, which applies (1) a contrast-weighted filter to suppress noise and enhance center contrast, and (2) Gaussian fitting with second-derivative analysis to locate meaningful inflection points. This probabilistic framework improves detection stability, and experiments show GIDC achieves higher accuracy and robustness than state-of-the-art methods.",
     keywords: ["Density-based clustering, cluster center detection, decision graph, Gaussian fitting, inflection point analysis, unsupervised learning"]
   }
   /*{ 
