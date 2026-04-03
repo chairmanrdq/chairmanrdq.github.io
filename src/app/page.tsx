@@ -3,7 +3,6 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Button } from "@/components/ui/button";
 import { SectionTitle } from "@/components/ui/section-title";
 import { Mail, Phone, Link as LinkIcon, MapPin, Award, Rss, BookOpen, Star, TrendingUp, Users, Globe, Zap, ArrowRight, ChevronRight, Leaf, Cpu, Database, Battery, Cloud, Sparkles, Crown, Diamond } from 'lucide-react';
-import ImageCarousel from '@/components/home/image-carousel';
 
 // Enhanced Mock Data with luxury focus
 const scholarData = {
@@ -34,7 +33,7 @@ const scholarData = {
     { label: "Publications", value: "Curated list", icon: <BookOpen className="h-5 w-5 text-primary" /> },
     { label: "Research areas", value: "4 focus themes", icon: <Star className="h-5 w-5 text-secondary" /> },
     { label: "Teaching & advising", value: "Courses & mentorship", icon: <Users className="h-5 w-5 text-accent" /> },
-    { label: "Projects", value: "Grants & collaborations", icon: <Zap className="h-5 w-5 text-[hsl(35_70%_45%)]" /> },
+    { label: "Projects", value: "Grants & collaborations", icon: <Zap className="h-5 w-5 text-secondary" /> },
   ],
   news: [
     { 
@@ -64,11 +63,24 @@ const scholarData = {
       date: "Current lab", 
       title: "Lab Team & Mentorship", 
       description: "Current team members, research interests, and guidance opportunities. Send a short email with your background and goals.", 
-      icon: <Users className="h-5 w-5 flex-shrink-0 text-[hsl(35_70%_45%)]" />,
+      icon: <Users className="h-5 w-5 flex-shrink-0 text-secondary" />,
       badge: "Students",
-      tone: "gold",
+      tone: "primary",
       link: "/team",
       action: "Meet the team"
+    }
+    ,
+    {
+      id: "a",
+      date: "2026-04-01",
+      title: "Two Teams from Our University Win Awards in AI+Data Track of the 5th Jiutian·Wutong Cup National Finals",
+      description:
+        "The national finals of the AI+Data Track of the 2026 5th China Mobile Jiutian·Wutong Cup. Our Intelligent Computing Pioneer Team and Neida Meow Meow Team received first and second prizes, respectively.",
+      icon: <Award className="h-5 w-5 flex-shrink-0" />,
+      badge: "Award",
+      tone: "gold",
+      link: "/projects",
+      action: "View projects",
     }
     //{ 
      // id: 3, 
@@ -112,59 +124,33 @@ const featuredPublications = [
   },
 ];
 
-// Enhanced carousel data with luxury focus
-const carouselImages = [
-  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/26wt.jpg", alt: "Inner Mongolia University Image1", dataAiHint: "Illustration of Inner Mongolia University" },
-  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/zsxf.jpg", alt: "Inner Mongolia University Image2", dataAiHint: "Illustration of Inner Mongolia University" },
-  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/zsxf1.jpg", alt: "Inner Mongolia University Image3", dataAiHint: "Illustration of Inner Mongolia University" },
-  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/zsxf2.png", alt: "Inner Mongolia University Image4", dataAiHint: "Illustration of Inner Mongolia University" },
-  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/mmhy.jpg", alt: "Inner Mongolia University Image5", dataAiHint: "Illustration of Inner Mongolia University" },
-  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/ndmm.jpg", alt: "Inner Mongolia University Image6", dataAiHint: "Illustration of Inner Mongolia University" },
-  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/dbxc.jpg", alt: "Inner Mongolia University Image7", dataAiHint: "Illustration of Inner Mongolia University" },
-  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/202508.jpg", alt: "Inner Mongolia University Image8", dataAiHint: "Illustration of Inner Mongolia University" },
-  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/202509.jpg", alt: "Inner Mongolia University Image9", dataAiHint: "Illustration of Inner Mongolia University" },
-  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/202510.jpg", alt: "Inner Mongolia University Image10", dataAiHint: "Illustration of Inner Mongolia University" },
-  { src: "https://picsum.photos/seed/carouselA/1400/600", alt: "State-of-the-Art Research Facility", dataAiHint: "modern laboratory with advanced equipment" },
-  { src: "https://picsum.photos/seed/carouselB/1400/600", alt: "AI Neural Network Visualization", dataAiHint: "complex neural network visualization" },
-  { src: "https://picsum.photos/seed/carouselC/1400/600", alt: "International Research Collaboration", dataAiHint: "diverse team collaboration" },
-  { src: "https://picsum.photos/seed/carouselD/1400/600", alt: "Advanced Computing Infrastructure", dataAiHint: "high-performance computing center" },
-];
+// (Removed) image carousel on home page: replaced with text-first research snapshot.
 export default function Home() {
   return (
     <div className="relative">
       {/* Hero Section with Ultra Luxury Animated Gradient */}
-      <section className="relative overflow-hidden rounded-3xl mb-16 p-8 md:p-12 luxury-card luxury-corner">
-                 <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-secondary/5 to-accent/5 opacity-70"></div>
-                 <div className="absolute top-0 left-0 w-72 h-72 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 opacity-60" style={{backgroundColor: 'hsla(225,55%,30%,0.20)'}}></div>
-        <div className="absolute bottom-0 right-0 w-80 h-80 rounded-full blur-3xl translate-x-1/2 translate-y-1/2 opacity-50" style={{backgroundColor: 'hsla(215,35%,32%,0.18)'}}></div>
-        <div className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 opacity-45" style={{backgroundColor: 'hsla(150,25%,28%,0.20)'}}></div>
+      <section className="relative overflow-hidden rounded-3xl mb-16 p-8 md:p-12">
         
         <div className="relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-            {/* Enhanced Avatar with Ultra Luxury Effects */}
             <div className="relative group">
-              <div className="absolute inset-0 animated-luxury-gradient rounded-none blur-lg opacity-40 group-hover:opacity-60 transition-opacity duration-700"></div>
               <div className="relative">
                 <Image
                   src={scholarData.avatarUrl}
                   alt={`Profile picture of ${scholarData.name}`}
                   width={200}
                   height={300}
-                  className="rounded-none object-cover h-72 w-48 lg:h-96 lg:w-64 border-4 border-background shadow-2xl group-hover:scale-105 transition-transform duration-700 luxury-glow-hover luxury-float"
+                  className="rounded-none object-cover h-72 w-48 lg:h-96 lg:w-64 border-4 border-background shadow-sm"
                   data-ai-hint={scholarData.dataAiHint}
                   priority
                 />
-                 <div className="absolute -bottom-2 -right-2 animated-luxury-gradient text-white p-3 rounded-none shadow-lg luxury-glow">
-                  <Crown className="h-6 w-6 text-[hsl(35_70%_45%)]" />
-                 </div>
-                <div className="absolute -top-1 -left-1 w-4 h-4 rounded-full luxury-shimmer" style={{backgroundColor: 'hsl(35,80%,70%)'}}></div>
               </div>
             </div>
 
             {/* Enhanced Bio Content with Luxury Effects */}
             <div className="flex-1 text-center lg:text-left">
                              <div className="inline-flex items-center gap-2 luxury-badge mb-4">
-                <Diamond className="h-4 w-4 text-[hsl(35_70%_45%)]" />
+                <Diamond className="h-4 w-4 text-secondary" />
                 <span className="text-sm font-medium">Computing Power Networks • Green Scheduling • Service Recommendation</span>
                </div>
               
@@ -231,11 +217,7 @@ export default function Home() {
                     variant="outline" 
                     size="sm" 
                     asChild 
-                                         className="luxury-border transition-all duration-500 group"
-                     style={{
-                       border: '2px solid transparent',
-                      background: 'linear-gradient(white, white) padding-box, linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)), hsl(var(--accent))) border-box'
-                     }}
+                    className="group rounded-2xl border-primary/20 text-primary hover:bg-primary/5 transition-colors"
                   >
                     <a href={link.url} target="_blank" rel="noopener noreferrer">
                       {link.icon}
@@ -453,12 +435,12 @@ export default function Home() {
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
                                              <span className="luxury-badge" style={{
-                         color: item.tone === 'gold' ? 'hsl(35 70% 45%)' : 'hsl(var(--primary))',
+                        color: item.tone === 'gold' ? 'hsl(var(--gold))' : 'hsl(var(--primary))',
                          background: item.tone === 'gold'
-                           ? 'linear-gradient(135deg, hsl(35 70% 45% / 0.08) 0%, hsl(35 70% 45% / 0.12) 100%)'
+                          ? 'linear-gradient(135deg, hsl(var(--gold) / 0.08) 0%, hsl(var(--gold) / 0.12) 100%)'
                            : 'linear-gradient(135deg, hsl(var(--secondary) / 0.08) 0%, hsl(var(--secondary) / 0.12) 100%)',
                          border: item.tone === 'gold'
-                           ? '1px solid hsl(35 70% 45% / 0.2)'
+                          ? '1px solid hsl(var(--gold) / 0.2)'
                            : '1px solid hsl(var(--secondary) / 0.2)'
                        }}>
                          {item.badge}
@@ -492,16 +474,60 @@ export default function Home() {
       {/* Luxury Divider */}
       <div className="luxury-divider"></div>
 
-      {/* Enhanced Image Carousel Section */}
-      <section id="image-carousel" aria-labelledby="carousel-title" className="mb-16">
+      {/* Research Snapshot */}
+      <section id="research-snapshot" aria-labelledby="research-snapshot-title" className="mb-16">
         <div className="text-center mb-8">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gradient-luxury mb-4">Research Highlights</h2>
-          <div className="w-24 h-1 mx-auto rounded-full bg-gradient-to-r from-primary via-secondary to-accent"></div>
+          <h2 id="research-snapshot-title" className="text-3xl lg:text-4xl font-bold text-gradient-luxury mb-4">
+            Research Snapshot
+          </h2>
+          <div className="w-24 h-1 mx-auto rounded-full bg-primary/20"></div>
         </div>
-        
-        <div className="luxury-card overflow-hidden luxury-hover">
-          <ImageCarousel images={carouselImages} interval={5000} />
-        </div>
+
+        <Card className="luxury-card">
+          <CardContent className="pt-6">
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-lg font-semibold text-primary mb-1">Computing Power Networks</h3>
+                <p className="text-sm text-foreground/80 leading-relaxed">
+                  User-aware and QoS-aware scheduling across heterogeneous resources, with a focus on
+                  provable performance and energy-efficient execution.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-semibold text-primary mb-1">Green & Low-carbon Optimization</h3>
+                <p className="text-sm text-foreground/80 leading-relaxed">
+                  Low-carbon resource matching and system evaluation, targeting robust reductions in
+                  power usage while maintaining service quality.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-semibold text-primary mb-1">Service Computing & Recommendation</h3>
+                <p className="text-sm text-foreground/80 leading-relaxed">
+                  Robust service recommendation and cold-start solutions, integrating learning-based
+                  models for practical deployment scenarios.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-8 flex flex-wrap gap-3 items-center">
+              {scholarData.researchKeywords.map((keyword, index) => (
+                <span
+                  key={index}
+                  className="inline-flex items-center px-3 py-1 rounded-full border border-border text-xs text-foreground/80"
+                >
+                  {keyword}
+                </span>
+              ))}
+              <Button variant="outline" asChild className="rounded-xl border-primary/20 text-primary hover:bg-primary/5 ml-auto">
+                <a href="/research" className="inline-flex items-center gap-2">
+                  Explore details <ChevronRight className="h-4 w-4" />
+                </a>
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
       </section>
     </div>
   );

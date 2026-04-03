@@ -8,70 +8,73 @@ body {
 
 @layer base {
   :root {
-    /* 学术 + 艺术气质的偏克制配色（Light） */
-    --background: 40 20% 97%;  /* 微暖米白，纸张感 */
-    --foreground: 230 20% 15%; /* 深墨蓝灰，阅读友好 */
+    /* 顶会论文风：冷静、低饱和、以学术蓝/灰为主 */
+    --background: 220 30% 98%;   /* 冷调“纸白” */
+    --foreground: 220 25% 14%;  /* 深墨蓝灰，阅读友好 */
 
-    --gradient-start-color: 40 20% 98%;
-    --gradient-end-color: 40 15% 94%;
+    --gradient-start-color: 220 35% 99%;
+    --gradient-end-color: 220 25% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 230 20% 15%;
+    --card: 220 30% 99%;
+    --card-foreground: 220 25% 14%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 230 20% 15%;
+    --popover: 220 30% 99%;
+    --popover-foreground: 220 25% 14%;
 
-    /* Primary：深墨蓝，论文/标题主色 */
-    --primary: 225 55% 30%; /* 接近 #12325b */
+    /* Primary：学术蓝 */
+    --primary: 220 60% 33%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary：略偏灰的群青蓝，用于导航 */
-    --secondary: 215 35% 32%;
+    /* Secondary：蓝灰（更中性） */
+    --secondary: 215 30% 30%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 25% 96%;
-    --muted-foreground: 220 10% 40%;
+    --muted: 220 18% 96%;
+    --muted-foreground: 220 12% 42%;
 
-    /* Accent：低饱和墨绿，呼应绿色算力，又不张扬 */
-    --accent: 150 25% 28%;
+    /* Accent：更克制的低饱和墨绿 */
+    --accent: 155 22% 30%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 72% 55%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 18% 88%;
+    --border: 220 18% 86%;
     --input: 0 0% 100%;
-    --ring: 225 55% 30%;
+    --ring: 220 60% 33%;
 
-    --link-hover: 220 60% 45%; /* 适度提亮的蓝色 hover */
+    --link-hover: 220 65% 45%;
+
+    /* Gold：奖项强调色（更稳重、不过亮） */
+    --gold: 45 92% 50%;
 
     /* Chart 色板：一深一浅，突出严肃感 */
     --chart-1: 225 55% 30%;
     --chart-2: 215 35% 38%;
     --chart-3: 150 25% 32%;
-    --chart-4: 35 70% 52%;  /* 柔和金黄，降低俗气 */
-    --chart-5: 220 10% 40%;
+    --chart-4: var(--gold);
+    --chart-5: 220 12% 42%;
     
     --radius: 0.9rem; /* 略收窄圆角，更学术一点 */
 
     /* Sidebar（浅色） */
-    --sidebar-background: 40 20% 98%;
-    --sidebar-foreground: 230 20% 15%;
-    --sidebar-primary: 225 55% 30%;
+    --sidebar-background: 220 30% 99%;
+    --sidebar-foreground: 220 25% 14%;
+    --sidebar-primary: 220 60% 33%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 210 20% 95%;
-    --sidebar-accent-foreground: 225 55% 30%;
-    --sidebar-border: 210 18% 88%;
-    --sidebar-ring: 225 55% 30%;
+    --sidebar-accent-foreground: 220 60% 33%;
+    --sidebar-border: 220 18% 86%;
+    --sidebar-ring: 220 60% 33%;
   }
 
   .dark {
-    /* Dark：低饱和深蓝灰，适合夜间阅读 */
-    --background: 230 25% 8%;
+    /* Dark：偏论文正文的深蓝灰 */
+    --background: 220 28% 8%;
     --foreground: 210 15% 92%;
 
-    --gradient-start-color: 230 25% 6%;
-    --gradient-end-color: 230 20% 12%;
+    --gradient-start-color: 220 28% 6%;
+    --gradient-end-color: 220 22% 12%;
 
     --card: 230 25% 12%;
     --card-foreground: 210 15% 92%;
@@ -79,31 +82,31 @@ body {
     --popover: 230 25% 10%;
     --popover-foreground: 210 15% 92%;
 
-    --primary: 215 60% 72%;
+    --primary: 220 60% 74%;
     --primary-foreground: 230 25% 8%;
 
-    --secondary: 205 40% 65%;
+    --secondary: 215 35% 62%;
     --secondary-foreground: 230 25% 8%;
 
-    --muted: 230 15% 18%;
+    --muted: 220 14% 18%;
     --muted-foreground: 220 12% 72%;
 
-    --accent: 145 25% 45%;
+    --accent: 155 22% 45%;
     --accent-foreground: 230 25% 8%;
 
     --destructive: 0 70% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 230 18% 26%;
+    --border: 220 18% 26%;
     --input: 230 20% 18%;
-    --ring: 215 60% 72%;
+    --ring: 220 60% 74%;
 
-    --link-hover: 210 70% 72%;
+    --link-hover: 220 70% 72%;
     
-    --chart-1: 215 60% 72%;
+    --chart-1: 220 60% 74%;
     --chart-2: 205 40% 65%;
     --chart-3: 145 25% 45%;
-    --chart-4: 35 70% 58%;
+    --chart-4: 45 92% 60%;
     --chart-5: 220 12% 72%;
 
     /* Sidebar（深色） */
@@ -212,50 +215,62 @@ body {
 
 /* 金色强调色 - 用于荣誉、奖项、重要数字 */
 .gold-accent {
-  color: hsl(35 70% 40%);
-  background: linear-gradient(135deg, hsl(35 80% 90%) 0%, hsl(35 80% 88%) 100%);
-  border: 1px solid hsl(35 65% 80%);
-  box-shadow: 0 4px 12px hsl(35 80% 80% / 0.4);
+  color: hsl(var(--gold));
+  background: linear-gradient(
+    135deg,
+    hsl(var(--gold) / 0.18) 0%,
+    hsl(var(--gold) / 0.12) 100%
+  );
+  border: 1px solid hsl(var(--gold) / 0.28);
+  box-shadow: 0 4px 12px hsl(var(--gold) / 0.22);
 }
 
 /* 高端学术 button styles */
 .btn-luxury {
-  background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 25%, hsl(var(--accent)) 50%, hsl(var(--secondary)) 75%, hsl(var(--primary)) 100%);
-  background-size: 100% 100%;
-  color: white;
-  transition: all 0.6s ease;
-  border-radius: 1.25rem;
-  font-weight: 600;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3), 0 0 20px hsl(var(--primary)/0.3);
-  transform: scale(1);
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  transition: all 0.2s ease;
+  border-radius: 0.9rem;
+  font-weight: 650;
+  box-shadow: none;
+  transform: none;
   animation: none;
 }
 
 .btn-luxury:hover {
-  background: linear-gradient(135deg, hsl(var(--primary)/0.95) 0%, hsl(var(--secondary)/0.95) 25%, hsl(var(--accent)/0.95) 50%, hsl(var(--secondary)/0.95) 75%, hsl(var(--primary)/0.95) 100%);
-  background-size: 100% 100%;
-  box-shadow: 0 18px 50px -18px rgba(0, 0, 0, 0.35), 0 0 18px hsl(var(--primary)/0.35);
-  transform: scale(1.02) translateY(-2px);
+  background: hsl(var(--primary) / 0.92);
+  box-shadow: none;
+  transform: translateY(-1px);
   animation: none;
 }
 
 /* 金色按钮 - 用于荣誉、奖项 */
 .btn-gold {
-  background: linear-gradient(135deg, hsl(35 80% 72%) 0%, hsl(40 85% 78%) 50%, hsl(35 80% 72%) 100%);
+  background: linear-gradient(
+    135deg,
+    hsl(45 92% 54%) 0%,
+    hsl(48 96% 58%) 50%,
+    hsl(45 92% 54%) 100%
+  );
   background-size: 100% 100%;
   color: hsl(230 20% 15%);
   transition: all 0.6s ease;
   border-radius: 1.25rem;
   font-weight: 600;
-  box-shadow: 0 25px 50px -12px rgba(255, 193, 7, 0.3), 0 0 20px rgba(255, 193, 7, 0.3);
+  box-shadow: 0 25px 50px -12px hsl(var(--gold) / 0.25), 0 0 20px hsl(var(--gold) / 0.22);
   transform: scale(1);
   animation: none;
 }
 
 .btn-gold:hover {
-  background: linear-gradient(135deg, hsl(40 85% 78%) 0%, hsl(35 80% 72%) 50%, hsl(40 85% 78%) 100%);
+  background: linear-gradient(
+    135deg,
+    hsl(48 96% 58%) 0%,
+    hsl(45 92% 54%) 50%,
+    hsl(48 96% 58%) 100%
+  );
   background-size: 100% 100%;
-  box-shadow: 0 18px 50px -18px rgba(255, 193, 7, 0.35), 0 0 18px hsl(35 80% 72% / 0.45);
+  box-shadow: 0 18px 50px -18px hsl(var(--gold) / 0.30), 0 0 18px hsl(var(--gold) / 0.35);
   transform: scale(1.02) translateY(-2px);
   animation: none;
 }
@@ -278,39 +293,40 @@ body {
 
 /* Ultra Luxury theme elements */
 .luxury-card {
-  background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
+  background: hsl(var(--card));
   border: 1px solid hsl(var(--border));
-  border-radius: 1.4rem;
-  box-shadow: 0 18px 40px -18px rgba(0, 0, 0, 0.28);
-  transition: all 0.4s ease;
-  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  box-shadow: none;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+  backdrop-filter: none;
   background-size: 100% 100%;
   animation: none;
 }
 
 .luxury-card:hover {
-  box-shadow: 0 26px 55px -18px rgba(0, 0, 0, 0.32);
-  transform: translateY(-2px);
+  box-shadow: none;
+  transform: translateY(-1px);
+  border-color: hsl(var(--primary) / 0.35);
 }
 
 .luxury-badge {
-  color: hsl(var(--primary));
-  background: linear-gradient(135deg, hsl(var(--primary)/0.08) 0%, hsl(var(--secondary)/0.08) 25%, hsl(var(--accent)/0.08) 50%, hsl(var(--secondary)/0.08) 75%, hsl(var(--primary)/0.08) 100%);
-  border: 1px solid hsl(var(--primary)/0.2);
-  padding: 0.75rem 1.5rem;
+  color: hsl(var(--foreground) / 0.9);
+  background: hsl(var(--muted));
+  border: 1px solid hsl(var(--border));
+  padding: 0.35rem 0.7rem;
   border-radius: 9999px;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: 600;
-  backdrop-filter: blur(16px);
-  box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.15), 0 0 10px hsl(var(--primary)/0.1);
+  backdrop-filter: none;
+  box-shadow: none;
   background-size: 100% 100%;
   animation: none;
-  transition: all 0.4s ease;
+  transition: all 0.2s ease;
 }
 
 .luxury-badge:hover {
-  transform: scale(1.03);
-  box-shadow: 0 12px 25px -12px rgba(0, 0, 0, 0.2), 0 0 12px hsl(var(--primary)/0.18);
+  transform: translateY(-1px);
+  box-shadow: none;
   animation: none;
 }
 
@@ -332,8 +348,8 @@ body {
 }
 
 @keyframes luxury-glow {
-  0%, 100% { box-shadow: 0 0 25px hsl(var(--primary) / 0.30), 0 0 15px hsl(35 80% 72% / 0.18); }
-  50% { box-shadow: 0 0 50px hsl(var(--primary) / 0.42), 0 0 30px hsl(35 80% 72% / 0.30); }
+  0%, 100% { box-shadow: 0 0 25px hsl(var(--primary) / 0.30), 0 0 15px hsl(var(--gold) / 0.18); }
+  50% { box-shadow: 0 0 50px hsl(var(--primary) / 0.42), 0 0 30px hsl(var(--gold) / 0.30); }
 }
 
 @keyframes luxury-sparkle {
@@ -366,17 +382,17 @@ body {
 }
 
 .luxury-hover:hover {
-  transform: scale(1.02) translateY(-2px);
-  box-shadow: 0 18px 40px -22px rgba(0, 0, 0, 0.3);
+  transform: translateY(-1px);
+  box-shadow: none;
 }
 
 .luxury-glow {
-  box-shadow: 0 0 26px hsl(var(--primary) / 0.28), 0 0 18px hsl(35 80% 72% / 0.16);
+  box-shadow: 0 0 26px hsl(var(--primary) / 0.28), 0 0 18px hsl(var(--gold) / 0.16);
   animation: none;
 }
 
 .luxury-glow-hover:hover {
-  box-shadow: 0 0 44px hsl(var(--primary) / 0.32), 0 0 26px hsl(35 80% 72% / 0.18);
+  box-shadow: 0 0 44px hsl(var(--primary) / 0.32), 0 0 26px hsl(var(--gold) / 0.18);
   animation: none;
 }
 
@@ -401,19 +417,21 @@ body {
 
 /* 高端学术 text gradients */
 .text-gradient-luxury {
-  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: none;
+  background-clip: initial;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  color: hsl(var(--primary));
   background-size: 100% 100%;
   animation: none;
 }
 
 .text-gradient-tech {
-  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: none;
+  background-clip: initial;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  color: hsl(var(--secondary));
 }
 
 .text-gradient-green {
@@ -425,13 +443,13 @@ body {
 
 /* Luxury borders */
 .luxury-border {
-  border: 2px solid transparent;
-  background: linear-gradient(white, white) padding-box, linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)), hsl(var(--accent))) border-box;
+  border: 1px solid hsl(var(--border));
+  background: none;
 }
 
 .luxury-border-dark {
-  border: 2px solid transparent;
-  background: linear-gradient(hsl(var(--background)), hsl(var(--background))) padding-box, linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)), hsl(var(--accent))) border-box;
+  border: 1px solid hsl(var(--border));
+  background: none;
 }
 
 /* Luxury glassmorphism */
@@ -450,8 +468,8 @@ body {
 /* 高端学术 decorative elements */
 .luxury-divider {
   height: 2px;
-  background: linear-gradient(90deg, transparent, hsl(var(--primary)), hsl(var(--secondary)), hsl(var(--accent)), transparent);
-  margin: 2rem 0;
+  background: hsl(var(--border));
+  margin: 1.5rem 0;
 }
 
 .luxury-corner {
