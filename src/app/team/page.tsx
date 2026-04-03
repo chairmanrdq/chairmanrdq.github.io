@@ -89,7 +89,7 @@ const teamMembers = [
     avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/dlj.jpg", // Increased size
     dataAiHint: "student headshot",
     researchInterests: ["Task Scheduling","Computing Power Networks"],
-    bio: "Focus on using task scheduling methods to improve the utilization of resources and green power in data centers. A reader immersed in a fantasy world and a amateur writers who do not write most of the time.",
+    bio: "Focuses on task scheduling methods to improve resource utilization and low-carbon power usage in data centers. Interested in system evaluation, reproducible experiments, and technical reading.",
     email: "david.green@university.edu", // Replace
   },
   {
@@ -99,7 +99,7 @@ const teamMembers = [
     avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/fph.jpg", // Increased size
     dataAiHint: "student headshot",
     researchInterests: ["Task Scheduling","Computing Power Networks"],
-    bio: "Addressing the challenges of edge collaborative algorithms through a feedback-diffusion model scheduling method. Spending time in the virtual world to relax both mentally and physically.",
+    bio: "Addresses challenges in edge collaborative algorithms using feedback-diffusion model scheduling, aiming to balance efficiency, latency, and robustness in heterogeneous environments.",
     email: "david.green@university.edu", // Replace
   },
   {
@@ -109,7 +109,7 @@ const teamMembers = [
     avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/mh.jpg", // Increased size
     dataAiHint: "student headshot",
     researchInterests: ["Task Offloading","Task Recommendation","Computing Power Networks"],
-    bio: "My research focuses on task offloading and recommendation in computing power networks, aiming to optimize resource allocation and enhance service efficiency. Reading for cozy stories, gaming for epic wins! Swap books for controllers after dark—my perfect kind of fun.",
+    bio: "Researches task offloading and recommendation in computing power networks, optimizing resource allocation and improving service efficiency under practical constraints.",
     email: "david.green@university.edu", // Replace
   },
   {
@@ -320,6 +320,63 @@ const alumni_collegeMembers = [
 export default function TeamPage() {
   return (
     <div className="space-y-12">
+      <section id="lab-overview" aria-labelledby="lab-overview-title">
+        <SectionTitle id="lab-overview-title">Lab Overview</SectionTitle>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <Card className="shadow-md border-primary/10 lg:col-span-2">
+            <CardContent className="p-6">
+              <h3 className="text-xl md:text-2xl font-semibold text-primary mb-3">Research Themes</h3>
+              <p className="text-sm md:text-base text-foreground/80 leading-relaxed mb-5">
+                Our lab focuses on computing power networks and low-carbon resource optimization, and builds
+                reliable learning-based methods for task scheduling and service recommendation.
+              </p>
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
+                  <span className="text-primary font-semibold">1.</span>
+                  <p className="text-sm text-foreground/80">Computing power scheduling with user perception / QoS awareness.</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-primary font-semibold">2.</span>
+                  <p className="text-sm text-foreground/80">Green & low-carbon scheduling for energy-efficient computing.</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-primary font-semibold">3.</span>
+                  <p className="text-sm text-foreground/80">Service recommendation and cold-start solutions with robust modeling.</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="shadow-md border-primary/10">
+            <CardContent className="p-6">
+              <h3 className="text-xl md:text-2xl font-semibold text-primary mb-3">How to Apply</h3>
+              <p className="text-sm text-foreground/80 leading-relaxed mb-4">
+                If you are interested in research, email us with a short self-introduction and your background.
+              </p>
+              <div className="space-y-2 text-sm">
+                <div className="flex items-start gap-3">
+                  <span className="text-muted-foreground">•</span>
+                  <p className="text-foreground/80">Your CV, transcripts (if available), and 1–2 related projects.</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-muted-foreground">•</span>
+                  <p className="text-foreground/80">Why this lab, and what you want to work on.</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-muted-foreground">•</span>
+                  <p className="text-foreground/80">
+                    Contact:{" "}
+                    <a className="text-accent hover:underline" href="mailto:imucsrdq@163.com">
+                      imucsrdq@163.com
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
       <section id="current-team" aria-labelledby="current-team-title">
         <SectionTitle id="current-team-title">Current Team Members</SectionTitle>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -376,8 +433,8 @@ export default function TeamPage() {
         </div>
       </section>
 	  
-	   <section id="current-team" aria-labelledby="current-team-title">
-        <SectionTitle id="current-team-title">Undergraduate Student</SectionTitle>
+      <section id="undergraduate-team" aria-labelledby="undergraduate-team-title">
+        <SectionTitle id="undergraduate-team-title">Undergraduate Student</SectionTitle>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {collegeMembers.map(member => (
             <Card key={member.id} className="shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col sm:flex-row overflow-hidden border-primary/10">
