@@ -42,15 +42,15 @@ const scholarData = {
       date: "2026-04-01", 
       title: "🏆 Two Teams from Our University Win Awards in AI+Data Track of the 5th Jiutian·Wutong Cup National Finals", 
       description: "The national finals of the AI+Data Track of the 2026 5th China Mobile Jiutian·Wutong Cup recently concluded. Featuring 18 elite teams from 22 universities worldwide, our Intelligent Computing Pioneer Team and Neida Meow Meow Team won first and second prizes respectively, showcasing our students' excellence in digital intelligence innovation.", 
-             icon: <Award className="h-5 w-5 flex-shrink-0" style={{color: '#FFC107'}} />,
+             icon: <Award className="h-5 w-5 flex-shrink-0 text-[hsl(35_70%_45%)]" />,
       badge: "Award"
     },   
-   { 
+    { 
       id: 1, 
       date: "2025-10-24", 
       title: "🎤 Our group participated in the China National Computer Congress (CNCC 2025)", 
       description: "During the congress, we engaged in academic exchanges on computing power network scheduling, heterogeneous resource orchestration, and cross-domain intelligent dispatching, and explored collaborations with industry and academia.", 
-             icon: <Rss className="h-5 w-5 flex-shrink-0" style={{color: '#1E3A8A'}} />,
+             icon: <Rss className="h-5 w-5 flex-shrink-0 text-primary" />,
       badge: "Keynote"
     },
     { 
@@ -58,7 +58,7 @@ const scholarData = {
       date: "2025-08-13", 
       title: "🏆 Our group participated in CCF HPC China 2025, held in Ordos, Inner Mongolia.", 
       description: "During the conference, we presented our research on green computing power scheduling and HPC optimization, and engaged in in-depth discussions with scholars from China and abroad.", 
-             icon: <Award className="h-5 w-5 flex-shrink-0" style={{color: '#FFC107'}} />,
+             icon: <Award className="h-5 w-5 flex-shrink-0 text-[hsl(35_70%_45%)]" />,
       badge: "Award"
     },
     { 
@@ -66,7 +66,7 @@ const scholarData = {
       date: "2024-10-24", 
       title: "🎤 Our group participated in the China National Computer Congress (CNCC 2024)", 
       description: "During the congress, we engaged in academic exchanges on computing power networks, green computing, and service computing, and explored collaborations with industry and academia.", 
-             icon: <Rss className="h-5 w-5 flex-shrink-0" style={{color: '#1E3A8A'}} />,
+             icon: <Rss className="h-5 w-5 flex-shrink-0 text-primary" />,
       badge: "Keynote"
     }
     //{ 
@@ -101,12 +101,11 @@ export default function Home() {
   return (
     <div className="relative">
       {/* Hero Section with Ultra Luxury Animated Gradient */}
-      <section className="relative overflow-hidden animated-luxury-gradient-light rounded-3xl mb-16 p-8 md:p-12 luxury-border luxury-corner">
-                 <div className="absolute inset-0 bg-gradient-to-r from-[#5B2C6F]/4 via-[#1E3A8A]/4 to-[#1B5E20]/4 opacity-70"></div>
-                 <div className="absolute top-0 left-0 w-80 h-80 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 luxury-pulse" style={{backgroundColor: 'rgba(91, 44, 111, 0.2)'}}></div>
-         <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full blur-3xl translate-x-1/2 translate-y-1/2 luxury-pulse delay-1000" style={{backgroundColor: 'rgba(30, 58, 138, 0.2)'}}></div>
-         <div className="absolute top-1/2 left-1/2 w-72 h-72 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 luxury-pulse delay-500" style={{backgroundColor: 'rgba(27, 94, 32, 0.2)'}}></div>
-         <div className="absolute top-1/4 right-1/4 w-48 h-48 rounded-full blur-2xl luxury-sparkle" style={{backgroundColor: 'rgba(255, 193, 7, 0.15)'}}></div>
+      <section className="relative overflow-hidden rounded-3xl mb-16 p-8 md:p-12 luxury-card luxury-corner">
+                 <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-secondary/5 to-accent/5 opacity-70"></div>
+                 <div className="absolute top-0 left-0 w-72 h-72 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 opacity-60" style={{backgroundColor: 'hsla(225,55%,30%,0.20)'}}></div>
+        <div className="absolute bottom-0 right-0 w-80 h-80 rounded-full blur-3xl translate-x-1/2 translate-y-1/2 opacity-50" style={{backgroundColor: 'hsla(215,35%,32%,0.18)'}}></div>
+        <div className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 opacity-45" style={{backgroundColor: 'hsla(150,25%,28%,0.20)'}}></div>
         
         <div className="relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
@@ -123,10 +122,10 @@ export default function Home() {
                   data-ai-hint={scholarData.dataAiHint}
                   priority
                 />
-                                 <div className="absolute -bottom-2 -right-2 animated-luxury-gradient text-white p-3 rounded-none shadow-lg luxury-glow luxury-sparkle">
-                   <Crown className="h-6 w-6" style={{color: '#FFC107'}} />
+                 <div className="absolute -bottom-2 -right-2 animated-luxury-gradient text-white p-3 rounded-none shadow-lg luxury-glow">
+                  <Crown className="h-6 w-6 text-[hsl(35_70%_45%)]" />
                  </div>
-                 <div className="absolute -top-1 -left-1 w-4 h-4 rounded-full luxury-shimmer" style={{backgroundColor: '#FFC107'}}></div>
+                <div className="absolute -top-1 -left-1 w-4 h-4 rounded-full luxury-shimmer" style={{backgroundColor: 'hsl(35,80%,70%)'}}></div>
               </div>
             </div>
 
@@ -167,8 +166,8 @@ export default function Home() {
               {/* Enhanced Contact Info */}
               <div className="space-y-3 text-sm mb-6">
                 <div className="flex items-center justify-center lg:justify-start gap-3">
-                                     <div className="tech-accent p-2 rounded-lg">
-                     <Mail className="h-4 w-4" style={{color: '#1E3A8A'}} />
+                                    <div className="tech-accent p-2 rounded-lg">
+                    <Mail className="h-4 w-4 text-primary" />
                    </div>
                   <a href={`mailto:${scholarData.contact.email}`} className="text-foreground/90 hover:text-primary transition-colors">
                     {scholarData.contact.email}
@@ -176,15 +175,15 @@ export default function Home() {
                 </div>
                 {scholarData.contact.phone && (
                   <div className="flex items-center justify-center lg:justify-start gap-3">
-                                       <div className="tech-accent p-2 rounded-lg">
-                     <Phone className="h-4 w-4" style={{color: '#1E3A8A'}} />
+                                      <div className="tech-accent p-2 rounded-lg">
+                    <Phone className="h-4 w-4 text-primary" />
                    </div>
                     <span className="text-foreground/90">{scholarData.contact.phone}</span>
                   </div>
                 )}
                 <div className="flex items-center justify-center lg:justify-start gap-3">
-                                     <div className="tech-accent p-2 rounded-lg">
-                     <MapPin className="h-4 w-4" style={{color: '#1E3A8A'}} />
+                                    <div className="tech-accent p-2 rounded-lg">
+                    <MapPin className="h-4 w-4 text-primary" />
                    </div>
                   <span className="text-foreground/90">{scholarData.contact.office}</span>
                 </div>
@@ -225,15 +224,13 @@ export default function Home() {
 
       {/* Research Focus Section with Luxury Effects */}
       <section id="research-focus" aria-labelledby="research-focus-title" className="mb-16">
-                 <div className="text-center mb-8">
-           <h2 className="text-3xl lg:text-4xl font-bold text-gradient-luxury mb-4">Research Focus</h2>
-           <div className="w-24 h-1 mx-auto rounded-full" style={{
-             background: 'linear-gradient(90deg, #5B2C6F, #1E3A8A, #1B5E20)'
-           }}></div>
-         </div>
+        <div className="text-center mb-8">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gradient-luxury mb-4">Research Focus</h2>
+          <div className="w-24 h-1 mx-auto rounded-full bg-gradient-to-r from-primary via-secondary to-accent"></div>
+        </div>
         
-        <Card className="luxury-card overflow-hidden luxury-hover">
-                     <div className="absolute inset-0 bg-gradient-to-r from-[#5B2C6F]/3 via-[#1E3A8A]/3 to-[#1B5E20]/3 opacity-60"></div>
+        <Card className="luxury-card overflow-hidden luxury-hover relative">
+                    <div className="absolute inset-0 bg-gradient-to-r from-primary/7 via-secondary/7 to-accent/7 opacity-70"></div>
           <CardContent className="relative z-10 pt-8">
             <p className="text-lg lg:text-xl text-foreground/80 mb-6 leading-relaxed">
               {scholarData.researchFocusSummary}
@@ -274,20 +271,18 @@ export default function Home() {
 
       {/* Enhanced News & Updates Section */}
       <section id="news" aria-labelledby="news-title" className="mb-16">
-                 <div className="text-center mb-8">
-           <h2 className="text-3xl lg:text-4xl font-bold text-gradient-luxury mb-4">Latest News & Updates</h2>
-           <div className="w-24 h-1 mx-auto rounded-full" style={{
-             background: 'linear-gradient(90deg, #5B2C6F, #1E3A8A, #1B5E20)'
-           }}></div>
-         </div>
+        <div className="text-center mb-8">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gradient-luxury mb-4">Latest News & Updates</h2>
+          <div className="w-24 h-1 mx-auto rounded-full bg-gradient-to-r from-primary via-secondary to-accent"></div>
+        </div>
         
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {scholarData.news.map(item => (
             <Card 
-              key={item.id} 
-              className="luxury-card group overflow-hidden luxury-hover"
-            >
-                             <div className="absolute inset-0 bg-gradient-to-br from-[#5B2C6F]/3 via-[#1E3A8A]/3 to-[#1B5E20]/3 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+             key={item.id} 
+             className="luxury-card group overflow-hidden luxury-hover relative"
+           >
+                            <div className="absolute inset-0 bg-gradient-to-br from-primary/8 via-secondary/8 to-accent/8 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
               <CardContent className="relative z-10 pt-6">
                 <div className="flex items-start gap-4">
                                        <div className="innovation-accent p-3 rounded-xl">
@@ -310,12 +305,7 @@ export default function Home() {
                        </span>
                       <span className="text-xs text-muted-foreground">{item.date}</span>
                     </div>
-                                         <h3 className="text-lg font-semibold mb-2 group-hover:text-gradient-luxury transition-all duration-500" style={{
-                       background: 'linear-gradient(135deg, #5B2C6F, #1E3A8A)',
-                       backgroundClip: 'text',
-                       WebkitBackgroundClip: 'text',
-                       WebkitTextFillColor: 'transparent'
-                     }}>
+                                            <h3 className="text-lg font-semibold mb-2 group-hover:text-gradient-luxury transition-all duration-500">
                        {item.title}
                      </h3>
                     <p className="text-sm text-foreground/80 leading-relaxed">
@@ -334,12 +324,10 @@ export default function Home() {
 
       {/* Enhanced Image Carousel Section */}
       <section id="image-carousel" aria-labelledby="carousel-title" className="mb-16">
-                 <div className="text-center mb-8">
-           <h2 className="text-3xl lg:text-4xl font-bold text-gradient-luxury mb-4">Research Highlights</h2>
-           <div className="w-24 h-1 mx-auto rounded-full" style={{
-             background: 'linear-gradient(90deg, #5B2C6F, #1E3A8A, #1B5E20)'
-           }}></div>
-         </div>
+        <div className="text-center mb-8">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gradient-luxury mb-4">Research Highlights</h2>
+          <div className="w-24 h-1 mx-auto rounded-full bg-gradient-to-r from-primary via-secondary to-accent"></div>
+        </div>
         
         <div className="luxury-card overflow-hidden luxury-hover">
           <ImageCarousel images={carouselImages} interval={5000} />
