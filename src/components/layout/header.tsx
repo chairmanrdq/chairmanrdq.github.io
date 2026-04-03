@@ -25,6 +25,7 @@ import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
+import { ThemeToggle } from '@/components/theme-toggle';
 import React from 'react';
 
 // Replace with actual scholar name
@@ -64,30 +65,34 @@ export default function Header() {
           </span>
         </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-1 lg:space-x-2">
-          {navItems.map((item) => (
-            <Button
-              key={item.href}
-              variant="ghost"
-              asChild
-              className={cn(
-                "text-sm font-medium transition-all duration-500 rounded-2xl",
-                pathname === item.href
-                  ? "bg-gradient-to-r from-primary/8 via-secondary/8 to-accent/8 text-primary font-semibold hover:from-primary/15 hover:via-secondary/15 hover:to-accent/15 luxury-border" // Active state
-                  : "text-foreground/70 hover:text-gradient-luxury hover:bg-gradient-to-r hover:from-primary/3 hover:via-secondary/3 hover:to-accent/3" // Inactive state
-              )}
-            >
-              <Link href={item.href}>
-                <item.icon className="h-4 w-4 mr-2" />
-                {item.label}
-              </Link>
-            </Button>
-          ))}
-        </nav>
+        {/* Desktop Navigation + theme */}
+        <div className="hidden md:flex items-center gap-1 lg:gap-2">
+          <nav className="flex items-center space-x-1 lg:space-x-2">
+            {navItems.map((item) => (
+              <Button
+                key={item.href}
+                variant="ghost"
+                asChild
+                className={cn(
+                  "text-sm font-medium transition-all duration-500 rounded-2xl",
+                  pathname === item.href
+                    ? "bg-gradient-to-r from-primary/8 via-secondary/8 to-accent/8 text-primary font-semibold hover:from-primary/15 hover:via-secondary/15 hover:to-accent/15 luxury-border" // Active state
+                    : "text-foreground/70 hover:text-gradient-luxury hover:bg-gradient-to-r hover:from-primary/3 hover:via-secondary/3 hover:to-accent/3" // Inactive state
+                )}
+              >
+                <Link href={item.href}>
+                  <item.icon className="h-4 w-4 mr-2" />
+                  {item.label}
+                </Link>
+              </Button>
+            ))}
+          </nav>
+          <ThemeToggle />
+        </div>
 
         {/* Mobile Navigation */}
-        <div className="md:hidden">
+        <div className="md:hidden flex items-center gap-1">
+          <ThemeToggle />
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" aria-label="Toggle menu" className="text-primary hover:text-primary/80">

@@ -8,18 +8,19 @@ body {
 
 @layer base {
   :root {
-    /* 科技蓝配色：冷白底 + 电气深蓝 + 青蓝辅助 */
-    --background: 221 22% 94%;
-    --foreground: 223 44% 11%;
+    /* 科技蓝配色：分层冷底 + 浮起模块 + 青蓝高光 */
+    --background: 222 24% 93%;
+    --background-end: 223 28% 90%;
+    --foreground: 224 42% 10%;
 
-    --gradient-start-color: 221 38% 95%;
-    --gradient-end-color: 223 28% 89%;
+    --gradient-start-color: 222 38% 96%;
+    --gradient-end-color: 224 26% 88%;
 
-    --card: 220 20% 96%;
-    --card-foreground: 223 34% 12%;
+    --card: 222 26% 97.5%;
+    --card-foreground: 223 36% 11%;
 
-    --popover: 220 20% 96%;
-    --popover-foreground: 223 34% 12%;
+    --popover: 222 26% 97.5%;
+    --popover-foreground: 223 36% 11%;
 
     --primary: 220 90% 30%;
     --primary-foreground: 0 0% 100%;
@@ -27,8 +28,8 @@ body {
     --secondary: 221 52% 34%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 221 18% 90%;
-    --muted-foreground: 223 12% 36%;
+    --muted: 222 20% 91%;
+    --muted-foreground: 223 14% 34%;
 
     --accent: 196 100% 43%;
     --accent-foreground: 0 0% 100%;
@@ -36,8 +37,8 @@ body {
     --destructive: 0 72% 55%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 222 28% 74%;
-    --input: 220 20% 97%;
+    --border: 221 24% 76%;
+    --input: 222 24% 97%;
     --ring: 220 90% 30%;
 
     --link-hover: 196 100% 41%;
@@ -55,28 +56,29 @@ body {
     --radius: 0.9rem; /* 略收窄圆角，更学术一点 */
 
     /* Sidebar（浅色） */
-    --sidebar-background: 221 24% 95%;
+    --sidebar-background: 222 26% 94.5%;
     --sidebar-foreground: 223 38% 12%;
     --sidebar-primary: 220 86% 31%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 221 18% 90%;
+    --sidebar-accent: 222 20% 91%;
     --sidebar-accent-foreground: 220 86% 31%;
-    --sidebar-border: 222 26% 76%;
+    --sidebar-border: 221 24% 78%;
     --sidebar-ring: 220 86% 31%;
   }
 
   .dark {
-    --background: 224 34% 6%;
+    --background: 224 36% 5.5%;
+    --background-end: 226 32% 8%;
     --foreground: 210 28% 94%;
 
-    --gradient-start-color: 224 40% 5%;
-    --gradient-end-color: 224 26% 11%;
+    --gradient-start-color: 224 42% 4.5%;
+    --gradient-end-color: 226 28% 10%;
 
-    --card: 224 28% 10%;
-    --card-foreground: 210 24% 93%;
+    --card: 224 28% 11%;
+    --card-foreground: 210 26% 94%;
 
-    --popover: 224 30% 9%;
-    --popover-foreground: 210 24% 93%;
+    --popover: 224 30% 10%;
+    --popover-foreground: 210 26% 94%;
 
     --primary: 214 98% 74%;
     --primary-foreground: 220 28% 8%;
@@ -123,7 +125,11 @@ body {
   }
   body {
     @apply text-foreground;
-    background-image: radial-gradient(circle at 0% 0%, hsl(var(--gradient-start-color)), transparent 55%), radial-gradient(circle at 100% 100%, hsl(var(--gradient-end-color)), transparent 55%), linear-gradient(135deg, hsl(var(--background)), hsl(var(--background)));
+    background-image:
+      radial-gradient(circle at 0% 0%, hsl(var(--gradient-start-color)), transparent 55%),
+      radial-gradient(circle at 100% 100%, hsl(var(--gradient-end-color)), transparent 55%),
+      radial-gradient(ellipse 120% 70% at 50% -15%, hsl(var(--primary) / 0.07), transparent 52%),
+      linear-gradient(168deg, hsl(var(--background)) 0%, hsl(var(--background-end)) 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
     min-height: 100vh;
@@ -136,10 +142,10 @@ body {
     inset: -10%;
     pointer-events: none;
     z-index: -1;
-    opacity: 0.55;
+    opacity: 0.48;
     background:
-      radial-gradient(circle at 15% 10%, hsl(var(--primary) / 0.18), transparent 55%),
-      radial-gradient(circle at 85% 90%, hsl(var(--accent) / 0.14), transparent 55%);
+      radial-gradient(circle at 15% 10%, hsl(var(--primary) / 0.14), transparent 55%),
+      radial-gradient(circle at 85% 90%, hsl(var(--accent) / 0.12), transparent 55%);
     animation: bg-drift 28s ease-in-out infinite;
     transform: translate3d(0, 0, 0);
   }
@@ -149,10 +155,10 @@ body {
     inset: 0;
     pointer-events: none;
     z-index: -1;
-    opacity: 0.35;
+    opacity: 0.3;
     background-image:
-      linear-gradient(hsl(var(--primary) / 0.07) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(var(--primary) / 0.07) 1px, transparent 1px),
+      linear-gradient(hsl(var(--primary) / 0.055) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--primary) / 0.055) 1px, transparent 1px),
       repeating-linear-gradient(
         180deg,
         hsl(var(--accent) / 0.05) 0px,
@@ -178,6 +184,13 @@ body {
   h4 { @apply text-xl; }
   /* Links use primary color and custom hover color */
   a:not(.no-style) { @apply text-primary hover:text-[hsl(var(--link-hover))] transition-colors duration-200; }
+
+  html {
+    color-scheme: light;
+  }
+  html.dark {
+    color-scheme: dark;
+  }
 }
 
 /* Custom separator with icon */
@@ -197,7 +210,12 @@ body {
 /* Luxury card styles */
 /* Legacy definition (keep consistent with later override) */
 .luxury-card {
-  background: linear-gradient(180deg, hsl(var(--card)) 0%, hsl(var(--muted)) 100%);
+  background: linear-gradient(
+    165deg,
+    hsl(var(--card)) 0%,
+    hsl(var(--card)) 45%,
+    hsl(var(--muted)) 100%
+  );
   border: 1px solid hsl(var(--border));
   border-radius: 1rem;
   box-shadow:
@@ -346,7 +364,12 @@ body {
 
 /* Ultra Luxury theme elements */
 .luxury-card {
-  background: linear-gradient(180deg, hsl(var(--card)) 0%, hsl(var(--muted)) 100%);
+  background: linear-gradient(
+    165deg,
+    hsl(var(--card)) 0%,
+    hsl(var(--card)) 45%,
+    hsl(var(--muted)) 100%
+  );
   border: 1px solid hsl(var(--border));
   border-radius: 1rem;
   box-shadow:
@@ -598,7 +621,14 @@ body {
 /* 高端学术 decorative elements */
 .luxury-divider {
   height: 1px;
-  background: linear-gradient(90deg, transparent, hsl(var(--primary) / 0.35), hsl(var(--secondary) / 0.25), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    hsl(var(--primary) / 0.28),
+    hsl(var(--accent) / 0.35),
+    hsl(var(--primary) / 0.28),
+    transparent
+  );
   margin: 1.75rem 0;
 }
 
@@ -612,11 +642,9 @@ body {
   background: linear-gradient(
     90deg,
     hsl(var(--primary) / 0),
-    hsl(var(--primary) / 0.32),
-    hsl(var(--primary) / 0.58),
-    hsl(var(--accent) / 0.28),
-    hsl(var(--primary) / 0.58),
-    hsl(var(--primary) / 0.32),
+    hsl(var(--primary) / 0.38),
+    hsl(var(--accent) / 0.55),
+    hsl(var(--primary) / 0.38),
     hsl(var(--primary) / 0)
   );
 }
