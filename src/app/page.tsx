@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Button } from "@/components/ui/button";
 import { SectionTitle } from "@/components/ui/section-title";
 import { Mail, Phone, Link as LinkIcon, MapPin, Award, Rss, BookOpen, Star, TrendingUp, Users, Globe, Zap, ArrowRight, ChevronRight, Leaf, Cpu, Database, Battery, Cloud, Sparkles, Crown, Diamond } from 'lucide-react';
+import ImageCarousel from '@/components/home/image-carousel';
 
 // Enhanced Mock Data with luxury focus
 const scholarData = {
@@ -124,7 +125,24 @@ const featuredPublications = [
   },
 ];
 
-// (Removed) image carousel on home page: replaced with text-first research snapshot.
+// Photo highlights on home page
+const carouselImages = [
+  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/26wt.jpg", alt: "Inner Mongolia University Image1", dataAiHint: "Illustration of Inner Mongolia University" },
+  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/zsxf.jpg", alt: "Inner Mongolia University Image2", dataAiHint: "Illustration of Inner Mongolia University" },
+  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/zsxf1.jpg", alt: "Inner Mongolia University Image3", dataAiHint: "Illustration of Inner Mongolia University" },
+  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/zsxf2.png", alt: "Inner Mongolia University Image4", dataAiHint: "Illustration of Inner Mongolia University" },
+  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/mmhy.jpg", alt: "Inner Mongolia University Image5", dataAiHint: "Illustration of Inner Mongolia University" },
+  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/ndmm.jpg", alt: "Inner Mongolia University Image6", dataAiHint: "Illustration of Inner Mongolia University" },
+  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/dbxc.jpg", alt: "Inner Mongolia University Image7", dataAiHint: "Illustration of Inner Mongolia University" },
+  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/202508.jpg", alt: "Inner Mongolia University Image8", dataAiHint: "Illustration of Inner Mongolia University" },
+  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/202509.jpg", alt: "Inner Mongolia University Image9", dataAiHint: "Illustration of Inner Mongolia University" },
+  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/202510.jpg", alt: "Inner Mongolia University Image10", dataAiHint: "Illustration of Inner Mongolia University" },
+  { src: "https://picsum.photos/seed/carouselA/1400/600", alt: "State-of-the-Art Research Facility", dataAiHint: "modern laboratory with advanced equipment" },
+  { src: "https://picsum.photos/seed/carouselB/1400/600", alt: "AI Neural Network Visualization", dataAiHint: "complex neural network visualization" },
+  { src: "https://picsum.photos/seed/carouselC/1400/600", alt: "International Research Collaboration", dataAiHint: "diverse team collaboration" },
+  { src: "https://picsum.photos/seed/carouselD/1400/600", alt: "Advanced Computing Infrastructure", dataAiHint: "high-performance computing center" },
+];
+
 export default function Home() {
   return (
     <div className="relative">
@@ -528,6 +546,20 @@ export default function Home() {
             </div>
           </CardContent>
         </Card>
+      </section>
+
+      {/* Photo Highlights */}
+      <section id="photo-highlights" aria-labelledby="photo-highlights-title" className="mb-16">
+        <div className="text-center mb-8">
+          <h2 id="photo-highlights-title" className="text-3xl lg:text-4xl font-bold text-gradient-luxury mb-4">
+            Visual Highlights
+          </h2>
+          <div className="w-24 h-1 mx-auto rounded-full bg-primary/20"></div>
+        </div>
+
+        <div className="luxury-card overflow-hidden luxury-hover">
+          <ImageCarousel images={carouselImages} interval={5000} />
+        </div>
       </section>
     </div>
   );
