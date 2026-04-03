@@ -55,7 +55,7 @@ export default function Header() {
               alt="Lab logo"
               width={64}
               height={64}
-              className="rounded-full w-full h-full object-cover"
+              className="rounded-full w-full h-full object-contain"
               priority
             />
           </div>
@@ -104,7 +104,7 @@ export default function Header() {
                           alt="Lab logo"
                           width={64}
                           height={64}
-                          className="rounded-full w-full h-full object-cover"
+                          className="rounded-full w-full h-full object-contain"
                           priority
                         />
                       </div>
