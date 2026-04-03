@@ -168,8 +168,8 @@ export default function Home() {
             {/* Enhanced Bio Content with Luxury Effects */}
             <div className="flex-1 text-center lg:text-left">
                              <div className="inline-flex items-center gap-2 luxury-badge mb-4">
-                <Diamond className="h-4 w-4 text-secondary" />
-                <span className="text-sm font-medium">Computing Power Networks • Green Scheduling • Service Recommendation</span>
+                <Cpu className="h-4 w-4 text-primary/85" />
+                <span className="text-sm font-medium">Computing Power Networks • Low-Carbon Scheduling • Reliable Service Intelligence</span>
                </div>
               
               <h1 className="text-4xl lg:text-6xl font-bold text-gradient-luxury mb-4">
@@ -184,8 +184,8 @@ export default function Home() {
                 {scholarData.affiliation}
               </p>
               <p className="text-sm text-foreground/70 mb-6 leading-relaxed">
-                Research agenda: computing power network scheduling, low-carbon resource optimization, and
-                service recommendation with reliable learning methods.
+                Research agenda: theory-grounded and system-validated methods for computing-power scheduling,
+                low-carbon optimization, and trustworthy service intelligence.
               </p>
               <p className="text-sm text-foreground/70 mb-8 leading-relaxed">
                 I build learning-enabled systems with a focus on <span className="text-primary font-medium">reliability</span>,{' '}
@@ -239,7 +239,7 @@ export default function Home() {
                     variant="outline" 
                     size="sm" 
                     asChild 
-                    className="group rounded-2xl border-primary/20 text-primary hover:bg-primary/5 transition-colors"
+                    className="group rounded-2xl outline-academic transition-colors"
                   >
                     <a href={link.url} target="_blank" rel="noopener noreferrer">
                       {link.icon}
@@ -390,13 +390,13 @@ export default function Home() {
             <Card key={pub.id} className="luxury-card group overflow-hidden luxury-hover relative">
               <CardContent className="relative z-10 pt-6">
                 <div className="flex items-start justify-between gap-3 mb-3">
-                  <span className="px-3 py-1 rounded-full text-xs bg-secondary text-secondary-foreground">
+                  <span className="luxury-badge">
                     {pub.type}
                   </span>
-                  <span className="text-xs text-muted-foreground whitespace-nowrap">{pub.year}</span>
+                  <span className="text-xs text-foreground/55 whitespace-nowrap">{pub.year}</span>
                 </div>
 
-                <h3 className="text-lg font-semibold mb-2 group-hover:text-gradient-luxury transition-all duration-500">
+                <h3 className="text-lg font-semibold mb-2 text-primary/95 group-hover:text-primary transition-colors duration-300">
                   {pub.title}
                 </h3>
                 <p className="text-sm italic text-foreground/80 leading-relaxed">{pub.authors}</p>
@@ -408,7 +408,7 @@ export default function Home() {
                       variant="outline"
                       size="sm"
                       asChild
-                      className="border-accent/50 text-accent hover:bg-accent/10 hover:text-accent"
+                      className="outline-academic"
                     >
                       <a href={`https://doi.org/${pub.doi}`} target="_blank" rel="noopener noreferrer">
                         DOI <ChevronRight className="h-4 w-4" />
@@ -419,7 +419,7 @@ export default function Home() {
                     variant="outline"
                     size="sm"
                     asChild
-                    className="border-primary/30 text-primary hover:bg-primary/10 hover:text-primary"
+                    className="outline-academic"
                   >
                     <a href="/publications">
                       All <ChevronRight className="h-4 w-4" />
@@ -481,7 +481,7 @@ export default function Home() {
                     </p>
                     {item.link && (
                       <div className="mt-4">
-                        <Button variant="outline" size="sm" asChild className="border-primary/30 text-primary hover:bg-primary/10 hover:text-primary">
+                        <Button variant="outline" size="sm" asChild className="outline-academic">
                           <a href={item.link} className="inline-flex items-center gap-2">
                             {item.action || 'View'}
                             <ChevronRight className="h-4 w-4" />
@@ -546,7 +546,7 @@ export default function Home() {
                   {keyword}
                 </span>
               ))}
-              <Button variant="outline" asChild className="rounded-xl border-primary/20 text-primary hover:bg-primary/5 ml-auto">
+              <Button variant="outline" asChild className="rounded-xl outline-academic ml-auto">
                 <a href="/research" className="inline-flex items-center gap-2">
                   Explore details <ChevronRight className="h-4 w-4" />
                 </a>

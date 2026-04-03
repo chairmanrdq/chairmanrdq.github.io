@@ -22,18 +22,18 @@ body {
     --popover-foreground: 220 25% 14%;
 
     /* Primary：学术蓝 */
-    --primary: 220 55% 28%;
+    --primary: 221 48% 25%;
     --primary-foreground: 0 0% 100%;
 
     /* Secondary：蓝灰（更中性） */
-    --secondary: 220 15% 45%;
+    --secondary: 220 12% 38%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 222 20% 95%;
     --muted-foreground: 222 10% 42%;
 
     /* Accent：冷调海军蓝-青（更学术、更稳） */
-    --accent: 185 35% 38%;
+    --accent: 198 24% 36%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 72% 55%;
@@ -43,10 +43,10 @@ body {
     --input: 0 0% 100%;
     --ring: 220 55% 28%;
 
-    --link-hover: 220 70% 40%;
+    --link-hover: 220 50% 34%;
 
     /* Gold：奖项强调色（更稳重、不过亮） */
-    --gold: 42 95% 52%;
+    --gold: 43 68% 47%;
 
     /* Chart 色板：一深一浅，突出严肃感 */
     --chart-1: 225 55% 30%;
@@ -82,16 +82,16 @@ body {
     --popover: 230 25% 10%;
     --popover-foreground: 210 15% 92%;
 
-    --primary: 220 60% 78%;
+    --primary: 220 42% 74%;
     --primary-foreground: 230 25% 8%;
 
-    --secondary: 220 15% 63%;
+    --secondary: 220 12% 60%;
     --secondary-foreground: 230 25% 8%;
 
     --muted: 220 14% 18%;
     --muted-foreground: 220 12% 72%;
 
-    --accent: 185 35% 58%;
+    --accent: 198 22% 56%;
     --accent-foreground: 230 25% 8%;
 
     --destructive: 0 70% 60%;
@@ -101,7 +101,7 @@ body {
     --input: 230 20% 18%;
     --ring: 220 60% 74%;
 
-    --link-hover: 220 70% 72%;
+    --link-hover: 220 38% 78%;
     
     --chart-1: 220 60% 74%;
     --chart-2: 205 40% 65%;
@@ -240,17 +240,21 @@ body {
 }
 
 .tech-accent {
-  color: hsl(var(--secondary));
-  background: linear-gradient(135deg, hsl(var(--secondary)/0.08) 0%, hsl(var(--secondary)/0.12) 100%);
-  border: 1px solid hsl(var(--secondary)/0.2);
-  box-shadow: 0 4px 12px hsl(var(--secondary)/0.1);
+  color: hsl(var(--primary) / 0.9);
+  background: linear-gradient(135deg, hsl(var(--primary) / 0.045) 0%, hsl(var(--accent) / 0.065) 100%);
+  border: 1px solid hsl(var(--primary) / 0.14);
+  box-shadow:
+    0 8px 20px -16px hsl(var(--primary) / 0.28),
+    0 1px 0 hsl(var(--accent) / 0.16) inset;
 }
 
 .innovation-accent {
-  color: hsl(var(--accent));
-  background: linear-gradient(135deg, hsl(var(--accent)/0.08) 0%, hsl(var(--accent)/0.12) 100%);
-  border: 1px solid hsl(var(--accent)/0.2);
-  box-shadow: 0 4px 12px hsl(var(--accent)/0.1);
+  color: hsl(var(--primary) / 0.9);
+  background: linear-gradient(135deg, hsl(var(--primary) / 0.045) 0%, hsl(var(--accent) / 0.07) 100%);
+  border: 1px solid hsl(var(--primary) / 0.15);
+  box-shadow:
+    0 8px 20px -16px hsl(var(--primary) / 0.3),
+    0 1px 0 hsl(var(--accent) / 0.18) inset;
 }
 
 /* 金色强调色 - 用于荣誉、奖项、重要数字 */
@@ -355,8 +359,8 @@ body {
 
 .luxury-badge {
   color: hsl(var(--primary) / 0.95);
-  background: hsl(var(--primary) / 0.06);
-  border: 1px solid hsl(var(--primary) / 0.18);
+  background: linear-gradient(135deg, hsl(var(--primary) / 0.045) 0%, hsl(var(--accent) / 0.06) 100%);
+  border: 1px solid hsl(var(--primary) / 0.15);
   padding: 0.3rem 0.6rem;
   border-radius: 9999px;
   font-size: 0.72rem;
@@ -366,6 +370,17 @@ body {
   background-size: 100% 100%;
   animation: none;
   transition: all 0.2s ease;
+}
+
+.outline-academic {
+  border-color: hsl(var(--primary) / 0.24);
+  color: hsl(var(--primary));
+}
+
+.outline-academic:hover {
+  border-color: hsl(var(--primary) / 0.34);
+  background: hsl(var(--primary) / 0.08);
+  color: hsl(var(--primary));
 }
 
 .luxury-badge:hover {
@@ -473,7 +488,7 @@ body {
 
 /* 高端学术 text gradients */
 .text-gradient-luxury {
-  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary) / 0.82));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -484,7 +499,7 @@ body {
 }
 
 .text-gradient-tech {
-  background: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--accent)));
+  background: linear-gradient(135deg, hsl(var(--primary) / 0.9), hsl(var(--accent) / 0.9));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
