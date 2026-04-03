@@ -111,6 +111,24 @@ export default function PublicationsPage() {
   return (
     <div className="space-y-12">
       <SectionTitle>Publications</SectionTitle>
+      <Card className="luxury-card">
+        <CardContent className="pt-6">
+          <h3 className="text-lg font-semibold text-primary mb-2">Selected Contributions</h3>
+          <ul className="list-disc list-inside space-y-2 text-sm text-foreground/80">
+            <li>
+              Density-peak clustering: automatic center detection via curve optimization and inflection-point analysis.
+            </li>
+            <li>
+              QoS prediction with privacy: personalized federated learning with topology-aware signals and hierarchical aggregation.
+            </li>
+            <li>
+              Empirical validation: report standard clustering metrics (e.g., AMI/ARI/FMI) and automatic center counts on benchmark-style
+              comparisons; QoS work compares against distributed and centralized baselines on two real-world datasets; clustering robustness is
+              stressed under noise and smooth-density regimes.
+            </li>
+          </ul>
+        </CardContent>
+      </Card>
       <Tabs defaultValue="All" className="w-full">
         <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 mb-6 gap-2">
           {allCategories.map(category => (

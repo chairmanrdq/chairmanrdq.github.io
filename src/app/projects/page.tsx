@@ -55,6 +55,25 @@ export default function ProjectsPage() {
   return (
     <div className="space-y-12">
       <SectionTitle>Funded Projects & Grants</SectionTitle>
+      <Card className="luxury-card">
+        <CardContent className="pt-6">
+          <h3 className="text-lg font-semibold text-primary mb-2">Research-to-Impact</h3>
+          <ul className="list-disc list-inside space-y-2 text-sm text-foreground/80">
+            <li>
+              <span className="text-primary font-medium">Computing power scheduling</span> at a regional hub node, driven by{' '}
+              <span className="text-primary font-medium">user perception</span> and dynamic matching across heterogeneous resources.
+            </li>
+            <li>
+              <span className="text-primary font-medium">Cross-domain coordination</span> for end-to-end resource allocation and optimization under
+              operational constraints.
+            </li>
+            <li>
+              <span className="text-primary font-medium">Green, low-carbon</span> scheduling objectives, validated with industry partners (e.g., hub
+              operator collaboration) rather than lab-only assumptions.
+            </li>
+          </ul>
+        </CardContent>
+      </Card>
       <div className="space-y-8">
         {projectsData.sort((a,b) => (b.status === "Ongoing" ? 1 : -1) || (parseInt(b.period.split(" - ")[0]) - parseInt(a.period.split(" - ")[0])) ).map(project => (
           <Card key={project.id} className="shadow-md hover:shadow-lg transition-shadow duration-300 border-primary/10">

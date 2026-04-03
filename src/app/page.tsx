@@ -187,6 +187,10 @@ export default function Home() {
                 Research agenda: computing power network scheduling, low-carbon resource optimization, and
                 service recommendation with reliable learning methods.
               </p>
+              <p className="text-sm text-foreground/70 mb-8 leading-relaxed">
+                I build learning-enabled systems with a focus on <span className="text-primary font-medium">reliability</span>,{' '}
+                <span className="text-primary font-medium">efficiency</span>, and <span className="text-primary font-medium">reproducibility</span>.
+              </p>
 
               {/* Stats Grid with Luxury Cards */}
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
