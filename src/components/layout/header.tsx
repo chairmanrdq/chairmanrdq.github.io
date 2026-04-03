@@ -3,7 +3,24 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { Home, FlaskConical, Newspaper, FolderGit2, Users, GraduationCap, Download as DownloadIcon, MessageSquare, Menu, X, Cpu, Leaf, Battery, Sparkles, Diamond } from 'lucide-react';
+import logoOne from '../../../pic/logo-one.png';
+import {
+  Home,
+  FlaskConical,
+  Newspaper,
+  FolderGit2,
+  Users,
+  GraduationCap,
+  Download as DownloadIcon,
+  MessageSquare,
+  Menu,
+  X,
+  Cpu,
+  Leaf,
+  Battery,
+  Sparkles,
+  Diamond,
+} from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
@@ -33,14 +50,7 @@ export default function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 text-xl sm:text-2xl font-bold hover:opacity-80 transition-opacity" onClick={() => setIsMobileMenuOpen(false)}>
           <div className="animated-luxury-gradient p-1.5 rounded-full luxury-glow">
-            <Image
-              src="/assets/c__Users_imucsrdq_AppData_Roaming_Cursor_User_workspaceStorage_98bda57420d27ab7f115cee777d15aa0_images_logo-one-a74ff0a3-7a57-4376-907e-b095e89cdb9c.png"
-              alt="Lab logo"
-              width={32}
-              height={32}
-              className="rounded-full"
-              priority
-            />
+            <Image src={logoOne} alt="Lab logo" width={32} height={32} className="rounded-full" priority />
           </div>
           <span className="text-gradient-luxury">
             {SCHOLAR_NAME}
@@ -83,7 +93,7 @@ export default function Header() {
                     <Link href="/" className="flex items-center gap-2 text-lg font-bold" onClick={() => setIsMobileMenuOpen(false)}>
                       <div className="animated-luxury-gradient p-1.5 rounded-full luxury-glow">
                         <Image
-                          src="/assets/c__Users_imucsrdq_AppData_Roaming_Cursor_User_workspaceStorage_98bda57420d27ab7f115cee777d15aa0_images_logo-one-a74ff0a3-7a57-4376-907e-b095e89cdb9c.png"
+                          src={logoOne}
                           alt="Lab logo"
                           width={28}
                           height={28}
