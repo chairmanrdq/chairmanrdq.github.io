@@ -466,7 +466,7 @@ export default function TeamPage() {
 	  <section id="alumni_collegeMembers" aria-labelledby="alumni-title">
         <SectionTitle id="alumni-title">Lab Alumni Undergraduate</SectionTitle>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {alumni.map(member => (
+          {alumni_collegeMembers.map(member => (
              <Card key={member.id} className="shadow-md hover:shadow-lg transition-shadow duration-300 border-primary/10">
                <CardContent className="pt-6 flex flex-col items-center text-center">
                 <Image
