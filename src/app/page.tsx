@@ -31,10 +31,10 @@ const scholarData = {
     "Service Recommendation",
   ],
   stats: [
-    { label: "Publications", value: "Curated list", icon: <BookOpen className="h-5 w-5 text-primary" /> },
-    { label: "Research areas", value: "4 focus themes", icon: <Star className="h-5 w-5 text-secondary" /> },
-    { label: "Teaching & advising", value: "Courses & mentorship", icon: <Users className="h-5 w-5 text-accent" /> },
-    { label: "Projects", value: "Grants & collaborations", icon: <Zap className="h-5 w-5 text-secondary" /> },
+    { label: "Publications", value: "Curated list", icon: <BookOpen className="h-5 w-5" /> },
+    { label: "Research areas", value: "4 focus themes", icon: <Star className="h-5 w-5" /> },
+    { label: "Teaching & advising", value: "Courses & mentorship", icon: <Users className="h-5 w-5" /> },
+    { label: "Projects", value: "Grants & collaborations", icon: <Zap className="h-5 w-5" /> },
   ],
   news: [
     { 
@@ -147,7 +147,7 @@ export default function Home() {
   return (
     <div className="relative">
       {/* Hero Section with Ultra Luxury Animated Gradient */}
-      <section className="relative overflow-hidden rounded-3xl mb-16 p-8 md:p-12">
+      <section className="relative overflow-hidden rounded-3xl mb-16 p-8 md:p-12 luxury-card">
         
         <div className="relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
@@ -196,11 +196,11 @@ export default function Home() {
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
                 {scholarData.stats.map((stat, index) => (
                   <div key={index} className="luxury-card p-4 text-center luxury-hover">
-                    <div className="text-gradient-tech mb-2 flex justify-center">
+                    <div className="mb-2 flex justify-center text-primary/85">
                       {stat.icon}
                     </div>
-                    <div className="text-2xl font-bold text-gradient-luxury">{stat.value}</div>
-                    <div className="text-xs text-muted-foreground">{stat.label}</div>
+                    <div className="text-xl md:text-2xl font-semibold text-primary/95 tracking-tight">{stat.value}</div>
+                    <div className="text-xs text-foreground/65 mt-1">{stat.label}</div>
                   </div>
                 ))}
               </div>
@@ -266,7 +266,7 @@ export default function Home() {
           >
             Prospective Students
           </h2>
-          <div className="w-24 h-1 mx-auto rounded-full bg-gradient-to-r from-primary via-secondary to-accent" />
+          <div className="section-title-rule" aria-hidden={true} />
         </div>
 
         <Card className="luxury-card overflow-hidden luxury-hover relative">
@@ -333,7 +333,7 @@ export default function Home() {
       <section id="research-focus" aria-labelledby="research-focus-title" className="mb-16">
         <div className="text-center mb-8">
           <h2 className="text-3xl lg:text-4xl font-bold text-gradient-luxury mb-4">Research Focus</h2>
-          <div className="w-24 h-1 mx-auto rounded-full bg-gradient-to-r from-primary via-secondary to-accent"></div>
+          <div className="section-title-rule" aria-hidden={true} />
         </div>
         
         <Card className="luxury-card overflow-hidden luxury-hover relative">
@@ -382,7 +382,7 @@ export default function Home() {
           <h2 className="text-3xl lg:text-4xl font-bold text-gradient-luxury mb-4" id="featured-publications-title">
             Selected Publications
           </h2>
-          <div className="w-24 h-1 mx-auto rounded-full bg-gradient-to-r from-primary via-secondary to-accent"></div>
+          <div className="section-title-rule" aria-hidden={true} />
         </div>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -439,7 +439,7 @@ export default function Home() {
       <section id="news" aria-labelledby="news-title" className="mb-16">
         <div className="text-center mb-8">
           <h2 id="news-title" className="text-3xl lg:text-4xl font-bold text-gradient-luxury mb-4">Academic Highlights</h2>
-          <div className="w-24 h-1 mx-auto rounded-full bg-gradient-to-r from-primary via-secondary to-accent"></div>
+          <div className="section-title-rule" aria-hidden={true} />
         </div>
         
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -448,36 +448,40 @@ export default function Home() {
              key={item.id} 
              className="luxury-card group overflow-hidden luxury-hover relative"
            >
-                            <div className="absolute inset-0 bg-gradient-to-br from-primary/8 via-secondary/8 to-accent/8 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/8 via-primary/6 to-accent/8 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
               <CardContent className="relative z-10 pt-6">
                 <div className="flex items-start gap-4">
-                  <div className="innovation-accent p-3 rounded-xl">
+                  <div
+                    className={`p-3 rounded-xl border ${
+                      item.tone === 'gold'
+                        ? 'text-[hsl(var(--gold))] bg-[hsl(var(--gold)/0.10)] border-[hsl(var(--gold)/0.22)]'
+                        : 'text-primary bg-[hsl(var(--primary)/0.10)] border-[hsl(var(--primary)/0.18)]'
+                    }`}
+                  >
                     {item.icon}
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
-                                             <span className="luxury-badge" style={{
-                        color: item.tone === 'gold' ? 'hsl(var(--gold))' : 'hsl(var(--primary))',
-                         background: item.tone === 'gold'
-                          ? 'linear-gradient(135deg, hsl(var(--gold) / 0.08) 0%, hsl(var(--gold) / 0.12) 100%)'
-                           : 'linear-gradient(135deg, hsl(var(--secondary) / 0.08) 0%, hsl(var(--secondary) / 0.12) 100%)',
-                         border: item.tone === 'gold'
-                          ? '1px solid hsl(var(--gold) / 0.2)'
-                           : '1px solid hsl(var(--secondary) / 0.2)'
-                       }}>
-                         {item.badge}
-                       </span>
+                      <span
+                        className={`luxury-badge ${
+                          item.tone === 'gold'
+                            ? 'text-[hsl(var(--gold))] bg-[hsl(var(--gold)/0.10)] border-[hsl(var(--gold)/0.22)]'
+                            : 'text-primary bg-[hsl(var(--primary)/0.08)] border-[hsl(var(--primary)/0.18)]'
+                        }`}
+                      >
+                        {item.badge}
+                      </span>
                       <span className="text-xs text-muted-foreground">{item.date}</span>
                     </div>
-                                            <h3 className="text-lg font-semibold mb-2 group-hover:text-gradient-luxury transition-all duration-500">
+                    <h3 className="text-lg font-semibold mb-2 text-primary/95 group-hover:text-primary transition-colors duration-300">
                        {item.title}
-                     </h3>
+                    </h3>
                     <p className="text-sm text-foreground/80 leading-relaxed">
                       {item.description}
                     </p>
                     {item.link && (
                       <div className="mt-4">
-                        <Button variant="outline" size="sm" asChild className="border-accent/50 text-accent hover:bg-accent/10 hover:text-accent">
+                        <Button variant="outline" size="sm" asChild className="border-primary/30 text-primary hover:bg-primary/10 hover:text-primary">
                           <a href={item.link} className="inline-flex items-center gap-2">
                             {item.action || 'View'}
                             <ChevronRight className="h-4 w-4" />
@@ -502,7 +506,7 @@ export default function Home() {
           <h2 id="research-snapshot-title" className="text-3xl lg:text-4xl font-bold text-gradient-luxury mb-4">
             Research Snapshot
           </h2>
-          <div className="w-24 h-1 mx-auto rounded-full bg-primary/20"></div>
+          <div className="section-title-rule" aria-hidden={true} />
         </div>
 
         <Card className="luxury-card">
@@ -558,7 +562,7 @@ export default function Home() {
           <h2 id="photo-highlights-title" className="text-3xl lg:text-4xl font-bold text-gradient-luxury mb-4">
             Visual Highlights
           </h2>
-          <div className="w-24 h-1 mx-auto rounded-full bg-primary/20"></div>
+          <div className="section-title-rule" aria-hidden={true} />
         </div>
 
         <div className="luxury-card overflow-hidden luxury-hover">

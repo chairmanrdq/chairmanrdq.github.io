@@ -147,6 +147,19 @@ body {
     animation: bg-drift 28s ease-in-out infinite;
     transform: translate3d(0, 0, 0);
   }
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.2;
+    background-image:
+      linear-gradient(hsl(var(--primary) / 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--primary) / 0.045) 1px, transparent 1px);
+    background-size: 40px 40px;
+    mask-image: radial-gradient(circle at center, black 20%, transparent 85%);
+  }
   @media (prefers-reduced-motion: reduce) {
     body::before {
       animation: none;
@@ -184,15 +197,19 @@ body {
   background: linear-gradient(180deg, hsl(var(--card)) 0%, hsl(var(--muted)) 100%);
   border: 1px solid hsl(var(--border));
   border-radius: 1rem;
-  box-shadow: 0 18px 55px -40px rgba(0, 0, 0, 0.35);
+  box-shadow:
+    0 16px 45px -35px hsl(220 55% 12% / 0.35),
+    0 1px 0 hsl(var(--primary) / 0.12) inset;
   transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
 }
 
 .luxury-card:hover {
-  box-shadow: 0 28px 80px -55px rgba(0, 0, 0, 0.45);
+  box-shadow:
+    0 22px 60px -40px hsl(220 55% 12% / 0.45),
+    0 1px 0 hsl(var(--accent) / 0.18) inset;
   transform: translateY(-2px);
-  border-color: hsl(var(--primary) / 0.25);
+  border-color: hsl(var(--primary) / 0.32);
 }
 
 /* Ultra Luxury gradient backgrounds */
@@ -250,19 +267,19 @@ body {
 
 /* 高端学术 button styles */
 .btn-luxury {
-  background: hsl(var(--primary));
+  background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
   color: hsl(var(--primary-foreground));
   transition: all 0.2s ease;
   border-radius: 0.9rem;
   font-weight: 650;
-  box-shadow: none;
+  box-shadow: 0 10px 24px -14px hsl(var(--primary) / 0.55);
   transform: none;
   animation: none;
 }
 
 .btn-luxury:hover {
-  background: hsl(var(--primary) / 0.92);
-  box-shadow: none;
+  background: linear-gradient(135deg, hsl(var(--primary) / 0.94) 0%, hsl(var(--secondary) / 0.94) 100%);
+  box-shadow: 0 14px 28px -14px hsl(var(--primary) / 0.62);
   transform: translateY(-1px);
   animation: none;
 }
@@ -319,17 +336,21 @@ body {
   background: linear-gradient(180deg, hsl(var(--card)) 0%, hsl(var(--muted)) 100%);
   border: 1px solid hsl(var(--border));
   border-radius: 1rem;
-  box-shadow: 0 18px 55px -40px rgba(0, 0, 0, 0.35);
+  box-shadow:
+    0 16px 45px -35px hsl(220 55% 12% / 0.35),
+    0 1px 0 hsl(var(--primary) / 0.12) inset;
   transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
   background-size: 100% 100%;
   animation: none;
 }
 
 .luxury-card:hover {
-  box-shadow: 0 28px 80px -55px rgba(0, 0, 0, 0.45);
+  box-shadow:
+    0 22px 60px -40px hsl(220 55% 12% / 0.45),
+    0 1px 0 hsl(var(--accent) / 0.18) inset;
   transform: translateY(-2px);
-  border-color: hsl(var(--primary) / 0.25);
+  border-color: hsl(var(--primary) / 0.32);
 }
 
 .luxury-badge {
@@ -513,6 +534,25 @@ body {
   height: 1px;
   background: linear-gradient(90deg, transparent, hsl(var(--primary) / 0.35), hsl(var(--secondary) / 0.25), transparent);
   margin: 1.75rem 0;
+}
+
+/* 区块标题下统一装饰线：冷蓝细线、中心微亮，全站同一规格 */
+.section-title-rule {
+  width: 5.5rem;
+  height: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 9999px;
+  background: linear-gradient(
+    90deg,
+    hsl(var(--primary) / 0),
+    hsl(var(--primary) / 0.32),
+    hsl(var(--primary) / 0.58),
+    hsl(var(--accent) / 0.28),
+    hsl(var(--primary) / 0.58),
+    hsl(var(--primary) / 0.32),
+    hsl(var(--primary) / 0)
+  );
 }
 
 .luxury-corner {
