@@ -147,7 +147,7 @@ export default function Home() {
   return (
     <div className="relative">
       {/* Hero Section with Ultra Luxury Animated Gradient */}
-      <section className="relative overflow-hidden rounded-3xl mb-16 p-8 md:p-12 luxury-card">
+      <section className="relative overflow-hidden rounded-3xl mb-16 p-8 md:p-12 luxury-card animated-luxury-gradient-light">
         
         <div className="relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
@@ -195,7 +195,7 @@ export default function Home() {
               {/* Stats Grid with Luxury Cards */}
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
                 {scholarData.stats.map((stat, index) => (
-                  <div key={index} className="luxury-card p-4 text-center luxury-hover">
+                  <div key={index} className="luxury-card p-4 text-center luxury-hover luxury-float">
                     <div className="mb-2 flex justify-center text-primary/85">
                       {stat.icon}
                     </div>
@@ -337,7 +337,7 @@ export default function Home() {
         </div>
         
         <Card className="luxury-card overflow-hidden luxury-hover relative">
-                    <div className="absolute inset-0 bg-gradient-to-r from-primary/7 via-secondary/7 to-accent/7 opacity-70"></div>
+          <div className="absolute inset-0 animated-luxury-gradient-light opacity-70"></div>
           <CardContent className="relative z-10 pt-8">
             <p className="text-lg lg:text-xl text-foreground/80 mb-6 leading-relaxed">
               {scholarData.researchFocusSummary}
@@ -362,7 +362,7 @@ export default function Home() {
             <Button 
               variant="default" 
               asChild 
-              className="btn-luxury px-6 py-3 rounded-2xl group"
+              className="btn-luxury px-6 py-3 rounded-2xl group luxury-glow-hover"
             >
               <a href="/research" className="flex items-center gap-2">
                 Explore my research
@@ -387,7 +387,7 @@ export default function Home() {
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {featuredPublications.map(pub => (
-            <Card key={pub.id} className="luxury-card group overflow-hidden luxury-hover relative">
+            <Card key={pub.id} className="luxury-card tech-border-sweep group overflow-hidden luxury-hover relative">
               <CardContent className="relative z-10 pt-6">
                 <div className="flex items-start justify-between gap-3 mb-3">
                   <span className="luxury-badge">
@@ -446,7 +446,7 @@ export default function Home() {
           {scholarData.news.map(item => (
             <Card 
              key={item.id} 
-             className="luxury-card group overflow-hidden luxury-hover relative"
+             className="luxury-card tech-border-sweep group overflow-hidden luxury-hover relative"
            >
               <div className="absolute inset-0 bg-gradient-to-br from-primary/8 via-primary/6 to-accent/8 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
               <CardContent className="relative z-10 pt-6">

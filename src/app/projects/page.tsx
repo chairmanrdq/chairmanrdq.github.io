@@ -55,7 +55,7 @@ export default function ProjectsPage() {
   return (
     <div className="space-y-12">
       <SectionTitle>Funded Projects & Grants</SectionTitle>
-      <Card className="luxury-card">
+      <Card className="luxury-card tech-border-sweep">
         <CardContent className="pt-6">
           <h3 className="text-lg font-semibold text-primary mb-2">Research-to-Impact</h3>
           <ul className="list-disc list-inside space-y-2 text-sm text-foreground/80">
@@ -76,7 +76,7 @@ export default function ProjectsPage() {
       </Card>
       <div className="space-y-8">
         {projectsData.sort((a,b) => (b.status === "Ongoing" ? 1 : -1) || (parseInt(b.period.split(" - ")[0]) - parseInt(a.period.split(" - ")[0])) ).map(project => (
-          <Card key={project.id} className="shadow-md hover:shadow-lg transition-shadow duration-300 border-primary/10">
+          <Card key={project.id} className="luxury-card tech-border-sweep shadow-md hover:shadow-lg transition-shadow duration-300 border-primary/10">
             <CardHeader>
               <div className="flex flex-col sm:flex-row justify-between sm:items-start gap-2">
                 <CardTitle className="text-xl md:text-2xl text-primary/90">{project.title}</CardTitle>

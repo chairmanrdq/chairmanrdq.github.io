@@ -111,7 +111,7 @@ export default function PublicationsPage() {
   return (
     <div className="space-y-12">
       <SectionTitle>Publications</SectionTitle>
-      <Card className="luxury-card">
+      <Card className="luxury-card tech-border-sweep">
         <CardContent className="pt-6">
           <h3 className="text-lg font-semibold text-primary mb-2">Selected Contributions</h3>
           <ul className="list-disc list-inside space-y-2 text-sm text-foreground/80">
@@ -141,7 +141,7 @@ export default function PublicationsPage() {
             <div className="space-y-6">
               {filterPublications(category).length > 0 ? (
                 filterPublications(category).sort((a,b) => b.year - a.year).map(pub => (
-                  <Card key={pub.id} className="shadow-md hover:shadow-lg transition-shadow duration-300 border-primary/10">
+                  <Card key={pub.id} className="luxury-card tech-border-sweep shadow-md hover:shadow-lg transition-shadow duration-300 border-primary/10">
                     <CardHeader>
                       <CardTitle className="text-lg md:text-xl text-primary/90">{pub.title}</CardTitle>
                       <CardDescription className="text-sm text-foreground/70 italic">

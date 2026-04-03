@@ -216,7 +216,7 @@ body {
 .luxury-gradient {
   background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 25%, hsl(var(--accent)) 50%, hsl(var(--secondary)) 75%, hsl(var(--primary)) 100%);
   background-size: 100% 100%;
-  animation: none;
+  animation: card-breathe 12s ease-in-out infinite;
 }
 
 .luxury-gradient-light {
@@ -368,19 +368,22 @@ body {
   backdrop-filter: blur(6px);
   box-shadow: none;
   background-size: 100% 100%;
-  animation: none;
+  animation: badge-breathe 7s ease-in-out infinite;
   transition: all 0.2s ease;
 }
 
 .outline-academic {
   border-color: hsl(var(--primary) / 0.24);
   color: hsl(var(--primary));
+  transition: border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
 }
 
 .outline-academic:hover {
   border-color: hsl(var(--primary) / 0.34);
   background: hsl(var(--primary) / 0.08);
   color: hsl(var(--primary));
+  box-shadow: 0 10px 22px -16px hsl(var(--primary) / 0.45);
+  transform: translateY(-1px);
 }
 
 .luxury-badge:hover {
@@ -435,16 +438,39 @@ body {
   100% { background-position: 200% 0; }
 }
 
+@keyframes card-breathe {
+  0%, 100% {
+    box-shadow:
+      0 16px 45px -35px hsl(220 55% 12% / 0.32),
+      0 1px 0 hsl(var(--primary) / 0.10) inset;
+  }
+  50% {
+    box-shadow:
+      0 20px 52px -34px hsl(220 55% 12% / 0.42),
+      0 1px 0 hsl(var(--accent) / 0.16) inset;
+  }
+}
+
+@keyframes badge-breathe {
+  0%, 100% { border-color: hsl(var(--primary) / 0.13); }
+  50% { border-color: hsl(var(--accent) / 0.26); }
+}
+
+@keyframes tech-sweep {
+  0% { transform: translateX(-140%) skewX(-18deg); }
+  100% { transform: translateX(220%) skewX(-18deg); }
+}
+
 .animated-luxury-gradient {
   background: linear-gradient(135deg, hsl(var(--primary) / 0.16), hsl(var(--secondary) / 0.14), hsl(var(--accent) / 0.10));
-  background-size: 100% 100%;
-  animation: none;
+  background-size: 200% 200%;
+  animation: luxury-gradient-shift 16s ease-in-out infinite;
 }
 
 .animated-luxury-gradient-light {
   background: linear-gradient(135deg, hsl(var(--primary) / 0.07), hsl(var(--secondary) / 0.07), hsl(var(--accent) / 0.05));
-  background-size: 100% 100%;
-  animation: none;
+  background-size: 220% 220%;
+  animation: luxury-gradient-shift 20s ease-in-out infinite;
 }
 
 /* Luxury hover effects */
@@ -459,7 +485,7 @@ body {
 
 .luxury-glow {
   box-shadow: 0 0 26px hsl(var(--primary) / 0.28), 0 0 18px hsl(var(--gold) / 0.16);
-  animation: none;
+  animation: luxury-glow 9s ease-in-out infinite;
 }
 
 .luxury-glow-hover:hover {
@@ -475,15 +501,42 @@ body {
 .luxury-shimmer {
   background: linear-gradient(90deg, transparent, hsl(var(--secondary) / 0.28), transparent);
   background-size: 200% 100%;
-  animation: none;
+  animation: luxury-shimmer 7s linear infinite;
 }
 
 .luxury-float {
-  animation: none;
+  animation: luxury-float 6s ease-in-out infinite;
 }
 
 .luxury-pulse {
-  animation: none;
+  animation: luxury-pulse 4.5s ease-in-out infinite;
+}
+
+.tech-border-sweep {
+  position: relative;
+  isolation: isolate;
+}
+
+.tech-border-sweep::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  opacity: 0;
+  background: linear-gradient(
+    110deg,
+    transparent 42%,
+    hsl(var(--accent) / 0.45) 50%,
+    hsl(var(--primary) / 0.35) 54%,
+    transparent 62%
+  );
+  transition: opacity 0.25s ease;
+}
+
+.tech-border-sweep:hover::after {
+  opacity: 1;
+  animation: tech-sweep 1.15s ease-out 1;
 }
 
 /* 高端学术 text gradients */
@@ -495,7 +548,7 @@ body {
   background-size: 200% 200%;
   background-position: 0% 50%;
   transition: background-position 0.7s ease;
-  animation: none;
+  animation: luxury-gradient-shift 14s ease-in-out infinite;
 }
 
 .text-gradient-tech {
@@ -511,6 +564,25 @@ body {
 .text-gradient-luxury:hover,
 .text-gradient-tech:hover {
   background-position: 100% 50%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .luxury-card,
+  .luxury-badge,
+  .animated-luxury-gradient,
+  .animated-luxury-gradient-light,
+  .luxury-glow,
+  .luxury-shimmer,
+  .luxury-float,
+  .luxury-pulse,
+  .text-gradient-luxury,
+  .tech-border-sweep:hover::after {
+    animation: none !important;
+  }
+  .outline-academic:hover {
+    transform: none;
+    box-shadow: none;
+  }
 }
 
 .text-gradient-green {
