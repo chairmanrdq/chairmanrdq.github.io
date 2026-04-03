@@ -7,8 +7,8 @@ import type { Metadata } from 'next';
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: 'Projects & Grants',
-  description: 'Overview of funded research projects and grants led by Dr. RuiDong Qi（祁瑞东）.', // Replace
+  title: 'Projects',
+  description: 'Funded research portfolio led by Dr. RuiDong Qi, including principal-investigator projects and industry-linked collaborations.',
 };
 
 // Mock Data - Replace with actual data
@@ -54,22 +54,22 @@ const projectsData = [
 export default function ProjectsPage() {
   return (
     <div className="space-y-12">
-      <SectionTitle>Funded Projects & Grants</SectionTitle>
+      <SectionTitle>Projects</SectionTitle>
       <Card className="luxury-card">
         <CardContent className="pt-6">
           <h3 className="text-lg font-semibold text-primary mb-2">Research-to-Impact</h3>
           <ul className="list-disc list-inside space-y-2 text-sm text-foreground/80">
             <li>
-              <span className="text-primary font-medium">Computing power scheduling</span> at a regional hub node, driven by{' '}
-              <span className="text-primary font-medium">user perception</span> and dynamic matching across heterogeneous resources.
+              <span className="text-primary font-medium">Computing power scheduling</span> for regional hub nodes, driven by{' '}
+              <span className="text-primary font-medium">user-perceived QoS</span> and dynamic matching across heterogeneous resources.
             </li>
             <li>
-              <span className="text-primary font-medium">Cross-domain coordination</span> for end-to-end resource allocation and optimization under
+              <span className="text-primary font-medium">Cross-domain coordination</span> for end-to-end allocation and optimization under realistic
               operational constraints.
             </li>
             <li>
-              <span className="text-primary font-medium">Green, low-carbon</span> scheduling objectives, validated with industry partners (e.g., hub
-              operator collaboration) rather than lab-only assumptions.
+              <span className="text-primary font-medium">Green, low-carbon</span> scheduling objectives validated through industry collaboration,
+              moving beyond lab-only assumptions.
             </li>
           </ul>
         </CardContent>

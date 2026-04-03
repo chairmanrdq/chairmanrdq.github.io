@@ -7,7 +7,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Publications',
-  description: 'A comprehensive list of publications by Dr. RuiDong Qi（祁瑞东）, including journal articles, conference papers, and books.', // Replace
+  description: 'Selected and full publication record of Dr. RuiDong Qi, including conference papers and journal-oriented research outputs.',
 };
 
 // Mock Data - Replace with actual data
@@ -116,15 +116,14 @@ export default function PublicationsPage() {
           <h3 className="text-lg font-semibold text-primary mb-2">Selected Contributions</h3>
           <ul className="list-disc list-inside space-y-2 text-sm text-foreground/80">
             <li>
-              Density-peak clustering: automatic center detection via curve optimization and inflection-point analysis.
+              Density-peak clustering with principled automatic center discovery via curve optimization and inflection-point modeling.
             </li>
             <li>
-              QoS prediction with privacy: personalized federated learning with topology-aware signals and hierarchical aggregation.
+              Privacy-aware QoS prediction through personalized federated learning with topology-aware signals and hierarchical aggregation.
             </li>
             <li>
-              Empirical validation: report standard clustering metrics (e.g., AMI/ARI/FMI) and automatic center counts on benchmark-style
-              comparisons; QoS work compares against distributed and centralized baselines on two real-world datasets; clustering robustness is
-              stressed under noise and smooth-density regimes.
+              Empirical protocol emphasizes reproducible evaluation: standard clustering metrics (AMI/ARI/FMI), baseline-controlled QoS
+              comparisons on real-world datasets, and robustness analysis under noisy and smooth-density regimes.
             </li>
           </ul>
         </CardContent>

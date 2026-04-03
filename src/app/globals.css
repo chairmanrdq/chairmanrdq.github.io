@@ -8,116 +8,112 @@ body {
 
 @layer base {
   :root {
-    /* 顶尖深蓝学术风：更冷、更深、更克制 */
-    --background: 222 32% 98%;   /* 纸白偏冷 */
-    --foreground: 220 28% 13%;  /* 深墨蓝灰 */
+    /* Science 配色：冷白底 + 深蓝主色 + 青色辅助 */
+    --background: 210 36% 98%;
+    --foreground: 220 34% 14%;
 
-    --gradient-start-color: 222 35% 99%;
-    --gradient-end-color: 222 28% 95%;
+    --gradient-start-color: 210 48% 99%;
+    --gradient-end-color: 212 32% 95%;
 
-    --card: 220 30% 99%;
-    --card-foreground: 220 25% 14%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 30% 14%;
 
-    --popover: 220 30% 99%;
-    --popover-foreground: 220 25% 14%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 30% 14%;
 
-    /* Primary：学术蓝 */
-    --primary: 224 62% 24%;
+    --primary: 213 78% 34%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary：蓝灰（更中性） */
-    --secondary: 220 22% 42%;
+    --secondary: 213 32% 40%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 222 20% 95%;
-    --muted-foreground: 222 10% 42%;
+    --muted: 210 20% 94%;
+    --muted-foreground: 220 12% 40%;
 
-    /* Accent：冷调海军蓝-青（更学术、更稳） */
-    --accent: 189 55% 45%;
+    --accent: 189 78% 39%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 72% 55%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 18% 84%;
+    --border: 214 22% 84%;
     --input: 0 0% 100%;
-    --ring: 220 55% 28%;
+    --ring: 213 78% 34%;
 
-    --link-hover: 190 75% 40%;
+    --link-hover: 189 88% 35%;
 
     /* Gold：奖项强调色（更稳重、不过亮） */
-    --gold: 43 70% 50%;
+    --gold: 42 86% 50%;
 
     /* Chart 色板：一深一浅，突出严肃感 */
-    --chart-1: 225 55% 30%;
-    --chart-2: 215 35% 38%;
-    --chart-3: 150 25% 32%;
+    --chart-1: 213 78% 34%;
+    --chart-2: 189 78% 39%;
+    --chart-3: 162 48% 34%;
     --chart-4: var(--gold);
-    --chart-5: 220 12% 42%;
+    --chart-5: 226 18% 42%;
     
     --radius: 0.9rem; /* 略收窄圆角，更学术一点 */
 
     /* Sidebar（浅色） */
-    --sidebar-background: 220 30% 99%;
-    --sidebar-foreground: 220 25% 14%;
-    --sidebar-primary: 220 60% 33%;
+    --sidebar-background: 210 38% 99%;
+    --sidebar-foreground: 220 30% 14%;
+    --sidebar-primary: 213 74% 34%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 210 20% 95%;
-    --sidebar-accent-foreground: 220 60% 33%;
-    --sidebar-border: 220 18% 86%;
-    --sidebar-ring: 220 60% 33%;
+    --sidebar-accent: 210 22% 95%;
+    --sidebar-accent-foreground: 213 74% 34%;
+    --sidebar-border: 214 22% 86%;
+    --sidebar-ring: 213 74% 34%;
   }
 
   .dark {
-    /* Dark：偏论文正文的深蓝灰 */
     --background: 220 28% 8%;
-    --foreground: 220 20% 92%;
+    --foreground: 210 24% 92%;
 
-    --gradient-start-color: 220 28% 6%;
-    --gradient-end-color: 220 22% 12%;
+    --gradient-start-color: 220 34% 6%;
+    --gradient-end-color: 220 24% 12%;
 
-    --card: 230 25% 12%;
-    --card-foreground: 210 15% 92%;
+    --card: 222 24% 12%;
+    --card-foreground: 210 20% 92%;
 
-    --popover: 230 25% 10%;
-    --popover-foreground: 210 15% 92%;
+    --popover: 222 24% 10%;
+    --popover-foreground: 210 20% 92%;
 
-    --primary: 221 55% 78%;
-    --primary-foreground: 230 25% 8%;
+    --primary: 209 82% 72%;
+    --primary-foreground: 220 28% 8%;
 
-    --secondary: 220 18% 60%;
-    --secondary-foreground: 230 25% 8%;
+    --secondary: 214 26% 66%;
+    --secondary-foreground: 220 28% 8%;
 
     --muted: 220 14% 18%;
-    --muted-foreground: 220 12% 72%;
+    --muted-foreground: 218 14% 72%;
 
-    --accent: 189 50% 64%;
-    --accent-foreground: 230 25% 8%;
+    --accent: 188 70% 62%;
+    --accent-foreground: 220 28% 8%;
 
     --destructive: 0 70% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 18% 25%;
+    --border: 220 18% 24%;
     --input: 230 20% 18%;
-    --ring: 220 60% 74%;
+    --ring: 209 82% 72%;
 
-    --link-hover: 190 75% 80%;
+    --link-hover: 188 82% 76%;
     
-    --chart-1: 220 60% 74%;
-    --chart-2: 205 40% 65%;
-    --chart-3: 145 25% 45%;
-    --chart-4: 45 92% 60%;
-    --chart-5: 220 12% 72%;
+    --chart-1: 209 82% 72%;
+    --chart-2: 188 70% 62%;
+    --chart-3: 162 45% 52%;
+    --chart-4: 45 88% 62%;
+    --chart-5: 220 14% 72%;
 
     /* Sidebar（深色） */
-    --sidebar-background: 230 25% 6%;
-    --sidebar-foreground: 210 15% 92%;
-    --sidebar-primary: 215 60% 72%;
-    --sidebar-primary-foreground: 230 25% 8%;
-    --sidebar-accent: 230 20% 16%;
-    --sidebar-accent-foreground: 215 60% 72%;
-    --sidebar-border: 230 18% 26%;
-    --sidebar-ring: 215 60% 72%;
+    --sidebar-background: 222 28% 6%;
+    --sidebar-foreground: 210 20% 92%;
+    --sidebar-primary: 209 82% 72%;
+    --sidebar-primary-foreground: 220 28% 8%;
+    --sidebar-accent: 223 20% 16%;
+    --sidebar-accent-foreground: 209 82% 72%;
+    --sidebar-border: 223 18% 26%;
+    --sidebar-ring: 209 82% 72%;
   }
 }
 
@@ -440,10 +436,6 @@ body {
   75% { opacity: 1; transform: scale(1.1) rotate(270deg); }
 }
 
-@keyframes luxury-shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
-}
 
 @keyframes card-breathe {
   0%, 100% {
@@ -504,7 +496,7 @@ body {
 .luxury-shimmer {
   background: linear-gradient(90deg, transparent, hsl(var(--secondary) / 0.28), transparent);
   background-size: 200% 100%;
-  animation: luxury-shimmer 7s linear infinite;
+  animation: none;
 }
 
 .luxury-float {

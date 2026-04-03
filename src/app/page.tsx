@@ -8,7 +8,7 @@ import ImageCarousel from '@/components/home/image-carousel';
 // Enhanced Mock Data with luxury focus
 const scholarData = {
   name: "Dr. RuiDong Qi（祁瑞东）",
-  position: "Distinguished Lecturer in Computing Power Networks | Researcher in Green Computing",
+  position: "Principal Investigator in Computing Power Systems | Green AI and Service Intelligence",
   affiliation: "College of Computer Science, Inner Mongolia University",
   avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/rdq2.jpg",
   dataAiHint: "professional portrait",
@@ -22,7 +22,7 @@ const scholarData = {
     { name: "ORCID", url: "#", icon: <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256" fill="currentColor"><path d="M256,128c0,70.7-57.3,128-128,128S0,198.7,0,128C0,57.3,57.3,0,128,0S256,57.3,256,128z M126.1,208.9h-20V128.4c0-12.8-2.4-23.1-7.1-30.8c-4.7-7.7-11.7-11.5-21.1-11.5c-8.1,0-14.7,3.1-19.9,9.2c-5.2,6.1-7.8,15.1-7.8,26.9v86.8H29.4V72.4h20.8v10c3.8-4.5,8.2-7.9,13.4-10.2c5.1-2.3,10.6-3.5,16.5-3.5c15.9,0,28.1,5.9,36.5,17.7c8.4,11.8,12.6,28.5,12.6,50.1L126.1,208.9L126.1,208.9z M198.8,208.9h-20.5V112.4c0-11-1.4-19.1-4.1-24.4c-2.8-5.2-7.3-7.8-13.5-7.8c-6.9,0-12.3,2.9-16.1,8.6c-3.9,5.8-5.8,13.9-5.8,24.4v85.7h-20.5V72.4h20.5v10.5c3.4-4.2,7.4-7.4,11.9-9.7c4.5-2.3,9.5-3.4,14.9-3.4c11.2,0,20.1,3.6,26.7,10.9c6.6,7.3,9.9,17.7,9.9,31.2V208.9z"/></svg> },
     { name: "LinkedIn", url: "#", icon: <LinkIcon className="h-4 w-4" /> },
   ],
-  researchFocusSummary: "Our research spans cloud computing, big data, and service computing, with a focus on cloud–edge collaboration, predictive analytics, and intelligent service recommendation. We also develop system platforms that integrate cloud and data-driven applications.",
+  researchFocusSummary: "Our research integrates computing power systems, service intelligence, and green optimization. We study cloud-edge collaboration, user-centric QoS modeling, and reliable recommendation under practical deployment constraints.",
   //researchFocusSummary: "Our research focuses on cloud computing, big data, service computing, and system development. In cloud computing, we emphasize cloud–edge collaboration, cross-cloud resource scheduling, and task scheduling methods. In big data, we conduct predictive analytics and user behavior analysis within cloud environments, as well as ecosystem service assessment and forecasting. In service computing, we explore advanced recommendation approaches, including retrieval-augmented cold-start, large-model-based, multimodal, and elastic recommendation methods. We also develop system platforms that integrate cloud computing and big data applications, along with intelligent service recommendation systems.",
   researchKeywords: [    
     "Cloud Computing and Big Data",
@@ -39,9 +39,9 @@ const scholarData = {
   news: [
     { 
       id: "p", 
-      date: "Updated regularly", 
+      date: "Selected and updated", 
       title: "Selected Publications", 
-      description: "Curated papers across clustering, federated learning, and density-peak frameworks. DOI links are provided when available.", 
+      description: "Representative papers on clustering, federated QoS prediction, and robust density-peak modeling, with DOI access where available.", 
       icon: <BookOpen className="h-5 w-5 flex-shrink-0 text-primary" />,
       badge: "Publications",
       tone: "primary",
@@ -50,9 +50,9 @@ const scholarData = {
     },   
     { 
       id: "g", 
-      date: "Ongoing research", 
+      date: "Active portfolio", 
       title: "Projects & Grants", 
-      description: "Research projects and industry/enterprise collaborations in computing-power scheduling and intelligent service platforms.", 
+      description: "Funded projects and industry collaborations on computing-power scheduling, cross-domain orchestration, and low-carbon optimization.", 
       icon: <Sparkles className="h-5 w-5 flex-shrink-0 text-secondary" />,
       badge: "Grants",
       tone: "primary",
@@ -61,9 +61,9 @@ const scholarData = {
     },
     { 
       id: "t", 
-      date: "Current lab", 
+      date: "Lab and mentorship", 
       title: "Lab Team & Mentorship", 
-      description: "Current team members, research interests, and guidance opportunities. Send a short email with your background and goals.", 
+      description: "Team structure, research tracks, and supervision opportunities for students with strong foundations and clear interests.", 
       icon: <Users className="h-5 w-5 flex-shrink-0 text-secondary" />,
       badge: "Students",
       tone: "primary",

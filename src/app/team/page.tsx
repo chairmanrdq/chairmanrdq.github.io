@@ -6,8 +6,8 @@ import { Button } from '@/components/ui/button';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Research Team',
-  description: 'Meet the talented research team members working with Dr. RuiDong Qi（祁瑞东）.', // Replace
+  title: 'Team & Mentorship',
+  description: 'Research group profile, team structure, and mentorship information for students working with Dr. RuiDong Qi.',
 };
 
 // Mock Data - Replace with actual data
@@ -325,15 +325,15 @@ export default function TeamPage() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <Card className="shadow-md border-primary/10 lg:col-span-2">
             <CardContent className="p-6">
-              <h3 className="text-xl md:text-2xl font-semibold text-primary mb-3">Research Themes</h3>
+              <h3 className="text-xl md:text-2xl font-semibold text-primary mb-3">Research Directions</h3>
               <p className="text-sm md:text-base text-foreground/80 leading-relaxed mb-5">
-                Our lab focuses on computing power networks and low-carbon resource optimization, and builds
-                reliable learning-based methods for task scheduling and service recommendation.
+                The lab develops theory-informed and system-validated methods for computing power networks,
+                low-carbon resource optimization, and reliable service intelligence.
               </p>
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
                   <span className="text-primary font-semibold">1.</span>
-                  <p className="text-sm text-foreground/80">Computing power scheduling with user perception / QoS awareness.</p>
+                  <p className="text-sm text-foreground/80">Computing power scheduling with user-perceived QoS awareness.</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <span className="text-primary font-semibold">2.</span>
@@ -341,7 +341,7 @@ export default function TeamPage() {
                 </div>
                 <div className="flex items-start gap-3">
                   <span className="text-primary font-semibold">3.</span>
-                  <p className="text-sm text-foreground/80">Service recommendation and cold-start solutions with robust modeling.</p>
+                  <p className="text-sm text-foreground/80">Service recommendation and cold-start solutions with robust, deployable modeling.</p>
                 </div>
               </div>
             </CardContent>
@@ -349,9 +349,9 @@ export default function TeamPage() {
 
           <Card className="shadow-md border-primary/10">
             <CardContent className="p-6">
-              <h3 className="text-xl md:text-2xl font-semibold text-primary mb-3">How to Apply</h3>
+              <h3 className="text-xl md:text-2xl font-semibold text-primary mb-3">Prospective Students</h3>
               <p className="text-sm text-foreground/80 leading-relaxed mb-4">
-                If you are interested in research, email us with a short self-introduction and your background.
+                Students interested in research are encouraged to email a concise self-introduction and academic background.
               </p>
               <div className="space-y-2 text-sm">
                 <div className="flex items-start gap-3">
@@ -360,7 +360,7 @@ export default function TeamPage() {
                 </div>
                 <div className="flex items-start gap-3">
                   <span className="text-muted-foreground">•</span>
-                  <p className="text-foreground/80">Why this lab, and what you want to work on.</p>
+                  <p className="text-foreground/80">Motivation for joining the lab and proposed research interests.</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <span className="text-muted-foreground">•</span>
@@ -434,7 +434,7 @@ export default function TeamPage() {
       </section>
 	  
       <section id="undergraduate-team" aria-labelledby="undergraduate-team-title">
-        <SectionTitle id="undergraduate-team-title">Undergraduate Student</SectionTitle>
+        <SectionTitle id="undergraduate-team-title">Undergraduate Researchers</SectionTitle>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {collegeMembers.map(member => (
             <Card key={member.id} className="shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col sm:flex-row overflow-hidden border-primary/10">
@@ -521,7 +521,7 @@ export default function TeamPage() {
       </section>
 	                               
 	  <section id="alumni_collegeMembers" aria-labelledby="alumni-title">
-        <SectionTitle id="alumni-title">Lab Alumni Undergraduate</SectionTitle>
+        <SectionTitle id="alumni-title">Undergraduate Alumni</SectionTitle>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {alumni_collegeMembers.map(member => (
              <Card key={member.id} className="shadow-md hover:shadow-lg transition-shadow duration-300 border-primary/10">

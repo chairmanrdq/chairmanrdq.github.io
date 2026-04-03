@@ -35,7 +35,7 @@ const navItems = [
   { href: '/research', label: 'Research', icon: FlaskConical },
   { href: '/publications', label: 'Publications', icon: Newspaper },
   { href: '/projects', label: 'Projects', icon: FolderGit2 },
-  { href: '/team', label: 'Team', icon: Users },
+  { href: '/team', label: 'Team & Mentorship', icon: Users },
   { href: '/courses', label: 'Courses', icon: GraduationCap },
   { href: '/resources', label: 'Resources', icon: DownloadIcon },
   { href: '/contact', label: 'Contact', icon: MessageSquare },
