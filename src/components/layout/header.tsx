@@ -2,7 +2,8 @@
 "use client";
 
 import Link from 'next/link';
-import { Home, FlaskConical, Newspaper, FolderGit2, Users, GraduationCap, Download as DownloadIcon, MessageSquare, Menu, X, Cpu, Leaf, Battery, Sparkles, Crown, Diamond } from 'lucide-react';
+import Image from 'next/image';
+import { Home, FlaskConical, Newspaper, FolderGit2, Users, GraduationCap, Download as DownloadIcon, MessageSquare, Menu, X, Cpu, Leaf, Battery, Sparkles, Diamond } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
@@ -31,8 +32,15 @@ export default function Header() {
     <header className="bg-background/95 backdrop-blur-md sticky top-0 z-50 w-full border-b border-primary/20 shadow-2xl">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 text-xl sm:text-2xl font-bold hover:opacity-80 transition-opacity" onClick={() => setIsMobileMenuOpen(false)}>
-          <div className="animated-luxury-gradient p-2 rounded-lg luxury-glow">
-            <Crown className="h-6 w-6 text-white" />
+          <div className="animated-luxury-gradient p-1.5 rounded-full luxury-glow">
+            <Image
+              src="/assets/c__Users_imucsrdq_AppData_Roaming_Cursor_User_workspaceStorage_98bda57420d27ab7f115cee777d15aa0_images_logo-one-a74ff0a3-7a57-4376-907e-b095e89cdb9c.png"
+              alt="Lab logo"
+              width={32}
+              height={32}
+              className="rounded-full"
+              priority
+            />
           </div>
           <span className="text-gradient-luxury">
             {SCHOLAR_NAME}
@@ -73,8 +81,15 @@ export default function Header() {
               <div className="flex flex-col h-full">
                 <div className="p-6 flex justify-between items-center border-b border-primary/20">
                     <Link href="/" className="flex items-center gap-2 text-lg font-bold" onClick={() => setIsMobileMenuOpen(false)}>
-                      <div className="animated-luxury-gradient p-2 rounded-lg luxury-glow">
-                        <Crown className="h-5 w-5 text-white" />
+                      <div className="animated-luxury-gradient p-1.5 rounded-full luxury-glow">
+                        <Image
+                          src="/assets/c__Users_imucsrdq_AppData_Roaming_Cursor_User_workspaceStorage_98bda57420d27ab7f115cee777d15aa0_images_logo-one-a74ff0a3-7a57-4376-907e-b095e89cdb9c.png"
+                          alt="Lab logo"
+                          width={28}
+                          height={28}
+                          className="rounded-full"
+                          priority
+                        />
                       </div>
                       <span className="text-gradient-luxury">
                         {SCHOLAR_NAME}
