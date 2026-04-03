@@ -8,12 +8,12 @@ body {
 
 @layer base {
   :root {
-    /* 顶会论文风：冷静、低饱和、以学术蓝/灰为主 */
-    --background: 220 30% 98%;   /* 冷调“纸白” */
-    --foreground: 220 25% 14%;  /* 深墨蓝灰，阅读友好 */
+    /* 顶尖深蓝学术风：更冷、更深、更克制 */
+    --background: 222 32% 98%;   /* 纸白偏冷 */
+    --foreground: 220 28% 13%;  /* 深墨蓝灰 */
 
-    --gradient-start-color: 220 35% 99%;
-    --gradient-end-color: 220 25% 95%;
+    --gradient-start-color: 222 35% 99%;
+    --gradient-end-color: 222 28% 95%;
 
     --card: 220 30% 99%;
     --card-foreground: 220 25% 14%;
@@ -22,31 +22,31 @@ body {
     --popover-foreground: 220 25% 14%;
 
     /* Primary：学术蓝 */
-    --primary: 220 60% 33%;
+    --primary: 220 55% 28%;
     --primary-foreground: 0 0% 100%;
 
     /* Secondary：蓝灰（更中性） */
-    --secondary: 215 30% 30%;
+    --secondary: 220 15% 45%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 220 18% 96%;
-    --muted-foreground: 220 12% 42%;
+    --muted: 222 20% 95%;
+    --muted-foreground: 222 10% 42%;
 
-    /* Accent：更克制的低饱和墨绿 */
-    --accent: 155 22% 30%;
+    /* Accent：冷调海军蓝-青（更学术、更稳） */
+    --accent: 185 35% 38%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 72% 55%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 18% 86%;
+    --border: 220 18% 84%;
     --input: 0 0% 100%;
-    --ring: 220 60% 33%;
+    --ring: 220 55% 28%;
 
-    --link-hover: 220 65% 45%;
+    --link-hover: 220 70% 40%;
 
     /* Gold：奖项强调色（更稳重、不过亮） */
-    --gold: 45 92% 50%;
+    --gold: 42 95% 52%;
 
     /* Chart 色板：一深一浅，突出严肃感 */
     --chart-1: 225 55% 30%;
@@ -71,7 +71,7 @@ body {
   .dark {
     /* Dark：偏论文正文的深蓝灰 */
     --background: 220 28% 8%;
-    --foreground: 210 15% 92%;
+    --foreground: 220 20% 92%;
 
     --gradient-start-color: 220 28% 6%;
     --gradient-end-color: 220 22% 12%;
@@ -82,22 +82,22 @@ body {
     --popover: 230 25% 10%;
     --popover-foreground: 210 15% 92%;
 
-    --primary: 220 60% 74%;
+    --primary: 220 60% 78%;
     --primary-foreground: 230 25% 8%;
 
-    --secondary: 215 35% 62%;
+    --secondary: 220 15% 63%;
     --secondary-foreground: 230 25% 8%;
 
     --muted: 220 14% 18%;
     --muted-foreground: 220 12% 72%;
 
-    --accent: 155 22% 45%;
+    --accent: 185 35% 58%;
     --accent-foreground: 230 25% 8%;
 
     --destructive: 0 70% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 18% 26%;
+    --border: 220 18% 25%;
     --input: 230 20% 18%;
     --ring: 220 60% 74%;
 
@@ -131,6 +131,26 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     min-height: 100vh;
+    position: relative;
+    isolation: isolate;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: -10%;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.55;
+    background:
+      radial-gradient(circle at 15% 10%, hsl(var(--primary) / 0.18), transparent 55%),
+      radial-gradient(circle at 85% 90%, hsl(var(--accent) / 0.14), transparent 55%);
+    animation: bg-drift 28s ease-in-out infinite;
+    transform: translate3d(0, 0, 0);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    body::before {
+      animation: none;
+    }
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-semibold tracking-tight;
@@ -337,6 +357,18 @@ body {
   100% { background-position: 0% 50%; }
 }
 
+@keyframes bg-drift {
+  0% {
+    transform: translate3d(0%, 0%, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(1.6%, -1.4%, 0) scale(1.02);
+  }
+  100% {
+    transform: translate3d(0%, 0%, 0) scale(1);
+  }
+}
+
 @keyframes luxury-float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
@@ -417,21 +449,29 @@ body {
 
 /* 高端学术 text gradients */
 .text-gradient-luxury {
-  background: none;
-  background-clip: initial;
-  -webkit-background-clip: initial;
-  -webkit-text-fill-color: initial;
-  color: hsl(var(--primary));
-  background-size: 100% 100%;
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  background-position: 0% 50%;
+  transition: background-position 0.7s ease;
   animation: none;
 }
 
 .text-gradient-tech {
-  background: none;
-  background-clip: initial;
-  -webkit-background-clip: initial;
-  -webkit-text-fill-color: initial;
-  color: hsl(var(--secondary));
+  background: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--accent)));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  background-position: 0% 50%;
+  transition: background-position 0.7s ease;
+}
+
+.text-gradient-luxury:hover,
+.text-gradient-tech:hover {
+  background-position: 100% 50%;
 }
 
 .text-gradient-green {
