@@ -387,7 +387,7 @@ export default function Home() {
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {featuredPublications.map(pub => (
-            <Card key={pub.id} className="luxury-card tech-border-sweep group overflow-hidden luxury-hover relative">
+            <Card key={pub.id} className="luxury-card group overflow-hidden luxury-hover relative">
               <CardContent className="relative z-10 pt-6">
                 <div className="flex items-start justify-between gap-3 mb-3">
                   <span className="luxury-badge">
@@ -446,7 +446,7 @@ export default function Home() {
           {scholarData.news.map(item => (
             <Card 
              key={item.id} 
-             className="luxury-card tech-border-sweep group overflow-hidden luxury-hover relative"
+             className="luxury-card group overflow-hidden luxury-hover relative"
            >
               <div className="absolute inset-0 bg-gradient-to-br from-primary/8 via-primary/6 to-accent/8 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
               <CardContent className="relative z-10 pt-6">
