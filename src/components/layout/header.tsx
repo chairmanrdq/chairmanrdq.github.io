@@ -50,7 +50,14 @@ export default function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 text-xl sm:text-2xl font-bold hover:opacity-80 transition-opacity" onClick={() => setIsMobileMenuOpen(false)}>
           <div className="animated-luxury-gradient h-16 w-16 p-0 rounded-full luxury-glow flex items-center justify-center">
-            <Image src={logoOne} alt="Lab logo" width={64} height={64} className="rounded-full" priority />
+            <Image
+              src={logoOne}
+              alt="Lab logo"
+              width={64}
+              height={64}
+              className="rounded-full w-full h-full object-cover"
+              priority
+            />
           </div>
           <span className="text-gradient-luxury">
             {SCHOLAR_NAME}
@@ -97,7 +104,7 @@ export default function Header() {
                           alt="Lab logo"
                           width={64}
                           height={64}
-                          className="rounded-full"
+                          className="rounded-full w-full h-full object-cover"
                           priority
                         />
                       </div>
