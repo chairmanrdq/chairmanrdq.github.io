@@ -49,7 +49,7 @@ export default function Header() {
     <header className="bg-background/95 backdrop-blur-md sticky top-0 z-50 w-full border-b border-primary/20 shadow-2xl">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 text-xl sm:text-2xl font-bold hover:opacity-80 transition-opacity" onClick={() => setIsMobileMenuOpen(false)}>
-          <div className="animated-luxury-gradient h-1/2 aspect-square p-0 rounded-full luxury-glow flex items-center justify-center">
+          <div className="animated-luxury-gradient h-8 w-8 p-0 rounded-full luxury-glow flex items-center justify-center">
             <Image src={logoOne} alt="Lab logo" width={32} height={32} className="rounded-full" priority />
           </div>
           <span className="text-gradient-luxury">
@@ -91,7 +91,7 @@ export default function Header() {
               <div className="flex flex-col h-full">
                 <div className="p-6 flex justify-between items-center border-b border-primary/20">
                     <Link href="/" className="flex items-center gap-2 text-lg font-bold" onClick={() => setIsMobileMenuOpen(false)}>
-                      <div className="animated-luxury-gradient h-1/2 aspect-square p-0 rounded-full luxury-glow flex items-center justify-center">
+                      <div className="animated-luxury-gradient h-8 w-8 p-0 rounded-full luxury-glow flex items-center justify-center">
                         <Image
                           src={logoOne}
                           alt="Lab logo"
