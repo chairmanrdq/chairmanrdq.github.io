@@ -9,61 +9,61 @@ body {
 @layer base {
   :root {
     /* 科技蓝配色：分层冷底 + 浮起模块 + 青蓝高光 */
-    --background: 222 24% 93%;
-    --background-end: 223 28% 90%;
-    --foreground: 224 42% 10%;
+    --background: 221 28% 95%;
+    --background-end: 224 34% 90%;
+    --foreground: 226 48% 9%;
 
-    --gradient-start-color: 222 38% 96%;
-    --gradient-end-color: 224 26% 88%;
+    --gradient-start-color: 220 46% 97%;
+    --gradient-end-color: 225 34% 87%;
 
-    --card: 222 26% 97.5%;
-    --card-foreground: 223 36% 11%;
+    --card: 221 30% 98%;
+    --card-foreground: 224 38% 10%;
 
-    --popover: 222 26% 97.5%;
-    --popover-foreground: 223 36% 11%;
+    --popover: 221 30% 98%;
+    --popover-foreground: 224 38% 10%;
 
-    --primary: 220 90% 30%;
+    --primary: 221 100% 32%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 221 52% 34%;
+    --secondary: 223 62% 35%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 222 20% 91%;
-    --muted-foreground: 223 14% 34%;
+    --muted: 222 24% 92%;
+    --muted-foreground: 225 18% 30%;
 
-    --accent: 196 100% 43%;
+    --accent: 193 100% 48%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 72% 55%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 221 24% 76%;
-    --input: 222 24% 97%;
-    --ring: 220 90% 30%;
+    --border: 222 30% 74%;
+    --input: 221 28% 98%;
+    --ring: 221 100% 32%;
 
-    --link-hover: 196 100% 41%;
+    --link-hover: 193 100% 46%;
 
     /* Gold：奖项强调色（更稳重、不过亮） */
     --gold: 42 62% 44%;
 
     /* Chart 色板：一深一浅，突出严肃感 */
-    --chart-1: 220 90% 30%;
-    --chart-2: 196 96% 40%;
-    --chart-3: 225 60% 38%;
+    --chart-1: 221 100% 32%;
+    --chart-2: 193 100% 48%;
+    --chart-3: 227 64% 40%;
     --chart-4: var(--gold);
-    --chart-5: 228 26% 38%;
+    --chart-5: 229 28% 40%;
     
     --radius: 0.9rem; /* 略收窄圆角，更学术一点 */
 
     /* Sidebar（浅色） */
-    --sidebar-background: 222 26% 94.5%;
-    --sidebar-foreground: 223 38% 12%;
-    --sidebar-primary: 220 86% 31%;
+    --sidebar-background: 221 30% 95.5%;
+    --sidebar-foreground: 224 40% 11%;
+    --sidebar-primary: 221 96% 32%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 222 20% 91%;
-    --sidebar-accent-foreground: 220 86% 31%;
-    --sidebar-border: 221 24% 78%;
-    --sidebar-ring: 220 86% 31%;
+    --sidebar-accent: 222 24% 92%;
+    --sidebar-accent-foreground: 221 96% 32%;
+    --sidebar-border: 222 28% 78%;
+    --sidebar-ring: 221 96% 32%;
   }
 
   .dark {
@@ -126,16 +126,16 @@ body {
   body {
     @apply text-foreground;
     background-image:
-      radial-gradient(circle at 0% 0%, hsl(var(--gradient-start-color)), transparent 55%),
-      radial-gradient(circle at 100% 100%, hsl(var(--gradient-end-color)), transparent 55%),
-      radial-gradient(ellipse 120% 70% at 50% -15%, hsl(var(--primary) / 0.08), transparent 52%),
+      radial-gradient(circle at 0% 0%, hsl(var(--gradient-start-color)), transparent 58%),
+      radial-gradient(circle at 100% 100%, hsl(var(--gradient-end-color)), transparent 58%),
+      radial-gradient(ellipse 130% 78% at 50% -15%, hsl(var(--primary) / 0.1), transparent 54%),
       conic-gradient(
         from 210deg at 50% 50%,
-        hsl(var(--primary) / 0.035),
+        hsl(var(--primary) / 0.04),
         transparent 24%,
-        hsl(var(--accent) / 0.03) 42%,
+        hsl(var(--accent) / 0.035) 42%,
         transparent 66%,
-        hsl(var(--primary) / 0.03) 88%,
+        hsl(var(--primary) / 0.035) 88%,
         transparent
       ),
       linear-gradient(168deg, hsl(var(--background)) 0%, hsl(var(--background-end)) 100%);
@@ -151,10 +151,10 @@ body {
     inset: -10%;
     pointer-events: none;
     z-index: -1;
-    opacity: 0.42;
+    opacity: 0.5;
     background:
-      radial-gradient(circle at 15% 10%, hsl(var(--primary) / 0.12), transparent 55%),
-      radial-gradient(circle at 85% 90%, hsl(var(--accent) / 0.10), transparent 55%);
+      radial-gradient(circle at 15% 10%, hsl(var(--primary) / 0.16), transparent 58%),
+      radial-gradient(circle at 85% 90%, hsl(var(--accent) / 0.12), transparent 58%);
     animation: bg-drift 28s ease-in-out infinite;
     transform: translate3d(0, 0, 0);
   }
@@ -164,14 +164,14 @@ body {
     inset: 0;
     pointer-events: none;
     z-index: -1;
-    opacity: 0.3;
+    opacity: 0.34;
     background-image:
-      linear-gradient(hsl(var(--primary) / 0.055) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(var(--primary) / 0.055) 1px, transparent 1px),
+      linear-gradient(hsl(var(--primary) / 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--primary) / 0.06) 1px, transparent 1px),
       repeating-linear-gradient(
         180deg,
-        hsl(var(--accent) / 0.05) 0px,
-        hsl(var(--accent) / 0.05) 1px,
+        hsl(var(--accent) / 0.055) 0px,
+        hsl(var(--accent) / 0.055) 1px,
         transparent 1px,
         transparent 6px
       );
