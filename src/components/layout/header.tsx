@@ -47,7 +47,7 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 
   return (
-    <header className="bg-background/95 backdrop-blur-md sticky top-0 z-50 w-full border-b border-primary/20 shadow-2xl">
+    <header className="site-header-tech sticky top-0 z-50 w-full">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 text-xl sm:text-2xl font-bold hover:opacity-80 transition-opacity" onClick={() => setIsMobileMenuOpen(false)}>
           <div className="h-16 w-16 flex items-center justify-center">
@@ -74,7 +74,7 @@ export default function Header() {
                 variant="ghost"
                 asChild
                 className={cn(
-                  "text-sm font-medium transition-all duration-500 rounded-2xl",
+                  "nav-chip-tech text-sm font-medium transition-all duration-500 rounded-2xl",
                   pathname === item.href
                     ? "bg-gradient-to-r from-primary/8 via-secondary/8 to-accent/8 text-primary font-semibold hover:from-primary/15 hover:via-secondary/15 hover:to-accent/15 luxury-border" // Active state
                     : "text-foreground/70 hover:text-gradient-luxury hover:bg-gradient-to-r hover:from-primary/3 hover:via-secondary/3 hover:to-accent/3" // Inactive state
@@ -129,7 +129,7 @@ export default function Header() {
                        <Link
                         href={item.href}
                         className={cn(
-                          "flex items-center space-x-3 text-md font-medium transition-all duration-500 rounded-2xl px-3 py-3",
+                          "nav-chip-tech flex items-center space-x-3 text-md font-medium transition-all duration-500 rounded-2xl px-3 py-3",
                           pathname === item.href
                             ? "bg-gradient-to-r from-primary/8 via-secondary/8 to-accent/8 text-primary font-semibold luxury-border" // Active state
                             : "text-foreground/70 hover:text-gradient-luxury hover:bg-gradient-to-r hover:from-primary/3 hover:via-secondary/3 hover:to-accent/3" // Inactive state

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { SectionTitle } from "@/components/ui/section-title";
 import { Mail, Phone, Link as LinkIcon, MapPin, Award, Rss, BookOpen, Star, TrendingUp, Users, Globe, Zap, ArrowRight, ChevronRight, Leaf, Cpu, Database, Battery, Cloud, Sparkles, Crown, Diamond } from 'lucide-react';
 import ImageCarousel from '@/components/home/image-carousel';
+import SectionNav from '@/components/home/section-nav';
 
 // Enhanced Mock Data with luxury focus
 const scholarData = {
@@ -256,6 +257,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <SectionNav />
 
       {/* Prospective Students */}
       <section id="prospective-students" aria-labelledby="prospective-students-title" className="mb-16">

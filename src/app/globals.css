@@ -177,9 +177,13 @@ body {
       );
     background-size: 36px 36px, 36px 36px, 100% 6px;
     mask-image: radial-gradient(circle at center, black 20%, transparent 85%);
+    animation: grid-pan 38s linear infinite;
   }
   @media (prefers-reduced-motion: reduce) {
     body::before {
+      animation: none;
+    }
+    body::after {
       animation: none;
     }
   }
@@ -200,6 +204,37 @@ body {
   html.dark {
     color-scheme: dark;
   }
+}
+
+@keyframes grid-pan {
+  0% { background-position: 0 0, 0 0, 0 0; }
+  100% { background-position: 36px 0, 0 36px, 0 6px; }
+}
+
+@keyframes nav-glow-sweep {
+  0%, 100% { box-shadow: 0 0 0 hsl(var(--accent) / 0); }
+  50% { box-shadow: 0 0 18px hsl(var(--accent) / 0.18); }
+}
+
+.site-header-tech {
+  background:
+    linear-gradient(135deg, hsl(var(--background) / 0.92), hsl(var(--background-end) / 0.9));
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid hsl(var(--primary) / 0.24);
+  box-shadow:
+    0 10px 26px -20px hsl(var(--primary) / 0.35),
+    0 0 0 1px hsl(var(--accent) / 0.08) inset;
+}
+
+.nav-chip-tech {
+  border: 1px solid transparent;
+  background: linear-gradient(135deg, hsl(var(--primary) / 0.03), hsl(var(--accent) / 0.02));
+}
+
+.nav-chip-tech:hover {
+  border-color: hsl(var(--accent) / 0.34);
+  background: linear-gradient(135deg, hsl(var(--primary) / 0.1), hsl(var(--accent) / 0.08));
+  animation: nav-glow-sweep 1.8s ease-in-out infinite;
 }
 
 /* Custom separator with icon */
