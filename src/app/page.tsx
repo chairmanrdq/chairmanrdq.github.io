@@ -345,17 +345,12 @@ export default function Home() {
             
             <div className="flex flex-wrap gap-3 mb-6">
               {scholarData.researchKeywords.map((keyword, index) => (
-                                 <span 
-                   key={index} 
-                   className="luxury-badge transition-all duration-500 cursor-default"
-                   style={{
-                     color: 'hsl(var(--accent))',
-                     background: 'linear-gradient(135deg, hsl(var(--accent) / 0.08) 0%, hsl(var(--accent) / 0.12) 100%)',
-                     border: '1px solid hsl(var(--accent) / 0.2)'
-                   }}
-                 >
+                <span
+                  key={index}
+                  className="luxury-badge luxury-badge-accent transition-all duration-500 cursor-default"
+                >
                    {keyword}
-                 </span>
+                </span>
               ))}
             </div>
             
