@@ -277,10 +277,43 @@ body {
 }
 
 .site-header-tech {
-  background: hsl(var(--background) / 0.96);
-  backdrop-filter: blur(8px);
-  border-bottom: 2px solid hsl(218 58% 9% / 0.14);
-  box-shadow: none;
+  position: relative;
+  isolation: isolate;
+  /* 天蓝 → 浅白地平线 → 地绿微染（天蓝地绿） */
+  background-color: hsl(0 0% 100%);
+  background-image:
+    radial-gradient(ellipse 115% 95% at 50% -35%, hsl(204 92% 82% / 0.55) 0%, transparent 52%),
+    linear-gradient(
+      180deg,
+      hsl(208 72% 74%) 0%,
+      hsl(206 68% 84%) 18%,
+      hsl(200 52% 94%) 42%,
+      hsl(0 0% 100%) 72%,
+      hsl(148 38% 93%) 100%
+    );
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid hsl(155 36% 48% / 0.28);
+  box-shadow:
+    0 1px 0 hsl(0 0% 100% / 0.65) inset,
+    0 4px 18px -8px hsl(210 65% 45% / 0.12);
+}
+
+.dark .site-header-tech {
+  background-color: hsl(218 58% 9%);
+  background-image:
+    radial-gradient(ellipse 110% 90% at 50% -40%, hsl(210 55% 38% / 0.35) 0%, transparent 50%),
+    linear-gradient(
+      180deg,
+      hsl(215 48% 22%) 0%,
+      hsl(210 38% 16%) 28%,
+      hsl(205 32% 13%) 55%,
+      hsl(175 28% 11%) 82%,
+      hsl(160 26% 10%) 100%
+    );
+  border-bottom-color: hsl(155 28% 32% / 0.45);
+  box-shadow:
+    0 1px 0 hsl(210 25% 22% / 0.35) inset,
+    0 6px 20px -10px hsl(0 0% 0% / 0.35);
 }
 
 .nav-chip-tech {
