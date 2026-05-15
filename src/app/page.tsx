@@ -154,7 +154,13 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
             <div className="flex shrink-0 flex-col items-center">
               <div className="relative group motion-safe:animate-subtle-float">
-                <div className="relative">
+                <div className="relative inline-block">
+                  <span
+                    className="hero-avatar-crown pointer-events-none absolute left-2 top-2 z-10 flex h-7 w-7 items-center justify-center rounded-md border border-[hsl(var(--gold)/0.42)] bg-background/90 text-[hsl(var(--gold))] shadow-sm backdrop-blur-sm dark:border-[hsl(var(--gold)/0.5)] dark:bg-card/90"
+                    aria-hidden={true}
+                  >
+                    <Crown className="h-3.5 w-3.5" strokeWidth={2.35} />
+                  </span>
                   <Image
                     src={scholarData.avatarUrl}
                     alt={`Profile picture of ${scholarData.name}`}

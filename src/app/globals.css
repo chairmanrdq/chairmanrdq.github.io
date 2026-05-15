@@ -374,6 +374,26 @@ body {
   opacity: 0.85;
 }
 
+/* 首页主照片左上角小皇冠（装饰，无独立语义） */
+@keyframes hero-crown {
+  0%,
+  100% {
+    transform: rotate(-7deg) scale(1) translateY(0);
+    filter: drop-shadow(0 1px 2px hsl(var(--gold) / 0.45));
+  }
+  50% {
+    transform: rotate(6deg) scale(1.08) translateY(-2px);
+    filter: drop-shadow(0 0 7px hsl(var(--gold-highlight) / 0.55));
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-avatar-crown {
+    animation: hero-crown 2.75s ease-in-out infinite;
+    transform-origin: 50% 100%;
+  }
+}
+
 /* Custom separator with icon */
 .separator-with-icon {
   @apply flex items-center text-muted-foreground my-6;
@@ -813,6 +833,11 @@ body {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
+  }
+  .hero-avatar-crown {
+    animation: none !important;
+    transform: none !important;
+    filter: none !important;
   }
   .luxury-badge-tech {
     animation: none !important;
