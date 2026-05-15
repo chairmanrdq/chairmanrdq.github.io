@@ -10,13 +10,6 @@ export default function Footer() {
         <p className="text-sm font-medium tracking-wide text-muted-foreground">
           &copy; {new Date().getFullYear()} {SCHOLAR_NAME}. All rights reserved.
         </p>
-        <p
-          lang="mn-Mong"
-          className="mongolian-script-display mt-3 text-xs leading-relaxed text-muted-foreground/90"
-          translate="no"
-        >
-          ᠥᠪᠥᠷ ᠮᠣᠩᠭᠤᠯ ᠤᠨ ᠥᠪᠡᠷᠲᠡᠭᠡᠨ ᠵᠠᠰᠠᠬᠤ ᠣᠷᠤᠨ · 敕勒川，阴山下
-        </p>
       </div>
     </footer>
   );

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter, Noto_Sans_Mongolian } from 'next/font/google';
+import { Inter } from 'next/font/google';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import Header from '@/components/layout/header';
@@ -10,13 +10,6 @@ import { THEME_STORAGE_KEY } from '@/lib/theme-constants';
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-sans',
-});
-
-const notoSansMongolian = Noto_Sans_Mongolian({
-  weight: ['400'],
-  subsets: ['mongolian'],
-  variable: '--font-mongolian',
-  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -38,7 +31,7 @@ export default function RootLayout({
   const themeInitScript = `(function(){try{var k='${THEME_STORAGE_KEY}';var t=localStorage.getItem(k);if(t==='dark'){document.documentElement.classList.add('dark');}else if(t==='light'){document.documentElement.classList.remove('dark');}else{if(window.matchMedia('(prefers-color-scheme: dark)').matches){document.documentElement.classList.add('dark');}else{document.documentElement.classList.remove('dark');}}}catch(e){}})();`;
 
   return (
-    <html lang="en" suppressHydrationWarning className={`${inter.variable} ${notoSansMongolian.variable}`}>
+    <html lang="en" suppressHydrationWarning className={inter.variable}>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
