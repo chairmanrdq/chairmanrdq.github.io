@@ -5,12 +5,11 @@ import { Button } from "@/components/ui/button";
 import { SectionTitle } from "@/components/ui/section-title";
 import { Mail, Phone, Link as LinkIcon, MapPin, Award, Rss, BookOpen, Star, TrendingUp, Users, Globe, Zap, ArrowRight, ChevronRight, Leaf, Cpu, Database, Battery, Cloud, Sparkles, Crown, Diamond } from 'lucide-react';
 import ImageCarousel from '@/components/home/image-carousel';
-import CalligraphyIntro from '@/components/home/calligraphy-intro';
 import ScrollBlurRevealTitle from '@/components/home/scroll-blur-reveal-title';
 
 // Enhanced Mock Data with luxury focus
 const scholarData = {
-  name: "Dr. RuiDong Qi",
+  name: "Dr. RuiDong Qi (祁瑞东)",
   position: "Principal Investigator in Computing Power Systems | Green AI and Service Intelligence",
   affiliation: "College of Computer Science, Inner Mongolia University",
   avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/rdq2.jpg",
@@ -155,7 +154,6 @@ const homeCalligraphyQuoteFont = Ma_Shan_Zheng({
 export default function Home() {
   return (
     <div className="relative">
-      <CalligraphyIntro />
       {/* Hero */}
       <section className="relative mb-16 overflow-hidden rounded-xl border-2 border-[#0A1526]/15 bg-[#FFFFFF] p-8 md:p-12 luxury-card page-section-reveal">
         <div className="relative z-10">
@@ -178,11 +176,17 @@ export default function Home() {
                 <blockquote
                   className={`${homeCalligraphyQuoteFont.className} text-[clamp(0.95rem,2.4vw,1.35rem)] leading-[1.75] tracking-[0.08em] text-[#0A1526] dark:text-foreground/90`}
                 >
-                  人生万事须自为，
-				  跬步江山即寥廓。
+                  <span className="motion-safe:animate-hero-quote-line motion-reduce:animate-none motion-reduce:opacity-100 block">
+                    人生万事须自为，
+                  </span>
+                  <span
+                    className="motion-safe:animate-hero-quote-line motion-reduce:animate-none motion-reduce:opacity-100 block [animation-delay:480ms]"
+                  >
+                    跬步江山即寥廓。
+                  </span>
                 </blockquote>
                 <div
-                  className="mx-auto mt-4 h-px w-full max-w-[10rem] bg-gradient-to-r from-transparent via-primary/40 to-transparent"
+                  className="mx-auto mt-4 h-px w-full max-w-[10rem] bg-gradient-to-r from-transparent via-primary/40 to-transparent motion-safe:animate-fade-in motion-safe:[animation-delay:1.05s] motion-reduce:animate-none motion-reduce:opacity-100"
                   aria-hidden
                 />
               </figure>
@@ -328,7 +332,7 @@ export default function Home() {
               </div>
 
               <div className="w-full lg:w-[340px]">
-                <div className="tech-accent p-4 rounded-xl mb-4">
+                <div className="tech-accent-soft p-4 rounded-xl mb-4">
                   <div className="flex items-center gap-2">
                     <Mail className="h-5 w-5 text-primary" />
                     <p className="font-semibold text-foreground/90">Contact Email</p>
@@ -342,9 +346,9 @@ export default function Home() {
                 </div>
 
                 <Button
-                  variant="default"
+                  variant="luxurySoft"
                   asChild
-                  className="btn-luxury w-full px-6 py-3 rounded-2xl group"
+                  className="w-full px-6 py-3 rounded-2xl group"
                 >
                   <a href="mailto:imucsrdq@163.com?subject=Lab%20Application%20-%20Your%20Name">
                     Email Dr. Qi <ChevronRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -393,9 +397,9 @@ export default function Home() {
             </div>
             
             <Button 
-              variant="default" 
+              variant="luxurySoft" 
               asChild 
-              className="btn-luxury px-6 py-3 rounded-2xl group luxury-glow-hover"
+              className="px-6 py-3 rounded-2xl group luxury-glow-hover"
             >
               <a href="/research" className="flex items-center gap-2">
                 Explore my research

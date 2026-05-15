@@ -61,7 +61,9 @@ export default function CoursesPage() {
             <CardHeader>
               <div className="flex flex-col sm:flex-row justify-between sm:items-start gap-1">
                 <CardTitle className="text-xl md:text-2xl text-primary/90">{course.title}</CardTitle>
-                <span className="text-sm text-muted-foreground font-medium bg-secondary px-2 py-1 rounded-md w-fit mt-1 sm:mt-0">{course.level}</span>
+                <span className="mt-1 w-fit rounded-md border border-border/70 bg-muted px-2 py-1 text-sm font-medium text-foreground/85 sm:mt-0">
+                  {course.level}
+                </span>
               </div>
               <CardDescription className="text-md font-medium text-accent pt-1">{course.term}</CardDescription>
             </CardHeader>

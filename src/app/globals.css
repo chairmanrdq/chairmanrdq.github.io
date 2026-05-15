@@ -167,36 +167,6 @@ body {
   50% { box-shadow: 0 0 22px hsl(var(--accent) / 0.28); }
 }
 
-@keyframes ink-stroke-reveal {
-  0% {
-    opacity: 0;
-    transform: translateY(10px) scale(0.9) rotate(-2deg);
-    filter: blur(6px);
-  }
-  65% {
-    filter: blur(0);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1) rotate(0deg);
-    filter: blur(0);
-  }
-}
-
-.calligraphy-char {
-  opacity: 0;
-  animation: ink-stroke-reveal 0.78s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .calligraphy-char {
-    animation: none;
-    opacity: 1;
-    filter: none;
-    transform: none;
-  }
-}
-
 /* 首页区块标题：整句渐变 + 自左向右揭开并去模糊（ScrollBlurRevealTitle） */
 @keyframes section-title-scroll-reveal {
   0% {
@@ -367,6 +337,19 @@ body {
     0 10px 24px -16px hsl(var(--primary) / 0.30),
     0 0 0 1px hsl(var(--accent) / 0.08),
     0 1px 0 hsl(var(--accent) / 0.20) inset;
+}
+
+/* 更浅的信息块底（首页联系邮箱等） */
+.tech-accent-soft {
+  color: hsl(var(--primary) / 0.92);
+  background: linear-gradient(135deg, hsl(var(--primary) / 0.02) 0%, hsl(var(--accent) / 0.028) 100%);
+  border: 1px solid hsl(var(--primary) / 0.08);
+  box-shadow: 0 2px 12px -8px hsl(var(--primary) / 0.1);
+}
+
+.dark .tech-accent-soft {
+  background: linear-gradient(135deg, hsl(var(--primary) / 0.08) 0%, hsl(var(--accent) / 0.07) 100%);
+  border-color: hsl(var(--primary) / 0.16);
 }
 
 .innovation-accent {
