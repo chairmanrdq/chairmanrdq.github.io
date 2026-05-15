@@ -5,6 +5,7 @@ import { SectionTitle } from "@/components/ui/section-title";
 import { Mail, Phone, Link as LinkIcon, MapPin, Award, Rss, BookOpen, Star, TrendingUp, Users, Globe, Zap, ArrowRight, ChevronRight, Leaf, Cpu, Database, Battery, Cloud, Sparkles, Crown, Diamond } from 'lucide-react';
 import ImageCarousel from '@/components/home/image-carousel';
 import CalligraphyIntro from '@/components/home/calligraphy-intro';
+import ScrollBlurRevealTitle from '@/components/home/scroll-blur-reveal-title';
 
 // Enhanced Mock Data with luxury focus
 const scholarData = {
@@ -276,12 +277,7 @@ export default function Home() {
         style={{ animationDelay: "80ms" }}
       >
         <div className="text-center mb-8">
-          <h2
-            id="prospective-students-title"
-            className="text-3xl lg:text-4xl font-bold text-gradient-luxury mb-4"
-          >
-            Prospective Students
-          </h2>
+          <ScrollBlurRevealTitle id="prospective-students-title" text="Prospective Students" />
           <div className="section-title-rule" aria-hidden={true} />
         </div>
 
@@ -353,7 +349,7 @@ export default function Home() {
         style={{ animationDelay: "160ms" }}
       >
         <div className="text-center mb-8">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gradient-luxury mb-4">Research Focus</h2>
+          <ScrollBlurRevealTitle id="research-focus-title" text="Research Focus" />
           <div className="section-title-rule" aria-hidden={true} />
         </div>
         
@@ -400,9 +396,7 @@ export default function Home() {
         style={{ animationDelay: "240ms" }}
       >
         <div className="text-center mb-8">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gradient-luxury mb-4" id="featured-publications-title">
-            Selected Publications
-          </h2>
+          <ScrollBlurRevealTitle id="featured-publications-title" text="Selected Publications" />
           <div className="section-title-rule" aria-hidden={true} />
         </div>
 
@@ -468,7 +462,7 @@ export default function Home() {
         style={{ animationDelay: "320ms" }}
       >
         <div className="text-center mb-8">
-          <h2 id="news-title" className="text-3xl lg:text-4xl font-bold text-gradient-luxury mb-4">Academic Highlights</h2>
+          <ScrollBlurRevealTitle id="news-title" text="Academic Highlights" />
           <div className="section-title-rule" aria-hidden={true} />
         </div>
         
