@@ -42,11 +42,10 @@ export default function Header() {
 
   return (
     <header className="site-header-tech sticky top-0 z-50 w-full">
-      <div className="container mx-auto flex h-20 min-h-[5rem] items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto flex h-20 min-h-[5rem] min-w-0 items-center justify-between gap-2 px-4 sm:gap-3 sm:px-6 lg:px-8">
         <Link
           href="/"
-          className="flex shrink-0 items-center hover:opacity-80 transition-opacity"
-          aria-label="Home"
+          className="flex min-w-0 max-w-[calc(100%-8.75rem)] items-center gap-2 hover:opacity-80 transition-opacity sm:max-w-[min(340px,52%)] md:max-w-[min(360px,46%)] lg:max-w-[min(400px,42%)]"
           onClick={() => setIsMobileMenuOpen(false)}
         >
           <div className="flex h-[4.5rem] w-[4.5rem] shrink-0 items-center justify-center">
@@ -59,10 +58,13 @@ export default function Header() {
               priority
             />
           </div>
+          <span className="text-gradient-luxury min-w-0 flex-1 text-left text-sm font-bold leading-snug sm:text-base md:text-lg lg:text-xl line-clamp-2 break-words">
+            {siteConfig.piShortName}
+          </span>
         </Link>
 
         {/* Desktop Navigation + theme */}
-        <div className="hidden md:flex items-center gap-1 lg:gap-2">
+        <div className="hidden min-w-0 shrink-0 md:flex md:items-center md:gap-1 lg:gap-2">
           <nav className="flex items-center space-x-1 lg:space-x-2">
             {navItems.map((item) => (
               <Button
@@ -87,7 +89,7 @@ export default function Header() {
         </div>
 
         {/* Mobile Navigation */}
-        <div className="md:hidden flex items-center gap-1">
+        <div className="flex shrink-0 items-center gap-1 md:hidden">
           <ThemeToggle />
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild>
@@ -100,8 +102,7 @@ export default function Header() {
                 <div className="p-6 flex justify-between items-center border-b border-primary/20">
                     <Link
                       href="/"
-                      className="flex shrink-0 items-center hover:opacity-80 transition-opacity"
-                      aria-label="Home"
+                      className="flex min-w-0 max-w-[calc(100%-3rem)] items-center gap-2 hover:opacity-80 transition-opacity"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       <div className="flex h-[4.5rem] w-[4.5rem] shrink-0 items-center justify-center">
@@ -114,6 +115,9 @@ export default function Header() {
                           priority
                         />
                       </div>
+                      <span className="text-gradient-luxury min-w-0 flex-1 text-left text-base font-bold leading-snug line-clamp-2 break-words">
+                        {siteConfig.piShortName}
+                      </span>
                     </Link>
                     <SheetClose asChild>
                         <Button variant="ghost" size="icon" aria-label="Close menu" className="text-primary hover:text-primary/80">
