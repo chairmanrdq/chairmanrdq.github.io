@@ -147,9 +147,9 @@ const carouselImages = [
 
 export default function Home() {
   return (
-    <div className="relative">
+    <div className="home-tech-canvas relative">
       {/* Hero */}
-      <section className="relative mb-16 overflow-hidden rounded-xl border-2 border-[#0A1526]/15 bg-[#FFFFFF] p-8 md:p-12 luxury-card tech-frame-ambient page-section-reveal">
+      <section className="home-hero-tech relative mb-16 overflow-hidden rounded-xl border-2 border-[#0A1526]/15 bg-[#FFFFFF] p-8 md:p-12 luxury-card tech-frame-ambient page-section-reveal">
         <div className="relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
             <div className="flex shrink-0 flex-col items-center">
@@ -173,7 +173,7 @@ export default function Home() {
 
             {/* Enhanced Bio Content with Luxury Effects */}
             <div className="flex-1 text-center lg:text-left">
-                             <div className="inline-flex items-center gap-2 luxury-badge mb-4 motion-safe:animate-fade-up" style={{ animationDelay: '0ms' }}>
+                             <div className="inline-flex items-center gap-2 luxury-badge luxury-badge-tech mb-4 motion-safe:animate-fade-up" style={{ animationDelay: '0ms' }}>
                 <Cpu className="h-4 w-4 text-primary/85" />
                 <span className="text-sm font-medium">Computing Power Networks • Low-Carbon Scheduling • Reliable Service Intelligence</span>
                </div>
@@ -216,7 +216,7 @@ export default function Home() {
                       {stat.icon}
                     </div>
                     <div className="text-xl md:text-2xl font-semibold text-primary/95 tracking-tight">{stat.value}</div>
-                    <div className="text-xs text-foreground/65 mt-1">{stat.label}</div>
+                    <div className="text-xs text-foreground/65 mt-1 font-mono tabular-nums tracking-wide">{stat.label}</div>
                   </div>
                 ))}
               </div>
@@ -408,7 +408,7 @@ export default function Home() {
           {featuredPublications.map((pub, index) => (
             <Card
               key={pub.id}
-              className="luxury-card group overflow-hidden luxury-hover relative motion-safe:animate-fade-up"
+              className="luxury-card tech-frame-ambient group overflow-hidden luxury-hover relative motion-safe:animate-fade-up"
               style={{ animationDelay: `${index * 60}ms` }}
             >
               <CardContent className="relative z-10 pt-6">
@@ -474,7 +474,7 @@ export default function Home() {
           {scholarData.news.map((item, index) => (
             <Card 
              key={item.id} 
-             className="luxury-card group overflow-hidden luxury-hover relative motion-safe:animate-fade-up"
+             className="luxury-card tech-frame-ambient group overflow-hidden luxury-hover relative motion-safe:animate-fade-up"
              style={{ animationDelay: `${index * 55}ms` }}
            >
               <div className="absolute inset-0 bg-gradient-to-br from-primary/8 via-primary/6 to-accent/8 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
