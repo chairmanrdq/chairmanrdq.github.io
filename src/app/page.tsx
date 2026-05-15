@@ -148,8 +148,13 @@ const carouselImages = [
 export default function Home() {
   return (
     <div className="home-tech-canvas relative">
+      <div className="prestige-page-vignette" aria-hidden={true} />
       {/* Hero */}
       <section className="home-hero-tech relative mb-16 overflow-hidden rounded-xl border-2 border-[#0A1526]/15 bg-[#FFFFFF] p-8 md:p-12 luxury-card tech-frame-ambient page-section-reveal">
+        <div className="prestige-hero-lab" aria-hidden={true}>
+          <div className="prestige-hero-lab__corners" />
+          <div className="prestige-hero-lab__scan" />
+        </div>
         <div className="relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
             <div className="flex shrink-0 flex-col items-center">
@@ -188,7 +193,10 @@ export default function Home() {
                 className="text-4xl lg:text-6xl font-bold text-gradient-luxury mb-4 motion-safe:animate-fade-up"
                 style={{ animationDelay: '60ms' }}
               >
-                {scholarData.name}
+                <span className="prestige-name-shell">
+                  <span className="prestige-name-shell__shine" aria-hidden={true} />
+                  {scholarData.name}
+                </span>
               </h1>
               
               <p
@@ -283,7 +291,7 @@ export default function Home() {
       <section
         id="prospective-students"
         aria-labelledby="prospective-students-title"
-        className="mb-16 page-section-reveal"
+        className="mb-16 page-section-reveal prestige-section-halo"
         style={{ animationDelay: "80ms" }}
       >
         <div className="text-center mb-8">
@@ -355,7 +363,7 @@ export default function Home() {
       <section
         id="research-focus"
         aria-labelledby="research-focus-title"
-        className="mb-16 page-section-reveal"
+        className="mb-16 page-section-reveal prestige-section-halo"
         style={{ animationDelay: "160ms" }}
       >
         <div className="text-center mb-8">
@@ -402,7 +410,7 @@ export default function Home() {
       <section
         id="featured-publications"
         aria-labelledby="featured-publications-title"
-        className="mb-16 page-section-reveal"
+        className="mb-16 page-section-reveal prestige-section-halo"
         style={{ animationDelay: "240ms" }}
       >
         <div className="text-center mb-8">
@@ -468,7 +476,7 @@ export default function Home() {
       <section
         id="news"
         aria-labelledby="news-title"
-        className="mb-16 page-section-reveal"
+        className="mb-16 page-section-reveal prestige-section-halo"
         style={{ animationDelay: "320ms" }}
       >
         <div className="text-center mb-8">
@@ -539,7 +547,7 @@ export default function Home() {
       <section
         id="research-snapshot"
         aria-labelledby="research-snapshot-title"
-        className="mb-16 page-section-reveal"
+        className="mb-16 page-section-reveal prestige-section-halo"
         style={{ animationDelay: "400ms" }}
       >
         <div className="text-center mb-8">
@@ -598,7 +606,7 @@ export default function Home() {
       <section
         id="photo-highlights"
         aria-labelledby="photo-highlights-title"
-        className="mb-16 page-section-reveal"
+        className="mb-16 page-section-reveal prestige-section-halo"
         style={{ animationDelay: "480ms" }}
       >
         <div className="text-center mb-8">
