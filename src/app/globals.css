@@ -6,6 +6,11 @@ body {
   font-family: 'Inter', 'Roboto', 'Open Sans', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', var(--font-sans), sans-serif;
 }
 
+/* 传统蒙古文展示（与正文区分，依赖 layout 中 --font-mongolian） */
+.mongolian-script-display {
+  font-family: var(--font-mongolian), 'Mongolian Baiti', 'Noto Sans Mongolian', 'Microsoft Mongolian Baiti', serif;
+}
+
 @layer base {
   :root {
     /* 期刊图形摘要风：#FFFFFF / #0A1526 / #1D4ED8 / #00C177 */

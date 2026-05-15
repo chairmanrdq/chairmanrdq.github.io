@@ -5,6 +5,7 @@ import { SectionTitle } from "@/components/ui/section-title";
 import { Mail, Phone, Link as LinkIcon, MapPin, Award, Rss, BookOpen, Star, TrendingUp, Users, Globe, Zap, ArrowRight, ChevronRight, Leaf, Cpu, Database, Battery, Cloud, Sparkles, Crown, Diamond } from 'lucide-react';
 import ImageCarousel from '@/components/home/image-carousel';
 import BrushCalligraphyQuote from '@/components/home/brush-calligraphy-quote';
+import ChilechuanCulturePanel from '@/components/home/chilechuan-culture-panel';
 import ScrollBlurRevealTitle from '@/components/home/scroll-blur-reveal-title';
 
 // Enhanced Mock Data with luxury focus
@@ -278,6 +279,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <ChilechuanCulturePanel />
 
       {/* Prospective Students */}
       <section
