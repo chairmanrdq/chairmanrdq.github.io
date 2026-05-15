@@ -1,10 +1,31 @@
 /**
  * 全站单一配置：课题组品牌、站点 URL、学术外链。
  * 部署前请设置 NEXT_PUBLIC_SITE_URL（含 GitHub Pages 时的子路径，如 https://user.github.io/repo）。
+ * 若未写协议（如 user.github.io/repo），会自动补 https://，避免 layout 里 new URL() 在构建期抛错。
  */
+function resolveSiteUrl(): string {
+  const fallback = 'https://yourdomain.com';
+  const raw = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+  if (!raw) return fallback;
+  let normalized = raw.replace(/\/+$/, '');
+  if (!/^https?:\/\//i.test(normalized)) {
+    normalized = `https://${normalized.replace(/^\/+/, '')}`;
+  }
+  try {
+    const u = new URL(normalized);
+    if (!u.hostname) return fallback;
+    const path = u.pathname.replace(/\/$/, '');
+    return `${u.origin}${path}`;
+  } catch {
+    return fallback;
+  }
+}
+
+const siteUrl = resolveSiteUrl();
+
 export const siteConfig = {
   /** 规范站点根 URL，勿尾斜杠（用于 metadata、sitemap、JSON-LD） */
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '') || 'https://yourdomain.com',
+  siteUrl,
 
   labName: 'Computing Power & Service Intelligence Lab',
   labTagline:
