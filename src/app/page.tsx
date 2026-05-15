@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { Ma_Shan_Zheng } from 'next/font/google';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { SectionTitle } from "@/components/ui/section-title";
@@ -144,6 +145,12 @@ const carouselImages = [
   { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/202502.jpg", alt: "International Research Collaboration", dataAiHint: "diverse team collaboration" },
   { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/202503.jpg", alt: "Advanced Computing Infrastructure", dataAiHint: "high-performance computing center" },
 ];
+
+const homeCalligraphyQuoteFont = Ma_Shan_Zheng({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 export default function Home() {
   return (
@@ -599,6 +606,18 @@ export default function Home() {
         <div className="luxury-card overflow-hidden luxury-hover motion-safe:animate-fade-in" style={{ animationDelay: '120ms' }}>
           <ImageCarousel images={carouselImages} interval={5000} />
         </div>
+
+        <figure className="mt-10 px-2 text-center sm:px-4">
+          <blockquote
+            className={`${homeCalligraphyQuoteFont.className} mx-auto max-w-3xl text-[clamp(1.2rem,3.2vw,1.95rem)] leading-[1.85] tracking-[0.1em] text-[#0A1526] dark:text-foreground/90`}
+          >
+            人生万事须自为，跬步江山即寥廓。
+          </blockquote>
+          <div
+            className="mx-auto mt-5 h-px w-[min(90%,22rem)] bg-gradient-to-r from-transparent via-primary/40 to-transparent"
+            aria-hidden
+          />
+        </figure>
       </section>
     </div>
   );
