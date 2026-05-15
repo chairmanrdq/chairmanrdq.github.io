@@ -150,19 +150,52 @@ export default function Home() {
     <div className="relative">
       {/* Hero */}
       <section className="relative mb-16 overflow-hidden rounded-xl border-2 border-[#0A1526]/15 bg-[#FFFFFF] p-8 md:p-12 luxury-card page-section-reveal">
+        <div
+          className="pointer-events-none absolute inset-0 z-[1] hero-tech-grid-layer motion-reduce:opacity-[0.06]"
+          aria-hidden
+        />
         <div className="relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
             <div className="flex shrink-0 flex-col items-center">
               <div className="relative group motion-safe:animate-subtle-float">
-                <div className="relative">
+                <div className="hero-portrait-frame relative isolate inline-block">
+                  <div
+                    className="pointer-events-none absolute -inset-3 z-0 rounded-none bg-gradient-to-br from-primary/30 via-accent/18 to-primary/25 blur-md hero-portrait-glow motion-reduce:opacity-40 dark:from-primary/25 dark:via-accent/12 dark:to-primary/20"
+                    aria-hidden
+                  />
                   <Image
                     src={scholarData.avatarUrl}
                     alt={`Profile picture of ${scholarData.name}`}
                     width={200}
                     height={300}
-                    className="rounded-none object-cover h-72 w-48 lg:h-96 lg:w-64 border-2 border-[#0A1526]/25"
+                    className="relative z-[1] rounded-none object-cover h-72 w-48 border-2 border-[#0A1526]/25 lg:h-96 lg:w-64"
                     data-ai-hint={scholarData.dataAiHint}
                     priority
+                  />
+                  <div
+                    className="pointer-events-none absolute inset-0 z-[2] opacity-[0.14] motion-reduce:hidden [background-image:linear-gradient(hsl(var(--primary)_/_0.14)_1px,transparent_1px),linear-gradient(90deg,hsl(var(--primary)_/_0.14)_1px,transparent_1px)] [background-size:9px_9px]"
+                    aria-hidden
+                  />
+                  <div className="pointer-events-none absolute inset-0 z-[3] overflow-hidden motion-reduce:hidden" aria-hidden>
+                    <div className="hero-portrait-scanline" />
+                  </div>
+                  <div className="pointer-events-none absolute inset-0 z-[4] motion-reduce:opacity-70" aria-hidden>
+                    <span className="absolute left-0 top-0 h-5 w-5 border-l-2 border-t-2 border-primary/60 motion-safe:animate-pulse motion-reduce:animate-none" />
+                    <span className="absolute right-0 top-0 h-5 w-5 border-r-2 border-t-2 border-primary/60 motion-safe:animate-pulse motion-safe:[animation-delay:0.4s] motion-reduce:animate-none" />
+                    <span className="absolute bottom-0 left-0 h-5 w-5 border-b-2 border-l-2 border-accent/55 motion-safe:animate-pulse motion-safe:[animation-delay:0.8s] motion-reduce:animate-none" />
+                    <span className="absolute bottom-0 right-0 h-5 w-5 border-b-2 border-r-2 border-accent/55 motion-safe:animate-pulse motion-safe:[animation-delay:1.2s] motion-reduce:animate-none" />
+                  </div>
+                  <span
+                    className="pointer-events-none absolute left-2 top-[22%] z-[5] h-1.5 w-1.5 rounded-full bg-primary shadow-[0_0_8px_hsl(var(--primary)/0.65)] motion-safe:animate-pulse motion-safe:[animation-duration:1.75s] motion-reduce:animate-none"
+                    aria-hidden
+                  />
+                  <span
+                    className="pointer-events-none absolute right-2 top-[38%] z-[5] h-1 w-1 rounded-full bg-accent shadow-[0_0_6px_hsl(var(--accent)/0.55)] motion-safe:animate-pulse motion-safe:[animation-duration:2.1s] motion-safe:[animation-delay:0.35s] motion-reduce:animate-none"
+                    aria-hidden
+                  />
+                  <span
+                    className="pointer-events-none absolute bottom-[18%] left-1/2 z-[5] h-1 w-1 -translate-x-1/2 rounded-full bg-primary/90 motion-safe:animate-pulse motion-safe:[animation-duration:2.45s] motion-safe:[animation-delay:0.6s] motion-reduce:animate-none"
+                    aria-hidden
                   />
                 </div>
               </div>
