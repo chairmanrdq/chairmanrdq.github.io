@@ -277,16 +277,16 @@ body {
 }
 
 .site-header-tech {
-  /* 接近 sky-100 / #e0f2fe 的天蓝浅底 */
-  background: #e0f2fe;
+  /* 与正文区 muted 对齐，不用整片天蓝 */
+  background: hsl(var(--muted));
   backdrop-filter: blur(8px);
-  border-bottom: 1px solid hsl(204 60% 82%);
+  border-bottom: 1px solid hsl(var(--border));
   box-shadow: none;
 }
 
 .dark .site-header-tech {
-  background: hsl(210 32% 20%);
-  border-bottom: 1px solid hsl(210 26% 28%);
+  background: hsl(var(--muted));
+  border-bottom: 1px solid hsl(var(--border));
   box-shadow: none;
 }
 
@@ -801,30 +801,15 @@ body {
   background: linear-gradient(180deg, hsl(var(--primary) / 0.8), hsl(var(--secondary) / 0.8));
 }
 
-/* 页脚：仅纵向渐变色条（天光 → 草甸绿） */
+/* 页脚条：与顶栏同一套中性底，略偏暖绿灰以区分正文白底 */
 .site-footer-prairie {
-  border-top: 1px solid rgba(56, 142, 60, 0.28);
-  color: hsl(152 42% 16%);
-  background: linear-gradient(
-    180deg,
-    hsl(200 52% 96%) 0%,
-    hsl(88 42% 92%) 22%,
-    hsl(92 38% 82%) 48%,
-    hsl(100 36% 62%) 72%,
-    hsl(108 34% 44%) 92%,
-    hsl(112 32% 34%) 100%
-  );
+  border-top: 1px solid hsl(var(--border));
+  color: hsl(var(--muted-foreground));
+  background: hsl(160 14% 96%);
 }
 
 .dark .site-footer-prairie {
-  border-top-color: rgba(129, 199, 132, 0.22);
-  color: hsl(120 28% 90%);
-  background: linear-gradient(
-    180deg,
-    hsl(205 28% 14%) 0%,
-    hsl(168 22% 12%) 30%,
-    hsl(155 26% 14%) 58%,
-    hsl(145 30% 16%) 82%,
-    hsl(138 28% 12%) 100%
-  );
+  border-top-color: hsl(var(--border));
+  color: hsl(var(--muted-foreground));
+  background: hsl(160 8% 15%);
 }
