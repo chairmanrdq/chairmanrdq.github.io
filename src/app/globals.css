@@ -793,3 +793,108 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, hsl(var(--primary) / 0.8), hsl(var(--secondary) / 0.8));
 }
+
+/* 页脚：草原 / 草甸意象（天光 → 浅丘 → 深草 + 云与云影层） */
+.site-footer-prairie {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-top: 1px solid rgba(56, 142, 60, 0.28);
+  color: hsl(152 42% 16%);
+  background-color: hsl(108 32% 38%);
+  background-image:
+    repeating-linear-gradient(
+      102deg,
+      rgba(255, 255, 255, 0.045) 0 1px,
+      transparent 1px 12px
+    ),
+    linear-gradient(
+      180deg,
+      hsl(200 52% 96%) 0%,
+      hsl(88 42% 92%) 18%,
+      hsl(92 38% 82%) 42%,
+      hsl(100 36% 62%) 68%,
+      hsl(108 34% 44%) 88%,
+      hsl(112 32% 34%) 100%
+    );
+}
+
+/* 白云轮廓 + 投射在草甸上的云影（径向叠层） */
+.site-footer-prairie-atmosphere {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    /* 云影：略偏蓝的暗斑，模拟高云投影 */
+    radial-gradient(ellipse 48% 26% at 14% 88%, rgba(18, 52, 38, 0.22) 0%, transparent 78%),
+    radial-gradient(ellipse 44% 24% at 42% 94%, rgba(22, 48, 36, 0.18) 0%, transparent 76%),
+    radial-gradient(ellipse 52% 28% at 78% 86%, rgba(16, 44, 32, 0.2) 0%, transparent 78%),
+    radial-gradient(ellipse 36% 18% at 92% 78%, rgba(28, 56, 40, 0.14) 0%, transparent 72%),
+    /* 远坡柔光 */
+    radial-gradient(ellipse 130% 70% at 50% 102%, rgba(129, 199, 132, 0.32) 0%, transparent 58%),
+    /* 云层：亮白团块 */
+    radial-gradient(ellipse 52% 32% at 8% 16%, rgba(255, 255, 255, 0.94) 0%, transparent 70%),
+    radial-gradient(ellipse 44% 26% at 32% 10%, rgba(255, 255, 255, 0.9) 0%, transparent 66%),
+    radial-gradient(ellipse 48% 30% at 58% 14%, rgba(248, 252, 255, 0.92) 0%, transparent 68%),
+    radial-gradient(ellipse 40% 24% at 86% 20%, rgba(255, 255, 255, 0.88) 0%, transparent 64%),
+    radial-gradient(ellipse 36% 20% at 72% 6%, rgba(255, 255, 255, 0.75) 0%, transparent 62%);
+}
+
+.site-footer-prairie::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 10px;
+  pointer-events: none;
+  z-index: 0;
+  background: linear-gradient(
+    180deg,
+    hsl(var(--background) / 0.55) 0%,
+    transparent 100%
+  );
+}
+
+.dark .site-footer-prairie {
+  border-top-color: rgba(129, 199, 132, 0.22);
+  color: hsl(120 28% 90%);
+  background-color: hsl(150 24% 10%);
+  background-image:
+    repeating-linear-gradient(
+      102deg,
+      rgba(255, 255, 255, 0.03) 0 1px,
+      transparent 1px 12px
+    ),
+    linear-gradient(
+      180deg,
+      hsl(205 28% 14%) 0%,
+      hsl(168 22% 12%) 28%,
+      hsl(155 26% 14%) 55%,
+      hsl(145 30% 16%) 78%,
+      hsl(138 28% 12%) 100%
+    );
+}
+
+.dark .site-footer-prairie-atmosphere {
+  background-image:
+    radial-gradient(ellipse 48% 26% at 12% 88%, rgba(0, 0, 0, 0.42) 0%, transparent 78%),
+    radial-gradient(ellipse 46% 24% at 44% 94%, rgba(0, 0, 0, 0.36) 0%, transparent 76%),
+    radial-gradient(ellipse 52% 28% at 80% 86%, rgba(0, 0, 0, 0.4) 0%, transparent 78%),
+    radial-gradient(ellipse 38% 20% at 94% 78%, rgba(0, 0, 0, 0.28) 0%, transparent 72%),
+    radial-gradient(ellipse 130% 70% at 50% 102%, rgba(76, 175, 80, 0.18) 0%, transparent 58%),
+    radial-gradient(ellipse 50% 30% at 10% 18%, rgba(180, 210, 230, 0.22) 0%, transparent 68%),
+    radial-gradient(ellipse 42% 26% at 35% 12%, rgba(160, 195, 220, 0.2) 0%, transparent 64%),
+    radial-gradient(ellipse 46% 28% at 62% 16%, rgba(170, 200, 225, 0.22) 0%, transparent 66%),
+    radial-gradient(ellipse 38% 22% at 88% 22%, rgba(150, 185, 210, 0.18) 0%, transparent 62%),
+    radial-gradient(ellipse 34% 18% at 74% 8%, rgba(140, 175, 200, 0.14) 0%, transparent 60%);
+}
+
+.dark .site-footer-prairie::after {
+  background: linear-gradient(
+    180deg,
+    hsl(var(--background) / 0.4) 0%,
+    transparent 100%
+  );
+}
