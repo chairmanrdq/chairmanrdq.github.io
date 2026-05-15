@@ -54,6 +54,7 @@ const projectsData = [
 export default function ProjectsPage() {
   return (
     <div className="space-y-12">
+      <section className="space-y-6 page-section-reveal" style={{ animationDelay: "0ms" }}>
       <SectionTitle>Projects</SectionTitle>
       <Card className="luxury-card">
         <CardContent className="pt-6">
@@ -74,6 +75,8 @@ export default function ProjectsPage() {
           </ul>
         </CardContent>
       </Card>
+      </section>
+      <section className="page-section-reveal" style={{ animationDelay: "100ms" }}>
       <div className="space-y-8">
         {projectsData.sort((a,b) => (b.status === "Ongoing" ? 1 : -1) || (parseInt(b.period.split(" - ")[0]) - parseInt(a.period.split(" - ")[0])) ).map(project => (
           <Card key={project.id} className="luxury-card shadow-md hover:shadow-lg transition-shadow duration-300 border-primary/10">
@@ -132,6 +135,7 @@ export default function ProjectsPage() {
           </Card>
         ))}
       </div>
+      </section>
     </div>
   );
 }

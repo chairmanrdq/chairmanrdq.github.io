@@ -110,8 +110,9 @@ export default function PublicationsPage() {
 
   return (
     <div className="space-y-12">
-      <SectionTitle>Publications</SectionTitle>
-      <Card className="luxury-card">
+      <section className="space-y-6 page-section-reveal" style={{ animationDelay: "0ms" }}>
+        <SectionTitle>Publications</SectionTitle>
+        <Card className="luxury-card">
         <CardContent className="pt-6">
           <h3 className="text-lg font-semibold text-primary mb-2">Selected Contributions</h3>
           <ul className="list-disc list-inside space-y-2 text-sm text-foreground/80">
@@ -128,6 +129,8 @@ export default function PublicationsPage() {
           </ul>
         </CardContent>
       </Card>
+      </section>
+      <section className="page-section-reveal" style={{ animationDelay: "100ms" }}>
       <Tabs defaultValue="All" className="w-full">
         <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 mb-6 gap-2">
           {allCategories.map(category => (
@@ -201,6 +204,7 @@ export default function PublicationsPage() {
           </TabsContent>
         ))}
       </Tabs>
+      </section>
     </div>
   );
 }

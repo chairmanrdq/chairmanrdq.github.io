@@ -38,8 +38,12 @@ export default function RootLayout({
       <body className="antialiased flex flex-col min-h-screen bg-background text-foreground">
         <ThemeProvider>
           <Header />
-          <main className="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            {children}
+          <main className="flex-grow w-full py-6 sm:py-8 md:py-10 px-4 sm:px-6 lg:px-8">
+            <div
+              className="page-shell mx-auto w-full max-w-6xl rounded-3xl border border-border/65 bg-card/50 shadow-lg shadow-primary/[0.06] ring-1 ring-primary/[0.07] backdrop-blur-xl dark:bg-card/40 dark:shadow-black/25 dark:ring-primary/15 px-4 sm:px-6 md:px-8 lg:px-10 py-8 md:py-11 min-h-0"
+            >
+              {children}
+            </div>
           </main>
           <Footer />
           <Toaster />

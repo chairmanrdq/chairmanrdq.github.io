@@ -147,8 +147,8 @@ export default function Home() {
   return (
     <div className="relative">
       {/* Hero Section with Ultra Luxury Animated Gradient */}
-      <section className="relative overflow-hidden rounded-3xl mb-16 p-8 md:p-12 luxury-card animated-luxury-gradient-light">
-        
+      <section className="relative overflow-hidden rounded-3xl mb-16 p-8 md:p-12 luxury-card animated-luxury-gradient-light page-section-reveal">
+        <div className="hero-ambient-glow" aria-hidden />
         <div className="relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
             <div className="relative group">
@@ -258,7 +258,12 @@ export default function Home() {
       </section>
 
       {/* Prospective Students */}
-      <section id="prospective-students" aria-labelledby="prospective-students-title" className="mb-16">
+      <section
+        id="prospective-students"
+        aria-labelledby="prospective-students-title"
+        className="mb-16 page-section-reveal"
+        style={{ animationDelay: "80ms" }}
+      >
         <div className="text-center mb-8">
           <h2
             id="prospective-students-title"
@@ -330,7 +335,12 @@ export default function Home() {
       <div className="luxury-divider"></div>
 
       {/* Research Focus Section with Luxury Effects */}
-      <section id="research-focus" aria-labelledby="research-focus-title" className="mb-16">
+      <section
+        id="research-focus"
+        aria-labelledby="research-focus-title"
+        className="mb-16 page-section-reveal"
+        style={{ animationDelay: "160ms" }}
+      >
         <div className="text-center mb-8">
           <h2 className="text-3xl lg:text-4xl font-bold text-gradient-luxury mb-4">Research Focus</h2>
           <div className="section-title-rule" aria-hidden={true} />
@@ -372,7 +382,12 @@ export default function Home() {
       <div className="luxury-divider"></div>
 
       {/* Featured Publications */}
-      <section id="featured-publications" aria-labelledby="featured-publications-title" className="mb-16">
+      <section
+        id="featured-publications"
+        aria-labelledby="featured-publications-title"
+        className="mb-16 page-section-reveal"
+        style={{ animationDelay: "240ms" }}
+      >
         <div className="text-center mb-8">
           <h2 className="text-3xl lg:text-4xl font-bold text-gradient-luxury mb-4" id="featured-publications-title">
             Selected Publications
@@ -431,7 +446,12 @@ export default function Home() {
       <div className="luxury-divider"></div>
 
       {/* Enhanced News & Updates Section */}
-      <section id="news" aria-labelledby="news-title" className="mb-16">
+      <section
+        id="news"
+        aria-labelledby="news-title"
+        className="mb-16 page-section-reveal"
+        style={{ animationDelay: "320ms" }}
+      >
         <div className="text-center mb-8">
           <h2 id="news-title" className="text-3xl lg:text-4xl font-bold text-gradient-luxury mb-4">Academic Highlights</h2>
           <div className="section-title-rule" aria-hidden={true} />
@@ -496,7 +516,12 @@ export default function Home() {
       <div className="luxury-divider"></div>
 
       {/* Research Snapshot */}
-      <section id="research-snapshot" aria-labelledby="research-snapshot-title" className="mb-16">
+      <section
+        id="research-snapshot"
+        aria-labelledby="research-snapshot-title"
+        className="mb-16 page-section-reveal"
+        style={{ animationDelay: "400ms" }}
+      >
         <div className="text-center mb-8">
           <h2 id="research-snapshot-title" className="text-3xl lg:text-4xl font-bold text-gradient-luxury mb-4">
             Research Snapshot
@@ -552,7 +577,12 @@ export default function Home() {
       </section>
 
       {/* Photo Highlights */}
-      <section id="photo-highlights" aria-labelledby="photo-highlights-title" className="mb-16">
+      <section
+        id="photo-highlights"
+        aria-labelledby="photo-highlights-title"
+        className="mb-16 page-section-reveal"
+        style={{ animationDelay: "480ms" }}
+      >
         <div className="text-center mb-8">
           <h2 id="photo-highlights-title" className="text-3xl lg:text-4xl font-bold text-gradient-luxury mb-4">
             Visual Highlights

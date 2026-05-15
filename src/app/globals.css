@@ -8,118 +8,118 @@ body {
 
 @layer base {
   :root {
-    /* 科技蓝配色：分层冷底 + 浮起模块 + 青蓝高光 */
-    --background: 221 28% 95%;
-    --background-end: 224 34% 90%;
-    --foreground: 226 48% 9%;
+    /* 云厂商风：冷白底 + 阿里云系深蓝主色 + 品牌橙强调（参考 aliyun.com 国际站） */
+    --background: 210 24% 97%;
+    --background-end: 214 22% 93%;
+    --foreground: 222 47% 11%;
 
-    --gradient-start-color: 220 46% 97%;
-    --gradient-end-color: 225 34% 87%;
+    --gradient-start-color: 210 40% 99%;
+    --gradient-end-color: 214 28% 92%;
 
-    --card: 221 30% 98%;
-    --card-foreground: 224 38% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 40% 12%;
 
-    --popover: 221 30% 98%;
-    --popover-foreground: 224 38% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 40% 12%;
 
-    --primary: 221 100% 32%;
+    --primary: 214 94% 45%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 223 62% 35%;
+    --secondary: 222 44% 24%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 222 24% 92%;
-    --muted-foreground: 225 18% 30%;
+    --muted: 214 18% 92%;
+    --muted-foreground: 222 16% 38%;
 
-    --accent: 193 100% 48%;
+    --accent: 22 100% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 72% 55%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 222 30% 74%;
-    --input: 221 28% 98%;
-    --ring: 221 100% 32%;
+    --border: 214 16% 86%;
+    --input: 210 25% 98%;
+    --ring: 214 94% 45%;
 
-    --link-hover: 193 100% 46%;
+    --link-hover: 22 96% 44%;
 
     /* Gold：与设计文档一致 #B8860B（DarkGoldenrod），奖项与链接强调 */
     --gold: 43 89% 38%;
     --gold-highlight: 43 76% 46%;
 
-    /* Chart 色板：一深一浅，突出严肃感 */
-    --chart-1: 221 100% 32%;
-    --chart-2: 193 100% 48%;
-    --chart-3: 227 64% 40%;
+    /* Chart：蓝主色 + 橙强调 + 中性层次 */
+    --chart-1: 214 94% 45%;
+    --chart-2: 22 100% 50%;
+    --chart-3: 222 44% 36%;
     --chart-4: var(--gold);
-    --chart-5: 229 28% 40%;
+    --chart-5: 215 14% 46%;
     
-    --radius: 0.9rem; /* 略收窄圆角，更学术一点 */
+    --radius: 0.75rem;
 
     /* Sidebar（浅色） */
-    --sidebar-background: 221 30% 95.5%;
-    --sidebar-foreground: 224 40% 11%;
-    --sidebar-primary: 221 96% 32%;
+    --sidebar-background: 210 22% 96%;
+    --sidebar-foreground: 222 40% 12%;
+    --sidebar-primary: 214 90% 44%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 222 24% 92%;
-    --sidebar-accent-foreground: 221 96% 32%;
-    --sidebar-border: 222 28% 78%;
-    --sidebar-ring: 221 96% 32%;
+    --sidebar-accent: 214 18% 92%;
+    --sidebar-accent-foreground: 214 90% 38%;
+    --sidebar-border: 214 14% 84%;
+    --sidebar-ring: 214 90% 44%;
   }
 
   .dark {
-    --background: 224 36% 5.5%;
-    --background-end: 226 32% 8%;
+    --background: 222 38% 6%;
+    --background-end: 220 32% 9%;
     --foreground: 210 28% 94%;
 
-    --gradient-start-color: 224 42% 4.5%;
-    --gradient-end-color: 226 28% 10%;
+    --gradient-start-color: 222 42% 5%;
+    --gradient-end-color: 218 30% 10%;
 
-    --card: 224 28% 11%;
+    --card: 222 30% 10%;
     --card-foreground: 210 26% 94%;
 
-    --popover: 224 30% 10%;
+    --popover: 222 32% 9%;
     --popover-foreground: 210 26% 94%;
 
-    --primary: 214 98% 74%;
-    --primary-foreground: 220 28% 8%;
+    --primary: 213 90% 58%;
+    --primary-foreground: 222 47% 8%;
 
-    --secondary: 220 36% 64%;
-    --secondary-foreground: 220 28% 8%;
+    --secondary: 215 22% 72%;
+    --secondary-foreground: 222 40% 8%;
 
-    --muted: 224 18% 16%;
-    --muted-foreground: 220 16% 74%;
+    --muted: 222 22% 14%;
+    --muted-foreground: 215 16% 72%;
 
-    --accent: 195 96% 66%;
-    --accent-foreground: 220 28% 8%;
+    --accent: 24 100% 54%;
+    --accent-foreground: 222 47% 8%;
 
     --destructive: 0 70% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 224 20% 22%;
-    --input: 224 24% 16%;
-    --ring: 214 98% 74%;
+    --border: 222 18% 20%;
+    --input: 222 26% 14%;
+    --ring: 213 90% 58%;
 
-    --link-hover: 195 100% 80%;
+    --link-hover: 24 100% 62%;
 
     --gold: 43 58% 58%;
     --gold-highlight: 43 52% 66%;
 
-    --chart-1: 214 98% 74%;
-    --chart-2: 195 96% 66%;
-    --chart-3: 225 58% 60%;
+    --chart-1: 213 90% 58%;
+    --chart-2: 24 100% 54%;
+    --chart-3: 215 28% 68%;
     --chart-4: var(--gold);
     --chart-5: 220 14% 72%;
 
     /* Sidebar（深色） */
-    --sidebar-background: 224 34% 5%;
+    --sidebar-background: 222 36% 5.5%;
     --sidebar-foreground: 210 24% 94%;
-    --sidebar-primary: 214 98% 74%;
-    --sidebar-primary-foreground: 220 28% 8%;
-    --sidebar-accent: 224 20% 14%;
-    --sidebar-accent-foreground: 214 98% 74%;
-    --sidebar-border: 224 18% 24%;
-    --sidebar-ring: 214 98% 74%;
+    --sidebar-primary: 213 88% 56%;
+    --sidebar-primary-foreground: 222 40% 8%;
+    --sidebar-accent: 222 22% 14%;
+    --sidebar-accent-foreground: 213 88% 62%;
+    --sidebar-border: 222 18% 22%;
+    --sidebar-ring: 213 88% 56%;
   }
 }
 
@@ -132,14 +132,15 @@ body {
     background-image:
       radial-gradient(circle at 0% 0%, hsl(var(--gradient-start-color)), transparent 58%),
       radial-gradient(circle at 100% 100%, hsl(var(--gradient-end-color)), transparent 58%),
-      radial-gradient(ellipse 130% 78% at 50% -15%, hsl(var(--primary) / 0.1), transparent 54%),
+      radial-gradient(ellipse 120% 70% at 100% 0%, hsl(var(--accent) / 0.07), transparent 52%),
+      radial-gradient(ellipse 130% 78% at 50% -15%, hsl(var(--primary) / 0.09), transparent 54%),
       conic-gradient(
-        from 210deg at 50% 50%,
-        hsl(var(--primary) / 0.04),
-        transparent 24%,
-        hsl(var(--accent) / 0.035) 42%,
-        transparent 66%,
-        hsl(var(--primary) / 0.035) 88%,
+        from 200deg at 50% 50%,
+        hsl(var(--primary) / 0.045),
+        transparent 22%,
+        hsl(var(--accent) / 0.04) 40%,
+        transparent 64%,
+        hsl(var(--primary) / 0.035) 86%,
         transparent
       ),
       linear-gradient(168deg, hsl(var(--background)) 0%, hsl(var(--background-end)) 100%);
@@ -157,8 +158,9 @@ body {
     z-index: -1;
     opacity: 0.5;
     background:
-      radial-gradient(circle at 15% 10%, hsl(var(--primary) / 0.16), transparent 58%),
-      radial-gradient(circle at 85% 90%, hsl(var(--accent) / 0.12), transparent 58%);
+      radial-gradient(circle at 15% 10%, hsl(var(--primary) / 0.14), transparent 58%),
+      radial-gradient(circle at 88% 12%, hsl(var(--accent) / 0.1), transparent 50%),
+      radial-gradient(circle at 85% 90%, hsl(var(--accent) / 0.1), transparent 58%);
     animation: bg-drift 28s ease-in-out infinite;
     transform: translate3d(0, 0, 0);
   }
@@ -217,17 +219,60 @@ body {
 
 @keyframes nav-glow-sweep {
   0%, 100% { box-shadow: 0 0 0 hsl(var(--accent) / 0); }
-  50% { box-shadow: 0 0 18px hsl(var(--accent) / 0.18); }
+  50% { box-shadow: 0 0 18px hsl(var(--accent) / 0.22); }
+}
+
+@keyframes section-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-ambient {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.03);
+  }
+}
+
+.page-section-reveal {
+  animation: section-reveal 0.72s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-ambient-glow {
+  pointer-events: none;
+  position: absolute;
+  inset: -28% -6% auto -6%;
+  height: 60%;
+  border-radius: inherit;
+  background: radial-gradient(
+    ellipse 88% 68% at 50% 0%,
+    hsl(var(--accent) / 0.17),
+    hsl(var(--primary) / 0.09) 46%,
+    transparent 72%
+  );
+  animation: hero-ambient 8s ease-in-out infinite;
+  z-index: 0;
 }
 
 .site-header-tech {
   background:
-    linear-gradient(135deg, hsl(var(--background) / 0.92), hsl(var(--background-end) / 0.9));
+    linear-gradient(135deg, hsl(var(--background) / 0.94), hsl(var(--background-end) / 0.92));
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid hsl(var(--primary) / 0.24);
+  border-bottom: 1px solid hsl(var(--primary) / 0.18);
   box-shadow:
-    0 10px 26px -20px hsl(var(--primary) / 0.35),
-    0 0 0 1px hsl(var(--accent) / 0.08) inset;
+    0 10px 28px -18px hsl(var(--primary) / 0.28),
+    0 12px 36px -24px hsl(var(--accent) / 0.1),
+    0 0 0 1px hsl(var(--accent) / 0.1) inset;
 }
 
 .nav-chip-tech {
@@ -637,6 +682,12 @@ body {
   .luxury-pulse,
   .text-gradient-luxury {
     animation: none !important;
+  }
+  .page-section-reveal,
+  .hero-ambient-glow {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
   }
   .outline-academic:hover {
     transform: none;

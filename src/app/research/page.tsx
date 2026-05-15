@@ -38,7 +38,12 @@ const researchData = {
 export default function ResearchPage() {
   return (
     <div className="space-y-12">
-      <section id="research-overview" aria-labelledby="research-overview-title">
+      <section
+        id="research-overview"
+        aria-labelledby="research-overview-title"
+        className="page-section-reveal"
+        style={{ animationDelay: "0ms" }}
+      >
         <SectionTitle id="research-overview-title">Research Overview</SectionTitle>
         <Card className="shadow-md border-primary/10">
           <CardContent className="pt-6">
@@ -49,7 +54,12 @@ export default function ResearchPage() {
         </Card>
       </section>
 
-      <section id="research-areas" aria-labelledby="research-areas-title">
+      <section
+        id="research-areas"
+        aria-labelledby="research-areas-title"
+        className="page-section-reveal"
+        style={{ animationDelay: "90ms" }}
+      >
         <SectionTitle id="research-areas-title">Key Research Areas</SectionTitle>
         <div className="space-y-8">
           {researchData.detailedFocus.map((area, index) => (

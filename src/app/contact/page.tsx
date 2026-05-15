@@ -35,8 +35,11 @@ const contactData = {
 export default function ContactPage() {
   return (
     <div className="space-y-12">
-      <SectionTitle>Get in Touch</SectionTitle>
-      
+      <section className="page-section-reveal" style={{ animationDelay: "0ms" }}>
+        <SectionTitle>Get in Touch</SectionTitle>
+      </section>
+
+      <section className="page-section-reveal" style={{ animationDelay: "90ms" }}>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
         <Card className="lg:col-span-2 shadow-lg border-primary/10">
           <CardHeader>
@@ -125,6 +128,7 @@ export default function ContactPage() {
           </CardContent>
         </Card>
       </div>
+      </section>
     </div>
   );
 }

@@ -320,7 +320,12 @@ const alumni_collegeMembers = [
 export default function TeamPage() {
   return (
     <div className="space-y-12">
-      <section id="lab-overview" aria-labelledby="lab-overview-title">
+      <section
+        id="lab-overview"
+        aria-labelledby="lab-overview-title"
+        className="page-section-reveal"
+        style={{ animationDelay: "0ms" }}
+      >
         <SectionTitle id="lab-overview-title">Lab Overview</SectionTitle>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <Card className="shadow-md border-primary/10 lg:col-span-2">
@@ -377,7 +382,12 @@ export default function TeamPage() {
         </div>
       </section>
 
-      <section id="current-team" aria-labelledby="current-team-title">
+      <section
+        id="current-team"
+        aria-labelledby="current-team-title"
+        className="page-section-reveal"
+        style={{ animationDelay: "80ms" }}
+      >
         <SectionTitle id="current-team-title">Current Team Members</SectionTitle>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {teamMembers.map(member => (
@@ -433,7 +443,12 @@ export default function TeamPage() {
         </div>
       </section>
 	  
-      <section id="undergraduate-team" aria-labelledby="undergraduate-team-title">
+      <section
+        id="undergraduate-team"
+        aria-labelledby="undergraduate-team-title"
+        className="page-section-reveal"
+        style={{ animationDelay: "160ms" }}
+      >
         <SectionTitle id="undergraduate-team-title">Undergraduate Researchers</SectionTitle>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {collegeMembers.map(member => (
@@ -489,7 +504,12 @@ export default function TeamPage() {
         </div>
       </section>
 
-      <section id="alumni" aria-labelledby="alumni-title">
+      <section
+        id="alumni"
+        aria-labelledby="alumni-title"
+        className="page-section-reveal"
+        style={{ animationDelay: "240ms" }}
+      >
         <SectionTitle id="alumni-title">Lab Alumni</SectionTitle>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {alumni.map(member => (
@@ -520,8 +540,13 @@ export default function TeamPage() {
         </div>
       </section>
 	                               
-	  <section id="alumni_collegeMembers" aria-labelledby="alumni-title">
-        <SectionTitle id="alumni-title">Undergraduate Alumni</SectionTitle>
+	  <section
+        id="alumni_collegeMembers"
+        aria-labelledby="alumni-college-title"
+        className="page-section-reveal"
+        style={{ animationDelay: "320ms" }}
+      >
+        <SectionTitle id="alumni-college-title">Undergraduate Alumni</SectionTitle>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {alumni_collegeMembers.map(member => (
              <Card key={member.id} className="shadow-md hover:shadow-lg transition-shadow duration-300 border-primary/10">
