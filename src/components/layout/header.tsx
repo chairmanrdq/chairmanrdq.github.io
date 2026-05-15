@@ -15,10 +15,6 @@ import {
   MessageSquare,
   Menu,
   X,
-  Cpu,
-  Leaf,
-  Battery,
-  Sparkles,
   Diamond,
 } from 'lucide-react';
 import { usePathname } from 'next/navigation';
@@ -27,9 +23,7 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
 import { ThemeToggle } from '@/components/theme-toggle';
 import React from 'react';
-
-// Replace with actual scholar name
-const SCHOLAR_NAME = "Dr. RuiDong Qi";
+import { siteConfig } from '@/lib/site-config';
 
 const navItems = [
   { href: '/', label: 'Home', icon: Home },
@@ -60,9 +54,12 @@ export default function Header() {
               priority
             />
           </div>
-          <span className="text-gradient-luxury">
-            {SCHOLAR_NAME}
-          </span>
+          <div className="flex min-w-0 flex-col text-left leading-tight">
+            <span className="text-gradient-luxury truncate">{siteConfig.piShortName}</span>
+            <span className="mt-0.5 max-w-[11rem] truncate text-[10px] font-medium text-muted-foreground sm:max-w-[16rem] sm:text-xs lg:max-w-[22rem]">
+              {siteConfig.labName}
+            </span>
+          </div>
         </Link>
 
         {/* Desktop Navigation + theme */}
@@ -102,7 +99,7 @@ export default function Header() {
             <SheetContent side="right" className="w-full max-w-xs bg-background/95 backdrop-blur-md p-0 text-foreground border-l border-primary/20">
               <div className="flex flex-col h-full">
                 <div className="p-6 flex justify-between items-center border-b border-primary/20">
-                    <Link href="/" className="flex items-center gap-2 text-lg font-bold" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link href="/" className="flex min-w-0 items-center gap-2 text-lg font-bold" onClick={() => setIsMobileMenuOpen(false)}>
                       <div className="flex h-[4.5rem] w-[4.5rem] shrink-0 items-center justify-center">
                         <Image
                           src={logoOne}
@@ -113,9 +110,12 @@ export default function Header() {
                           priority
                         />
                       </div>
-                      <span className="text-gradient-luxury">
-                        {SCHOLAR_NAME}
-                      </span>
+                      <div className="flex min-w-0 flex-col text-left leading-tight">
+                        <span className="text-gradient-luxury truncate">{siteConfig.piShortName}</span>
+                        <span className="mt-0.5 max-w-[9rem] truncate text-[10px] font-medium text-muted-foreground">
+                          {siteConfig.labName}
+                        </span>
+                      </div>
                     </Link>
                     <SheetClose asChild>
                         <Button variant="ghost" size="icon" aria-label="Close menu" className="text-primary hover:text-primary/80">
@@ -142,9 +142,9 @@ export default function Header() {
                   ))}
                 </nav>
                 <div className="p-6 border-t border-primary/20">
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <Diamond className="h-4 w-4 text-accent" />
-                    <span>Leading AI Innovation</span>
+                  <div className="flex items-start gap-2 text-sm text-muted-foreground">
+                    <Diamond className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+                    <span className="leading-snug">{siteConfig.labTagline}</span>
                   </div>
                 </div>
               </div>

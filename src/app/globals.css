@@ -1044,3 +1044,29 @@ body {
   color: hsl(var(--muted-foreground));
   background: hsl(160 8% 15%);
 }
+
+/* 键盘用户：跳到主内容 */
+.skip-to-main {
+  position: absolute;
+  left: -9999px;
+  top: 0.75rem;
+  z-index: 100;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  font-size: 0.875rem;
+  font-weight: 600;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.skip-to-main:focus {
+  left: 0.75rem;
+  outline-color: hsl(var(--ring));
+}
+
+.skip-to-main:focus-visible {
+  left: 0.75rem;
+  outline-color: hsl(var(--ring));
+}

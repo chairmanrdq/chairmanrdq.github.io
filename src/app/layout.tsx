@@ -6,20 +6,39 @@ import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import { ThemeProvider } from '@/components/theme-provider';
 import { THEME_STORAGE_KEY } from '@/lib/theme-constants';
+import JsonLd from '@/components/seo/json-ld';
+import ScrollProgressBar from '@/components/layout/scroll-progress-bar';
+import { siteConfig, getCanonicalSiteUrl } from '@/lib/site-config';
 
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-sans',
 });
 
+const canonical = getCanonicalSiteUrl();
+
 export const metadata: Metadata = {
+  metadataBase: new URL(canonical),
   title: {
-    default: 'Research | Dr. RuiDong Qi',
-    template: '%s | Dr. RuiDong Qi（祁瑞东）', // Replace with actual scholar name
+    default: `${siteConfig.piShortName} | ${siteConfig.labName}`,
+    template: `%s | ${siteConfig.piShortName}`,
   },
-  description: 'Personal academic website of Dr. RuiDong Qi（祁瑞东）, showcasing research, publications, and professional activities.', // Replace
+  description: siteConfig.labTagline,
   verification: {
     google: '9adTvMEmfFATov8HAuYaYB9QK_tOM2trq8dGqcdRvi8',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: canonical,
+    siteName: siteConfig.labName,
+    title: siteConfig.piShortName,
+    description: siteConfig.labTagline,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: siteConfig.piShortName,
+    description: siteConfig.labTagline,
   },
 };
 
@@ -36,9 +55,14 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
       <body className="antialiased flex flex-col min-h-screen bg-background text-foreground">
+        <a href="#main-content" className="skip-to-main">
+          Skip to main content
+        </a>
+        <JsonLd />
         <ThemeProvider>
+          <ScrollProgressBar />
           <Header />
-          <main className="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <main id="main-content" className="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
             {children}
           </main>
           <Footer />

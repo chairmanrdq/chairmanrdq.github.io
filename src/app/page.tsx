@@ -1,8 +1,9 @@
 import Image from 'next/image';
+import { siteConfig } from '@/lib/site-config';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { SectionTitle } from "@/components/ui/section-title";
-import { Mail, Phone, Link as LinkIcon, MapPin, Award, Rss, BookOpen, Star, TrendingUp, Users, Globe, Zap, ArrowRight, ChevronRight, Leaf, Cpu, Database, Battery, Cloud, Sparkles, Crown, Diamond } from 'lucide-react';
+import { Mail, Phone, MapPin, Award, BookOpen, Star, Users, Zap, ArrowRight, ChevronRight, Leaf, Cpu, Database, Battery, Cloud, Sparkles, Crown, Github, Linkedin } from 'lucide-react';
 import ImageCarousel from '@/components/home/image-carousel';
 import BrushCalligraphyQuote from '@/components/home/brush-calligraphy-quote';
 import ScrollBlurRevealTitle from '@/components/home/scroll-blur-reveal-title';
@@ -15,14 +16,18 @@ const scholarData = {
   avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/rdq2.jpg",
   dataAiHint: "professional portrait",
   contact: {
-    email: "imucsrdq@163.com",
-    phone: "+1-234-567-8900",
+    email: siteConfig.contactEmail,
     office: "Room 303, BeiZheng Building, School of Computer Science (School of Software), Inner Mongolia University",
   },
   academicLinks: [
-    { name: "Google Scholar", url: "#", icon: <BookOpen className="h-4 w-4" />, stats: "" },
-    { name: "ORCID", url: "#", icon: <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256" fill="currentColor"><path d="M256,128c0,70.7-57.3,128-128,128S0,198.7,0,128C0,57.3,57.3,0,128,0S256,57.3,256,128z M126.1,208.9h-20V128.4c0-12.8-2.4-23.1-7.1-30.8c-4.7-7.7-11.7-11.5-21.1-11.5c-8.1,0-14.7,3.1-19.9,9.2c-5.2,6.1-7.8,15.1-7.8,26.9v86.8H29.4V72.4h20.8v10c3.8-4.5,8.2-7.9,13.4-10.2c5.1-2.3,10.6-3.5,16.5-3.5c15.9,0,28.1,5.9,36.5,17.7c8.4,11.8,12.6,28.5,12.6,50.1L126.1,208.9L126.1,208.9z M198.8,208.9h-20.5V112.4c0-11-1.4-19.1-4.1-24.4c-2.8-5.2-7.3-7.8-13.5-7.8c-6.9,0-12.3,2.9-16.1,8.6c-3.9,5.8-5.8,13.9-5.8,24.4v85.7h-20.5V72.4h20.5v10.5c3.4-4.2,7.4-7.4,11.9-9.7c4.5-2.3,9.5-3.4,14.9-3.4c11.2,0,20.1,3.6,26.7,10.9c6.6,7.3,9.9,17.7,9.9,31.2V208.9z"/></svg> },
-    { name: "LinkedIn", url: "#", icon: <LinkIcon className="h-4 w-4" /> },
+    { name: "Google Scholar", url: siteConfig.academic.googleScholar, icon: <BookOpen className="h-4 w-4" />, stats: "" },
+    {
+      name: "ORCID",
+      url: siteConfig.orcidId ? `https://orcid.org/${siteConfig.orcidId}` : siteConfig.academic.orcidSearch,
+      icon: <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256" fill="currentColor"><path d="M256,128c0,70.7-57.3,128-128,128S0,198.7,0,128C0,57.3,57.3,0,128,0S256,57.3,256,128z M126.1,208.9h-20V128.4c0-12.8-2.4-23.1-7.1-30.8c-4.7-7.7-11.7-11.5-21.1-11.5c-8.1,0-14.7,3.1-19.9,9.2c-5.2,6.1-7.8,15.1-7.8,26.9v86.8H29.4V72.4h20.8v10c3.8-4.5,8.2-7.9,13.4-10.2c5.1-2.3,10.6-3.5,16.5-3.5c15.9,0,28.1,5.9,36.5,17.7c8.4,11.8,12.6,28.5,12.6,50.1L126.1,208.9L126.1,208.9z M198.8,208.9h-20.5V112.4c0-11-1.4-19.1-4.1-24.4c-2.8-5.2-7.3-7.8-13.5-7.8c-6.9,0-12.3,2.9-16.1,8.6c-3.9,5.8-5.8,13.9-5.8,24.4v85.7h-20.5V72.4h20.5v10.5c3.4-4.2,7.4-7.4,11.9-9.7c4.5-2.3,9.5-3.4,14.9-3.4c11.2,0,20.1,3.6,26.7,10.9c6.6,7.3,9.9,17.7,9.9,31.2V208.9z"/></svg> },
+    },
+    { name: "GitHub", url: siteConfig.academic.githubProfile, icon: <Github className="h-4 w-4" /> },
+    { name: "LinkedIn", url: siteConfig.academic.linkedinSearch, icon: <Linkedin className="h-4 w-4" /> },
   ],
   researchFocusSummary: "Our research integrates computing power systems, service intelligence, and green optimization. We study cloud-edge collaboration, user-centric QoS modeling, and reliable recommendation under practical deployment constraints.",
   //researchFocusSummary: "Our research focuses on cloud computing, big data, service computing, and system development. In cloud computing, we emphasize cloud–edge collaboration, cross-cloud resource scheduling, and task scheduling methods. In big data, we conduct predictive analytics and user behavior analysis within cloud environments, as well as ecosystem service assessment and forecasting. In service computing, we explore advanced recommendation approaches, including retrieval-augmented cold-start, large-model-based, multimodal, and elastic recommendation methods. We also develop system platforms that integrate cloud computing and big data applications, along with intelligent service recommendation systems.",
@@ -198,8 +203,11 @@ export default function Home() {
                 {scholarData.position}
               </p>
               
-              <p className="text-lg text-foreground/70 mb-6 motion-safe:animate-fade-up" style={{ animationDelay: '150ms' }}>
+              <p className="text-lg text-foreground/70 mb-1 motion-safe:animate-fade-up" style={{ animationDelay: '150ms' }}>
                 {scholarData.affiliation}
+              </p>
+              <p className="mb-6 text-sm text-muted-foreground motion-safe:animate-fade-up" style={{ animationDelay: '170ms' }}>
+                {siteConfig.labName}
               </p>
               <p className="text-sm text-foreground/70 mb-6 leading-relaxed motion-safe:animate-fade-up" style={{ animationDelay: '190ms' }}>
                 Research agenda: theory-grounded and system-validated methods for computing-power scheduling,
@@ -323,10 +331,10 @@ export default function Home() {
                     <p className="font-semibold text-foreground/90">Contact Email</p>
                   </div>
                   <a
-                    href="mailto:imucsrdq@163.com"
+                    href={`mailto:${siteConfig.contactEmail}`}
                     className="block mt-2 text-accent hover:underline break-all"
                   >
-                    imucsrdq@163.com
+                    {siteConfig.contactEmail}
                   </a>
                 </div>
 
@@ -335,7 +343,7 @@ export default function Home() {
                   asChild
                   className="w-full px-6 py-3 rounded-2xl group"
                 >
-                  <a href="mailto:imucsrdq@163.com?subject=Lab%20Application%20-%20Your%20Name">
+                  <a href={`mailto:${siteConfig.contactEmail}?subject=Lab%20Application%20-%20Your%20Name`}>
                     Email Dr. Qi <ChevronRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </a>
                 </Button>

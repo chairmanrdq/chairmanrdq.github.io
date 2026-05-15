@@ -1,58 +1,59 @@
-import { MetadataRoute } from 'next'
+import { MetadataRoute } from 'next';
+import { getCanonicalSiteUrl } from '@/lib/site-config';
 
-export const dynamic = 'force-static'
+export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://yourdomain.com' // 请替换为你的实际域名
-  
+  const baseUrl = getCanonicalSiteUrl().replace(/\/$/, '');
+
   return [
     {
-      url: baseUrl,
+      url: `${baseUrl}/`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 1,
     },
     {
-      url: `${baseUrl}/research`,
+      url: `${baseUrl}/research/`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/publications`,
+      url: `${baseUrl}/publications/`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/projects`,
+      url: `${baseUrl}/projects/`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/courses`,
+      url: `${baseUrl}/courses/`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/team`,
+      url: `${baseUrl}/team/`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/resources`,
+      url: `${baseUrl}/resources/`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/contact`,
+      url: `${baseUrl}/contact/`,
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.5,
     },
-  ]
+  ];
 }
