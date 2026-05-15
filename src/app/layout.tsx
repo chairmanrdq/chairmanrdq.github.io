@@ -14,7 +14,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Research | Dr. RuiDong Qi（祁瑞东）',
+    default: 'Research | Dr. RuiDong Qi',
     template: '%s | Dr. RuiDong Qi（祁瑞东）', // Replace with actual scholar name
   },
   description: 'Personal academic website of Dr. RuiDong Qi（祁瑞东）, showcasing research, publications, and professional activities.', // Replace
