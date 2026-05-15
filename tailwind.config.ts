@@ -89,8 +89,8 @@ export default {
   				'100%': { opacity: '0.5', transform: 'scaleX(1)' }
   			},
   			'title-glow-drift': {
-  				'0%, 100%': { opacity: '0.55', filter: 'drop-shadow(0 0 12px hsl(185 100% 45% / 0.25))' },
-  				'50%': { opacity: '1', filter: 'drop-shadow(0 0 18px hsl(185 100% 55% / 0.45))' }
+  				'0%, 100%': { opacity: '0.85', filter: 'drop-shadow(0 0 0.5px hsl(224 76% 48% / 0.35))' },
+  				'50%': { opacity: '1', filter: 'drop-shadow(0 0 1px hsl(163 100% 38% / 0.45))' }
   			}
   		},
   		animation: {

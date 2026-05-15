@@ -8,114 +8,114 @@ body {
 
 @layer base {
   :root {
-    /* 海军蓝 → 青：近色渐变、数据流 / 算力网络感（浅色为冷灰底 + 深青蓝主干） */
-    --background: 222 20% 97%;
-    --background-end: 215 26% 93%;
-    --foreground: 222 42% 10%;
+    /* 期刊图形摘要风：#FFFFFF / #0A1526 / #1D4ED8 / #00C177 */
+    --background: 0 0% 100%;
+    --background-end: 0 0% 100%;
+    --foreground: 218 58% 9%;
 
-    --gradient-start-color: 222 22% 99%;
-    --gradient-end-color: 200 28% 94%;
+    --gradient-start-color: 0 0% 100%;
+    --gradient-end-color: 0 0% 100%;
 
-    --card: 222 14% 99%;
-    --card-foreground: 222 38% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 218 58% 9%;
 
-    --popover: 222 14% 99%;
-    --popover-foreground: 222 38% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 218 58% 9%;
 
-    --primary: 222 58% 30%;
-    --primary-foreground: 186 40% 98%;
+    --primary: 224 76% 48%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 224 42% 26%;
-    --secondary-foreground: 186 40% 98%;
+    --secondary: 218 58% 14%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 218 18% 92%;
-    --muted-foreground: 222 16% 36%;
+    --muted: 218 40% 97%;
+    --muted-foreground: 218 42% 30%;
 
-    --accent: 186 100% 38%;
-    --accent-foreground: 222 48% 8%;
+    --accent: 163 100% 38%;
+    --accent-foreground: 218 58% 9%;
 
-    --destructive: 0 72% 55%;
+    --destructive: 0 72% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 218 14% 85%;
-    --input: 222 12% 98%;
-    --ring: 186 100% 36%;
+    --border: 218 35% 90%;
+    --input: 0 0% 100%;
+    --ring: 224 76% 48%;
 
-    --link-hover: 184 100% 32%;
+    --link-hover: 224 72% 40%;
 
-    --gold: 43 89% 38%;
-    --gold-highlight: 43 76% 46%;
+    --gold: 163 100% 32%;
+    --gold-highlight: 163 100% 42%;
 
-    --chart-1: 222 58% 32%;
-    --chart-2: 186 100% 38%;
-    --chart-3: 215 45% 42%;
-    --chart-4: var(--gold);
-    --chart-5: 218 12% 48%;
+    --chart-1: 224 76% 48%;
+    --chart-2: 163 100% 38%;
+    --chart-3: 218 58% 22%;
+    --chart-4: 218 45% 36%;
+    --chart-5: 224 55% 42%;
     
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    --sidebar-background: 222 18% 96%;
-    --sidebar-foreground: 222 38% 11%;
-    --sidebar-primary: 222 55% 32%;
-    --sidebar-primary-foreground: 186 40% 98%;
-    --sidebar-accent: 218 16% 92%;
-    --sidebar-accent-foreground: 222 50% 30%;
-    --sidebar-border: 218 12% 86%;
-    --sidebar-ring: 186 95% 36%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 218 58% 9%;
+    --sidebar-primary: 224 76% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 218 40% 97%;
+    --sidebar-accent-foreground: 218 58% 12%;
+    --sidebar-border: 218 35% 90%;
+    --sidebar-ring: 224 76% 48%;
   }
 
   .dark {
-    --background: 222 50% 6%;
-    --background-end: 218 46% 9%;
-    --foreground: 186 28% 94%;
+    --background: 218 58% 9%;
+    --background-end: 218 55% 11%;
+    --foreground: 210 25% 96%;
 
-    --gradient-start-color: 222 52% 5%;
-    --gradient-end-color: 215 40% 8%;
+    --gradient-start-color: 218 58% 9%;
+    --gradient-end-color: 218 52% 12%;
 
-    --card: 222 34% 10%;
-    --card-foreground: 186 22% 95%;
+    --card: 218 52% 12%;
+    --card-foreground: 210 25% 96%;
 
-    --popover: 222 36% 9%;
-    --popover-foreground: 186 22% 95%;
+    --popover: 218 52% 11%;
+    --popover-foreground: 210 25% 96%;
 
-    --primary: 215 72% 55%;
-    --primary-foreground: 222 50% 6%;
+    --primary: 224 76% 58%;
+    --primary-foreground: 218 58% 9%;
 
-    --secondary: 224 35% 20%;
-    --secondary-foreground: 186 30% 92%;
+    --secondary: 218 45% 18%;
+    --secondary-foreground: 210 25% 96%;
 
-    --muted: 222 22% 14%;
-    --muted-foreground: 200 15% 72%;
+    --muted: 218 40% 16%;
+    --muted-foreground: 210 22% 78%;
 
-    --accent: 185 100% 48%;
-    --accent-foreground: 222 50% 6%;
+    --accent: 163 100% 44%;
+    --accent-foreground: 218 58% 9%;
 
-    --destructive: 0 70% 60%;
+    --destructive: 0 70% 55%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 18% 18%;
-    --input: 222 28% 13%;
-    --ring: 185 100% 46%;
+    --border: 218 35% 22%;
+    --input: 218 45% 14%;
+    --ring: 163 100% 44%;
 
-    --link-hover: 186 100% 68%;
+    --link-hover: 163 100% 52%;
 
-    --gold: 43 58% 58%;
-    --gold-highlight: 43 52% 66%;
+    --gold: 163 90% 48%;
+    --gold-highlight: 163 100% 55%;
 
-    --chart-1: 215 72% 55%;
-    --chart-2: 185 100% 48%;
-    --chart-3: 200 40% 45%;
-    --chart-4: var(--gold);
-    --chart-5: 218 12% 68%;
+    --chart-1: 224 76% 58%;
+    --chart-2: 163 100% 44%;
+    --chart-3: 210 25% 70%;
+    --chart-4: 218 40% 55%;
+    --chart-5: 224 55% 62%;
 
-    --sidebar-background: 222 48% 5.5%;
-    --sidebar-foreground: 186 24% 94%;
-    --sidebar-primary: 215 70% 54%;
-    --sidebar-primary-foreground: 222 50% 6%;
-    --sidebar-accent: 222 22% 14%;
-    --sidebar-accent-foreground: 185 100% 52%;
-    --sidebar-border: 220 16% 20%;
-    --sidebar-ring: 185 100% 46%;
+    --sidebar-background: 218 58% 8%;
+    --sidebar-foreground: 210 25% 96%;
+    --sidebar-primary: 224 76% 56%;
+    --sidebar-primary-foreground: 218 58% 9%;
+    --sidebar-accent: 218 40% 16%;
+    --sidebar-accent-foreground: 163 100% 48%;
+    --sidebar-border: 218 35% 22%;
+    --sidebar-ring: 163 100% 44%;
   }
 }
 
@@ -125,70 +125,18 @@ body {
   }
   body {
     @apply text-foreground;
-    background-image:
-      radial-gradient(ellipse 110% 90% at 0% 0%, hsl(222 55% 22% / 0.14), transparent 52%),
-      radial-gradient(ellipse 100% 85% at 100% 0%, hsl(186 90% 40% / 0.11), transparent 48%),
-      radial-gradient(ellipse 85% 55% at 50% 100%, hsl(215 60% 34% / 0.09), transparent 55%),
-      linear-gradient(105deg, hsl(222 45% 32% / 0.05) 0%, transparent 42%, hsl(186 80% 40% / 0.06) 100%),
-      conic-gradient(
-        from 210deg at 50% 50%,
-        hsl(var(--primary) / 0.05),
-        transparent 20%,
-        hsl(var(--accent) / 0.045) 38%,
-        transparent 58%,
-        hsl(var(--accent) / 0.04) 78%,
-        transparent
-      ),
-      linear-gradient(168deg, hsl(var(--background)) 0%, hsl(var(--background-end)) 100%);
+    background-color: hsl(var(--background));
+    background-image: none;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     min-height: 100vh;
     position: relative;
     isolation: isolate;
   }
   body::before {
-    content: '';
-    position: fixed;
-    inset: -10%;
-    pointer-events: none;
-    z-index: -1;
-    opacity: 0.5;
-    background:
-      radial-gradient(circle at 12% 15%, hsl(222 60% 28% / 0.16), transparent 55%),
-      radial-gradient(circle at 90% 12%, hsl(186 100% 42% / 0.13), transparent 48%),
-      radial-gradient(circle at 78% 90%, hsl(188 85% 38% / 0.11), transparent 52%),
-      radial-gradient(circle at 20% 88%, hsl(220 55% 26% / 0.1), transparent 50%);
-    animation: bg-drift 28s ease-in-out infinite;
-    transform: translate3d(0, 0, 0);
+    content: none;
   }
   body::after {
-    content: '';
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: -1;
-    opacity: 0.34;
-    background-image:
-      linear-gradient(hsl(var(--primary) / 0.055) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(var(--accent) / 0.05) 1px, transparent 1px),
-      repeating-linear-gradient(
-        180deg,
-        hsl(var(--accent) / 0.038) 0px,
-        hsl(var(--accent) / 0.038) 1px,
-        transparent 1px,
-        transparent 5px
-      );
-    background-size: 36px 36px, 36px 36px, 100% 6px;
-    mask-image: radial-gradient(circle at center, black 20%, transparent 85%);
-    animation: grid-pan 38s linear infinite;
-  }
-  @media (prefers-reduced-motion: reduce) {
-    body::before {
-      animation: none;
-    }
-    body::after {
-      animation: none;
-    }
+    content: none;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-semibold tracking-tight;
@@ -292,14 +240,10 @@ body {
 }
 
 .site-header-tech {
-  background:
-    linear-gradient(135deg, hsl(var(--background) / 0.94), hsl(var(--background-end) / 0.92));
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid hsl(var(--primary) / 0.18);
-  box-shadow:
-    0 10px 28px -18px hsl(var(--primary) / 0.28),
-    0 12px 36px -24px hsl(var(--accent) / 0.1),
-    0 0 0 1px hsl(var(--accent) / 0.1) inset;
+  background: hsl(var(--background) / 0.96);
+  backdrop-filter: blur(8px);
+  border-bottom: 2px solid hsl(218 58% 9% / 0.14);
+  box-shadow: none;
 }
 
 .nav-chip-tech {
@@ -330,29 +274,18 @@ body {
 /* Luxury card styles */
 /* Legacy definition (keep consistent with later override) */
 .luxury-card {
-  background: linear-gradient(
-    165deg,
-    hsl(var(--card)) 0%,
-    hsl(var(--card)) 45%,
-    hsl(var(--muted)) 100%
-  );
-  border: 1px solid hsl(var(--border));
-  border-radius: 1rem;
-  box-shadow:
-    0 12px 34px -24px hsl(var(--primary) / 0.28),
-    0 0 0 1px hsl(var(--accent) / 0.08),
-    0 1px 0 hsl(var(--primary) / 0.16) inset;
-  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-  backdrop-filter: blur(12px);
+  background: hsl(var(--card));
+  border: 2px solid hsl(218 58% 9% / 0.16);
+  border-radius: 0.75rem;
+  box-shadow: none;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+  backdrop-filter: none;
 }
 
 .luxury-card:hover {
-  box-shadow:
-    0 18px 44px -24px hsl(var(--primary) / 0.38),
-    0 0 0 1px hsl(var(--accent) / 0.16),
-    0 1px 0 hsl(var(--accent) / 0.24) inset;
-  transform: translateY(-2px);
-  border-color: hsl(var(--primary) / 0.32);
+  box-shadow: none;
+  transform: translateY(-1px);
+  border-color: hsl(var(--primary) / 0.45);
 }
 
 /* Ultra Luxury gradient backgrounds */
@@ -484,48 +417,21 @@ body {
   transform: scale(1.05) translateY(-0.25rem);
 }
 
-/* Ultra Luxury theme elements */
-.luxury-card {
-  background: linear-gradient(
-    165deg,
-    hsl(var(--card)) 0%,
-    hsl(var(--card)) 45%,
-    hsl(var(--muted)) 100%
-  );
-  border: 1px solid hsl(var(--border));
-  border-radius: 1rem;
-  box-shadow:
-    0 12px 34px -24px hsl(var(--primary) / 0.28),
-    0 0 0 1px hsl(var(--accent) / 0.08),
-    0 1px 0 hsl(var(--primary) / 0.16) inset;
-  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-  backdrop-filter: blur(12px);
-  background-size: 100% 100%;
-  animation: none;
-}
-
-.luxury-card:hover {
-  box-shadow:
-    0 18px 44px -24px hsl(var(--primary) / 0.38),
-    0 0 0 1px hsl(var(--accent) / 0.16),
-    0 1px 0 hsl(var(--accent) / 0.24) inset;
-  transform: translateY(-2px);
-  border-color: hsl(var(--primary) / 0.32);
-}
+/* Ultra Luxury theme elements — .luxury-card 定义见上文，避免重复覆盖 */
 
 .luxury-badge {
-  color: hsl(var(--primary) / 0.95);
-  background: linear-gradient(135deg, hsl(var(--primary) / 0.06) 0%, hsl(var(--accent) / 0.07) 100%);
-  border: 1px solid hsl(var(--primary) / 0.18);
+  color: hsl(var(--primary));
+  background: hsl(var(--muted));
+  border: 1px solid hsl(218 58% 9% / 0.14);
   padding: 0.3rem 0.6rem;
   border-radius: 9999px;
   font-size: 0.72rem;
   font-weight: 650;
-  backdrop-filter: blur(6px);
+  backdrop-filter: none;
   box-shadow: none;
   background-size: 100% 100%;
-  animation: badge-breathe 7s ease-in-out infinite;
-  transition: all 0.2s ease;
+  animation: none;
+  transition: border-color 0.2s ease, color 0.2s ease;
 }
 
 .outline-academic {
@@ -535,12 +441,10 @@ body {
 }
 
 .outline-academic:hover {
-  border-color: hsl(var(--accent) / 0.42);
-  background: linear-gradient(135deg, hsl(var(--primary) / 0.11), hsl(var(--accent) / 0.09));
+  border-color: hsl(var(--accent));
+  background: hsl(var(--muted));
   color: hsl(var(--primary));
-  box-shadow:
-    0 10px 26px -16px hsl(var(--primary) / 0.5),
-    0 0 10px hsl(var(--accent) / 0.2);
+  box-shadow: none;
   transform: translateY(-1px);
 }
 
@@ -677,10 +581,10 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-size: 200% 200%;
+  background-size: 100% 100%;
   background-position: 0% 50%;
-  transition: background-position 0.7s ease;
-  animation: luxury-gradient-shift 14s ease-in-out infinite;
+  transition: none;
+  animation: none;
 }
 
 .text-gradient-tech {
@@ -695,7 +599,7 @@ body {
 
 .text-gradient-luxury:hover,
 .text-gradient-tech:hover {
-  background-position: 100% 50%;
+  background-position: 0% 50%;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -5,6 +5,7 @@ import { SectionTitle } from "@/components/ui/section-title";
 import { Mail, Phone, Link as LinkIcon, MapPin, Award, Rss, BookOpen, Star, TrendingUp, Users, Globe, Zap, ArrowRight, ChevronRight, Leaf, Cpu, Database, Battery, Cloud, Sparkles, Crown, Diamond } from 'lucide-react';
 import ImageCarousel from '@/components/home/image-carousel';
 import CalligraphyIntro from '@/components/home/calligraphy-intro';
+import EnergyComputeTopology from '@/components/home/energy-compute-topology';
 
 // Enhanced Mock Data with luxury focus
 const scholarData = {
@@ -148,9 +149,15 @@ export default function Home() {
   return (
     <div className="relative">
       <CalligraphyIntro />
-      {/* Hero Section with Ultra Luxury Animated Gradient */}
-      <section className="relative overflow-hidden rounded-3xl mb-16 p-8 md:p-12 luxury-card animated-luxury-gradient-light page-section-reveal">
-        <div className="hero-ambient-glow" aria-hidden />
+      <section
+        className="mb-12 page-section-reveal overflow-hidden rounded-xl border-2 border-[#0A1526]/20 bg-[#FFFFFF]"
+        style={{ animationDelay: '0ms' }}
+        aria-label="Graphical abstract"
+      >
+        <EnergyComputeTopology className="h-auto w-full max-h-[min(52vh,520px)] object-contain" />
+      </section>
+      {/* Hero */}
+      <section className="relative mb-16 overflow-hidden rounded-xl border-2 border-[#0A1526]/15 bg-[#FFFFFF] p-8 md:p-12 luxury-card page-section-reveal">
         <div className="relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
             <div className="relative group">
@@ -160,7 +167,7 @@ export default function Home() {
                   alt={`Profile picture of ${scholarData.name}`}
                   width={200}
                   height={300}
-                  className="rounded-none object-cover h-72 w-48 lg:h-96 lg:w-64 border-4 border-background shadow-sm"
+                  className="rounded-none object-cover h-72 w-48 lg:h-96 lg:w-64 border-2 border-[#0A1526]/25"
                   data-ai-hint={scholarData.dataAiHint}
                   priority
                 />
@@ -197,7 +204,7 @@ export default function Home() {
               {/* Stats Grid with Luxury Cards */}
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
                 {scholarData.stats.map((stat, index) => (
-                  <div key={index} className="luxury-card p-4 text-center luxury-hover luxury-float">
+                  <div key={index} className="luxury-card p-4 text-center luxury-hover">
                     <div className="mb-2 flex justify-center text-primary/85">
                       {stat.icon}
                     </div>
