@@ -29,7 +29,7 @@ import { ThemeToggle } from '@/components/theme-toggle';
 import React from 'react';
 
 // Replace with actual scholar name
-const SCHOLAR_NAME = "Dr. RuiDong Qi（祁瑞东）";
+const SCHOLAR_NAME = "Dr. RuiDong Qi";
 
 const navItems = [
   { href: '/', label: 'Home', icon: Home },
