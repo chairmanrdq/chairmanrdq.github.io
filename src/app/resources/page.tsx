@@ -45,6 +45,114 @@ const resourcesData: {
     { id: "sl2", name: "Tutorial: Practical Ethical AI for Developers", description: "Tutorial slides covering practical steps and tools for implementing ethical AI principles in software development lifecycles.", link: "#googledrive-ethaidev", event: "AI Developer Summit 2024", icon: <Presentation className="mr-2 h-4 w-4"/>, buttonText: "Access on Google Drive" },*/
   ],
   friendlyLinks: [
+	{ 
+    id: "ccf_ai_1", 
+    name: "CVPR - IEEE Conference on Computer Vision and Pattern Recognition", 
+    url: "https://cvpr.thecvf.com/", 
+    category: "Artificial Intelligence", 
+    icon: <BookOpenCheck className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> 
+  },
+  { 
+    id: "ccf_ai_3", 
+    name: "ACL - Annual Meeting of the Association for Computational Linguistics", 
+    url: "https://aclanthology.org/", 
+    category: "Artificial Intelligence", 
+    icon: <BookOpenCheck className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> 
+  },
+  { 
+    id: "ccf_ai_4", 
+    name: "TPAMI - IEEE Transactions on Pattern Analysis and Machine Intelligence", 
+    url: "https://www.computer.org/csdl/journal/tp", 
+    category: "Artificial Intelligence", 
+    icon: <BookOpenCheck className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> 
+  },
+
+  // --- 数据库/数据挖掘/内容检索 (Database/Data Mining/Content Retrieval) ---
+  { 
+    id: "ccf_db_1", 
+    name: "SIGMOD - ACM Conference on Management of Data", 
+    url: "https://sigmod.org/", 
+    category: "Database & Data Mining", 
+    icon: <BookOpenCheck className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> 
+  },
+  { 
+    id: "ccf_db_2", 
+    name: "KDD - ACM Knowledge Discovery and Data Mining", 
+    url: "https://kdd.org/", 
+    category: "Database & Data Mining", 
+    icon: <BookOpenCheck className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> 
+  },
+  { 
+    id: "ccf_db_3", 
+    name: "SIGIR - ACM International Conference on Research and Development in Information Retrieval", 
+    url: "https://sigir.org/", 
+    category: "Database & Data Mining", 
+    icon: <BookOpenCheck className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> 
+  },
+
+  // --- 计算机网络 (Computer Network) ---
+  { 
+    id: "ccf_net_1", 
+    name: "SIGCOMM - ACM International Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication", 
+    url: "https://www.sigcomm.org/", 
+    category: "Computer Network", 
+    icon: <BookOpenCheck className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> 
+  },
+  { 
+    id: "ccf_net_2", 
+    name: "MobiCom - ACM International Conference on Mobile Computing and Networking", 
+    url: "https://sigmobile.org/mobicom/", 
+    category: "Computer Network", 
+    icon: <BookOpenCheck className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> 
+  },
+
+  // --- 计算机体系结构/并行与分布计算/存储系统 (Computer Architecture) ---
+  { 
+    id: "ccf_arch_1", 
+    name: "ISCA - International Symposium on Computer Architecture", 
+    url: "https://www.iscaconf.org/", 
+    category: "Computer Architecture", 
+    icon: <BookOpenCheck className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> 
+  },
+  { 
+    id: "ccf_arch_2", 
+    name: "ASPLOS - Architectural Support for Programming Languages and Operating Systems", 
+    url: "https://www.sigarch.org/conferences/asplos/", 
+    category: "Computer Architecture", 
+    icon: <BookOpenCheck className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> 
+  },
+
+  // --- 软件工程/系统软件/程序设计语言 (Software Engineering) ---
+  { 
+    id: "ccf_se_1", 
+    name: "ICSE - International Conference on Software Engineering", 
+    url: "https://conf.researchr.org/series/icse", 
+    category: "Software Engineering", 
+    icon: <BookOpenCheck className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> 
+  },
+  { 
+    id: "ccf_se_2", 
+    name: "OSDI - USENIX Symposium on Operating Systems Design and Implementation", 
+    url: "https://www.usenix.org/conferences/byname/106", 
+    category: "Software Engineering", 
+    icon: <BookOpenCheck className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> 
+  },
+
+  // --- 网络与信息安全 (Network and Information Security) ---
+  { 
+    id: "ccf_sec_1", 
+    name: "S&P - IEEE Symposium on Security and Privacy", 
+    url: "https://www.ieee-security.org/TC/SP/", 
+    category: "Information Security", 
+    icon: <BookOpenCheck className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> 
+  },
+  { 
+    id: "ccf_sec_2", 
+    name: "CCS - ACM Conference on Computer and Communications Security", 
+    url: "https://www.sigsac.org/ccs.html", 
+    category: "Information Security", 
+    icon: <BookOpenCheck className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> 
+  }
     /*{ id: "fl1", name: "AI Research Lab @ University of Innovation", url: "#", category: "Labs & Institutions", icon: <Users className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> },
     { id: "fl2", name: "ACL Anthology - NLP Publications", url: "https://aclanthology.org/", category: "Conferences & Journals", icon: <BookOpenCheck className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> },
     { id: "fl3", name: "Dr. Jane Doe's Research Group", url: "#", category: "Collaborators", icon: <Users className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> },
