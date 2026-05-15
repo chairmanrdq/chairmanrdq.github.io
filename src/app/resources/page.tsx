@@ -35,6 +35,105 @@ const resourcesData: {
   software: [
     /*{ id: "s1", name: "NLP Toolkit v2.1", description: "A Python library for common NLP tasks, optimized for research and education. Includes modules for text preprocessing, feature extraction, and model evaluation.", link: "#github-nlp-toolkit", lastUpdated: "2024-05-01", icon: <Github className="mr-2 h-4 w-4"/>, buttonText: "View on GitHub" },
     { id: "s2", name: "EthiCheck: Bias Detection Suite", description: "A suite of tools for analyzing and mitigating various types of bias in language models and text data. Supports multiple fairness metrics.", link: "#gitlab-ethicheck", lastUpdated: "2023-11-15", icon: <Github className="mr-2 h-4 w-4"/>, buttonText: "View on GitLab" },*/
+	{ 
+    id: "tool_ref_1", 
+    name: "Zotero - Your personal research assistant", 
+    url: "https://www.zotero.org/", 
+    category: "Reference Management", 
+    icon: <Library className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> 
+  },
+  { 
+    id: "tool_ref_2", 
+    name: "Mendeley - Reference Management Software", 
+    url: "https://www.mendeley.com/", 
+    category: "Reference Management", 
+    icon: <Library className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> 
+  },
+  { 
+    id: "tool_ref_3", 
+    name: "EndNote - The industry standard software tool for publishing and managing bibliographies", 
+    url: "https://endnote.com/", 
+    category: "Reference Management", 
+    icon: <Library className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> 
+  },
+
+  // --- 写作与排版 (Writing & Publishing) ---
+  { 
+    id: "tool_write_1", 
+    name: "Overleaf - Collaborative LaTeX Editor", 
+    url: "https://www.overleaf.com/", 
+    category: "Writing & Publishing", 
+    icon: <PenTool className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> 
+  },
+  { 
+    id: "tool_write_2", 
+    name: "Typora - A truly minimal markdown editor", 
+    url: "https://typora.io/", 
+    category: "Writing & Publishing", 
+    icon: <FileText className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> 
+  },
+
+  // --- 数据分析与计算 (Data Analysis & Computation) ---
+  { 
+    id: "tool_data_1", 
+    name: "Jupyter - Interactive computing across all programming languages", 
+    url: "https://jupyter.org/", 
+    category: "Data Analysis & Computation", 
+    icon: <Code className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> 
+  },
+  { 
+    id: "tool_data_2", 
+    name: "MATLAB - Math. Graphics. Programming.", 
+    url: "https://www.mathworks.com/products/matlab.html", 
+    category: "Data Analysis & Computation", 
+    icon: <Calculator className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> 
+  },
+  { 
+    id: "tool_data_3", 
+    name: "RStudio - Open source and enterprise-ready professional software for R", 
+    url: "https://posit.co/products/open-source/rstudio/", 
+    category: "Data Analysis & Computation", 
+    icon: <Terminal className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> 
+  },
+
+  // --- 文献检索与分析 (Literature Search & Discovery) ---
+  { 
+    id: "tool_search_1", 
+    name: "Google Scholar", 
+    url: "https://scholar.google.com/", 
+    category: "Search & Discovery", 
+    icon: <Search className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> 
+  },
+  { 
+    id: "tool_search_2", 
+    name: "Connected Papers - Find and explore academic papers", 
+    url: "https://www.connectedpapers.com/", 
+    category: "Search & Discovery", 
+    icon: <Network className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> 
+  },
+  { 
+    id: "tool_search_3", 
+    name: "Web of Science", 
+    url: "https://www.webofscience.com/", 
+    category: "Search & Discovery", 
+    icon: <Search className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> 
+  },
+
+  // --- 代码托管与版本控制 (Version Control) ---
+  { 
+    id: "tool_dev_1", 
+    name: "GitHub - Let's build from here", 
+    url: "https://github.com/", 
+    category: "Version Control", 
+    icon: <GitBranch className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> 
+  },
+  { 
+    id: "tool_dev_2", 
+    name: "GitLab - The DevSecOps Platform", 
+    url: "https://about.gitlab.com/", 
+    category: "Version Control", 
+    icon: <GitBranch className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> 
+  }
   ],
   datasets: [
     /*{ id: "d1", name: "Anonymized Clinical Notes Corpus (ACNC-2023)", description: "A large, curated dataset of anonymized clinical notes for NLP research, particularly for tasks like named entity recognition and relation extraction in the medical domain.", link: "#dataverse-acnc", size: "10GB", format: "JSON, TXT", icon: <Database className="mr-2 h-4 w-4"/>, buttonText: "Access on Dataverse" },
