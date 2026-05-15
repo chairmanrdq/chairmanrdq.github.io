@@ -73,7 +73,7 @@ const scholarData = {
     { 
       id: "t", 
       date: "Lab and mentorship", 
-      title: "Lab Team & Mentorship", 
+      title: "Lab Team", 
       description: "Team structure, research tracks, and supervision opportunities for students with strong foundations and clear interests.", 
       icon: <Users className="h-5 w-5 flex-shrink-0 text-secondary" />,
       badge: "Students",

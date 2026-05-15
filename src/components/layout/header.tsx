@@ -30,7 +30,7 @@ const navItems = [
   { href: '/research', label: 'Research', icon: FlaskConical },
   { href: '/publications', label: 'Publications', icon: Newspaper },
   { href: '/projects', label: 'Projects', icon: FolderGit2 },
-  { href: '/team', label: 'Team & Mentorship', icon: Users },
+  { href: '/team', label: 'Team', icon: Users },
   { href: '/courses', label: 'Courses', icon: GraduationCap },
   { href: '/resources', label: 'Resources', icon: DownloadIcon },
   { href: '/contact', label: 'Contact', icon: MessageSquare },
@@ -45,7 +45,7 @@ export default function Header() {
       <div className="container mx-auto flex h-20 min-h-[5rem] min-w-0 items-center justify-between gap-2 px-4 sm:gap-3 sm:px-6 lg:px-8">
         <Link
           href="/"
-          className="flex min-w-0 max-w-[calc(100%-8.75rem)] items-center gap-2 hover:opacity-80 transition-opacity sm:max-w-[min(340px,52%)] md:max-w-[min(360px,46%)] lg:max-w-[min(400px,42%)]"
+          className="flex shrink-0 items-center gap-2 hover:opacity-80 transition-opacity"
           onClick={() => setIsMobileMenuOpen(false)}
         >
           <div className="flex h-[4.5rem] w-[4.5rem] shrink-0 items-center justify-center">
@@ -58,14 +58,14 @@ export default function Header() {
               priority
             />
           </div>
-          <span className="text-gradient-luxury min-w-0 flex-1 text-left text-sm font-bold leading-snug sm:text-base md:text-lg lg:text-xl line-clamp-2 break-words">
+          <span className="text-gradient-luxury max-w-[9rem] truncate text-xs font-bold leading-none sm:max-w-none sm:text-sm sm:whitespace-nowrap md:text-base lg:text-lg">
             {siteConfig.piShortName}
           </span>
         </Link>
 
-        {/* Desktop Navigation + theme */}
-        <div className="hidden min-w-0 shrink-0 md:flex md:items-center md:gap-1 lg:gap-2">
-          <nav className="flex items-center space-x-1 lg:space-x-2">
+        {/* Desktop Navigation + theme：占剩余宽度，必要时横向滚动，避免被品牌区挤压 */}
+        <div className="hidden min-w-0 flex-1 items-center justify-end gap-1 pl-2 md:flex lg:gap-2">
+          <nav className="flex max-w-full flex-nowrap items-center justify-end gap-1 overflow-x-auto overscroll-x-contain [scrollbar-width:thin] lg:gap-2">
             {navItems.map((item) => (
               <Button
                 key={item.href}
@@ -85,7 +85,9 @@ export default function Header() {
               </Button>
             ))}
           </nav>
-          <ThemeToggle />
+          <div className="shrink-0 pl-1">
+            <ThemeToggle />
+          </div>
         </div>
 
         {/* Mobile Navigation */}
@@ -115,7 +117,7 @@ export default function Header() {
                           priority
                         />
                       </div>
-                      <span className="text-gradient-luxury min-w-0 flex-1 text-left text-base font-bold leading-snug line-clamp-2 break-words">
+                      <span className="text-gradient-luxury min-w-0 flex-1 truncate text-left text-base font-bold leading-tight sm:text-lg">
                         {siteConfig.piShortName}
                       </span>
                     </Link>

@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Team & Mentorship',
+  title: 'Team',
   description: 'Research group profile, team structure, and mentorship information for students working with Dr. RuiDong Qi.',
 };
 
