@@ -43,18 +43,22 @@ export default function Header() {
   return (
     <header className="site-header-tech sticky top-0 z-50 w-full">
       <div className="container mx-auto flex h-20 min-h-[5rem] items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-2 text-xl sm:text-2xl font-bold hover:opacity-80 transition-opacity" onClick={() => setIsMobileMenuOpen(false)}>
+        <Link
+          href="/"
+          className="flex shrink-0 items-center hover:opacity-80 transition-opacity"
+          aria-label="Home"
+          onClick={() => setIsMobileMenuOpen(false)}
+        >
           <div className="flex h-[4.5rem] w-[4.5rem] shrink-0 items-center justify-center">
             <Image
               src={logoOne}
-              alt="Lab logo"
+              alt=""
               width={72}
               height={72}
               className="rounded-full w-full h-full object-contain"
               priority
             />
           </div>
-          <span className="text-gradient-luxury truncate">{siteConfig.piShortName}</span>
         </Link>
 
         {/* Desktop Navigation + theme */}
@@ -94,18 +98,22 @@ export default function Header() {
             <SheetContent side="right" className="w-full max-w-xs bg-background/95 backdrop-blur-md p-0 text-foreground border-l border-primary/20">
               <div className="flex flex-col h-full">
                 <div className="p-6 flex justify-between items-center border-b border-primary/20">
-                    <Link href="/" className="flex min-w-0 items-center gap-2 text-lg font-bold" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link
+                      href="/"
+                      className="flex shrink-0 items-center hover:opacity-80 transition-opacity"
+                      aria-label="Home"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
                       <div className="flex h-[4.5rem] w-[4.5rem] shrink-0 items-center justify-center">
                         <Image
                           src={logoOne}
-                          alt="Lab logo"
+                          alt=""
                           width={72}
                           height={72}
                           className="rounded-full w-full h-full object-contain"
                           priority
                         />
                       </div>
-                      <span className="text-gradient-luxury truncate">{siteConfig.piShortName}</span>
                     </Link>
                     <SheetClose asChild>
                         <Button variant="ghost" size="icon" aria-label="Close menu" className="text-primary hover:text-primary/80">
