@@ -386,12 +386,7 @@ function CatalogLinkCard({ item }: { item: LinkCatalogItem }) {
 export default function ResourcesPage() {
   return (
     <div className="space-y-12">
-      <section
-        id="software"
-        aria-labelledby="software-title"
-        className="page-section-reveal"
-        style={{ animationDelay: "0ms" }}
-      >
+      <section id="software" aria-labelledby="software-title">
         <SectionTitle id="software-title">Software & Tools</SectionTitle>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {resourcesData.software.map((item) => (
@@ -400,24 +395,14 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      <section
-        id="datasets"
-        aria-labelledby="datasets-title"
-        className="page-section-reveal"
-        style={{ animationDelay: "80ms" }}
-      >
+      <section id="datasets" aria-labelledby="datasets-title">
         <SectionTitle id="datasets-title">Datasets</SectionTitle>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {resourcesData.datasets.map(item => <ResourceCard key={item.id} item={item} />)}
         </div>
       </section>
 
-      <section
-        id="slides"
-        aria-labelledby="slides-title"
-        className="page-section-reveal"
-        style={{ animationDelay: "160ms" }}
-      >
+      <section id="slides" aria-labelledby="slides-title">
         <SectionTitle id="slides-title">Presentations & Slides</SectionTitle>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {resourcesData.slides.map((item) => (
@@ -426,12 +411,7 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      <section
-        id="friendly-links"
-        aria-labelledby="friendly-links-title"
-        className="page-section-reveal"
-        style={{ animationDelay: "240ms" }}
-      >
+      <section id="friendly-links" aria-labelledby="friendly-links-title">
         <SectionTitle id="friendly-links-title">Useful Links</SectionTitle>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {resourcesData.friendlyLinks.map((item) => (

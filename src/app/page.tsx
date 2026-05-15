@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { SectionTitle } from "@/components/ui/section-title";
 import { Mail, Phone, Link as LinkIcon, MapPin, Award, Rss, BookOpen, Star, TrendingUp, Users, Globe, Zap, ArrowRight, ChevronRight, Leaf, Cpu, Database, Battery, Cloud, Sparkles, Crown, Diamond } from 'lucide-react';
 import ImageCarousel from '@/components/home/image-carousel';
+import CalligraphyIntro from '@/components/home/calligraphy-intro';
 
 // Enhanced Mock Data with luxury focus
 const scholarData = {
@@ -146,6 +147,7 @@ const carouselImages = [
 export default function Home() {
   return (
     <div className="relative">
+      <CalligraphyIntro />
       {/* Hero Section with Ultra Luxury Animated Gradient */}
       <section className="relative overflow-hidden rounded-3xl mb-16 p-8 md:p-12 luxury-card animated-luxury-gradient-light page-section-reveal">
         <div className="hero-ambient-glow" aria-hidden />
