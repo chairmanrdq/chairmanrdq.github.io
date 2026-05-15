@@ -5,7 +5,6 @@ import { SectionTitle } from "@/components/ui/section-title";
 import { Mail, Phone, Link as LinkIcon, MapPin, Award, Rss, BookOpen, Star, TrendingUp, Users, Globe, Zap, ArrowRight, ChevronRight, Leaf, Cpu, Database, Battery, Cloud, Sparkles, Crown, Diamond } from 'lucide-react';
 import ImageCarousel from '@/components/home/image-carousel';
 import CalligraphyIntro from '@/components/home/calligraphy-intro';
-import EnergyComputeTopology from '@/components/home/energy-compute-topology';
 
 // Enhanced Mock Data with luxury focus
 const scholarData = {
@@ -149,13 +148,6 @@ export default function Home() {
   return (
     <div className="relative">
       <CalligraphyIntro />
-      <section
-        className="mb-12 page-section-reveal overflow-hidden rounded-xl border-2 border-[#0A1526]/20 bg-[#FFFFFF]"
-        style={{ animationDelay: '0ms' }}
-        aria-label="Graphical abstract"
-      >
-        <EnergyComputeTopology className="h-auto w-full max-h-[min(52vh,520px)] object-contain" />
-      </section>
       {/* Hero */}
       <section className="relative mb-16 overflow-hidden rounded-xl border-2 border-[#0A1526]/15 bg-[#FFFFFF] p-8 md:p-12 luxury-card page-section-reveal">
         <div className="relative z-10">
