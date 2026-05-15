@@ -54,12 +54,7 @@ export default function Header() {
               priority
             />
           </div>
-          <div className="flex min-w-0 flex-col text-left leading-tight">
-            <span className="text-gradient-luxury truncate">{siteConfig.piShortName}</span>
-            <span className="mt-0.5 max-w-[11rem] truncate text-[10px] font-medium text-muted-foreground sm:max-w-[20rem] sm:text-xs lg:max-w-[28rem]">
-              {siteConfig.institution}
-            </span>
-          </div>
+          <span className="text-gradient-luxury truncate">{siteConfig.piShortName}</span>
         </Link>
 
         {/* Desktop Navigation + theme */}
@@ -110,12 +105,7 @@ export default function Header() {
                           priority
                         />
                       </div>
-                      <div className="flex min-w-0 flex-col text-left leading-tight">
-                        <span className="text-gradient-luxury truncate">{siteConfig.piShortName}</span>
-                        <span className="mt-0.5 max-w-[11rem] truncate text-[10px] font-medium text-muted-foreground sm:max-w-[16rem] sm:text-xs">
-                          {siteConfig.institution}
-                        </span>
-                      </div>
+                      <span className="text-gradient-luxury truncate">{siteConfig.piShortName}</span>
                     </Link>
                     <SheetClose asChild>
                         <Button variant="ghost" size="icon" aria-label="Close menu" className="text-primary hover:text-primary/80">
