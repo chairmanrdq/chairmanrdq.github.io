@@ -160,18 +160,31 @@ export default function Home() {
       <section className="relative mb-16 overflow-hidden rounded-xl border-2 border-[#0A1526]/15 bg-[#FFFFFF] p-8 md:p-12 luxury-card page-section-reveal">
         <div className="relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-            <div className="relative group motion-safe:animate-subtle-float">
-              <div className="relative">
-                <Image
-                  src={scholarData.avatarUrl}
-                  alt={`Profile picture of ${scholarData.name}`}
-                  width={200}
-                  height={300}
-                  className="rounded-none object-cover h-72 w-48 lg:h-96 lg:w-64 border-2 border-[#0A1526]/25"
-                  data-ai-hint={scholarData.dataAiHint}
-                  priority
-                />
+            <div className="flex shrink-0 flex-col items-center">
+              <div className="relative group motion-safe:animate-subtle-float">
+                <div className="relative">
+                  <Image
+                    src={scholarData.avatarUrl}
+                    alt={`Profile picture of ${scholarData.name}`}
+                    width={200}
+                    height={300}
+                    className="rounded-none object-cover h-72 w-48 lg:h-96 lg:w-64 border-2 border-[#0A1526]/25"
+                    data-ai-hint={scholarData.dataAiHint}
+                    priority
+                  />
+                </div>
               </div>
+              <figure className="mt-5 w-full max-w-[12rem] text-center lg:max-w-[16rem]">
+                <blockquote
+                  className={`${homeCalligraphyQuoteFont.className} text-[clamp(0.95rem,2.4vw,1.35rem)] leading-[1.75] tracking-[0.08em] text-[#0A1526] dark:text-foreground/90`}
+                >
+                  人生万事须自为，跬步江山即寥廓。
+                </blockquote>
+                <div
+                  className="mx-auto mt-4 h-px w-full max-w-[10rem] bg-gradient-to-r from-transparent via-primary/40 to-transparent"
+                  aria-hidden
+                />
+              </figure>
             </div>
 
             {/* Enhanced Bio Content with Luxury Effects */}
@@ -606,18 +619,6 @@ export default function Home() {
         <div className="luxury-card overflow-hidden luxury-hover motion-safe:animate-fade-in" style={{ animationDelay: '120ms' }}>
           <ImageCarousel images={carouselImages} interval={5000} />
         </div>
-
-        <figure className="mt-10 px-2 text-center sm:px-4">
-          <blockquote
-            className={`${homeCalligraphyQuoteFont.className} mx-auto max-w-3xl text-[clamp(1.2rem,3.2vw,1.95rem)] leading-[1.85] tracking-[0.1em] text-[#0A1526] dark:text-foreground/90`}
-          >
-            人生万事须自为，跬步江山即寥廓。
-          </blockquote>
-          <div
-            className="mx-auto mt-5 h-px w-[min(90%,22rem)] bg-gradient-to-r from-transparent via-primary/40 to-transparent"
-            aria-hidden
-          />
-        </figure>
       </section>
     </div>
   );
