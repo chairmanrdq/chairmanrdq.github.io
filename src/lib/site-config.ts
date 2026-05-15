@@ -27,7 +27,6 @@ export const siteConfig = {
   /** 规范站点根 URL，勿尾斜杠（用于 metadata、sitemap、JSON-LD） */
   siteUrl,
 
-  labName: 'Computing Power & Service Intelligence Lab',
   labTagline:
     'Computing power networks, low-carbon scheduling, and trustworthy service intelligence — theory-grounded, system-validated research.',
 

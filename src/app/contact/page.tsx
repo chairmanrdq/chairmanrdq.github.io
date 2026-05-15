@@ -48,7 +48,6 @@ export default function ContactPage() {
             <CardTitle className="text-2xl text-primary">{contactData.name}</CardTitle>
             <p className="text-md text-foreground/80">{contactData.position}</p>
             <p className="text-sm text-foreground/70">{contactData.affiliation}, {contactData.university}</p>
-            <p className="mt-1 text-xs text-muted-foreground">{siteConfig.labName}</p>
           </CardHeader>
           <CardContent className="space-y-5">
             <div className="flex items-start">

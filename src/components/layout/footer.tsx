@@ -9,7 +9,7 @@ export default function Footer() {
           &copy; {new Date().getFullYear()} {siteConfig.piFullName}. All rights reserved.
         </p>
         <p className="mx-auto mt-2 max-w-3xl text-xs leading-relaxed text-muted-foreground/90">
-          {siteConfig.labName} · {siteConfig.institution}
+          {siteConfig.institution}
         </p>
       </div>
     </footer>

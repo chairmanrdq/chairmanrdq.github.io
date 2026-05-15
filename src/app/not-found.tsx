@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { siteConfig } from '@/lib/site-config';
 
 export default function NotFound() {
   return (
@@ -10,7 +9,7 @@ export default function NotFound() {
         Page not found
       </h1>
       <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-        The page you requested does not exist or has been moved. Return to the {siteConfig.labName} home
+        The page you requested does not exist or has been moved. Return to the home page
         or use the navigation menu.
       </p>
       <div className="mt-8 flex flex-wrap justify-center gap-3">

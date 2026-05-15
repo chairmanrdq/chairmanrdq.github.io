@@ -17,7 +17,6 @@ export default function JsonLd() {
         alternateName: ['祁瑞东', 'RuiDong Qi', siteConfig.piFullName],
         jobTitle: 'Principal Investigator',
         worksFor: { '@id': `${url}/#org` },
-        memberOf: { '@id': `${url}/#lab` },
         url,
         email: siteConfig.contactEmail,
         ...(sameAs.length ? { sameAs } : {}),
@@ -28,13 +27,6 @@ export default function JsonLd() {
         name: siteConfig.institutionLegalName,
         department: siteConfig.institution,
         url: 'https://www.imu.edu.cn/',
-      },
-      {
-        '@type': 'Organization',
-        '@id': `${url}/#lab`,
-        name: siteConfig.labName,
-        description: siteConfig.labTagline,
-        parentOrganization: { '@id': `${url}/#org` },
       },
     ],
   };

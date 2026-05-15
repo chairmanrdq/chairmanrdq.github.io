@@ -20,7 +20,7 @@ const canonical = getCanonicalSiteUrl();
 export const metadata: Metadata = {
   metadataBase: new URL(canonical),
   title: {
-    default: `${siteConfig.piShortName} | ${siteConfig.labName}`,
+    default: `${siteConfig.piShortName} | ${siteConfig.institutionLegalName}`,
     template: `%s | ${siteConfig.piShortName}`,
   },
   description: siteConfig.labTagline,
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: canonical,
-    siteName: siteConfig.labName,
+    siteName: siteConfig.institutionLegalName,
     title: siteConfig.piShortName,
     description: siteConfig.labTagline,
   },

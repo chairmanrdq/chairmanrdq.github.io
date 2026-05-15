@@ -56,8 +56,8 @@ export default function Header() {
           </div>
           <div className="flex min-w-0 flex-col text-left leading-tight">
             <span className="text-gradient-luxury truncate">{siteConfig.piShortName}</span>
-            <span className="mt-0.5 max-w-[11rem] truncate text-[10px] font-medium text-muted-foreground sm:max-w-[16rem] sm:text-xs lg:max-w-[22rem]">
-              {siteConfig.labName}
+            <span className="mt-0.5 max-w-[11rem] truncate text-[10px] font-medium text-muted-foreground sm:max-w-[20rem] sm:text-xs lg:max-w-[28rem]">
+              {siteConfig.institution}
             </span>
           </div>
         </Link>
@@ -112,8 +112,8 @@ export default function Header() {
                       </div>
                       <div className="flex min-w-0 flex-col text-left leading-tight">
                         <span className="text-gradient-luxury truncate">{siteConfig.piShortName}</span>
-                        <span className="mt-0.5 max-w-[9rem] truncate text-[10px] font-medium text-muted-foreground">
-                          {siteConfig.labName}
+                        <span className="mt-0.5 max-w-[11rem] truncate text-[10px] font-medium text-muted-foreground sm:max-w-[16rem] sm:text-xs">
+                          {siteConfig.institution}
                         </span>
                       </div>
                     </Link>

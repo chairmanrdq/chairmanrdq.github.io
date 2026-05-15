@@ -207,11 +207,8 @@ export default function Home() {
                 {scholarData.position}
               </p>
               
-              <p className="text-lg text-foreground/70 mb-1 motion-safe:animate-fade-up" style={{ animationDelay: '150ms' }}>
+              <p className="text-lg text-foreground/70 mb-6 motion-safe:animate-fade-up" style={{ animationDelay: '150ms' }}>
                 {scholarData.affiliation}
-              </p>
-              <p className="mb-6 text-sm text-muted-foreground motion-safe:animate-fade-up" style={{ animationDelay: '170ms' }}>
-                {siteConfig.labName}
               </p>
               <p className="text-sm text-foreground/70 mb-6 leading-relaxed motion-safe:animate-fade-up" style={{ animationDelay: '190ms' }}>
                 Research agenda: theory-grounded and system-validated methods for computing-power scheduling,
