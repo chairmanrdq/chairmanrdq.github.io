@@ -43,8 +43,9 @@ body {
 
     --link-hover: 193 100% 46%;
 
-    /* Gold：奖项强调色（更稳重、不过亮） */
-    --gold: 42 62% 44%;
+    /* Gold：与设计文档一致 #B8860B（DarkGoldenrod），奖项与链接强调 */
+    --gold: 43 89% 38%;
+    --gold-highlight: 43 76% 46%;
 
     /* Chart 色板：一深一浅，突出严肃感 */
     --chart-1: 221 100% 32%;
@@ -100,11 +101,14 @@ body {
     --ring: 214 98% 74%;
 
     --link-hover: 195 100% 80%;
-    
+
+    --gold: 43 58% 58%;
+    --gold-highlight: 43 52% 66%;
+
     --chart-1: 214 98% 74%;
     --chart-2: 195 96% 66%;
     --chart-3: 225 58% 60%;
-    --chart-4: 45 88% 62%;
+    --chart-4: var(--gold);
     --chart-5: 220 14% 72%;
 
     /* Sidebar（深色） */
@@ -365,9 +369,9 @@ body {
 .btn-gold {
   background: linear-gradient(
     135deg,
-    hsl(45 92% 54%) 0%,
-    hsl(48 96% 58%) 50%,
-    hsl(45 92% 54%) 100%
+    hsl(var(--gold)) 0%,
+    hsl(var(--gold-highlight)) 50%,
+    hsl(var(--gold)) 100%
   );
   background-size: 100% 100%;
   color: hsl(230 20% 15%);
@@ -382,9 +386,9 @@ body {
 .btn-gold:hover {
   background: linear-gradient(
     135deg,
-    hsl(48 96% 58%) 0%,
-    hsl(45 92% 54%) 50%,
-    hsl(48 96% 58%) 100%
+    hsl(var(--gold-highlight)) 0%,
+    hsl(var(--gold)) 50%,
+    hsl(var(--gold-highlight)) 100%
   );
   background-size: 100% 100%;
   box-shadow: 0 16px 42px -16px hsl(var(--gold) / 0.2), 0 0 12px hsl(var(--gold) / 0.22);
