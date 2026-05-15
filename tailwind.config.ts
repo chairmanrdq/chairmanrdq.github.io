@@ -91,13 +91,28 @@ export default {
   			'title-glow-drift': {
   				'0%, 100%': { opacity: '0.85', filter: 'drop-shadow(0 0 0.5px hsl(224 76% 48% / 0.35))' },
   				'50%': { opacity: '1', filter: 'drop-shadow(0 0 1px hsl(163 100% 38% / 0.45))' }
+  			},
+  			'fade-up': {
+  				from: { opacity: '0', transform: 'translateY(14px)' },
+  				to: { opacity: '1', transform: 'translateY(0)' }
+  			},
+  			'subtle-float': {
+  				'0%, 100%': { transform: 'translateY(0)' },
+  				'50%': { transform: 'translateY(-5px)' }
+  			},
+  			'fade-in': {
+  				from: { opacity: '0' },
+  				to: { opacity: '1' }
   			}
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
   			'accordion-up': 'accordion-up 0.2s ease-out',
   			'calligraphy-ink-line': 'calligraphy-ink-line 2.4s ease-in-out infinite',
-  			'title-glow-drift': 'title-glow-drift 5s ease-in-out infinite'
+  			'title-glow-drift': 'title-glow-drift 5s ease-in-out infinite',
+  			'fade-up': 'fade-up 0.58s cubic-bezier(0.22, 1, 0.36, 1) both',
+  			'subtle-float': 'subtle-float 5.5s ease-in-out infinite',
+  			'fade-in': 'fade-in 0.45s ease-out both'
   		}
   	}
   },

@@ -74,7 +74,7 @@ export default function Header() {
                 variant="ghost"
                 asChild
                 className={cn(
-                  "nav-chip-tech text-sm font-medium transition-all duration-500 rounded-2xl",
+                  "nav-chip-tech text-sm font-medium transition-all duration-300 rounded-2xl motion-safe:transition-transform motion-safe:hover:scale-[1.02] motion-safe:active:scale-[0.98]",
                   pathname === item.href
                     ? "bg-gradient-to-r from-primary/8 via-secondary/8 to-accent/8 text-primary font-semibold hover:from-primary/15 hover:via-secondary/15 hover:to-accent/15 luxury-border" // Active state
                     : "text-foreground/70 hover:text-gradient-luxury hover:bg-gradient-to-r hover:from-primary/3 hover:via-secondary/3 hover:to-accent/3" // Inactive state
@@ -129,7 +129,7 @@ export default function Header() {
                        <Link
                         href={item.href}
                         className={cn(
-                          "nav-chip-tech flex items-center space-x-3 text-md font-medium transition-all duration-500 rounded-2xl px-3 py-3",
+                          "nav-chip-tech flex items-center space-x-3 text-md font-medium transition-all duration-300 rounded-2xl px-3 py-3 motion-safe:transition-transform motion-safe:active:scale-[0.99]",
                           pathname === item.href
                             ? "bg-gradient-to-r from-primary/8 via-secondary/8 to-accent/8 text-primary font-semibold luxury-border" // Active state
                             : "text-foreground/70 hover:text-gradient-luxury hover:bg-gradient-to-r hover:from-primary/3 hover:via-secondary/3 hover:to-accent/3" // Inactive state

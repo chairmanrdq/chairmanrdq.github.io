@@ -541,7 +541,7 @@ body {
 }
 
 .luxury-hover:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   border-color: hsl(var(--accent) / 0.42);
   filter: saturate(1.04);
 }
@@ -624,6 +624,12 @@ body {
     transform: none;
     box-shadow: none;
   }
+  .section-title-rule,
+  .luxury-divider {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
 
 .text-gradient-green {
@@ -669,15 +675,34 @@ body {
     transparent
   );
   margin: 1.75rem 0;
+  animation: divider-pulse 3.5s ease-in-out infinite;
+}
+
+@keyframes divider-pulse {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
 }
 
 /* 区块标题下统一装饰线：冷蓝细线、中心微亮，全站同一规格 */
+@keyframes title-rule-emerge {
+  from {
+    transform: scaleX(0.35);
+    opacity: 0.2;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
 .section-title-rule {
   width: 5.5rem;
   height: 2px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 9999px;
+  transform-origin: center;
+  animation: title-rule-emerge 0.68s cubic-bezier(0.22, 1, 0.36, 1) both;
   background: linear-gradient(
     90deg,
     hsl(var(--primary) / 0),

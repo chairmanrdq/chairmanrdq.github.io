@@ -152,7 +152,7 @@ export default function Home() {
       <section className="relative mb-16 overflow-hidden rounded-xl border-2 border-[#0A1526]/15 bg-[#FFFFFF] p-8 md:p-12 luxury-card page-section-reveal">
         <div className="relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-            <div className="relative group">
+            <div className="relative group motion-safe:animate-subtle-float">
               <div className="relative">
                 <Image
                   src={scholarData.avatarUrl}
@@ -168,27 +168,33 @@ export default function Home() {
 
             {/* Enhanced Bio Content with Luxury Effects */}
             <div className="flex-1 text-center lg:text-left">
-                             <div className="inline-flex items-center gap-2 luxury-badge mb-4">
+                             <div className="inline-flex items-center gap-2 luxury-badge mb-4 motion-safe:animate-fade-up" style={{ animationDelay: '0ms' }}>
                 <Cpu className="h-4 w-4 text-primary/85" />
                 <span className="text-sm font-medium">Computing Power Networks • Low-Carbon Scheduling • Reliable Service Intelligence</span>
                </div>
               
-              <h1 className="text-4xl lg:text-6xl font-bold text-gradient-luxury mb-4">
+              <h1
+                className="text-4xl lg:text-6xl font-bold text-gradient-luxury mb-4 motion-safe:animate-fade-up"
+                style={{ animationDelay: '60ms' }}
+              >
                 {scholarData.name}
               </h1>
               
-              <p className="text-xl lg:text-2xl text-foreground/80 mb-2 font-medium">
+              <p
+                className="text-xl lg:text-2xl text-foreground/80 mb-2 font-medium motion-safe:animate-fade-up"
+                style={{ animationDelay: '110ms' }}
+              >
                 {scholarData.position}
               </p>
               
-              <p className="text-lg text-foreground/70 mb-6">
+              <p className="text-lg text-foreground/70 mb-6 motion-safe:animate-fade-up" style={{ animationDelay: '150ms' }}>
                 {scholarData.affiliation}
               </p>
-              <p className="text-sm text-foreground/70 mb-6 leading-relaxed">
+              <p className="text-sm text-foreground/70 mb-6 leading-relaxed motion-safe:animate-fade-up" style={{ animationDelay: '190ms' }}>
                 Research agenda: theory-grounded and system-validated methods for computing-power scheduling,
                 low-carbon optimization, and trustworthy service intelligence.
               </p>
-              <p className="text-sm text-foreground/70 mb-8 leading-relaxed">
+              <p className="text-sm text-foreground/70 mb-8 leading-relaxed motion-safe:animate-fade-up" style={{ animationDelay: '230ms' }}>
                 I build learning-enabled systems with a focus on <span className="text-primary font-medium">reliability</span>,{' '}
                 <span className="text-primary font-medium">efficiency</span>, and <span className="text-primary font-medium">reproducibility</span>.
               </p>
@@ -196,7 +202,11 @@ export default function Home() {
               {/* Stats Grid with Luxury Cards */}
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
                 {scholarData.stats.map((stat, index) => (
-                  <div key={index} className="luxury-card p-4 text-center luxury-hover">
+                  <div
+                    key={index}
+                    className="luxury-card p-4 text-center luxury-hover motion-safe:animate-fade-up"
+                    style={{ animationDelay: `${180 + index * 70}ms` }}
+                  >
                     <div className="mb-2 flex justify-center text-primary/85">
                       {stat.icon}
                     </div>
@@ -358,7 +368,7 @@ export default function Home() {
               {scholarData.researchKeywords.map((keyword, index) => (
                 <span
                   key={index}
-                  className="luxury-badge luxury-badge-accent transition-all duration-500 cursor-default"
+                  className="luxury-badge luxury-badge-accent transition-all duration-300 cursor-default motion-safe:hover:scale-[1.03]"
                 >
                    {keyword}
                 </span>
@@ -397,8 +407,12 @@ export default function Home() {
         </div>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {featuredPublications.map(pub => (
-            <Card key={pub.id} className="luxury-card group overflow-hidden luxury-hover relative">
+          {featuredPublications.map((pub, index) => (
+            <Card
+              key={pub.id}
+              className="luxury-card group overflow-hidden luxury-hover relative motion-safe:animate-fade-up"
+              style={{ animationDelay: `${index * 60}ms` }}
+            >
               <CardContent className="relative z-10 pt-6">
                 <div className="flex items-start justify-between gap-3 mb-3">
                   <span className="luxury-badge">
@@ -459,10 +473,11 @@ export default function Home() {
         </div>
         
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {scholarData.news.map(item => (
+          {scholarData.news.map((item, index) => (
             <Card 
              key={item.id} 
-             className="luxury-card group overflow-hidden luxury-hover relative"
+             className="luxury-card group overflow-hidden luxury-hover relative motion-safe:animate-fade-up"
+             style={{ animationDelay: `${index * 55}ms` }}
            >
               <div className="absolute inset-0 bg-gradient-to-br from-primary/8 via-primary/6 to-accent/8 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
               <CardContent className="relative z-10 pt-6">
@@ -591,7 +606,7 @@ export default function Home() {
           <div className="section-title-rule" aria-hidden={true} />
         </div>
 
-        <div className="luxury-card overflow-hidden luxury-hover">
+        <div className="luxury-card overflow-hidden luxury-hover motion-safe:animate-fade-in" style={{ animationDelay: '120ms' }}>
           <ImageCarousel images={carouselImages} interval={5000} />
         </div>
       </section>
