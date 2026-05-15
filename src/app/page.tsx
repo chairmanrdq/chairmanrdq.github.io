@@ -149,7 +149,7 @@ export default function Home() {
   return (
     <div className="relative">
       {/* Hero */}
-      <section className="relative mb-16 overflow-hidden rounded-xl border-2 border-[#0A1526]/15 bg-[#FFFFFF] p-8 md:p-12 luxury-card page-section-reveal">
+      <section className="relative mb-16 overflow-hidden rounded-xl border-2 border-[#0A1526]/15 bg-[#FFFFFF] p-8 md:p-12 luxury-card tech-frame-ambient page-section-reveal">
         <div className="relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
             <div className="flex shrink-0 flex-col items-center">
@@ -209,7 +209,7 @@ export default function Home() {
                 {scholarData.stats.map((stat, index) => (
                   <div
                     key={index}
-                    className="luxury-card p-4 text-center luxury-hover motion-safe:animate-fade-up"
+                    className="luxury-card tech-frame-ambient p-4 text-center luxury-hover motion-safe:animate-fade-up"
                     style={{ animationDelay: `${180 + index * 70}ms` }}
                   >
                     <div className="mb-2 flex justify-center text-primary/85">
@@ -285,7 +285,7 @@ export default function Home() {
           <div className="section-title-rule" aria-hidden={true} />
         </div>
 
-        <Card className="luxury-card overflow-hidden luxury-hover relative">
+        <Card className="luxury-card tech-frame-ambient overflow-hidden luxury-hover relative">
           <CardContent className="relative z-10 pt-8">
             <div className="flex flex-col lg:flex-row gap-10 items-start">
               <div className="flex-1">
@@ -357,7 +357,7 @@ export default function Home() {
           <div className="section-title-rule" aria-hidden={true} />
         </div>
         
-        <Card className="luxury-card overflow-hidden luxury-hover relative">
+        <Card className="luxury-card tech-frame-ambient overflow-hidden luxury-hover relative">
           <div className="absolute inset-0 animated-luxury-gradient-light opacity-70"></div>
           <CardContent className="relative z-10 pt-8">
             <p className="text-lg lg:text-xl text-foreground/80 mb-6 leading-relaxed">
@@ -541,8 +541,8 @@ export default function Home() {
           <div className="section-title-rule" aria-hidden={true} />
         </div>
 
-        <Card className="luxury-card">
-          <CardContent className="pt-6">
+        <Card className="luxury-card tech-frame-ambient">
+          <CardContent className="relative z-10 pt-6">
             <div className="space-y-6">
               <div>
                 <h3 className="text-lg font-semibold text-primary mb-1">Computing Power Networks</h3>
@@ -600,7 +600,7 @@ export default function Home() {
           <div className="section-title-rule" aria-hidden={true} />
         </div>
 
-        <div className="luxury-card overflow-hidden luxury-hover motion-safe:animate-fade-in" style={{ animationDelay: '120ms' }}>
+        <div className="luxury-card tech-frame-ambient overflow-hidden luxury-hover motion-safe:animate-fade-in" style={{ animationDelay: '120ms' }}>
           <ImageCarousel images={carouselImages} interval={5000} />
         </div>
       </section>

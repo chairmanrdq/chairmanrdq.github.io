@@ -366,6 +366,37 @@ body {
   border-color: hsl(var(--primary) / 0.45);
 }
 
+/* 首页部分卡片：内描边 + 内晕极轻呼吸（透明层叠在内容之上，pointer-events: none） */
+@keyframes tech-frame-inner {
+  0%,
+  100% {
+    box-shadow:
+      inset 0 0 0 1px hsl(var(--primary) / 0.16),
+      inset 0 0 36px -18px hsl(var(--primary) / 0.055);
+  }
+  50% {
+    box-shadow:
+      inset 0 0 0 1px hsl(var(--accent) / 0.24),
+      inset 0 0 44px -14px hsl(var(--accent) / 0.08);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .tech-frame-ambient {
+    position: relative;
+  }
+
+  .tech-frame-ambient::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    z-index: 4;
+    animation: tech-frame-inner 5.5s ease-in-out infinite;
+  }
+}
+
 /* Ultra Luxury gradient backgrounds */
 .luxury-gradient {
   background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 25%, hsl(var(--accent)) 50%, hsl(var(--secondary)) 75%, hsl(var(--primary)) 100%);
