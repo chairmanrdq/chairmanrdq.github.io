@@ -4,250 +4,117 @@ import { cn } from '@/lib/utils';
 // Replace with actual scholar name
 const SCHOLAR_NAME = "Dr. RuiDong Qi（祁瑞东）";
 
-/** 卡通草甸：圆润草叶簇（无语义） */
+/** 草甸线描（无语义） */
 function PrairieGrassDecor({ className }: { className?: string }) {
   return (
     <svg
       className={className}
-      viewBox="0 0 128 26"
+      viewBox="0 0 120 22"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden
     >
       <path
-        d="M10 24c2-10 5-16 9-20M16 24c1-7 3-12 6-16M22 24c1-5 2-9 4-12M38 24c3-9 7-15 12-19M44 24c2-6 4-10 7-13M52 24c1-4 2-7 4-9M66 24c4-10 9-16 15-19M72 24c2-5 4-9 7-12M80 24c1-3 2-6 4-8M94 24c3-9 7-14 12-17M100 24c2-4 3-7 5-10M108 24c1-3 2-5 3-7M118 24c2-8 5-13 9-17"
+        d="M8 20c2-8 6-14 10-18M14 20c1-6 3-11 6-15M22 20c0-5 1-9 3-12M34 20c3-7 8-13 14-17M40 20c2-5 4-9 7-12M48 20c1-4 2-7 4-9M60 20c4-9 10-15 16-18M66 20c2-4 4-8 7-11M74 20c1-3 2-5 3-7M86 20c3-8 7-14 12-17M92 20c2-5 3-8 5-11M100 20c1-3 2-5 3-6M112 20c2-7 5-12 9-16M118 20c1-4 2-6 3-8"
         stroke="currentColor"
-        strokeWidth="2.25"
+        strokeWidth="1.35"
         strokeLinecap="round"
-        strokeLinejoin="round"
-        opacity="0.62"
+        opacity="0.55"
       />
     </svg>
   );
 }
 
 /**
- * 卡通化天际线：蓬松云、气流、Q 版风机 / 光伏 / 数据中心 / 蒙古包，
- * 配渐变与轻投影，偏品牌插画质感（无语义）。
+ * 地平线装饰：扁平剪影风（云线、风机、光伏、数据中心、蒙古包），非卡通造型。
  */
 function PrairieHorizonDecor({ className }: { className?: string }) {
   return (
     <svg
-      className={cn(
-        'footer-toy-illustration',
-        'text-teal-900 dark:text-teal-100',
-        className
-      )}
-      viewBox="0 0 440 100"
+      className={cn('text-emerald-950/68 dark:text-emerald-100/52', className)}
+      viewBox="0 0 440 88"
+      fill="none"
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden
     >
-      <defs>
-        <linearGradient id="footerToy-skyCloud" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stopColor="#ffffff" stopOpacity="0.98" />
-          <stop offset="100%" stopColor="#e0f2fe" stopOpacity="0.92" />
-        </linearGradient>
-        <linearGradient id="footerToy-metal" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stopColor="#0d9488" stopOpacity="0.55" />
-          <stop offset="50%" stopColor="#14b8a6" stopOpacity="0.85" />
-          <stop offset="100%" stopColor="#0f766e" stopOpacity="0.65" />
-        </linearGradient>
-        <linearGradient id="footerToy-solarGlass" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#99f6e4" stopOpacity="0.95" />
-          <stop offset="45%" stopColor="#2dd4bf" stopOpacity="0.75" />
-          <stop offset="100%" stopColor="#0f766e" stopOpacity="0.88" />
-        </linearGradient>
-        <linearGradient id="footerToy-dcGlass" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stopColor="#ccfbf1" stopOpacity="0.55" />
-          <stop offset="100%" stopColor="#115e59" stopOpacity="0.9" />
-        </linearGradient>
-        <linearGradient id="footerToy-yurtDome" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stopColor="#ecfdf5" stopOpacity="0.95" />
-          <stop offset="70%" stopColor="#34d399" stopOpacity="0.75" />
-          <stop offset="100%" stopColor="#047857" stopOpacity="0.92" />
-        </linearGradient>
-        <linearGradient id="footerToy-yurtWall" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stopColor="#6ee7b7" stopOpacity="0.55" />
-          <stop offset="100%" stopColor="#065f46" stopOpacity="0.88" />
-        </linearGradient>
-        <filter id="footerToy-softDrop" x="-20%" y="-20%" width="140%" height="140%">
-          <feDropShadow dx="0" dy="1.5" stdDeviation="1.2" floodColor="#0f172a" floodOpacity="0.18" />
-        </filter>
-      </defs>
-
-      {/* 地面轻影带 */}
-      <ellipse cx="220" cy="94" rx="198" ry="5" fill="#134e4a" fillOpacity="0.08" className="dark:fill-black dark:opacity-40" />
-
-      {/* 蓬松卡通云 */}
-      <g filter="url(#footerToy-softDrop)">
-        <path
-          fill="url(#footerToy-skyCloud)"
-          stroke="#bae6fd"
-          strokeWidth="1.25"
-          strokeLinejoin="round"
-          className="dark:stroke-slate-500/50"
-          d="M18 30c-8 0-14-6-12-14 2-9 12-12 18-6 3-10 16-12 22-3 6-9 18-6 22 4h-42c-6 0-10-5-8-11z"
-        />
-        <path
-          fill="url(#footerToy-skyCloud)"
-          stroke="#bae6fd"
-          strokeWidth="1.2"
-          strokeLinejoin="round"
-          className="dark:stroke-slate-500/45"
-          opacity={0.95}
-          d="M128 24c-7 0-12-5-10-12 2-7 10-10 15-5 3-8 13-10 18-3 5-7 14-4 18h-33c-5 0-8-4-7-9z"
-        />
-        <path
-          fill="url(#footerToy-skyCloud)"
-          stroke="#bae6fd"
-          strokeWidth="1.2"
-          strokeLinejoin="round"
-          className="dark:stroke-slate-500/45"
-          opacity={0.92}
-          d="M268 28c-8 0-14-6-12-13 2-8 11-11 17-6 4-9 15-8 20-2 5-8 16-5 20h-38c-6 0-10-5-8-11z"
-        />
-        <path
-          fill="url(#footerToy-skyCloud)"
-          stroke="#bae6fd"
-          strokeWidth="1.1"
-          strokeLinejoin="round"
-          className="dark:stroke-slate-500/40"
-          opacity={0.88}
-          d="M328 18c-5 0-9-4-8-9 1-5 7-7 11-4 2-6 10-5 13-1 4-5 11-3 14h-22c-4 0-6-3-5-7z"
-        />
+      {/* 云线 */}
+      <g stroke="currentColor" strokeWidth="1.05" strokeLinecap="round" opacity="0.42">
+        <path d="M6 22c10-12 26-14 36-4 6-10 20-12 30-2 8-8 22-8 30 2 6-8 16-8 24 0" />
+        <path d="M128 16c8-10 22-12 30-4 10-10 26-8 34 4 6-6 14-6 20 0" />
+        <path d="M268 18c12-12 28-14 40-2 8-8 18-10 26-2 10-8 24-6 32 4" />
+        <path d="M58 10c6-6 14-7 20-2" opacity="0.75" />
+        <path d="M328 12c8-7 18-8 26-2" opacity="0.7" />
       </g>
 
-      {/* 卡通气流 */}
-      <g
-        stroke="currentColor"
-        strokeWidth="1.35"
-        strokeLinecap="round"
-        fill="none"
-        opacity="0.38"
-        className="dark:opacity-30"
-      >
-        <path d="M20 38c10-5 20-5 30 0M24 44c8-3 16-3 24 1" />
-        <path d="M388 40c-10-5-20-5-30 0M384 46c-8-3-16-3-24 1" />
+      {/* 气流 */}
+      <g stroke="currentColor" strokeWidth="1" strokeLinecap="round" opacity="0.32">
+        <path d="M22 36q14-6 26 0M26 42q12-4 22 2" />
+        <path d="M372 38q-14-6-26 0M368 44q-12-4-22 2" />
       </g>
 
-      {/* Q 版风机（左） */}
-      <g transform="translate(2,6)" filter="url(#footerToy-softDrop)">
-        <ellipse cx="18" cy="78" rx="14" ry="3.5" fill="#134e4a" fillOpacity="0.12" />
-        <rect x="12" y="34" width="12" height="44" rx="5" fill="url(#footerToy-metal)" stroke="#0f766e" strokeWidth="1.2" />
-        <rect x="9" y="28" width="18" height="10" rx="4" fill="#115e59" stroke="#0d9488" strokeWidth="1" />
-        <circle cx="18" cy="32" r="5" fill="#ccfbf1" stroke="#0f766e" strokeWidth="1.2" />
-        <path
-          d="M18 32v-14M18 32l12 10M18 32L6 42"
-          stroke="#f0fdfa"
-          strokeWidth="3.2"
-          strokeLinecap="round"
-        />
-        <path
-          d="M18 32v-14M18 32l12 10M18 32L6 42"
-          stroke="#0f766e"
-          strokeWidth="1.6"
-          strokeLinecap="round"
-        />
-      </g>
-
-      {/* 卡通光伏板 */}
-      <g transform="translate(34, 44)" filter="url(#footerToy-softDrop)">
-        <ellipse cx="40" cy="52" rx="36" ry="4" fill="#134e4a" fillOpacity="0.1" />
-        <path
-          d="M4 50 L34 30 L84 30 L54 50 Z"
-          fill="url(#footerToy-solarGlass)"
-          stroke="#0f766e"
-          strokeWidth="1.35"
-          strokeLinejoin="round"
-        />
-        <path d="M14 46 L38 32" stroke="#f0fdfa" strokeOpacity="0.35" strokeWidth="1.2" strokeLinecap="round" />
-        <path d="M28 48 L52 34" stroke="#f0fdfa" strokeOpacity="0.28" strokeWidth="1" strokeLinecap="round" />
-        <path d="M42 48 L66 34" stroke="#f0fdfa" strokeOpacity="0.22" strokeWidth="1" strokeLinecap="round" />
-        <g fill="#0f766e" fillOpacity="0.35">
-          <rect x="18" y="38" width="10" height="8" rx="2" transform="skewX(-18)" />
-          <rect x="32" y="36" width="10" height="8" rx="2" transform="skewX(-18)" />
-          <rect x="46" y="34" width="10" height="8" rx="2" transform="skewX(-18)" />
-          <rect x="24" y="44" width="10" height="8" rx="2" transform="skewX(-18)" />
-          <rect x="38" y="42" width="10" height="8" rx="2" transform="skewX(-18)" />
-        </g>
-      </g>
-
-      {/* 卡通数据中心：圆角体量 + 玻璃条 + 屋顶机组 */}
-      <g transform="translate(148, 26)" filter="url(#footerToy-softDrop)">
-        <ellipse cx="38" cy="78" rx="40" ry="4" fill="#134e4a" fillOpacity="0.1" />
-        <rect x="0" y="22" width="76" height="44" rx="8" fill="#115e59" stroke="#0f766e" strokeWidth="1.35" />
-        <rect x="6" y="28" width="16" height="34" rx="4" fill="url(#footerToy-dcGlass)" stroke="#0d9488" strokeWidth="1" opacity="0.95" />
-        <rect x="4" y="14" width="68" height="14" rx="6" fill="#0f766e" stroke="#14b8a6" strokeWidth="1" />
-        <rect x="26" y="6" width="24" height="12" rx="4" fill="#134e4a" stroke="#5eead4" strokeWidth="0.9" />
-        <rect x="8" y="8" width="14" height="8" rx="3" fill="#0d9488" stroke="#99f6e4" strokeWidth="0.75" opacity="0.9" />
-        <rect x="54" y="8" width="14" height="8" rx="3" fill="#0d9488" stroke="#99f6e4" strokeWidth="0.75" opacity="0.9" />
-        <line x1="26" y1="40" x2="70" y2="40" stroke="#5eead4" strokeOpacity="0.25" strokeWidth="1.5" strokeLinecap="round" />
-        <line x1="26" y1="50" x2="70" y2="50" stroke="#5eead4" strokeOpacity="0.2" strokeWidth="1.5" strokeLinecap="round" />
-        <line x1="26" y1="60" x2="70" y2="60" stroke="#5eead4" strokeOpacity="0.18" strokeWidth="1.5" strokeLinecap="round" />
-        <rect x="30" y="56" width="16" height="12" rx="4" fill="#042f2e" stroke="#14b8a6" strokeWidth="1" />
-      </g>
-
-      {/* Q 版蒙古包 ×3 */}
-      <g filter="url(#footerToy-softDrop)">
-        <g transform="translate(96, 32) scale(0.56)">
-          <ellipse cx="36" cy="56" rx="34" ry="5" fill="#134e4a" fillOpacity="0.12" />
+      {/* 风机 */}
+      <g stroke="currentColor" strokeLinecap="round" fill="currentColor">
+        <g transform="translate(4, 8)" opacity="0.58">
+          <line x1="16" y1="74" x2="16" y2="28" strokeWidth="2" />
+          <circle cx="16" cy="26" r="2.6" />
           <path
-            d="M14 52V38h44v14H14z"
-            fill="url(#footerToy-yurtWall)"
-            stroke="#065f46"
-            strokeWidth="1.2"
+            d="M16 26V11M16 26l11 9M16 26L5 35"
+            strokeWidth="1.35"
+            fill="none"
           />
-          <path d="M14 38 Q36 10 58 38" fill="url(#footerToy-yurtDome)" stroke="#047857" strokeWidth="1.35" />
-          <ellipse cx="36" cy="20" rx="5" ry="3.5" fill="#fefce8" stroke="#ca8a04" strokeWidth="0.9" />
-          <path d="M26 52V42q10-5 20 0v10H26z" fill="#064e3b" stroke="#022c22" strokeWidth="1" />
-          <path d="M18 44h36" stroke="#ecfdf5" strokeOpacity="0.35" strokeWidth="1.2" strokeLinecap="round" />
         </g>
-        <g transform="translate(228, 18) scale(0.74)">
-          <ellipse cx="36" cy="56" rx="34" ry="5" fill="#134e4a" fillOpacity="0.12" />
-          <path
-            d="M14 52V38h44v14H14z"
-            fill="url(#footerToy-yurtWall)"
-            stroke="#065f46"
-            strokeWidth="1.2"
-          />
-          <path d="M14 38 Q36 10 58 38" fill="url(#footerToy-yurtDome)" stroke="#047857" strokeWidth="1.35" />
-          <ellipse cx="36" cy="20" rx="5" ry="3.5" fill="#fefce8" stroke="#ca8a04" strokeWidth="0.9" />
-          <path d="M26 52V42q10-5 20 0v10H26z" fill="#064e3b" stroke="#022c22" strokeWidth="1" />
-          <path d="M18 44h36" stroke="#ecfdf5" strokeOpacity="0.35" strokeWidth="1.2" strokeLinecap="round" />
-        </g>
-        <g transform="translate(308, 30) scale(0.52)">
-          <ellipse cx="36" cy="56" rx="34" ry="5" fill="#134e4a" fillOpacity="0.12" />
-          <path
-            d="M14 52V38h44v14H14z"
-            fill="url(#footerToy-yurtWall)"
-            stroke="#065f46"
-            strokeWidth="1.2"
-          />
-          <path d="M14 38 Q36 10 58 38" fill="url(#footerToy-yurtDome)" stroke="#047857" strokeWidth="1.35" />
-          <ellipse cx="36" cy="20" rx="5" ry="3.5" fill="#fefce8" stroke="#ca8a04" strokeWidth="0.9" />
-          <path d="M26 52V42q10-5 20 0v10H26z" fill="#064e3b" stroke="#022c22" strokeWidth="1" />
-          <path d="M18 44h36" stroke="#ecfdf5" strokeOpacity="0.35" strokeWidth="1.2" strokeLinecap="round" />
+        <g transform="translate(386, 10)" opacity="0.52">
+          <line x1="14" y1="72" x2="14" y2="30" strokeWidth="1.85" />
+          <circle cx="14" cy="28" r="2.4" />
+          <path d="M14 28V13M14 28l10 8M14 28L4 36" strokeWidth="1.25" fill="none" />
         </g>
       </g>
 
-      {/* Q 版风机（右） */}
-      <g transform="translate(378,8)" filter="url(#footerToy-softDrop)">
-        <ellipse cx="16" cy="76" rx="13" ry="3.2" fill="#134e4a" fillOpacity="0.12" />
-        <rect x="10" y="32" width="12" height="44" rx="5" fill="url(#footerToy-metal)" stroke="#0f766e" strokeWidth="1.2" />
-        <rect x="7" y="26" width="18" height="10" rx="4" fill="#115e59" stroke="#0d9488" strokeWidth="1" />
-        <circle cx="16" cy="30" r="4.8" fill="#ccfbf1" stroke="#0f766e" strokeWidth="1.1" />
+      {/* 光伏：倾斜面 + 栅格 */}
+      <g transform="translate(36, 46)" stroke="currentColor" fill="currentColor">
         <path
-          d="M16 30v-12M16 30l11 9M16 30L5 38"
-          stroke="#f0fdfa"
-          strokeWidth="3"
-          strokeLinecap="round"
+          d="M0 30L26 16h42L42 30v12L0 42z"
+          fillOpacity="0.18"
+          strokeWidth="1"
         />
-        <path
-          d="M16 30v-12M16 30l11 9M16 30L5 38"
-          stroke="#0f766e"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-        />
+        <line x1="8" y1="34" x2="30" y2="22" strokeWidth="0.75" opacity="0.45" />
+        <line x1="20" y1="38" x2="44" y2="24" strokeWidth="0.75" opacity="0.45" />
+        <line x1="4" y1="38" x2="4" y2="42" strokeWidth="0.75" opacity="0.38" />
+        <line x1="22" y1="28" x2="22" y2="40" strokeWidth="0.75" opacity="0.38" />
+        <line x1="40" y1="22" x2="40" y2="36" strokeWidth="0.75" opacity="0.38" />
+      </g>
+
+      {/* 数据中心：直角体量 + 檐口 + 横线 + 门 */}
+      <g transform="translate(152, 32)" stroke="currentColor" fill="currentColor">
+        <rect x="0" y="14" width="70" height="38" rx="1" fillOpacity="0.44" strokeWidth="1" />
+        <rect x="0" y="8" width="70" height="8" rx="0.5" fillOpacity="0.38" strokeWidth="0.9" />
+        <rect x="26" y="2" width="18" height="8" rx="0.5" fillOpacity="0.34" strokeWidth="0.85" />
+        <line x1="6" y1="26" x2="64" y2="26" strokeWidth="0.9" opacity="0.35" />
+        <line x1="6" y1="34" x2="64" y2="34" strokeWidth="0.9" opacity="0.35" />
+        <line x1="6" y1="42" x2="64" y2="42" strokeWidth="0.9" opacity="0.35" />
+        <rect x="28" y="44" width="14" height="8" rx="0.5" fillOpacity="0.55" strokeWidth="0.9" />
+      </g>
+
+      {/* 蒙古包：几何剪影 */}
+      <g fill="currentColor">
+        <g transform="translate(98, 30) scale(0.54)" opacity="0.62">
+          <path d="M14 52V36h44v16H14z" opacity="0.5" />
+          <path d="M14 36Q36 8 58 36z" opacity="0.68" />
+          <circle cx="36" cy="18" r="3" opacity="0.45" />
+          <path d="M26 52V40q10-4 20 0v12H26z" opacity="0.82" />
+        </g>
+        <g transform="translate(228, 20) scale(0.72)" opacity="0.6">
+          <path d="M14 52V36h44v16H14z" opacity="0.48" />
+          <path d="M14 36Q36 8 58 36z" opacity="0.66" />
+          <circle cx="36" cy="18" r="3.1" opacity="0.42" />
+          <path d="M26 52V40q10-4 20 0v12H26z" opacity="0.86" />
+        </g>
+        <g transform="translate(308, 32) scale(0.5)" opacity="0.58">
+          <path d="M14 52V36h44v16H14z" opacity="0.46" />
+          <path d="M14 36Q36 8 58 36z" opacity="0.64" />
+          <circle cx="36" cy="18" r="3" opacity="0.4" />
+          <path d="M26 52V40q10-4 20 0v12H26z" opacity="0.8" />
+        </g>
       </g>
     </svg>
   );
@@ -258,8 +125,8 @@ export default function Footer() {
     <footer className="site-footer-prairie border-t-0 py-10">
       <div className="site-footer-prairie-atmosphere" aria-hidden />
       <div className="relative z-[1] container mx-auto flex flex-col items-center gap-4 px-4 text-center sm:px-6 lg:px-8">
-        <PrairieHorizonDecor className="h-[5.25rem] w-full max-w-2xl sm:h-[5.75rem]" />
-        <PrairieGrassDecor className="h-6 w-[8rem] text-emerald-800/65 dark:text-emerald-200/55" />
+        <PrairieHorizonDecor className="h-[4.5rem] w-full max-w-2xl sm:h-[5rem]" />
+        <PrairieGrassDecor className="h-5 w-[7.5rem] text-emerald-800/55 dark:text-emerald-200/45" />
         <p className="text-sm font-medium tracking-wide text-emerald-950/90 dark:text-emerald-50/95">
           &copy; {new Date().getFullYear()} {SCHOLAR_NAME}. All rights reserved.
         </p>
