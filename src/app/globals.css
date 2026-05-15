@@ -197,6 +197,43 @@ body {
   }
 }
 
+/* 首页区块标题：整句渐变 + 自左向右揭开并去模糊（ScrollBlurRevealTitle） */
+@keyframes section-title-scroll-reveal {
+  0% {
+    clip-path: inset(0 100% 0 0);
+    filter: blur(12px);
+    opacity: 0.12;
+  }
+  40% {
+    opacity: 0.9;
+  }
+  100% {
+    clip-path: inset(0 0% 0 0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+.section-title-scroll-reveal-idle {
+  clip-path: inset(0 100% 0 0);
+  filter: blur(12px);
+  opacity: 0;
+}
+
+.section-title-scroll-reveal-play {
+  animation: section-title-scroll-reveal 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section-title-scroll-reveal-idle,
+  .section-title-scroll-reveal-play {
+    animation: none;
+    clip-path: none;
+    filter: none;
+    opacity: 1;
+  }
+}
+
 @keyframes section-reveal {
   from {
     opacity: 0;
