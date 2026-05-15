@@ -48,14 +48,14 @@ export default function Header() {
 
   return (
     <header className="site-header-tech sticky top-0 z-50 w-full">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div className="container mx-auto flex h-20 min-h-[5rem] items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2 text-xl sm:text-2xl font-bold hover:opacity-80 transition-opacity" onClick={() => setIsMobileMenuOpen(false)}>
-          <div className="h-16 w-16 flex items-center justify-center">
+          <div className="flex h-[4.5rem] w-[4.5rem] shrink-0 items-center justify-center">
             <Image
               src={logoOne}
               alt="Lab logo"
-              width={64}
-              height={64}
+              width={72}
+              height={72}
               className="rounded-full w-full h-full object-contain"
               priority
             />
@@ -103,12 +103,12 @@ export default function Header() {
               <div className="flex flex-col h-full">
                 <div className="p-6 flex justify-between items-center border-b border-primary/20">
                     <Link href="/" className="flex items-center gap-2 text-lg font-bold" onClick={() => setIsMobileMenuOpen(false)}>
-                      <div className="h-16 w-16 flex items-center justify-center">
+                      <div className="flex h-[4.5rem] w-[4.5rem] shrink-0 items-center justify-center">
                         <Image
                           src={logoOne}
                           alt="Lab logo"
-                          width={64}
-                          height={64}
+                          width={72}
+                          height={72}
                           className="rounded-full w-full h-full object-contain"
                           priority
                         />

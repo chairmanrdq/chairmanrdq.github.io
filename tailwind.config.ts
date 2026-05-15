@@ -103,10 +103,6 @@ export default {
   			'fade-in': {
   				from: { opacity: '0' },
   				to: { opacity: '1' }
-  			},
-  			'hero-quote-line': {
-  				from: { opacity: '0', transform: 'translateY(10px)', filter: 'blur(6px)' },
-  				to: { opacity: '1', transform: 'translateY(0)', filter: 'blur(0)' }
   			}
   		},
   		animation: {
@@ -116,8 +112,7 @@ export default {
   			'title-glow-drift': 'title-glow-drift 5s ease-in-out infinite',
   			'fade-up': 'fade-up 0.58s cubic-bezier(0.22, 1, 0.36, 1) both',
   			'subtle-float': 'subtle-float 5.5s ease-in-out infinite',
-  			'fade-in': 'fade-in 0.45s ease-out both',
-  			'hero-quote-line': 'hero-quote-line 0.88s cubic-bezier(0.22, 1, 0.36, 1) both'
+  			'fade-in': 'fade-in 0.45s ease-out both'
   		}
   	}
   },

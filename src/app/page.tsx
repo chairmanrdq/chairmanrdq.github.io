@@ -1,10 +1,10 @@
 import Image from 'next/image';
-import { Ma_Shan_Zheng } from 'next/font/google';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { SectionTitle } from "@/components/ui/section-title";
 import { Mail, Phone, Link as LinkIcon, MapPin, Award, Rss, BookOpen, Star, TrendingUp, Users, Globe, Zap, ArrowRight, ChevronRight, Leaf, Cpu, Database, Battery, Cloud, Sparkles, Crown, Diamond } from 'lucide-react';
 import ImageCarousel from '@/components/home/image-carousel';
+import BrushCalligraphyQuote from '@/components/home/brush-calligraphy-quote';
 import ScrollBlurRevealTitle from '@/components/home/scroll-blur-reveal-title';
 
 // Enhanced Mock Data with luxury focus
@@ -145,12 +145,6 @@ const carouselImages = [
   { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/202503.jpg", alt: "Advanced Computing Infrastructure", dataAiHint: "high-performance computing center" },
 ];
 
-const homeCalligraphyQuoteFont = Ma_Shan_Zheng({
-  weight: '400',
-  subsets: ['latin'],
-  display: 'swap',
-});
-
 export default function Home() {
   return (
     <div className="relative">
@@ -173,22 +167,7 @@ export default function Home() {
                 </div>
               </div>
               <figure className="mt-5 w-full max-w-[12rem] text-center lg:max-w-[16rem]">
-                <blockquote
-                  className={`${homeCalligraphyQuoteFont.className} text-[clamp(0.95rem,2.4vw,1.35rem)] leading-[1.75] tracking-[0.08em] text-[#0A1526] dark:text-foreground/90`}
-                >
-                  <span className="motion-safe:animate-hero-quote-line motion-reduce:animate-none motion-reduce:opacity-100 block">
-                    人生万事须自为，
-                  </span>
-                  <span
-                    className="motion-safe:animate-hero-quote-line motion-reduce:animate-none motion-reduce:opacity-100 block [animation-delay:480ms]"
-                  >
-                    跬步江山即寥廓。
-                  </span>
-                </blockquote>
-                <div
-                  className="mx-auto mt-4 h-px w-full max-w-[10rem] bg-gradient-to-r from-transparent via-primary/40 to-transparent motion-safe:animate-fade-in motion-safe:[animation-delay:1.05s] motion-reduce:animate-none motion-reduce:opacity-100"
-                  aria-hidden
-                />
+                <BrushCalligraphyQuote />
               </figure>
             </div>
 
