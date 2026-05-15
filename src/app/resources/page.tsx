@@ -1,8 +1,24 @@
-
+import type { ReactNode } from 'react';
 import { SectionTitle } from "@/components/ui/section-title";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Download, ExternalLink, Users, BookOpenCheck, Github, Database, Presentation, Globe } from 'lucide-react';
+import {
+  Download,
+  ExternalLink,
+  BookOpenCheck,
+  Presentation,
+  Library,
+  PenTool,
+  FileText,
+  Code,
+  Calculator,
+  Terminal,
+  Search,
+  Network,
+  GitBranch,
+  MonitorPlay,
+  Projector,
+} from 'lucide-react';
 import type { Metadata } from 'next';
 import { cn } from '@/lib/utils';
 
@@ -21,16 +37,25 @@ interface GenericResourceItem {
   size?: string;
   format?: string;
   event?: string;
-  icon?: React.ReactNode;
+  icon?: ReactNode;
   buttonText?: string;
+}
+
+/** 外链型条目（Software / Slides / Useful Links 共用卡片布局） */
+interface LinkCatalogItem {
+  id: string;
+  name: string;
+  url: string;
+  category: string;
+  icon: ReactNode;
 }
 
 // Mock Data - Replace with actual data
 const resourcesData: {
-  software: GenericResourceItem[];
+  software: LinkCatalogItem[];
   datasets: GenericResourceItem[];
-  slides: GenericResourceItem[];
-  friendlyLinks: Array<{ id: string; name: string; url: string; category: string; icon: React.ReactNode; }>;
+  slides: LinkCatalogItem[];
+  friendlyLinks: LinkCatalogItem[];
 } = {
   software: [
     /*{ id: "s1", name: "NLP Toolkit v2.1", description: "A Python library for common NLP tasks, optimized for research and education. Includes modules for text preprocessing, feature extraction, and model evaluation.", link: "#github-nlp-toolkit", lastUpdated: "2024-05-01", icon: <Github className="mr-2 h-4 w-4"/>, buttonText: "View on GitHub" },
@@ -339,6 +364,24 @@ const ResourceCard = ({item, buttonClassName}: {item: GenericResourceItem, butto
   </Card>
 );
 
+function CatalogLinkCard({ item }: { item: LinkCatalogItem }) {
+  return (
+    <Card className="shadow-md hover:shadow-lg transition-shadow duration-300 border-primary/10">
+      <CardContent className="pt-6">
+        <a href={item.url} target="_blank" rel="noopener noreferrer" className="group block">
+          <div className="flex items-center mb-2">
+            {item.icon}
+            <h3 className="text-lg font-semibold text-primary group-hover:underline">{item.name}</h3>
+          </div>
+          <p className="text-xs text-muted-foreground mb-1">{item.category}</p>
+          <p className="text-sm text-foreground/70 group-hover:text-accent transition-colors break-all">
+            {item.url} <ExternalLink className="inline h-3 w-3 ml-0.5 align-baseline" />
+          </p>
+        </a>
+      </CardContent>
+    </Card>
+  );
+}
 
 export default function ResourcesPage() {
   return (
@@ -346,12 +389,8 @@ export default function ResourcesPage() {
       <section id="software" aria-labelledby="software-title">
         <SectionTitle id="software-title">Software & Tools</SectionTitle>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {resourcesData.software.map(item => (
-            <ResourceCard 
-              key={item.id} 
-              item={item} 
-              // buttonClassName prop removed to use the new gray default style
-            />
+          {resourcesData.software.map((item) => (
+            <CatalogLinkCard key={item.id} item={item} />
           ))}
         </div>
       </section>
@@ -366,28 +405,17 @@ export default function ResourcesPage() {
       <section id="slides" aria-labelledby="slides-title">
         <SectionTitle id="slides-title">Presentations & Slides</SectionTitle>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {resourcesData.slides.map(item => <ResourceCard key={item.id} item={item} />)}
+          {resourcesData.slides.map((item) => (
+            <CatalogLinkCard key={item.id} item={item} />
+          ))}
         </div>
       </section>
 
       <section id="friendly-links" aria-labelledby="friendly-links-title">
         <SectionTitle id="friendly-links-title">Useful Links</SectionTitle>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {resourcesData.friendlyLinks.map(link => (
-            <Card key={link.id} className="shadow-md hover:shadow-lg transition-shadow duration-300 border-primary/10">
-              <CardContent className="pt-6">
-                <a href={link.url} target="_blank" rel="noopener noreferrer" className="group block">
-                  <div className="flex items-center mb-2">
-                    {link.icon}
-                    <h3 className="text-lg font-semibold text-primary group-hover:underline">{link.name}</h3>
-                  </div>
-                  <p className="text-xs text-muted-foreground mb-1">{link.category}</p>
-                  <p className="text-sm text-foreground/70 group-hover:text-accent transition-colors break-all">
-                    {link.url} <ExternalLink className="inline h-3 w-3 ml-0.5 align-baseline" />
-                  </p>
-                </a>
-              </CardContent>
-            </Card>
+          {resourcesData.friendlyLinks.map((item) => (
+            <CatalogLinkCard key={item.id} item={item} />
           ))}
         </div>
       </section>
