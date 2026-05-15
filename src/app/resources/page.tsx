@@ -133,13 +133,68 @@ const resourcesData: {
     url: "https://about.gitlab.com/", 
     category: "Version Control", 
     icon: <GitBranch className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> 
-  }
+  },
   ],
   datasets: [
     /*{ id: "d1", name: "Anonymized Clinical Notes Corpus (ACNC-2023)", description: "A large, curated dataset of anonymized clinical notes for NLP research, particularly for tasks like named entity recognition and relation extraction in the medical domain.", link: "#dataverse-acnc", size: "10GB", format: "JSON, TXT", icon: <Database className="mr-2 h-4 w-4"/>, buttonText: "Access on Dataverse" },
     { id: "d2", name: "Cross-Lingual Sentiment Lexicon (CLSL v1.2)", description: "A lexicon of sentiment scores for over 100,000 words and phrases across 10 major languages, useful for cross-lingual sentiment analysis.", link: "#zenodo-clsl", size: "50MB", format: "CSV", icon: <Database className="mr-2 h-4 w-4"/>, buttonText: "Download from Zenodo" },*/
   ],
   slides: [
+	{ 
+    id: "cfn_slide_1", 
+    name: "IETF CAN WG Meeting Materials (Computing-Aware Networking)", 
+    url: "https://datatracker.ietf.org/wg/can/meetings/", 
+    category: "Standards Organizations", 
+    icon: <Presentation className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> 
+  },
+  { 
+    id: "cfn_slide_2", 
+    name: "IRTF COINRG Meeting Materials (Computing in the Network)", 
+    url: "https://datatracker.ietf.org/rg/coinrg/meetings/", 
+    category: "Standards Organizations", 
+    icon: <Presentation className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> 
+  },
+
+  // --- 学术研讨会 (Academic Workshops & Conferences) ---
+  // 顶会中关于算网融合、网内计算的专属 Workshop 会公开演讲的 Slides
+  { 
+    id: "cfn_slide_3", 
+    name: "ACM SIGCOMM Workshops (e.g., NetCompute) Slides", 
+    url: "https://www.sigcomm.org/events/sigcomm-conference", 
+    category: "Academic Conferences", 
+    icon: <MonitorPlay className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> 
+  },
+  { 
+    id: "cfn_slide_4", 
+    name: "IEEE INFOCOM - Edge Computing & In-Network Computing Presentations", 
+    url: "https://infocom.ieee.org/", 
+    category: "Academic Conferences", 
+    icon: <MonitorPlay className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> 
+  },
+
+  // --- 工业界峰会与白皮书发布会 (Industry Summits & Keynotes) ---
+  // 算力网络由运营商和设备商主导，这些峰会是获取架构设计图和落地 PPT 的最佳途径
+  { 
+    id: "cfn_slide_5", 
+    name: "ODCC (Open Data Center Committee) - 算力网络与边缘计算分论坛演讲资料", 
+    url: "http://www.odcc.org.cn/meeting/list", 
+    category: "Industry Summits", 
+    icon: <Projector className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> 
+  },
+  { 
+    id: "cfn_slide_6", 
+    name: "OpenInfra Summit - Edge Computing & Network Architecture Presentations", 
+    url: "https://openinfra.dev/summit/", 
+    category: "Industry Summits", 
+    icon: <Projector className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> 
+  },
+  { 
+    id: "cfn_slide_7", 
+    name: "MPLS SD & AI Net World Congress - CFN & SRv6 Sessions", 
+    url: "https://www.uppersideconferences.com/mpls-sdn-nfv/", 
+    category: "Industry Summits", 
+    icon: <Presentation className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> 
+  },
     /*{ id: "sl1", name: "Keynote: The Future of Interpretable NLP", description: "Slides from my keynote presentation at ACL 2023, discussing challenges and opportunities in making NLP models more transparent and understandable.", link: "#slideshare-acl2023", event: "ACL 2023", icon: <Presentation className="mr-2 h-4 w-4"/>, buttonText: "View on SlideShare" },
     { id: "sl2", name: "Tutorial: Practical Ethical AI for Developers", description: "Tutorial slides covering practical steps and tools for implementing ethical AI principles in software development lifecycles.", link: "#googledrive-ethaidev", event: "AI Developer Summit 2024", icon: <Presentation className="mr-2 h-4 w-4"/>, buttonText: "Access on Google Drive" },*/
   ],
@@ -251,7 +306,7 @@ const resourcesData: {
     url: "https://www.sigsac.org/ccs.html", 
     category: "Information Security", 
     icon: <BookOpenCheck className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> 
-  }
+  },
     /*{ id: "fl1", name: "AI Research Lab @ University of Innovation", url: "#", category: "Labs & Institutions", icon: <Users className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> },
     { id: "fl2", name: "ACL Anthology - NLP Publications", url: "https://aclanthology.org/", category: "Conferences & Journals", icon: <BookOpenCheck className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> },
     { id: "fl3", name: "Dr. Jane Doe's Research Group", url: "#", category: "Collaborators", icon: <Users className="h-5 w-5 mr-2 text-accent flex-shrink-0" /> },
