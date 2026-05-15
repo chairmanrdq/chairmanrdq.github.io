@@ -533,9 +533,7 @@ export default function Home() {
         style={{ animationDelay: "400ms" }}
       >
         <div className="text-center mb-8">
-          <h2 id="research-snapshot-title" className="text-3xl lg:text-4xl font-bold text-gradient-luxury mb-4">
-            Research Snapshot
-          </h2>
+          <ScrollBlurRevealTitle id="research-snapshot-title" text="Research Snapshot" />
           <div className="section-title-rule" aria-hidden={true} />
         </div>
 
@@ -594,9 +592,7 @@ export default function Home() {
         style={{ animationDelay: "480ms" }}
       >
         <div className="text-center mb-8">
-          <h2 id="photo-highlights-title" className="text-3xl lg:text-4xl font-bold text-gradient-luxury mb-4">
-            Visual Highlights
-          </h2>
+          <ScrollBlurRevealTitle id="photo-highlights-title" text="Visual Highlights" />
           <div className="section-title-rule" aria-hidden={true} />
         </div>
 
