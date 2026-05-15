@@ -45,7 +45,7 @@ export default function Header() {
       <div className="container mx-auto flex h-20 min-h-[5rem] min-w-0 items-center justify-between gap-2 px-4 sm:gap-3 sm:px-6 lg:px-8">
         <Link
           href="/"
-          className="flex shrink-0 items-center gap-2 hover:opacity-80 transition-opacity"
+          className="flex max-w-[calc(100%-5.75rem)] shrink-0 items-center gap-2 hover:opacity-80 transition-opacity md:max-w-[12.75rem] lg:max-w-[13.5rem] xl:max-w-[14.25rem]"
           onClick={() => setIsMobileMenuOpen(false)}
         >
           <div className="flex h-[4.5rem] w-[4.5rem] shrink-0 items-center justify-center">
@@ -58,7 +58,7 @@ export default function Header() {
               priority
             />
           </div>
-          <span className="text-gradient-luxury max-w-[9rem] truncate text-xs font-bold leading-none sm:max-w-none sm:text-sm sm:whitespace-nowrap md:text-base lg:text-lg">
+          <span className="text-gradient-luxury max-w-[6.25rem] whitespace-normal break-words text-left text-xs font-bold leading-tight sm:max-w-[7rem] sm:text-sm md:max-w-[7.5rem] md:text-base lg:text-lg">
             {siteConfig.piShortName}
           </span>
         </Link>
