@@ -10,7 +10,7 @@ import ScrollBlurRevealTitle from '@/components/home/scroll-blur-reveal-title';
 
 // Enhanced Mock Data with luxury focus
 const scholarData = {
-  name: "Dr. RuiDong Qi（祁瑞东）",
+  name: "Dr. RuiDong Qi",
   position: "Principal Investigator in Computing Power Systems | Green AI and Service Intelligence",
   affiliation: "College of Computer Science, Inner Mongolia University",
   avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/rdq2.jpg",
@@ -178,7 +178,8 @@ export default function Home() {
                 <blockquote
                   className={`${homeCalligraphyQuoteFont.className} text-[clamp(0.95rem,2.4vw,1.35rem)] leading-[1.75] tracking-[0.08em] text-[#0A1526] dark:text-foreground/90`}
                 >
-                  人生万事须自为，跬步江山即寥廓。
+                  人生万事须自为，
+				  跬步江山即寥廓。
                 </blockquote>
                 <div
                   className="mx-auto mt-4 h-px w-full max-w-[10rem] bg-gradient-to-r from-transparent via-primary/40 to-transparent"
