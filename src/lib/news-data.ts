@@ -40,7 +40,7 @@ export const newsArticles: NewsArticle[] = [
     ],
     category: 'award',
     badge: 'Award',
-    relatedLink: { href: '/team#current-team', label: 'Meet participating students' },
+    relatedLink: { href: '/team#principal-investigator', label: 'Meet the PI & team' },
   },
 ];
 

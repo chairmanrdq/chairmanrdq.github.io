@@ -1,5 +1,6 @@
 import Image from 'next/image';
-import { siteConfig } from '@/lib/site-config';
+import { siteConfig, getPiAcademicLinks } from '@/lib/site-config';
+import { getHomeLabStats } from '@/lib/lab-stats';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { SectionTitle } from "@/components/ui/section-title";
@@ -19,34 +20,38 @@ const scholarData = {
   name: "Dr. RuiDong Qi (祁瑞东)",
   position: siteConfig.piPosition,
   affiliation: siteConfig.institution,
-  avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/rdq2.jpg",
-  dataAiHint: "professional portrait",
+  avatarUrl: siteConfig.piAvatarUrl,
   contact: {
     email: siteConfig.contactEmail,
-    office: "Room 303, BeiZheng Building, School of Computer Science (School of Software), Inner Mongolia University",
+    office: siteConfig.piOffice,
   },
-  academicLinks: [
-    { name: "Google Scholar", url: siteConfig.academic.googleScholar, icon: <BookOpen className="h-4 w-4" />, stats: "" },
-    {
-      name: "ORCID",
-      url: siteConfig.orcidId ? `https://orcid.org/${siteConfig.orcidId}` : siteConfig.academic.orcidSearch,
-      icon: (
+  academicLinks: getPiAcademicLinks().map((link) => ({
+    ...link,
+    icon:
+      link.name === 'ORCID' ? (
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256" fill="currentColor" aria-hidden>
-          <path d="M256,128c0,70.7-57.3,128-128,128S0,198.7,0,128C0,57.3,57.3,0,128,0S256,57.3,256,128z M126.1,208.9h-20V128.4c0-12.8-2.4-23.1-7.1-30.8c-4.7-7.7-11.7-11.5-21.1-11.5c-8.1,0-14.7,3.1-19.9,9.2c-5.2,6.1-7.8,15.1-7.8,26.9v86.8H29.4V72.4h20.8v10c3.8-4.5,8.2-7.9,13.4-10.2c5.1-2.3,10.6-3.5,16.5-3.5c15.9,0,28.1,5.9,36.5,17.7c8.4,11.8,12.6,28.5,12.6,50.1L126.1,208.9L126.1,208.9z M198.8,208.9h-20.5V112.4c0-11-1.4-19.1-4.1-24.4c-2.8-5.2-7.3-7.8-13.5-7.8c-6.9,0-12.3,2.9-16.1,8.6c-3.9,5.8-5.8,13.9-5.8,24.4v85.7h-20.5V72.4h20.5v10.5c3.4-4.2,7.4-7.4,11.9-9.7c4.5-2.3,9.5-3.4,14.9-3.4c11.2,0,20.1,3.6,26.7,10.9c6.6,7.3,9.9,17.7,9.9,31.2V208.9z" />
+          <path d="M256,128c0,70.7-57.3,128-128,128S0,198.7,0,128C0,57.3,57.3,0,128,0S256,57.3,256,128z M126.1,208.9h-20V128.4c0-12.8-2.4-23.1-7.1-30.8c-4.7-7.7-11.7-11.5-21.1-11.5c-8.1,0-14.7,3.1-19.9,9.2c-5.2,6.1-7.8,15.1-7.8,26.9v86.8H29.4V72.4h20.8v10c3.8-4.5,8.2-7.9,13.4-10.2c5.1-2.3,10.6-3.5,16.5-3.5c15.9,0,28.1,5.9,36.5,17.7c8.4,11.8,12.6,28.5,12.6,50.1L126.1,208.9z M198.8,208.9h-20.5V112.4c0-11-1.4-19.1-4.1-24.4c-2.8-5.2-7.3-7.8-13.5-7.8c-6.9,0-12.3,2.9-16.1,8.6c-3.9,5.8-5.8,13.9-5.8,24.4v85.7h-20.5V72.4h20.5v10.5c3.4-4.2,7.4-7.4,11.9-9.7c4.5-2.3,9.5-3.4,14.9-3.4c11.2,0,20.1,3.6,26.7,10.9c6.6,7.3,9.9,17.7,9.9,31.2V208.9z" />
         </svg>
+      ) : link.name === 'Google Scholar' ? (
+        <BookOpen className="h-4 w-4" />
+      ) : link.name === 'GitHub' ? (
+        <Github className="h-4 w-4" />
+      ) : (
+        <Linkedin className="h-4 w-4" />
       ),
-    },
-    { name: "GitHub", url: siteConfig.academic.githubProfile, icon: <Github className="h-4 w-4" /> },
-    { name: "LinkedIn", url: siteConfig.academic.linkedinSearch, icon: <Linkedin className="h-4 w-4" /> },
-  ],
+    stats: '',
+  })),
   researchFocusSummary: siteConfig.researchSummary,
   researchKeywords: [...siteConfig.researchKeywords],
-  stats: [
-    { label: "Publications", value: "Curated list", icon: <BookOpen className="h-5 w-5" /> },
-    { label: "Research areas", value: "4 focus themes", icon: <Star className="h-5 w-5" /> },
-    { label: "Teaching & advising", value: "Courses & mentorship", icon: <Users className="h-5 w-5" /> },
-    { label: "Projects", value: "Grants & collaborations", icon: <Zap className="h-5 w-5" /> },
-  ],
+  stats: getHomeLabStats().map((stat, index) => {
+    const icons = [
+      <BookOpen className="h-5 w-5" key="pub" />,
+      <Star className="h-5 w-5" key="theme" />,
+      <Users className="h-5 w-5" key="team" />,
+      <Zap className="h-5 w-5" key="proj" />,
+    ];
+    return { ...stat, icon: icons[index] ?? icons[0] };
+  }),
 };
 
 function highlightIcon(item: AcademicHighlight) {
@@ -93,7 +98,6 @@ export default function Home() {
                     width={200}
                     height={300}
                     className="rounded-none object-cover h-72 w-48 border-2 border-border lg:h-96 lg:w-64"
-                    data-ai-hint={scholarData.dataAiHint}
                     priority
                   />
                 </div>

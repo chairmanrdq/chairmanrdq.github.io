@@ -15,7 +15,7 @@ import { isValidHttpUrl } from '@/lib/utils';
 
 export const metadata: Metadata = {
   title: 'Publications',
-  description: `Selected and full publication record of ${siteConfig.piFullName}, including conference papers and journal-oriented research outputs.`,
+  description: `Selected publications by ${siteConfig.piFullName}, including conference papers on clustering, federated QoS prediction, and density-peak modeling.`,
 };
 
 export default function PublicationsPage() {

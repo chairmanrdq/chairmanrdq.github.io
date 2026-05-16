@@ -6,5 +6,6 @@ export const footerNavLinks = [
   { href: '/projects', label: 'Projects' },
   { href: '/news', label: 'News' },
   { href: '/team', label: 'Team' },
+  { href: '/courses', label: 'Courses' },
   { href: '/contact', label: 'Contact' },
 ] as const;

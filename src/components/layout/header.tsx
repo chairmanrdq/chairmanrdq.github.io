@@ -26,6 +26,7 @@ import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/s
 import { ThemeToggle } from '@/components/theme-toggle';
 import React from 'react';
 import { siteConfig } from '@/lib/site-config';
+import { isNavActive } from '@/lib/nav-utils';
 
 const navItems: { href: string; label: string; icon: LucideIcon }[] = [
   { href: '/', label: 'Home', icon: Home },
@@ -56,7 +57,7 @@ export default function Header() {
           <div className="flex h-11 w-11 shrink-0 items-center justify-center md:h-12 md:w-12 lg:h-14 lg:w-14">
             <Image
               src={logoOne}
-              alt=""
+              alt={`${siteConfig.piShortName} lab logo`}
               width={56}
               height={56}
               className="h-full w-full rounded-full object-contain"
@@ -81,7 +82,7 @@ export default function Header() {
                 asChild
                 className={cn(
                   'nav-chip-tech shrink-0 whitespace-nowrap rounded-2xl px-2 text-xs font-medium transition-all duration-300 motion-safe:transition-transform motion-safe:hover:scale-[1.02] motion-safe:active:scale-[0.98] lg:px-3 lg:text-sm',
-                  pathname === item.href
+                  isNavActive(pathname, item.href)
                     ? 'bg-gradient-to-r from-primary/8 via-secondary/8 to-accent/8 text-primary font-semibold hover:from-primary/15 hover:via-secondary/15 hover:to-accent/15 luxury-border'
                     : 'text-foreground/70 hover:text-gradient-luxury hover:bg-gradient-to-r hover:from-primary/3 hover:via-secondary/3 hover:to-accent/3',
                 )}
@@ -123,7 +124,7 @@ export default function Header() {
                     <div className="flex h-14 w-14 shrink-0 items-center justify-center">
                       <Image
                         src={logoOne}
-                        alt=""
+                        alt={`${siteConfig.piShortName} lab logo`}
                         width={56}
                         height={56}
                         className="rounded-full w-full h-full object-contain"
@@ -147,7 +148,7 @@ export default function Header() {
                         href={item.href}
                         className={cn(
                           "nav-chip-tech inline-flex items-center gap-1.5 rounded-2xl px-3 py-3 text-base font-medium transition-all duration-300 motion-safe:transition-transform motion-safe:active:scale-[0.99]",
-                          pathname === item.href
+                          isNavActive(pathname, item.href)
                             ? "bg-gradient-to-r from-primary/8 via-secondary/8 to-accent/8 text-primary font-semibold luxury-border"
                             : "text-foreground/70 hover:text-gradient-luxury hover:bg-gradient-to-r hover:from-primary/3 hover:via-secondary/3 hover:to-accent/3"
                         )}

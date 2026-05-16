@@ -11,45 +11,7 @@ export const metadata: Metadata = {
   description: 'Funded research portfolio led by Dr. RuiDong Qi, including principal-investigator projects and industry-linked collaborations.',
 };
 
-// Mock Data - Replace with actual data
-const projectsData = [
-  {
-    id: "proj1",
-    title: "User-Perceived Computing Power Scheduling Based on the Inner Mongolia Computing Hub Node",
-    role: "Principal Investigator",
-    fundingAgency: "Industry/Enterprise Collaboration Projects - China Mobile Communications Group Inner Mongolia Co., Ltd",
-    period: "2024 - 2026",
-    amount: "CNY 500,000 (industry collaboration fund)",
-    description: "This research focuses on the Inner Mongolia computing hub node, aiming to design efficient and intelligent computing power scheduling methods driven by user perception and dynamic resource matching. Key topics include perception and modeling of heterogeneous resources, user experience–oriented scheduling mechanisms, cross-domain resource coordination and optimization, and green, low-carbon scheduling strategies.",
-    collaborators: ["China Mobile Communications Group Inner Mongolia Co., Ltd"],
-    status: "Ongoing",
-    keywords: ["Computing Power Scheduling", "User Perception", "Cross-domain Coordination", "Green and Low-carbon Computing"]
-  },
-  /*{
-    id: "proj2",
-    title: "A Comprehensive Ethical AI Framework for Language Technologies",
-    role: "Co-Principal Investigator",
-    fundingAgency: "Ethics in AI National Consortium (EANC)",
-    period: "2021 - 2023",
-    amount: "$250,000",
-    description: "Focused on creating and validating a comprehensive framework for evaluating and ensuring ethical considerations (fairness, accountability, transparency) in the development and deployment of AI-driven language technologies across various sectors.",
-    collaborators: ["University of Ethics - AI Center", "AI Now Global Institute"],
-    status: "Completed",
-    keywords: ["AI Ethics", "Responsible AI", "Framework", "Language Technologies", "EANC"]
-  },
-  {
-    id: "proj3",
-    title: "Semantic Search and Discovery for Large-Scale Digital Humanities Archives",
-    role: "Principal Investigator",
-    fundingAgency: "National Endowment for the Humanities (NEH) - Digital Advancement Grant",
-    period: "2020 - 2022",
-    amount: "$150,000",
-    description: "Developed an innovative semantic search engine to enhance accessibility and discovery within extensive digital humanities archives. Leveraged knowledge graphs, NLP, and user-centered design principles to support scholarly research.",
-    collaborators: ["The Grand National Library - Digital Collections", "Digital Archive Heritage Initiative"],
-    status: "Completed",
-    keywords: ["Semantic Search", "Digital Humanities", "Knowledge Graphs", "NLP", "NEH"]
-  },*/
-];
+import { projects as projectsData } from '@/lib/projects-data';
 
 export default function ProjectsPage() {
   return (
@@ -64,7 +26,7 @@ export default function ProjectsPage() {
               Read the news story
             </a>{' '}
             or visit the{' '}
-            <a href="/team" className="text-primary font-medium hover:underline">
+            <a href="/team#current-team" className="text-primary font-medium hover:underline">
               team page
             </a>
             .

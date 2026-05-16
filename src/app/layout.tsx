@@ -30,11 +30,13 @@ export const metadata: Metadata = {
     siteName: siteConfig.institutionLegalName,
     title: siteConfig.piShortName,
     description: siteConfig.labTagline,
+    images: [{ url: siteConfig.piAvatarUrl, alt: siteConfig.piFullName }],
   },
   twitter: {
     card: 'summary_large_image',
     title: siteConfig.piShortName,
     description: siteConfig.labTagline,
+    images: [siteConfig.piAvatarUrl],
   },
 };
 

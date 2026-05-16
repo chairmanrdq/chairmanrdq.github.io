@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, Phone, MapPin, Linkedin, Github, BookOpen, Briefcase } from 'lucide-react';
 import Image from "next/image";
 import type { Metadata } from 'next';
-import { siteConfig } from '@/lib/site-config';
+import { siteConfig, getPiAcademicLinks } from '@/lib/site-config';
 
 export const metadata: Metadata = {
   title: 'Contact',
@@ -28,11 +28,18 @@ const contactData = {
     "Tuesdays & Thursdays, 2:00 PM - 4:00 PM (during term, or by appointment via email)",
 };
 
-const socialMedia = [
-  { name: "Google Scholar", url: siteConfig.academic.googleScholar, icon: BookOpen },
-  { name: "LinkedIn", url: siteConfig.academic.linkedinSearch, icon: Linkedin },
-  { name: "GitHub", url: siteConfig.academic.githubProfile, icon: Github },
-].filter((s) => Boolean(s.url));
+const socialIconMap = {
+  'Google Scholar': BookOpen,
+  ORCID: BookOpen,
+  GitHub: Github,
+  LinkedIn: Linkedin,
+} as const;
+
+const socialMedia = getPiAcademicLinks().map((link) => ({
+  name: link.name,
+  url: link.url,
+  icon: socialIconMap[link.name as keyof typeof socialIconMap] ?? BookOpen,
+}));
 
 export default function ContactPage() {
   return (
