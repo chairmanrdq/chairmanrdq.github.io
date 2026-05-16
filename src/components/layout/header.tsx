@@ -27,10 +27,10 @@ import { ThemeToggle } from '@/components/theme-toggle';
 import React from 'react';
 import { siteConfig } from '@/lib/site-config';
 
-const navItems: { href: string; label: string; icon: LucideIcon; shortLabel?: string }[] = [
+const navItems: { href: string; label: string; icon: LucideIcon }[] = [
   { href: '/', label: 'Home', icon: Home },
   { href: '/research', label: 'Research', icon: FlaskConical },
-  { href: '/publications', label: 'Publications', icon: Newspaper, shortLabel: 'Pubs' },
+  { href: '/publications', label: 'Pubs', icon: Newspaper },
   { href: '/projects', label: 'Projects', icon: FolderGit2 },
   { href: '/news', label: 'News', icon: Rss },
   { href: '/team', label: 'Team', icon: Users },
@@ -93,14 +93,7 @@ export default function Header() {
                   className="inline-flex items-center gap-1"
                 >
                   <item.icon className="h-3.5 w-3.5 shrink-0 opacity-90" aria-hidden strokeWidth={2} />
-                  {item.shortLabel ? (
-                    <>
-                      <span className="md:inline xl:hidden">{item.shortLabel}</span>
-                      <span className="hidden xl:inline">{item.label}</span>
-                    </>
-                  ) : (
-                    <span>{item.label}</span>
-                  )}
+                  {item.label}
                 </Link>
               </Button>
             ))}
