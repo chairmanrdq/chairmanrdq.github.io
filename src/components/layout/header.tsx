@@ -30,12 +30,12 @@ import { siteConfig } from '@/lib/site-config';
 const navItems: { href: string; label: string; icon: LucideIcon; shortLabel?: string }[] = [
   { href: '/', label: 'Home', icon: Home },
   { href: '/research', label: 'Research', icon: FlaskConical },
-  { href: '/publications', label: 'Publications', icon: Newspaper, shortLabel: 'Pubs' },
+  { href: '/publications', label: 'Publications', icon: Newspaper, shortLabel: 'Pub' },
   { href: '/projects', label: 'Projects', icon: FolderGit2 },
   { href: '/news', label: 'News', icon: Rss },
   { href: '/team', label: 'Team', icon: Users },
   { href: '/courses', label: 'Courses', icon: GraduationCap },
-  { href: '/resources', label: 'Resources', icon: DownloadIcon, shortLabel: 'Res' },
+  { href: '/resources', label: 'Resources', icon: DownloadIcon },
   { href: '/contact', label: 'Contact', icon: MessageSquare },
 ];
 
@@ -86,10 +86,21 @@ export default function Header() {
                     : 'text-foreground/70 hover:text-gradient-luxury hover:bg-gradient-to-r hover:from-primary/3 hover:via-secondary/3 hover:to-accent/3',
                 )}
               >
-                <Link href={item.href} className="inline-flex items-center gap-1">
+                <Link
+                  href={item.href}
+                  title={item.label}
+                  aria-label={item.label}
+                  className="inline-flex items-center gap-1"
+                >
                   <item.icon className="h-3.5 w-3.5 shrink-0 opacity-90" aria-hidden strokeWidth={2} />
-                  <span className="xl:hidden">{item.shortLabel ?? item.label}</span>
-                  <span className="hidden xl:inline">{item.label}</span>
+                  {item.shortLabel ? (
+                    <>
+                      <span className="md:inline xl:hidden">{item.shortLabel}</span>
+                      <span className="hidden xl:inline">{item.label}</span>
+                    </>
+                  ) : (
+                    <span>{item.label}</span>
+                  )}
                 </Link>
               </Button>
             ))}
