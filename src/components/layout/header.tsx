@@ -30,7 +30,7 @@ import { siteConfig } from '@/lib/site-config';
 const navItems: { href: string; label: string; icon: LucideIcon; shortLabel?: string }[] = [
   { href: '/', label: 'Home', icon: Home },
   { href: '/research', label: 'Research', icon: FlaskConical },
-  { href: '/publications', label: 'Publications', icon: Newspaper, shortLabel: 'Pub' },
+  { href: '/publications', label: 'Publications', icon: Newspaper, shortLabel: 'Pubs' },
   { href: '/projects', label: 'Projects', icon: FolderGit2 },
   { href: '/news', label: 'News', icon: Rss },
   { href: '/team', label: 'Team', icon: Users },
