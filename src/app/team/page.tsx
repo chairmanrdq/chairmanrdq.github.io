@@ -201,93 +201,46 @@ const collegeMembers = [
 ];
 
 const alumni = [
- {
-    id: 1,
-    name: "CongRong Wu（吴从荣）",
-    role: "Former Master student (Graduated 2026)",
-	currentPosition: "Technology Position @ Bank of China Shandong Branch",
-    avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/wcr.jpg", // Increased size
-    dataAiHint: "student headshot",
-	researchFocus: "Task Scheduling for Computing Power Networks",
-    //researchInterests: ["Time Series Prediction", "Reinforcement Learning", "Task Scheduling","Computing Power Networks"],
-    //bio: "Current research is shifting from cloud computing towards the establishment of a new computing-power network paradigm, focusing on enhancing the intelligent scheduling capability of the Computing Network Brain to improve the utilization efficiency of global computing resources.",
-    //  }
- /*{
-    id: 24,
-    name: "Dr. Samuel Cho",
-    role: "Former Postdoc (2020-2022)",
-    currentPosition: "Research Scientist @ BigTech AI",
-    avatarUrl: "https://picsum.photos/seed/samuelcho/120/120", // Increased size
-    dataAiHint: "professional headshot",
-    researchFocus: "Deep Learning for NLP",
-  },
   {
-    id: 25,
-    name: "Eva Rodriguez, PhD",
-    role: "Former PhD Student (Graduated 2021)",
-    currentPosition: "Assistant Professor @ State University",
-    avatarUrl: "https://picsum.photos/seed/evarodriguez/120/120", // Increased size
-    dataAiHint: "academic headshot",
-    researchFocus: "Computational Semantics",
-  }*/
+    id: 1,
+    name: 'CongRong Wu（吴从荣）',
+    role: 'Former Master student (Graduated 2026)',
+    currentPosition: 'Technology Position @ Bank of China Shandong Branch',
+    avatarUrl: 'https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/wcr.jpg',
+    dataAiHint: 'student headshot',
+    researchFocus: 'Task Scheduling for Computing Power Networks',
+  },
 ];
 
 const alumni_collegeMembers = [
-	{ 
-	  id: 13,
-	  name: "Le Yang（杨乐）",   
-      //role: "College Student",
-	  role: "Former Undergraduate student (Graduated 2026)",
-	  currentPosition: "Study for a Doctorate @ The Elite Program of Inner Mongolia University（内蒙古大学）",
-      avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/yln.jpg", // Increased size
-      dataAiHint: "student headshot",
-	  researchFocus: "Clustering",
-      //researchInterests: ["Clustering","Multimodal Sentiment Analysis,", "Big Data Processing"],
-      //bio: "Computer Science undergraduate with strong academic record and research experience. First-author paper at CCF-C conference on clustering algorithms; led provincial project on multimodal depression prediction. Awarded multiple national and provincial competition awards and scholarships. Demonstrated leadership as Vice Secretary of the College Youth League Committee. Proficient in English technical reading.",
-      //email: "david.green@university.edu" // Replace
-	},
- 	{ 
-	  id: 14,
-	  name: "YueQi Wang（王玥祁）",   
-      //role: "College Student",
-	  role: "Former Undergraduate student (Graduated 2026)",
-	  currentPosition: "Study for a Master’s Degree @ Northeastern University （东北大学）",
-      avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/wyq.jpg", // Increased size
-      dataAiHint: "student headshot",
-	  researchFocus: "Clustering",
-      //researchInterests: ["Artificial Intelligence","Data Intelligence,", "Interpretable Machine Learning"],
-      //bio: "Focuses on AI and data intelligence applications, specializing in optimized clustering algorithms, deep learning for medical data processing, and intelligent analytics in education. Committed to enhancing interpretability and cross-domain applications of intelligent algorithms, aiming to drive theoretical innovation and practical impact in healthcare, education, and smart society.",
-      //	},
- 	{ 
-	  id: 14,
-	  name: "YiXuan Dai（戴轶轩）",   
-      //role: "College Student",
-	  role: "Former Undergraduate student (Graduated 2026)",
-	  currentPosition: "Study for a Master’s Degree @ University of Science and Technology of China（中国科学技术大学）",
-      avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/dyx.jpg", // Increased size
-      dataAiHint: "student headshot",
-	  researchFocus: "Clustering",
-      //researchInterests: ["Artificial Intelligence","Data Intelligence,", "Interpretable Machine Learning"],
-      //bio: "Focuses on AI and data intelligence applications, specializing in optimized clustering algorithms, deep learning for medical data processing, and intelligent analytics in education. Committed to enhancing interpretability and cross-domain applications of intelligent algorithms, aiming to drive theoretical innovation and practical impact in healthcare, education, and smart society.",
-      //	}	
- /*{
-    id: 24,
-    name: "Dr. Samuel Cho",
-    role: "Former Postdoc (2020-2022)",
-    currentPosition: "Research Scientist @ BigTech AI",
-    avatarUrl: "https://picsum.photos/seed/samuelcho/120/120", // Increased size
-    dataAiHint: "professional headshot",
-    researchFocus: "Deep Learning for NLP",
+  {
+    id: 13,
+    name: 'Le Yang（杨乐）',
+    role: 'Former Undergraduate student (Graduated 2026)',
+    currentPosition: 'Study for a Doctorate @ The Elite Program of Inner Mongolia University（内蒙古大学）',
+    avatarUrl: 'https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/yln.jpg',
+    dataAiHint: 'student headshot',
+    researchFocus: 'Clustering',
   },
   {
-    id: 25,
-    name: "Eva Rodriguez, PhD",
-    role: "Former PhD Student (Graduated 2021)",
-    currentPosition: "Assistant Professor @ State University",
-    avatarUrl: "https://picsum.photos/seed/evarodriguez/120/120", // Increased size
-    dataAiHint: "academic headshot",
-    researchFocus: "Computational Semantics",
-  }*/
+    id: 14,
+    name: 'YueQi Wang（王玥祁）',
+    role: 'Former Undergraduate student (Graduated 2026)',
+    currentPosition: 'Study for a Master’s Degree @ Northeastern University （东北大学）',
+    avatarUrl: 'https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/wyq.jpg',
+    dataAiHint: 'student headshot',
+    researchFocus: 'Clustering',
+  },
+  {
+    id: 24,
+    name: 'YiXuan Dai（戴轶轩）',
+    role: 'Former Undergraduate student (Graduated 2026)',
+    currentPosition:
+      'Study for a Master’s Degree @ University of Science and Technology of China（中国科学技术大学）',
+    avatarUrl: 'https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/dyx.jpg',
+    dataAiHint: 'student headshot',
+    researchFocus: 'Clustering',
+  },
 ];
 
 
