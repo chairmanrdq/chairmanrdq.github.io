@@ -85,3 +85,6 @@ export function getPublicationTabCategories(): string[] {
 export function getFeaturedPublications(limit = 3): Publication[] {
   return [...publications].sort((a, b) => b.year - a.year).slice(0, limit);
 }
+
+/** Re-export for pages that import contribution bullets alongside publication helpers. */
+export { selectedContributionBullets } from '@/lib/research-content';
