@@ -112,13 +112,21 @@ export default function NewsPage() {
                       </div>
 
                       {article.relatedLink && (
-                        <div className="pt-2">
+                        <div className="pt-2 flex flex-wrap gap-3">
                           <Button variant="outline" size="sm" asChild className="outline-academic">
                             <Link href={article.relatedLink.href} className="inline-flex items-center gap-2">
                               {article.relatedLink.label}
                               <ChevronRight className="h-4 w-4" aria-hidden />
                             </Link>
                           </Button>
+                          {article.id === 'wutong-cup-2026' && (
+                            <Button variant="ghost" size="sm" asChild>
+                              <Link href="/projects" className="inline-flex items-center gap-2">
+                                Related projects
+                                <ChevronRight className="h-4 w-4" aria-hidden />
+                              </Link>
+                            </Button>
+                          )}
                         </div>
                       )}
                     </div>
