@@ -57,7 +57,7 @@ export default function ScrollBlurRevealTitle({ id, text, className }: Props) {
         id={id}
         aria-label={text}
         className={cn(
-          'inline-block max-w-full text-center text-3xl font-bold tracking-tight lg:text-4xl',
+          'type-section-title inline-block max-w-full text-center lg:text-4xl',
           className
         )}
       >

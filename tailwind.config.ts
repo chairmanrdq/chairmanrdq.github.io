@@ -9,6 +9,22 @@ export default {
   ],
   theme: {
   	extend: {
+  		fontFamily: {
+  			sans: [
+  				'var(--font-sans)',
+  				'PingFang SC',
+  				'Hiragino Sans GB',
+  				'Microsoft YaHei',
+  				'WenQuanYi Micro Hei',
+  				'sans-serif',
+  			],
+  			serif: [
+  				'var(--font-serif)',
+  				'Georgia',
+  				'Times New Roman',
+  				'serif',
+  			],
+  		},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',

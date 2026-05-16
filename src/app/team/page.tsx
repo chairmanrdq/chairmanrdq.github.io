@@ -330,7 +330,7 @@ export default function TeamPage() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <Card className="shadow-md border-primary/10 lg:col-span-2">
             <CardContent className="p-6">
-              <h3 className="text-xl md:text-2xl font-semibold text-primary mb-3">Research Directions</h3>
+              <h3 className="type-subheading-lg mb-3">Research Directions</h3>
               <p className="text-sm md:text-base text-foreground/80 leading-relaxed mb-5">
                 The lab develops theory-informed and system-validated methods for computing power networks,
                 low-carbon resource optimization, and reliable service intelligence.
@@ -354,7 +354,7 @@ export default function TeamPage() {
 
           <Card className="shadow-md border-primary/10">
             <CardContent className="p-6">
-              <h3 className="text-xl md:text-2xl font-semibold text-primary mb-3">Prospective Students</h3>
+              <h3 className="type-subheading-lg mb-3">Prospective Students</h3>
               <p className="text-sm text-foreground/80 leading-relaxed mb-4">
                 Students interested in research are encouraged to email a concise self-introduction and academic background.
               </p>
@@ -403,7 +403,7 @@ export default function TeamPage() {
                 />
               </div>
               <CardContent className="p-6 flex-grow sm:w-2/3">
-                <h3 className="text-xl md:text-2xl font-semibold text-primary">{member.name}</h3>
+                <h3 className="type-subheading-lg">{member.name}</h3>
                 <p className="text-md text-accent font-medium">{member.role}</p>
                 <p className="text-sm text-muted-foreground mt-1">
                   Interests: {member.researchInterests.join(', ')}
@@ -464,7 +464,7 @@ export default function TeamPage() {
                 />
               </div>
               <CardContent className="p-6 flex-grow sm:w-2/3">
-                <h3 className="text-xl md:text-2xl font-semibold text-primary">{member.name}</h3>
+                <h3 className="type-subheading-lg">{member.name}</h3>
                 <p className="text-md text-accent font-medium">{member.role}</p>
                 <p className="text-sm text-muted-foreground mt-1">
                   Interests: {member.researchInterests.join(', ')}
@@ -523,7 +523,7 @@ export default function TeamPage() {
                     className="rounded-full border-2 border-background shadow-sm object-cover aspect-square mb-3"
                     data-ai-hint={member.dataAiHint}
                   />
-                  <h3 className="text-lg font-semibold text-primary">{member.name}</h3>
+                  <h3 className="type-subheading">{member.name}</h3>
                   <p className="text-sm text-accent/90 font-medium">{member.role}</p>
                   <p className="text-xs text-muted-foreground mt-0.5">Focus: {member.researchFocus}</p>
                   <p className="text-sm text-foreground/80 mt-2">Now: {member.currentPosition}</p>
@@ -559,7 +559,7 @@ export default function TeamPage() {
                     className="rounded-full border-2 border-background shadow-sm object-cover aspect-square mb-3"
                     data-ai-hint={member.dataAiHint}
                   />
-                  <h3 className="text-lg font-semibold text-primary">{member.name}</h3>
+                  <h3 className="type-subheading">{member.name}</h3>
                   <p className="text-sm text-accent/90 font-medium">{member.role}</p>
                   <p className="text-xs text-muted-foreground mt-0.5">Focus: {member.researchFocus}</p>
                   <p className="text-sm text-foreground/80 mt-2">Now: {member.currentPosition}</p>

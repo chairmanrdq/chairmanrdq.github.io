@@ -114,7 +114,7 @@ export default function PublicationsPage() {
         <SectionTitle>Publications</SectionTitle>
         <Card className="luxury-card">
         <CardContent className="pt-6">
-          <h3 className="text-lg font-semibold text-primary mb-2">Selected Contributions</h3>
+          <h3 className="type-subheading mb-2">Selected Contributions</h3>
           <ul className="list-disc list-inside space-y-2 text-sm text-foreground/80">
             <li>
               Density-peak clustering with principled automatic center discovery via curve optimization and inflection-point modeling.
@@ -145,7 +145,7 @@ export default function PublicationsPage() {
                 filterPublications(category).sort((a,b) => b.year - a.year).map(pub => (
                   <Card key={pub.id} className="luxury-card shadow-md hover:shadow-lg transition-shadow duration-300 border-primary/10">
                     <CardHeader>
-                      <CardTitle className="text-lg md:text-xl text-primary/90">{pub.title}</CardTitle>
+                      <CardTitle className="text-primary/90">{pub.title}</CardTitle>
                       <CardDescription className="text-sm text-foreground/70 italic">
                         {pub.authors}
                       </CardDescription>

@@ -60,7 +60,7 @@ export default function CoursesPage() {
           <Card key={course.id} className="shadow-md hover:shadow-lg transition-shadow duration-300 border-primary/10">
             <CardHeader>
               <div className="flex flex-col sm:flex-row justify-between sm:items-start gap-1">
-                <CardTitle className="text-xl md:text-2xl text-primary/90">{course.title}</CardTitle>
+                <CardTitle className="text-primary/90">{course.title}</CardTitle>
                 <span className="mt-1 w-fit rounded-md border border-border/70 bg-muted px-2 py-1 text-sm font-medium text-foreground/85 sm:mt-0">
                   {course.level}
                 </span>

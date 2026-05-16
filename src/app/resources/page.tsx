@@ -342,7 +342,7 @@ const resourcesData: {
 const ResourceCard = ({item, buttonClassName}: {item: GenericResourceItem, buttonClassName?: string}) => (
   <Card className="shadow-md hover:shadow-lg transition-shadow duration-300 border-primary/10">
     <CardHeader>
-      <CardTitle className="text-xl text-primary/90">{item.name}</CardTitle>
+      <CardTitle className="text-primary/90">{item.name}</CardTitle>
       {item.lastUpdated && <CardDescription>Last updated: {item.lastUpdated}</CardDescription>}
       {item.size && item.format && <CardDescription>Size: {item.size} ({item.format})</CardDescription>}
       {item.event && <CardDescription>Event: {item.event}</CardDescription>}
@@ -371,7 +371,7 @@ function CatalogLinkCard({ item }: { item: LinkCatalogItem }) {
         <a href={item.url} target="_blank" rel="noopener noreferrer" className="group block">
           <div className="flex items-center mb-2">
             {item.icon}
-            <h3 className="text-lg font-semibold text-primary group-hover:underline">{item.name}</h3>
+            <h3 className="type-subheading group-hover:underline">{item.name}</h3>
           </div>
           <p className="text-xs text-muted-foreground mb-1">{item.category}</p>
           <p className="text-sm text-foreground/70 group-hover:text-accent transition-colors break-all">

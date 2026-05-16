@@ -101,7 +101,7 @@ export default function NewsPage() {
                         </span>
                       </div>
 
-                      <h2 className="text-xl font-semibold text-primary/95 leading-snug">{article.title}</h2>
+                      <h2 className="type-card-title text-primary/95">{article.title}</h2>
                       <p className="text-sm text-foreground/85 leading-relaxed font-medium">{article.summary}</p>
 
                       <div className="space-y-3 border-t border-primary/10 pt-4">

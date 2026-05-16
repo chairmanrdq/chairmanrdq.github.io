@@ -158,14 +158,14 @@ export default function Home() {
                </div>
               
               <h1
-                className="text-4xl lg:text-6xl font-bold text-gradient-luxury mb-4 motion-safe:animate-fade-up"
+                className="text-4xl lg:text-6xl font-bold leading-[1.1] text-gradient-luxury mb-4 motion-safe:animate-fade-up"
                 style={{ animationDelay: '60ms' }}
               >
                 {scholarData.name}
               </h1>
               
               <p
-                className="text-xl lg:text-2xl text-foreground/80 mb-2 font-medium motion-safe:animate-fade-up"
+                className="type-lead mb-2 motion-safe:animate-fade-up"
                 style={{ animationDelay: '110ms' }}
               >
                 {scholarData.position}
@@ -398,7 +398,7 @@ export default function Home() {
                   <span className="text-xs text-foreground/55 whitespace-nowrap">{pub.year}</span>
                 </div>
 
-                <h3 className="text-lg font-semibold mb-2 text-primary/95 group-hover:text-primary transition-colors duration-300">
+                <h3 className="type-subheading mb-2 text-primary/95 group-hover:text-primary transition-colors duration-300">
                   {pub.title}
                 </h3>
                 <p className="text-sm italic text-foreground/80 leading-relaxed">{pub.authors}</p>
@@ -481,7 +481,7 @@ export default function Home() {
                       </span>
                       <span className="text-xs text-muted-foreground">{item.date}</span>
                     </div>
-                    <h3 className="text-lg font-semibold mb-2 text-primary/95 group-hover:text-primary transition-colors duration-300">
+                    <h3 className="type-subheading mb-2 text-primary/95 group-hover:text-primary transition-colors duration-300">
                        {item.title}
                     </h3>
                     <p className="text-sm text-foreground/80 leading-relaxed">
@@ -532,7 +532,7 @@ export default function Home() {
           <CardContent className="relative z-10 pt-6">
             <div className="space-y-6">
               <div>
-                <h3 className="text-lg font-semibold text-primary mb-1">Computing Power Networks</h3>
+                <h3 className="type-subheading mb-1">Computing Power Networks</h3>
                 <p className="text-sm text-foreground/80 leading-relaxed">
                   User-aware and QoS-aware scheduling across heterogeneous resources, with a focus on
                   provable performance and energy-efficient execution.
@@ -540,7 +540,7 @@ export default function Home() {
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold text-primary mb-1">Green & Low-carbon Optimization</h3>
+                <h3 className="type-subheading mb-1">Green & Low-carbon Optimization</h3>
                 <p className="text-sm text-foreground/80 leading-relaxed">
                   Low-carbon resource matching and system evaluation, targeting robust reductions in
                   power usage while maintaining service quality.
@@ -548,7 +548,7 @@ export default function Home() {
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold text-primary mb-1">Service Computing & Recommendation</h3>
+                <h3 className="type-subheading mb-1">Service Computing & Recommendation</h3>
                 <p className="text-sm text-foreground/80 leading-relaxed">
                   Robust service recommendation and cold-start solutions, integrating learning-based
                   models for practical deployment scenarios.

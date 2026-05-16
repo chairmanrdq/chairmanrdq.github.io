@@ -63,7 +63,7 @@ export default function Header() {
               priority
             />
           </div>
-          <span className="text-gradient-luxury min-w-0 flex-1 truncate text-left text-xs font-bold leading-tight sm:text-sm md:text-sm lg:text-base">
+          <span className="font-serif text-gradient-luxury min-w-0 flex-1 truncate text-left text-xs font-bold leading-tight sm:text-sm md:text-sm lg:text-base">
             {siteConfig.piShortName}
           </span>
         </Link>
@@ -130,7 +130,7 @@ export default function Header() {
                         priority
                       />
                     </div>
-                    <span className="text-gradient-luxury min-w-0 flex-1 truncate text-left text-base font-bold leading-tight sm:text-lg">
+                    <span className="font-serif text-gradient-luxury min-w-0 flex-1 truncate text-left text-base font-bold leading-tight sm:text-lg">
                       {siteConfig.piShortName}
                     </span>
                   </Link>

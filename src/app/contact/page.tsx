@@ -53,7 +53,7 @@ export default function ContactPage() {
             <div className="flex items-start">
               <Mail className="h-5 w-5 mr-3 mt-1 text-accent flex-shrink-0" />
               <div>
-                <h3 className="font-semibold text-foreground/90">Email</h3>
+                <h3 className="type-subheading text-foreground/90">Email</h3>
                 <a href={`mailto:${contactData.email}`} className="text-accent hover:underline">{contactData.email}</a>
               </div>
             </div>
@@ -61,7 +61,7 @@ export default function ContactPage() {
               <div className="flex items-start">
                 <Phone className="h-5 w-5 mr-3 mt-1 text-accent flex-shrink-0" />
                 <div>
-                  <h3 className="font-semibold text-foreground/90">Phone</h3>
+                  <h3 className="type-subheading text-foreground/90">Phone</h3>
                   <p className="text-foreground/90">{contactData.phone}</p>
                 </div>
               </div>
@@ -69,7 +69,7 @@ export default function ContactPage() {
             <div className="flex items-start">
               <MapPin className="h-5 w-5 mr-3 mt-1 text-accent flex-shrink-0" />
               <div>
-                <h3 className="font-semibold text-foreground/90">Office Address</h3>
+                <h3 className="type-subheading text-foreground/90">Office Address</h3>
                 <p className="text-foreground/90">{contactData.office}</p>
                 <p className="text-foreground/90">{contactData.addressLine1}</p>
                 <p className="text-foreground/90">{contactData.addressLine2}</p>
@@ -78,13 +78,13 @@ export default function ContactPage() {
              <div className="flex items-start">
               <Briefcase className="h-5 w-5 mr-3 mt-1 text-accent flex-shrink-0" />
               <div>
-                <h3 className="font-semibold text-foreground/90">Office Hours</h3>
+                <h3 className="type-subheading text-foreground/90">Office Hours</h3>
                 <p className="text-foreground/90">{contactData.officeHours}</p>
               </div>
             </div>
             {socialMedia.length > 0 ? (
               <div>
-                <h3 className="font-semibold text-foreground/90 mb-2">Connect Online</h3>
+                <h3 className="type-subheading text-foreground/90 mb-2">Connect Online</h3>
                 <div className="flex space-x-4">
                   {socialMedia.map((social) => (
                     <a key={social.name} href={social.url} target="_blank" rel="noopener noreferrer"

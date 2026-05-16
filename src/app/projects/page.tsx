@@ -58,7 +58,7 @@ export default function ProjectsPage() {
       <SectionTitle>Projects</SectionTitle>
       <Card className="luxury-card">
         <CardContent className="pt-6">
-          <h3 className="text-lg font-semibold text-primary mb-2">Research-to-Impact</h3>
+          <h3 className="type-subheading mb-2">Research-to-Impact</h3>
           <ul className="list-disc list-inside space-y-2 text-sm text-foreground/80">
             <li>
               <span className="text-primary font-medium">Computing power scheduling</span> for regional hub nodes, driven by{' '}
@@ -82,7 +82,7 @@ export default function ProjectsPage() {
           <Card key={project.id} className="luxury-card shadow-md hover:shadow-lg transition-shadow duration-300 border-primary/10">
             <CardHeader>
               <div className="flex flex-col sm:flex-row justify-between sm:items-start gap-2">
-                <CardTitle className="text-xl md:text-2xl text-primary/90">{project.title}</CardTitle>
+                <CardTitle className="text-primary/90">{project.title}</CardTitle>
                 <Badge 
                   variant={project.status === "Ongoing" ? "default" : "outline"} 
                   className={cn("w-fit mt-1 sm:mt-0", project.status === "Ongoing" ? "bg-green-600/10 border-green-600 text-green-700 dark:bg-green-500/20 dark:text-green-400 dark:border-green-500" : "border-gray-400 text-gray-500 dark:border-gray-600 dark:text-gray-400")}

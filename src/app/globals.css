@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: 'Inter', 'Roboto', 'Open Sans', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', var(--font-sans), sans-serif;
-}
-
 @layer base {
   :root {
     /* 期刊图形摘要风：#FFFFFF / #0A1526 / #1D4ED8 / #00C177 */
@@ -138,14 +134,25 @@ body {
   body::after {
     content: none;
   }
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold tracking-tight;
-    font-family: 'Inter', 'Roboto', 'Open Sans', var(--font-sans), sans-serif;
+  h1 {
+    @apply font-serif text-4xl font-bold leading-[1.1] tracking-tight text-balance md:text-5xl;
   }
-  h1 { @apply text-4xl; }
-  h2 { @apply text-3xl; }
-  h3 { @apply text-2xl; }
-  h4 { @apply text-xl; }
+  h2 {
+    @apply font-serif text-2xl font-semibold leading-snug tracking-tight text-balance sm:text-3xl;
+  }
+  h3 {
+    @apply font-sans text-lg font-semibold leading-snug tracking-tight text-primary;
+  }
+  h4 {
+    @apply font-sans text-base font-semibold leading-snug;
+  }
+  h5,
+  h6 {
+    @apply font-sans text-sm font-semibold leading-snug;
+  }
+  main p {
+    @apply leading-relaxed;
+  }
   /* Links use primary color and custom hover color */
   a:not(.no-style) { @apply text-primary hover:text-[hsl(var(--link-hover))] transition-colors duration-200; }
 
@@ -154,6 +161,44 @@ body {
   }
   html.dark {
     color-scheme: dark;
+  }
+}
+
+@layer components {
+  /* 区块主标题（渐变，与 SectionTitle 一致） */
+  .type-section-title {
+    @apply font-serif text-2xl font-bold tracking-tight text-balance sm:text-3xl;
+  }
+  .type-section-title-gradient {
+    @apply type-section-title mb-6 border-b border-primary/25 pb-3 md:mb-8 text-transparent bg-gradient-to-r from-primary via-primary/90 to-accent bg-clip-text motion-safe:animate-title-glow-drift;
+  }
+  /* 论文 / 项目 / 新闻条目主标题 */
+  .type-card-title {
+    @apply font-serif text-lg font-semibold leading-snug tracking-tight md:text-xl;
+  }
+  /* 卡片内小节、人名等次级标题 */
+  .type-subheading {
+    @apply font-sans text-lg font-semibold leading-snug tracking-tight text-primary;
+  }
+  .type-subheading-lg {
+    @apply font-sans text-xl font-semibold leading-snug tracking-tight text-primary md:text-2xl;
+  }
+  .type-lead {
+    @apply font-sans text-lg font-medium leading-relaxed text-foreground/80 md:text-xl;
+  }
+  .type-body {
+    @apply font-sans text-[15px] leading-relaxed text-foreground/85 md:text-base;
+  }
+  .type-caption {
+    @apply font-sans text-sm leading-relaxed text-muted-foreground;
+  }
+  .typography-content {
+    @apply font-sans text-[15px] leading-relaxed md:text-base;
+  }
+  .dark h1,
+  .dark h2,
+  .dark .type-card-title {
+    @apply font-semibold;
   }
 }
 

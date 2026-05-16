@@ -65,7 +65,7 @@ export default function ResearchPage() {
           {researchData.detailedFocus.map((area, index) => (
             <Card key={index} className="shadow-md hover:shadow-lg transition-shadow duration-300 border-primary/10">
               <CardHeader>
-                <CardTitle className="text-xl md:text-2xl text-primary/90">{area.title}</CardTitle>
+                <CardTitle className="text-primary/90">{area.title}</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-foreground/80 mb-4 leading-relaxed">{area.description}</p>
