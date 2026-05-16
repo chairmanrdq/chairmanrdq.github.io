@@ -111,15 +111,22 @@ export default function ContactPage() {
             <CardTitle className="text-xl text-primary">Campus Location</CardTitle>
           </CardHeader>
           <CardContent className="p-0">
-            <div className="aspect-video bg-secondary">
+            <div className="aspect-video bg-secondary relative">
                 <Image
                     src={contactData.mapPlaceholderUrl}
                     alt="Map showing office location near Inner Mongolia University"
                     width={800}
                     height={450}
                     className="w-full h-full object-cover"
-                    data-ai-hint={contactData.dataAiHint}
                 />
+                <a
+                  href="https://www.openstreetmap.org/?mlat=40.8183&mlon=111.6520#map=15/40.8183/111.6520"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute bottom-3 right-3 rounded-md bg-background/90 px-3 py-1.5 text-xs font-medium text-primary shadow-sm hover:bg-background"
+                >
+                  Open in OpenStreetMap
+                </a>
             </div>
           </CardContent>
         </Card>

@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 
 function MemberLinks({ member }: { member: TeamMember }) {
   return (
-    <motion className="flex flex-wrap gap-x-3 gap-y-2 items-center mt-4">
+    <div className="flex flex-wrap gap-x-3 gap-y-2 items-center mt-4">
       {member.linkedin ? (
         <Button variant="ghost" size="sm" asChild className="text-muted-foreground hover:text-accent p-1 h-auto">
           <a
