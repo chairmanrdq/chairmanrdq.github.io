@@ -52,12 +52,12 @@ export default function CoursesPage() {
                 className="shadow-md hover:shadow-lg transition-shadow duration-300 border-primary/10"
               >
                 <CardHeader>
-                  <div className="flex flex-col sm:flex-row justify-between sm:items-start gap-1">
+                  <motion className="flex flex-col sm:flex-row justify-between sm:items-start gap-1">
                     <CardTitle className="text-primary/90">{course.courseName}</CardTitle>
                     <span className="mt-1 w-fit rounded-md border border-border/70 bg-muted px-2 py-1 text-sm font-medium text-foreground/85 sm:mt-0">
                       {course.level}
                     </span>
-                  </div>
+                  </motion>
                   <CardDescription className="text-md font-medium text-accent pt-1">
                     {course.term} · {course.location}
                   </CardDescription>
@@ -87,7 +87,7 @@ export default function CoursesPage() {
                         </a>
                       </Button>
                     )}
-                  </div>
+                  </motion>
                   {validResources.length > 0 && (
                     <div>
                       <h4 className="text-sm font-semibold text-foreground/90 mb-2">Course Resources</h4>
@@ -105,14 +105,14 @@ export default function CoursesPage() {
                           </li>
                         ))}
                       </ul>
-                    </div>
+                    </motion>
                   )}
                 </CardContent>
               </Card>
             );
           })}
-        </div>
+        </motion>
       </section>
-    </div>
+    </motion>
   );
 }

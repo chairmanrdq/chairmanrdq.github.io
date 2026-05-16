@@ -395,12 +395,25 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      <section id="datasets" aria-labelledby="datasets-title">
-        <SectionTitle id="datasets-title">Datasets</SectionTitle>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {resourcesData.datasets.map(item => <ResourceCard key={item.id} item={item} />)}
-        </div>
-      </section>
+      {resourcesData.datasets.length > 0 ? (
+        <section id="datasets" aria-labelledby="datasets-title">
+          <SectionTitle id="datasets-title">Datasets</SectionTitle>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {resourcesData.datasets.map((item) => (
+              <ResourceCard key={item.id} item={item} />
+            ))}
+          </div>
+        </section>
+      ) : (
+        <section id="datasets" aria-labelledby="datasets-title" className="page-section-reveal">
+          <SectionTitle id="datasets-title">Datasets</SectionTitle>
+          <Card className="luxury-card border-primary/10">
+            <CardContent className="pt-6 type-body text-sm">
+              No lab-hosted datasets are listed yet. Contact the PI if you need collaboration data under agreement.
+            </CardContent>
+          </Card>
+        </section>
+      )}
 
       <section id="slides" aria-labelledby="slides-title">
         <SectionTitle id="slides-title">Presentations & Slides</SectionTitle>

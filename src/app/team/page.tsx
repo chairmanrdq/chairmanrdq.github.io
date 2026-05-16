@@ -1,9 +1,12 @@
 import { SectionTitle } from "@/components/ui/section-title";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from 'next/image';
-import { Mail, Linkedin, Globe, BookUser } from 'lucide-react';
+import { Linkedin, Globe, BookUser } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import type { Metadata } from 'next';
+import { recruitmentChecklist, recruitmentEmail, recruitmentIntro } from '@/lib/recruitment';
+import { researchOverview, researchThemes } from '@/lib/research-content';
+import { isValidHttpUrl } from '@/lib/utils';
 
 export const metadata: Metadata = {
   title: 'Team',
@@ -20,7 +23,6 @@ const teamMembers = [
     dataAiHint: "student headshot",
     researchInterests: ["Multi-Objective Optimization", "Task Scheduling", "Computing Power Networks"],
     bio: "Develops multi-objective models and adaptive scheduling algorithms for distributed heterogeneous computing. Leverages heuristic and ML methods to minimize execution delay and energy consumption, enabling low-carbon computing infrastructure.",
-    email: "david.green@university.edu", // Replace
   },
   {
     id: 3,
@@ -30,7 +32,6 @@ const teamMembers = [
     dataAiHint: "student headshot",
     researchInterests: ["Task scheduling", "Generative Models", "Computing Power Networks"],
     bio: "Develops intelligent scheduling for heterogeneous computing using ML/RL to optimize task allocation, throughput, and latency under real-time and QoS constraints. Enhances resource efficiency for generative workloads and low-carbon infrastructure.",
-    email: "david.green@university.edu", // Replace
   },
   {
     id: 4,
@@ -40,7 +41,6 @@ const teamMembers = [
     dataAiHint: "student headshot",
     researchInterests: ["Cloud-Edge-Device Collaborative Inference", "Computing Power Networks"],
     bio: "Designs intelligent adaptive scheduling policies for distributed heterogeneous computing. Leverages reinforcement learning and generative algorithms to dynamically optimize task allocation, balancing low latency and energy efficiency for sustainable computing infrastructure.",
-    email: "david.green@university.edu", // Replace
   },
   {
     id: 5,
@@ -50,7 +50,6 @@ const teamMembers = [
     dataAiHint: "student headshot",
     researchInterests: ["Cold Start Problem","Service Recommendation", "Computing Power Networks"],
     bio: "My research goal is to optimize the cold-start of cloud service recommendation through meta-learning, graph neural networks and various technologies under data scarcity, so as to improve the recommendation performance for new services/users.",
-    email: "david.green@university.edu", // Replace
   },
   {
     id: 6,
@@ -60,7 +59,6 @@ const teamMembers = [
     dataAiHint: "student headshot",
     researchInterests: ["Recommendation system","LLM", "Service recommendation","Computing Power Networks"],
     bio: "Wu Mingjie is currently researching the content related to service recommendation, especially how to use large language models to enhance the performance of service recommendation.",
-    email: "david.green@university.edu", // Replace
   },
   {
     id: 7,
@@ -70,7 +68,6 @@ const teamMembers = [
     dataAiHint: "student headshot",
     researchInterests: ["Multimodal Fusion","Power Forecasting"],
     bio: "Develops spatiotemporal forecasting frameworks for green power by fusing multi-source data (NWP, satellite, ground observations) with deep learning to enhance grid stability and renewable energy integration.",
-    email: "david.green@university.edu", // Replace
   },
   {
     id: 8,
@@ -80,7 +77,6 @@ const teamMembers = [
     dataAiHint: "student headshot",
     researchInterests: ["Green power Scheduling","Data Analysis", "Computing Power Networks"],
     bio: "Online Job Scheduling for Low-Carbon Data Center Operation，Low-Carbon Operation of Resources Based on Deep Reinforcement Learning",
-    email: "david.green@university.edu", // Replace
   },
   {
     id: 9,
@@ -90,7 +86,6 @@ const teamMembers = [
     dataAiHint: "student headshot",
     researchInterests: ["Task Scheduling","Computing Power Networks"],
     bio: "Focuses on task scheduling methods to improve resource utilization and low-carbon power usage in data centers. Interested in system evaluation, reproducible experiments, and technical reading.",
-    email: "david.green@university.edu", // Replace
   },
   {
     id: 10,
@@ -100,7 +95,6 @@ const teamMembers = [
     dataAiHint: "student headshot",
     researchInterests: ["Task Scheduling","Computing Power Networks"],
     bio: "Addresses challenges in edge collaborative algorithms using feedback-diffusion model scheduling, aiming to balance efficiency, latency, and robustness in heterogeneous environments.",
-    email: "david.green@university.edu", // Replace
   },
   {
     id: 11,
@@ -110,7 +104,6 @@ const teamMembers = [
     dataAiHint: "student headshot",
     researchInterests: ["Task Offloading","Task Recommendation","Computing Power Networks"],
     bio: "Researches task offloading and recommendation in computing power networks, optimizing resource allocation and improving service efficiency under practical constraints.",
-    email: "david.green@university.edu", // Replace
   },
   {
     id: 12,
@@ -120,7 +113,6 @@ const teamMembers = [
     dataAiHint: "student headshot",
     researchInterests: ["Recommendation system","Task Recommendation","Computing Power Networks"],
     bio: "My research optimizes machine learning recommendation algorithms to boost performance and user experience, advancing intelligent recommendation. Focused on machine learning recommendation algorithms to uncover user needs and offer personalized recommendations. ",
-    email: "david.green@university.edu", // Replace
   },
 ];
 
@@ -133,7 +125,6 @@ const collegeMembers = [
       dataAiHint: "student headshot",
       researchInterests: ["Edge-Cloud Computing","Tasking Scheduling", " Reinforcement Learning"],
       bio: "Research focuses on resource optimization and task scheduling in cloud-edge computing systems. Develops dynamic scheduling models using reinforcement learning and heuristic algorithms to balance computing power and latency, addressing challenges such as task blocking, high energy consumption, and unstable service quality in multi-device environments.",
-      email: "david.green@university.edu", // Replace
 	},
 	{ 
 	  id: 16,
@@ -143,7 +134,6 @@ const collegeMembers = [
       dataAiHint: "student headshot",
       researchInterests: ["Cross-Domain Scheduling","Resource Optimization", "Computing Force Network"], 
       bio: "Research focuses on computing force network architecture and cross-domain resource scheduling. Develops intelligent scheduling mechanisms to enable efficient and coordinated allocation of distributed computing resources across heterogeneous domains, optimizing overall network utilization and service performance.",
-      email: "david.green@university.edu", // Replace
 	},
 	{ 
 	  id: 17,
@@ -153,7 +143,6 @@ const collegeMembers = [
       dataAiHint: "student headshot",
       researchInterests: ["Computing Force Network","Clustering Algorithms", "Distributed Machine Learning"],
       bio: "Research focuses on optimizing and innovating clustering algorithms in computing force networks to enhance their performance, efficiency, and robustness on complex data. Explores the integration of machine learning, data analysis, and cloud computing technologies to develop scalable and adaptive clustering solutions for distributed and data-intensive environments.",
-      email: "david.green@university.edu", // Replace
 	},
 	{ 
 	  id: 18,
@@ -163,7 +152,6 @@ const collegeMembers = [
       dataAiHint: "student headshot",
       researchInterests: ["Computing Force Network","Clustering Algorithms", "Unsupervised Learning"],  
       bio: "Research focuses on clustering algorithms and unsupervised learning in computing force networks, with an emphasis on algorithm optimization and practical applications in data analysis. Explores innovative approaches to enhance the performance and adaptability of clustering methods in complex, real-world data scenarios.",
-      email: "david.green@university.edu", // Replace
 	},
 	{ 
 	  id: 19,
@@ -173,7 +161,6 @@ const collegeMembers = [
       dataAiHint: "student headshot",
       researchInterests: ["Cold Start Problem","Service Recommendation", "Computing Power Networks"],
       bio: "Research focuses on cold-start recommendation systems, integrating multimodal features (text/image) and contextual information to reduce dependency on traditional interaction data. Develops personalized strategies for long-tail items and new users, while optimizing lightweight model architectures for efficient deployment in high-concurrency scenarios.",
-      email: "david.green@university.edu", // Replace
 	},
 	{ 
 	  id: 20,
@@ -183,7 +170,6 @@ const collegeMembers = [
       dataAiHint: "student headshot",
       researchInterests: ["Service Recommendation","Computing Power Networks"],
       bio: "Specializes in user demand analysis and intelligent recommendation. Utilizes qualitative/quantitative research and data-driven strategies to deeply understand user behavior, building accurate and scalable recommendation systems that enhance product experience and business outcomes. ",
-      email: "david.green@university.edu", // Replace
 	},
 	{ 
 	  id: 21,
@@ -193,7 +179,6 @@ const collegeMembers = [
       dataAiHint: "student headshot",
       researchInterests: ["Service Recommendation","Computing Power Networks"],
       bio: "Specializes in architecting and implementing AI-driven recommendation platforms. Combines expertise in service design and artificial intelligence to build scalable systems that deliver precise, personalized recommendations and create tangible business value.",
-      email: "david.green@university.edu", // Replace
 	},
 	{ 
 	  id: 22,
@@ -203,7 +188,6 @@ const collegeMembers = [
       dataAiHint: "student headshot",
       researchInterests: ["Service Recommendation","Computing Power Networks"],
       bio: "Research focuses on big data technologies and their applications in service recommendation systems. Developing innovative recommendation algorithms and data processing frameworks to improve recommendation quality and system performance.",
-      email: "david.green@university.edu", // Replace
 	},
 	{ 
 	  id: 23,
@@ -213,7 +197,6 @@ const collegeMembers = [
       dataAiHint: "student headshot",
       researchInterests: ["Computing Power Networks"],
       bio: "Research focuses on software performance optimization and computational efficiency. Designing innovative approaches to accelerate code execution, reduce computational overhead, and enhance overall system performance through advanced optimization techniques.",
-      email: "david.green@university.edu", // Replace
 	},
 ];
 
@@ -228,9 +211,7 @@ const alumni = [
 	researchFocus: "Task Scheduling for Computing Power Networks",
     //researchInterests: ["Time Series Prediction", "Reinforcement Learning", "Task Scheduling","Computing Power Networks"],
     //bio: "Current research is shifting from cloud computing towards the establishment of a new computing-power network paradigm, focusing on enhancing the intelligent scheduling capability of the Computing Network Brain to improve the utilization efficiency of global computing resources.",
-    //email: "david.green@university.edu", // Replace
-	website: "#" // Replace
-  }
+    //  }
  /*{
     id: 24,
     name: "Dr. Samuel Cho",
@@ -239,7 +220,6 @@ const alumni = [
     avatarUrl: "https://picsum.photos/seed/samuelcho/120/120", // Increased size
     dataAiHint: "professional headshot",
     researchFocus: "Deep Learning for NLP",
-    website: "#" // Replace
   },
   {
     id: 25,
@@ -249,7 +229,6 @@ const alumni = [
     avatarUrl: "https://picsum.photos/seed/evarodriguez/120/120", // Increased size
     dataAiHint: "academic headshot",
     researchFocus: "Computational Semantics",
-    website: "#" // Replace
   }*/
 ];
 
@@ -266,7 +245,6 @@ const alumni_collegeMembers = [
       //researchInterests: ["Clustering","Multimodal Sentiment Analysis,", "Big Data Processing"],
       //bio: "Computer Science undergraduate with strong academic record and research experience. First-author paper at CCF-C conference on clustering algorithms; led provincial project on multimodal depression prediction. Awarded multiple national and provincial competition awards and scholarships. Demonstrated leadership as Vice Secretary of the College Youth League Committee. Proficient in English technical reading.",
       //email: "david.green@university.edu" // Replace
-	  website: "#" // Replace
 	},
  	{ 
 	  id: 14,
@@ -279,8 +257,7 @@ const alumni_collegeMembers = [
 	  researchFocus: "Clustering",
       //researchInterests: ["Artificial Intelligence","Data Intelligence,", "Interpretable Machine Learning"],
       //bio: "Focuses on AI and data intelligence applications, specializing in optimized clustering algorithms, deep learning for medical data processing, and intelligent analytics in education. Committed to enhancing interpretability and cross-domain applications of intelligent algorithms, aiming to drive theoretical innovation and practical impact in healthcare, education, and smart society.",
-      //email: "david.green@university.edu", // Replace
-	},
+      //	},
  	{ 
 	  id: 14,
 	  name: "YiXuan Dai（戴轶轩）",   
@@ -292,8 +269,7 @@ const alumni_collegeMembers = [
 	  researchFocus: "Clustering",
       //researchInterests: ["Artificial Intelligence","Data Intelligence,", "Interpretable Machine Learning"],
       //bio: "Focuses on AI and data intelligence applications, specializing in optimized clustering algorithms, deep learning for medical data processing, and intelligent analytics in education. Committed to enhancing interpretability and cross-domain applications of intelligent algorithms, aiming to drive theoretical innovation and practical impact in healthcare, education, and smart society.",
-      //email: "david.green@university.edu", // Replace
-	}	
+      //	}	
  /*{
     id: 24,
     name: "Dr. Samuel Cho",
@@ -302,7 +278,6 @@ const alumni_collegeMembers = [
     avatarUrl: "https://picsum.photos/seed/samuelcho/120/120", // Increased size
     dataAiHint: "professional headshot",
     researchFocus: "Deep Learning for NLP",
-    website: "#" // Replace
   },
   {
     id: 25,
@@ -312,7 +287,6 @@ const alumni_collegeMembers = [
     avatarUrl: "https://picsum.photos/seed/evarodriguez/120/120", // Increased size
     dataAiHint: "academic headshot",
     researchFocus: "Computational Semantics",
-    website: "#" // Replace
   }*/
 ];
 
@@ -331,23 +305,16 @@ export default function TeamPage() {
           <Card className="shadow-md border-primary/10 lg:col-span-2">
             <CardContent className="p-6">
               <h3 className="type-subheading-lg mb-3">Research Directions</h3>
-              <p className="text-sm md:text-base text-foreground/80 leading-relaxed mb-5">
-                The lab develops theory-informed and system-validated methods for computing power networks,
-                low-carbon resource optimization, and reliable service intelligence.
-              </p>
+              <p className="type-body text-sm md:text-base mb-5">{researchOverview}</p>
               <div className="space-y-3">
-                <div className="flex items-start gap-3">
-                  <span className="text-primary font-semibold">1.</span>
-                  <p className="text-sm text-foreground/80">Computing power scheduling with user-perceived QoS awareness.</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <span className="text-primary font-semibold">2.</span>
-                  <p className="text-sm text-foreground/80">Green & low-carbon scheduling for energy-efficient computing.</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <span className="text-primary font-semibold">3.</span>
-                  <p className="text-sm text-foreground/80">Service recommendation and cold-start solutions with robust, deployable modeling.</p>
-                </div>
+                {researchThemes.map((theme, index) => (
+                  <div className="flex items-start gap-3" key={theme.title}>
+                    <span className="text-primary font-semibold">{index + 1}.</span>
+                    <p className="text-sm text-foreground/80">
+                      <span className="font-medium text-primary/90">{theme.title}:</span> {theme.description}
+                    </p>
+                  </div>
+                ))}
               </div>
             </CardContent>
           </Card>
@@ -355,28 +322,24 @@ export default function TeamPage() {
           <Card className="shadow-md border-primary/10">
             <CardContent className="p-6">
               <h3 className="type-subheading-lg mb-3">Prospective Students</h3>
-              <p className="text-sm text-foreground/80 leading-relaxed mb-4">
-                Students interested in research are encouraged to email a concise self-introduction and academic background.
-              </p>
-              <div className="space-y-2 text-sm">
-                <div className="flex items-start gap-3">
+              <p className="type-body text-sm mb-4">{recruitmentIntro}</p>
+              <ul className="space-y-2 text-sm list-none">
+                {recruitmentChecklist.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <span className="text-muted-foreground">•</span>
+                    <span className="text-foreground/80">{item}</span>
+                  </li>
+                ))}
+                <li className="flex items-start gap-3">
                   <span className="text-muted-foreground">•</span>
-                  <p className="text-foreground/80">Your CV, transcripts (if available), and 1–2 related projects.</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <span className="text-muted-foreground">•</span>
-                  <p className="text-foreground/80">Motivation for joining the lab and proposed research interests.</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <span className="text-muted-foreground">•</span>
-                  <p className="text-foreground/80">
-                    Contact:{" "}
-                    <a className="text-accent hover:underline" href="mailto:imucsrdq@163.com">
-                      imucsrdq@163.com
+                  <span className="text-foreground/80">
+                    Contact:{' '}
+                    <a className="text-accent hover:underline" href={`mailto:${recruitmentEmail}`}>
+                      {recruitmentEmail}
                     </a>
-                  </p>
-                </div>
-              </div>
+                  </span>
+                </li>
+              </ul>
             </CardContent>
           </Card>
         </div>
@@ -410,11 +373,6 @@ export default function TeamPage() {
                 </p>
                 <p className="text-sm text-foreground/80 mt-3 mb-4 leading-relaxed">{member.bio}</p>
                 <div className="flex flex-wrap gap-x-3 gap-y-2 items-center">
-                  <Button variant="ghost" size="sm" asChild className="text-muted-foreground hover:text-accent p-1 h-auto">
-                    <a href={`mailto:${member.email}`} aria-label={`Email ${member.name}`}>
-                      <Mail size={18} className="mr-1" /> Email
-                    </a>
-                  </Button>
                   {member.linkedin && (
                     <Button variant="ghost" size="sm" asChild className="text-muted-foreground hover:text-accent p-1 h-auto">
                       <a href={member.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`LinkedIn profile of ${member.name}`}>
@@ -422,7 +380,7 @@ export default function TeamPage() {
                       </a>
                     </Button>
                   )}
-                  {member.website && (
+                  {isValidHttpUrl(member.website) && (
                     <Button variant="ghost" size="sm" asChild className="text-muted-foreground hover:text-accent p-1 h-auto">
                       <a href={member.website} target="_blank" rel="noopener noreferrer" aria-label={`Website of ${member.name}`}>
                         <Globe size={18} className="mr-1" /> Website
@@ -471,11 +429,6 @@ export default function TeamPage() {
                 </p>
                 <p className="text-sm text-foreground/80 mt-3 mb-4 leading-relaxed">{member.bio}</p>
                 <div className="flex flex-wrap gap-x-3 gap-y-2 items-center">
-                  <Button variant="ghost" size="sm" asChild className="text-muted-foreground hover:text-accent p-1 h-auto">
-                    <a href={`mailto:${member.email}`} aria-label={`Email ${member.name}`}>
-                      <Mail size={18} className="mr-1" /> Email
-                    </a>
-                  </Button>
                   {member.linkedin && (
                     <Button variant="ghost" size="sm" asChild className="text-muted-foreground hover:text-accent p-1 h-auto">
                       <a href={member.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`LinkedIn profile of ${member.name}`}>
@@ -483,7 +436,7 @@ export default function TeamPage() {
                       </a>
                     </Button>
                   )}
-                  {member.website && (
+                  {isValidHttpUrl(member.website) && (
                     <Button variant="ghost" size="sm" asChild className="text-muted-foreground hover:text-accent p-1 h-auto">
                       <a href={member.website} target="_blank" rel="noopener noreferrer" aria-label={`Website of ${member.name}`}>
                         <Globe size={18} className="mr-1" /> Website
@@ -527,7 +480,7 @@ export default function TeamPage() {
                   <p className="text-sm text-accent/90 font-medium">{member.role}</p>
                   <p className="text-xs text-muted-foreground mt-0.5">Focus: {member.researchFocus}</p>
                   <p className="text-sm text-foreground/80 mt-2">Now: {member.currentPosition}</p>
-                   {member.website && (
+                   {isValidHttpUrl(member.website) && (
                     <Button variant="link" size="sm" asChild className="mt-2 text-accent px-0 h-auto">
                       <a href={member.website} target="_blank" rel="noopener noreferrer" aria-label={`Website of ${member.name}`}>
                         <Globe size={14} className="mr-1" /> Profile
@@ -563,7 +516,7 @@ export default function TeamPage() {
                   <p className="text-sm text-accent/90 font-medium">{member.role}</p>
                   <p className="text-xs text-muted-foreground mt-0.5">Focus: {member.researchFocus}</p>
                   <p className="text-sm text-foreground/80 mt-2">Now: {member.currentPosition}</p>
-                   {member.website && (
+                   {isValidHttpUrl(member.website) && (
                     <Button variant="link" size="sm" asChild className="mt-2 text-accent px-0 h-auto">
                       <a href={member.website} target="_blank" rel="noopener noreferrer" aria-label={`Website of ${member.name}`}>
                         <Globe size={14} className="mr-1" /> Profile

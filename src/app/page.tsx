@@ -6,6 +6,8 @@ import { SectionTitle } from "@/components/ui/section-title";
 import { Mail, Phone, MapPin, Award, BookOpen, Star, Users, Zap, ArrowRight, ChevronRight, Leaf, Cpu, Database, Battery, Cloud, Sparkles, Crown, Github, Linkedin, Megaphone } from 'lucide-react';
 import { academicHighlights } from '@/lib/news-data';
 import type { AcademicHighlight } from '@/lib/news-data';
+import { getFeaturedPublications } from '@/lib/publications';
+import { recruitmentChecklist, recruitmentIntro, recruitmentMailto } from '@/lib/recruitment';
 import ImageCarousel from '@/components/home/image-carousel';
 import BrushCalligraphyQuote from '@/components/home/brush-calligraphy-quote';
 import ScrollBlurRevealTitle from '@/components/home/scroll-blur-reveal-title';
@@ -13,8 +15,8 @@ import ScrollBlurRevealTitle from '@/components/home/scroll-blur-reveal-title';
 // Enhanced Mock Data with luxury focus
 const scholarData = {
   name: "Dr. RuiDong Qi (祁瑞东)",
-  position: "Principal Investigator in Computing Power Systems | Green AI and Service Intelligence",
-  affiliation: "College of Computer Science, Inner Mongolia University",
+  position: siteConfig.piPosition,
+  affiliation: siteConfig.institution,
   avatarUrl: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/rdq2.jpg",
   dataAiHint: "professional portrait",
   contact: {
@@ -35,14 +37,8 @@ const scholarData = {
     { name: "GitHub", url: siteConfig.academic.githubProfile, icon: <Github className="h-4 w-4" /> },
     { name: "LinkedIn", url: siteConfig.academic.linkedinSearch, icon: <Linkedin className="h-4 w-4" /> },
   ],
-  researchFocusSummary: "Our research integrates computing power systems, service intelligence, and green optimization. We study cloud-edge collaboration, user-centric QoS modeling, and reliable recommendation under practical deployment constraints.",
-  //researchFocusSummary: "Our research focuses on cloud computing, big data, service computing, and system development. In cloud computing, we emphasize cloud–edge collaboration, cross-cloud resource scheduling, and task scheduling methods. In big data, we conduct predictive analytics and user behavior analysis within cloud environments, as well as ecosystem service assessment and forecasting. In service computing, we explore advanced recommendation approaches, including retrieval-augmented cold-start, large-model-based, multimodal, and elastic recommendation methods. We also develop system platforms that integrate cloud computing and big data applications, along with intelligent service recommendation systems.",
-  researchKeywords: [    
-    "Cloud Computing and Big Data",
-    "Services Computing",
-    "Computing Power Networks and Green Scheduling",
-    "Service Recommendation",
-  ],
+  researchFocusSummary: siteConfig.researchSummary,
+  researchKeywords: [...siteConfig.researchKeywords],
   stats: [
     { label: "Publications", value: "Curated list", icon: <BookOpen className="h-5 w-5" /> },
     { label: "Research areas", value: "4 focus themes", icon: <Star className="h-5 w-5" /> },
@@ -69,36 +65,7 @@ function highlightIcon(item: AcademicHighlight) {
   }
 }
 
-const featuredPublications = [
-  {
-    id: "fp1",
-    title: "An Adaptive Density Peak Clustering Algorithm Based on N-ary Bézier Reverse Curve Optimization",
-    authors: "Le Yang, Rui-dong Qi & Jian-tao Zhou",
-    venue:
-      "Proceedings of the 21nd Annual Meeting of International Conference on Intelligent Computing (ICIC 2025)",
-    year: 2025,
-    type: "Conference Paper",
-    doi: "10.1007/978-981-96-9884-4_25",
-  },
-  {
-    id: "fp2",
-    title: "Personalized Hierarchical Topology-Aware Federated Learning: An Approach for QoS Prediction",
-    authors: "CongRong Wu, Rui-dong Qi & Jian-tao Zhou",
-    venue: "IEEE International Symposium on Parallel and Distributed Processing with Applications (ISPA)",
-    year: 2025,
-    type: "Conference Paper",
-    doi: "10.1109/ISPA67752.2025.00193",
-  },
-  {
-    id: "fp3",
-    title: "GIDC: A Gaussian Inflection-Based Framework for Automatic Density Peak Clustering",
-    authors: "YueQi Wang, Rui-dong Qi & Jian-tao Zhou",
-    venue: "IEEE International Symposium on Parallel and Distributed Processing with Applications (ISPA)",
-    year: 2025,
-    type: "Conference Paper",
-    doi: "10.1109/ISPA67752.2025.00129",
-  },
-];
+const featuredPublications = getFeaturedPublications(3);
 
 // Photo highlights on home page
 const carouselImages = [
@@ -268,25 +235,21 @@ export default function Home() {
           <CardContent className="relative z-10 pt-8">
             <div className="flex flex-col lg:flex-row gap-10 items-start">
               <div className="flex-1">
-                <p className="text-lg text-foreground/80 mb-4 leading-relaxed">
-                  If you want to join the lab, send a short email with your background and what you want to
-                  work on. We prioritize candidates with clear research interests and solid foundations.
-                </p>
+                <p className="type-body text-lg mb-4">{recruitmentIntro}</p>
 
-                <div className="space-y-3 text-sm text-foreground/80">
-                  <div className="flex items-start gap-3">
-                    <span className="text-primary font-semibold">1.</span>
-                    <p>Your CV / transcripts (if available) and 1–2 related projects.</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <span className="text-primary font-semibold">2.</span>
-                    <p>Why this lab, and how your experience connects to our research themes.</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <span className="text-primary font-semibold">3.</span>
-                    <p>Any constraints (schedule, language preference, and expected start time).</p>
-                  </div>
-                </div>
+                <ul className="space-y-3 text-sm text-foreground/80 list-none">
+                  {recruitmentChecklist.map((item, i) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <span className="text-primary font-semibold">{i + 1}.</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="text-sm mt-4">
+                  <a href="/team#lab-overview" className="text-accent hover:underline">
+                    Full recruitment details on the Team page →
+                  </a>
+                </p>
               </div>
 
               <div className="w-full lg:w-[340px]">
@@ -308,7 +271,7 @@ export default function Home() {
                   asChild
                   className="w-full px-6 py-3 rounded-2xl group"
                 >
-                  <a href={`mailto:${siteConfig.contactEmail}?subject=Lab%20Application%20-%20Your%20Name`}>
+                  <a href={recruitmentMailto}>
                     Email Dr. Qi <ChevronRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </a>
                 </Button>
@@ -398,7 +361,7 @@ export default function Home() {
                   <span className="text-xs text-foreground/55 whitespace-nowrap">{pub.year}</span>
                 </div>
 
-                <h3 className="type-subheading mb-2 text-primary/95 group-hover:text-primary transition-colors duration-300">
+                <h3 className="type-card-title mb-2 text-primary/95 group-hover:text-primary transition-colors duration-300">
                   {pub.title}
                 </h3>
                 <p className="text-sm italic text-foreground/80 leading-relaxed">{pub.authors}</p>

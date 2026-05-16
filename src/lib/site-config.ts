@@ -33,6 +33,21 @@ export const siteConfig = {
   piShortName: 'Dr. RuiDong Qi',
   piFullName: 'Dr. RuiDong Qi（祁瑞东）',
 
+  /** 全站统一的职位表述（首页、联系页等） */
+  piPosition:
+    'Principal Investigator in Computing Power Networks | Green AI and Service Intelligence',
+
+  /** 全站统一的研究摘要（首页、Research 等） */
+  researchSummary:
+    'Our research integrates computing power systems, service intelligence, and green optimization. We study cloud–edge collaboration, user-centric QoS modeling, and reliable recommendation under practical deployment constraints.',
+
+  researchKeywords: [
+    'Cloud Computing and Big Data',
+    'Services Computing',
+    'Computing Power Networks and Green Scheduling',
+    'Service Recommendation',
+  ] as const,
+
   institution: 'College of Computer Science, Inner Mongolia University',
   institutionLegalName: 'Inner Mongolia University',
 

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 const contactData = {
   name: siteConfig.piFullName,
-  position: "Principal Investigator in Computing Power Networks",
+  position: siteConfig.piPosition,
   affiliation: "School of Computer Science (School of Software)",
   university: siteConfig.institutionLegalName,
   email: siteConfig.contactEmail,

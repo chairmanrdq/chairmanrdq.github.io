@@ -19,7 +19,7 @@ const projectsData = [
     role: "Principal Investigator",
     fundingAgency: "Industry/Enterprise Collaboration Projects - China Mobile Communications Group Inner Mongolia Co., Ltd",
     period: "2024 - 2026",
-    amount: "$500,000",
+    amount: "CNY 500,000 (industry collaboration fund)",
     description: "This research focuses on the Inner Mongolia computing hub node, aiming to design efficient and intelligent computing power scheduling methods driven by user perception and dynamic resource matching. Key topics include perception and modeling of heterogeneous resources, user experience–oriented scheduling mechanisms, cross-domain resource coordination and optimization, and green, low-carbon scheduling strategies.",
     collaborators: ["China Mobile Communications Group Inner Mongolia Co., Ltd"],
     status: "Ongoing",
