@@ -38,8 +38,18 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, interval = 5000, 
         );
     }
 
+    const currentAlt = images[currentImageIndex]?.alt ?? 'Lab photo';
+
     return (
-        <div className={cn("relative w-full h-64 md:h-96 overflow-hidden rounded-none shadow-xl group border border-border", className)}>
+        <div
+            className={cn("relative w-full h-64 md:h-96 overflow-hidden rounded-none shadow-xl group border border-border", className)}
+            role="region"
+            aria-roledescription="carousel"
+            aria-label="Lab photo highlights"
+        >
+            <p className="sr-only" aria-live="polite">
+                Slide {currentImageIndex + 1} of {images.length}: {currentAlt}
+            </p>
             {images.map((image, index) => (
                 <div
                     key={index}

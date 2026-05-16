@@ -40,7 +40,7 @@ const coursesData = [
 
 export default function CoursesPage() {
   return (
-    <div className="space-y-12">
+    <div className="content-page-calm space-y-12">
       <section className="space-y-8 page-section-reveal" style={{ animationDelay: '0ms' }}>
         <SectionTitle>Teaching & Courses</SectionTitle>
         <div className="space-y-8">

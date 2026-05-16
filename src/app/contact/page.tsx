@@ -36,7 +36,7 @@ const socialMedia = [
 
 export default function ContactPage() {
   return (
-    <div className="space-y-12">
+    <div className="content-page-calm space-y-12">
       <section className="page-section-reveal" style={{ animationDelay: "0ms" }}>
         <SectionTitle>Get in Touch</SectionTitle>
       </section>

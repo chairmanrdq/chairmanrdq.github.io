@@ -53,9 +53,24 @@ const projectsData = [
 
 export default function ProjectsPage() {
   return (
-    <div className="space-y-12">
+    <div className="content-page-calm space-y-12">
       <section className="space-y-6 page-section-reveal" style={{ animationDelay: "0ms" }}>
       <SectionTitle>Projects</SectionTitle>
+      <Card className="luxury-card border-[hsl(var(--gold)/0.12)]">
+        <CardContent className="pt-6 text-sm text-foreground/80">
+          <p>
+            Lab teams recently placed first and second in the Jiutian·Wutong Cup AI+Data national finals.{' '}
+            <a href="/news#wutong-cup-2026" className="text-primary font-medium hover:underline">
+              Read the news story
+            </a>{' '}
+            or visit the{' '}
+            <a href="/team" className="text-primary font-medium hover:underline">
+              team page
+            </a>
+            .
+          </p>
+        </CardContent>
+      </Card>
       <Card className="luxury-card">
         <CardContent className="pt-6">
           <h3 className="type-subheading mb-2">Research-to-Impact</h3>

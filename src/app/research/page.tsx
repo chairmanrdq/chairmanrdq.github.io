@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function ResearchPage() {
   return (
-    <div className="space-y-12">
+    <div className="content-page-calm space-y-12">
       <section
         id="research-overview"
         aria-labelledby="research-overview-title"

@@ -39,8 +39,9 @@
 
     --link-hover: 224 72% 40%;
 
-    --gold: 163 100% 32%;
-    --gold-highlight: 163 100% 42%;
+    /* 奖项/高亮用真金色，与 accent 绿色区分 */
+    --gold: 43 74% 38%;
+    --gold-highlight: 43 82% 48%;
 
     --chart-1: 224 76% 48%;
     --chart-2: 163 100% 38%;
@@ -95,8 +96,8 @@
 
     --link-hover: 163 100% 52%;
 
-    --gold: 163 90% 48%;
-    --gold-highlight: 163 100% 55%;
+    --gold: 43 70% 55%;
+    --gold-highlight: 43 78% 62%;
 
     --chart-1: 224 76% 58%;
     --chart-2: 163 100% 44%;
@@ -1114,4 +1115,23 @@
 .skip-to-main:focus-visible {
   left: 0.75rem;
   outline-color: hsl(var(--ring));
+}
+
+/* 内容页减弱入场/悬停动效，首页不受影响 */
+.content-page-calm .page-section-reveal,
+.content-page-calm .motion-safe\:animate-fade-up,
+.content-page-calm .motion-safe\:animate-fade-in {
+  animation: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.content-page-calm .luxury-card.group:hover .absolute.inset-0 {
+  opacity: 0 !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .content-page-calm .luxury-hover:hover {
+    transform: none !important;
+  }
 }

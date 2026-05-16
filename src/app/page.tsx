@@ -4,8 +4,10 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Button } from "@/components/ui/button";
 import { SectionTitle } from "@/components/ui/section-title";
 import { Mail, Phone, MapPin, Award, BookOpen, Star, Users, Zap, ArrowRight, ChevronRight, Leaf, Cpu, Database, Battery, Cloud, Sparkles, Crown, Github, Linkedin, Megaphone } from 'lucide-react';
-import { academicHighlights } from '@/lib/news-data';
+import { getLatestNewsHighlight, labQuickLinks } from '@/lib/news-data';
 import type { AcademicHighlight } from '@/lib/news-data';
+import { labGalleryImages } from '@/lib/lab-gallery';
+import { researchThemes } from '@/lib/research-content';
 import { getFeaturedPublications } from '@/lib/publications';
 import { recruitmentChecklist, recruitmentIntro, recruitmentMailto } from '@/lib/recruitment';
 import ImageCarousel from '@/components/home/image-carousel';
@@ -66,30 +68,14 @@ function highlightIcon(item: AcademicHighlight) {
 }
 
 const featuredPublications = getFeaturedPublications(3);
-
-// Photo highlights on home page
-const carouselImages = [
-  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/26wt.jpg", alt: "Inner Mongolia University Image1", dataAiHint: "Illustration of Inner Mongolia University" },
-  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/zsxf.jpg", alt: "Inner Mongolia University Image2", dataAiHint: "Illustration of Inner Mongolia University" },
-  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/zsxf2.jpg", alt: "Inner Mongolia University Image3", dataAiHint: "Illustration of Inner Mongolia University" },
-  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/wtb.jpg", alt: "Inner Mongolia University Image4", dataAiHint: "Illustration of Inner Mongolia University" },
-  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/mmhy.jpg", alt: "Inner Mongolia University Image5", dataAiHint: "Illustration of Inner Mongolia University" },
-  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/ndmm.jpg", alt: "Inner Mongolia University Image6", dataAiHint: "Illustration of Inner Mongolia University" },
-  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/dbxc.jpg", alt: "Inner Mongolia University Image7", dataAiHint: "Illustration of Inner Mongolia University" },
-  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/202508.jpg", alt: "Inner Mongolia University Image8", dataAiHint: "Illustration of Inner Mongolia University" },
-  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/202509.jpg", alt: "Inner Mongolia University Image9", dataAiHint: "Illustration of Inner Mongolia University" },
-  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/202510.jpg", alt: "Inner Mongolia University Image10", dataAiHint: "Illustration of Inner Mongolia University" },
-  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/heb.jpg", alt: "State-of-the-Art Research Facility", dataAiHint: "modern laboratory with advanced equipment" },
-  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/herb.jpg", alt: "AI Neural Network Visualization", dataAiHint: "complex neural network visualization" },
-  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/202502.jpg", alt: "International Research Collaboration", dataAiHint: "diverse team collaboration" },
-  { src: "https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/202503.jpg", alt: "Advanced Computing Infrastructure", dataAiHint: "high-performance computing center" },
-];
+const latestNews = getLatestNewsHighlight();
+const researchSnapshotThemes = researchThemes.slice(0, 3);
 
 export default function Home() {
   return (
     <div className="home-tech-canvas relative">
       {/* Hero */}
-      <section className="home-hero-tech relative mb-16 overflow-hidden rounded-xl border-2 border-[#0A1526]/15 bg-[#FFFFFF] p-8 md:p-12 luxury-card tech-frame-ambient page-section-reveal">
+      <section className="home-hero-tech relative mb-16 overflow-hidden rounded-xl border-2 border-border/80 bg-card p-8 md:p-12 luxury-card tech-frame-ambient page-section-reveal">
         <div className="relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
             <div className="flex shrink-0 flex-col items-center">
@@ -106,7 +92,7 @@ export default function Home() {
                     alt={`Profile picture of ${scholarData.name}`}
                     width={200}
                     height={300}
-                    className="rounded-none object-cover h-72 w-48 border-2 border-[#0A1526]/25 lg:h-96 lg:w-64"
+                    className="rounded-none object-cover h-72 w-48 border-2 border-border lg:h-96 lg:w-64"
                     data-ai-hint={scholarData.dataAiHint}
                     priority
                   />
@@ -400,20 +386,19 @@ export default function Home() {
       {/* Luxury Divider */}
       <div className="luxury-divider"></div>
 
-      {/* Enhanced News & Updates Section */}
       <section
-        id="news"
-        aria-labelledby="news-title"
+        id="lab-quick-links"
+        aria-labelledby="quick-links-title"
         className="mb-16 page-section-reveal"
         style={{ animationDelay: "320ms" }}
       >
         <div className="text-center mb-8">
-          <ScrollBlurRevealTitle id="news-title" text="Academic Highlights" />
+          <ScrollBlurRevealTitle id="quick-links-title" text="Explore the Lab" />
           <div className="section-title-rule" aria-hidden={true} />
         </div>
         
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {academicHighlights.map((item, index) => (
+          {labQuickLinks.map((item, index) => (
             <Card 
              key={item.id} 
              className="luxury-card tech-frame-ambient group overflow-hidden luxury-hover relative motion-safe:animate-fade-up"
@@ -466,18 +451,58 @@ export default function Home() {
             </Card>
           ))}
         </div>
-        <div className="mt-8 flex justify-center">
-          <Button variant="outline" asChild className="outline-academic">
-            <a href="/news" className="inline-flex items-center gap-2">
-              View all news
-              <ArrowRight className="h-4 w-4" />
-            </a>
-          </Button>
-        </div>
       </section>
 
-      {/* Luxury Divider */}
-      <div className="luxury-divider"></div>
+      <div className="luxury-divider" />
+
+      {latestNews && (
+        <section
+          id="latest-news"
+          aria-labelledby="latest-news-title"
+          className="mb-16 page-section-reveal"
+          style={{ animationDelay: "360ms" }}
+        >
+          <div className="text-center mb-8">
+            <ScrollBlurRevealTitle id="latest-news-title" text="Latest News" />
+            <div className="section-title-rule" aria-hidden={true} />
+          </div>
+          <Card className="luxury-card tech-frame-ambient group overflow-hidden luxury-hover relative max-w-3xl mx-auto ring-1 ring-[hsl(var(--gold)/0.12)]">
+            <CardContent className="relative z-10 pt-6">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-xl border text-[hsl(var(--gold))] bg-[hsl(var(--gold)/0.10)] border-[hsl(var(--gold)/0.22)]">
+                  {highlightIcon(latestNews)}
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="luxury-badge text-[hsl(var(--gold))] bg-[hsl(var(--gold)/0.10)] border-[hsl(var(--gold)/0.22)]">
+                      {latestNews.badge}
+                    </span>
+                    <span className="text-xs text-muted-foreground">{latestNews.date}</span>
+                  </div>
+                  <h3 className="type-subheading mb-2 text-primary/95">{latestNews.title}</h3>
+                  <p className="text-sm text-foreground/80 leading-relaxed">{latestNews.description}</p>
+                  <div className="mt-4 flex flex-wrap gap-3">
+                    <Button variant="outline" size="sm" asChild className="outline-academic">
+                      <a href={latestNews.link} className="inline-flex items-center gap-2">
+                        {latestNews.action}
+                        <ChevronRight className="h-4 w-4" />
+                      </a>
+                    </Button>
+                    <Button variant="ghost" size="sm" asChild>
+                      <a href="/news" className="inline-flex items-center gap-2 text-muted-foreground">
+                        View all news
+                        <ArrowRight className="h-4 w-4" />
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </section>
+      )}
+
+      <div className="luxury-divider" />
 
       {/* Research Snapshot */}
       <section
@@ -494,29 +519,12 @@ export default function Home() {
         <Card className="luxury-card tech-frame-ambient">
           <CardContent className="relative z-10 pt-6">
             <div className="space-y-6">
-              <div>
-                <h3 className="type-subheading mb-1">Computing Power Networks</h3>
-                <p className="text-sm text-foreground/80 leading-relaxed">
-                  User-aware and QoS-aware scheduling across heterogeneous resources, with a focus on
-                  provable performance and energy-efficient execution.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="type-subheading mb-1">Green & Low-carbon Optimization</h3>
-                <p className="text-sm text-foreground/80 leading-relaxed">
-                  Low-carbon resource matching and system evaluation, targeting robust reductions in
-                  power usage while maintaining service quality.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="type-subheading mb-1">Service Computing & Recommendation</h3>
-                <p className="text-sm text-foreground/80 leading-relaxed">
-                  Robust service recommendation and cold-start solutions, integrating learning-based
-                  models for practical deployment scenarios.
-                </p>
-              </div>
+              {researchSnapshotThemes.map((theme) => (
+                <div key={theme.title}>
+                  <h3 className="type-subheading mb-1">{theme.title}</h3>
+                  <p className="text-sm text-foreground/80 leading-relaxed">{theme.description}</p>
+                </div>
+              ))}
             </div>
 
             <div className="mt-8 flex flex-wrap gap-3 items-center">
@@ -551,7 +559,7 @@ export default function Home() {
         </div>
 
         <div className="luxury-card tech-frame-ambient overflow-hidden luxury-hover motion-safe:animate-fade-in" style={{ animationDelay: '120ms' }}>
-          <ImageCarousel images={carouselImages} interval={5000} />
+          <ImageCarousel images={[...labGalleryImages]} interval={5000} />
         </div>
       </section>
     </div>

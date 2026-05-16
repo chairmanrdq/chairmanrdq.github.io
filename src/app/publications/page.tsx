@@ -22,7 +22,7 @@ export default function PublicationsPage() {
   const tabCategories = getPublicationTabCategories();
 
   return (
-    <div className="space-y-12">
+    <div className="content-page-calm space-y-12">
       <section className="space-y-6 page-section-reveal" style={{ animationDelay: '0ms' }}>
         <SectionTitle>Publications</SectionTitle>
         <Card className="luxury-card">

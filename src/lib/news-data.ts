@@ -40,11 +40,12 @@ export const newsArticles: NewsArticle[] = [
     ],
     category: 'award',
     badge: 'Award',
-    relatedLink: { href: '/projects', label: 'View related projects' },
+    relatedLink: { href: '/team#current-team', label: 'Meet participating students' },
   },
 ];
 
-export const academicHighlights: AcademicHighlight[] = [
+/** 首页「快捷入口」卡片（非新闻） */
+export const labQuickLinks: AcademicHighlight[] = [
   {
     id: 'p',
     date: 'Selected and updated',
@@ -81,17 +82,28 @@ export const academicHighlights: AcademicHighlight[] = [
     action: 'Meet the team',
     icon: 'users',
   },
-  {
+];
+
+export function getLatestNewsHighlight(): AcademicHighlight | null {
+  const article = newsArticles[0];
+  if (!article) return null;
+  return {
     id: 'news-teaser',
-    date: newsArticles[0]?.date ?? 'Latest',
+    date: article.date,
     title: 'Jiutian·Wutong Cup Finals — Lab Teams Win First & Second Prize',
-    description: newsArticles[0]?.summary ?? 'Awards, milestones, and updates from the research group.',
+    description: article.summary,
     badge: 'News',
     tone: 'gold',
-    link: '/news#wutong-cup-2026',
+    link: `/news#${article.id}`,
     action: 'Read full story',
     icon: 'award',
-  },
+  };
+}
+
+/** @deprecated Use labQuickLinks + getLatestNewsHighlight */
+export const academicHighlights: AcademicHighlight[] = [
+  ...labQuickLinks,
+  ...(getLatestNewsHighlight() ? [getLatestNewsHighlight()!] : []),
 ];
 
 export function getNewsArticleById(id: string): NewsArticle | undefined {

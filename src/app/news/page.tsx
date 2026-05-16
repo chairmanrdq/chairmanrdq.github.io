@@ -36,16 +36,15 @@ export default function NewsPage() {
   );
 
   return (
-    <div className="space-y-12">
+    <div className="content-page-calm space-y-12">
       <section className="space-y-6 page-section-reveal" style={{ animationDelay: '0ms' }}>
         <SectionTitle>News &amp; Updates</SectionTitle>
         <Card className="luxury-card">
           <CardContent className="pt-6">
             <p className="text-sm text-foreground/80 leading-relaxed">
               Awards, competition results, recruitment notices, and other milestones from the lab.
-              Items previously featured on the homepage{' '}
-              <span className="text-primary font-medium">Academic Highlights</span> section appear here
-              as full stories when they are news-worthy updates.
+              The homepage <span className="text-primary font-medium">Latest News</span> teaser links here
+              for full stories; quick links to publications, projects, and team remain on the home page.
             </p>
           </CardContent>
         </Card>

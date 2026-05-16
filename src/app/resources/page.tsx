@@ -383,9 +383,21 @@ function CatalogLinkCard({ item }: { item: LinkCatalogItem }) {
   );
 }
 
+const labCuratedVenueIds = new Set(['ccf_net_1', 'ccf_net_2', 'ccf_db_2', 'ccf_arch_2', 'ccf_se_1']);
+
 export default function ResourcesPage() {
+  const curatedFriendlyLinks = resourcesData.friendlyLinks.filter((item) =>
+    labCuratedVenueIds.has(item.id),
+  );
+
   return (
-    <div className="space-y-12">
+    <div className="content-page-calm space-y-12">
+      <Card className="luxury-card border-primary/10">
+        <CardContent className="pt-6 text-sm text-foreground/80 leading-relaxed">
+          Software, slides, and a short reading list aligned with computing networks, systems, and data mining—
+          not a general bookmark wall. Contact the PI for collaboration datasets under agreement.
+        </CardContent>
+      </Card>
       <section id="software" aria-labelledby="software-title">
         <SectionTitle id="software-title">Software & Tools</SectionTitle>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -425,9 +437,12 @@ export default function ResourcesPage() {
       </section>
 
       <section id="friendly-links" aria-labelledby="friendly-links-title">
-        <SectionTitle id="friendly-links-title">Useful Links</SectionTitle>
+        <SectionTitle id="friendly-links-title">Curated Venues (Lab Reading List)</SectionTitle>
+        <p className="mb-4 text-sm text-muted-foreground max-w-2xl">
+          Representative conferences and journals for networking, systems, and data-centric research in the group.
+        </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {resourcesData.friendlyLinks.map((item) => (
+          {curatedFriendlyLinks.map((item) => (
             <CatalogLinkCard key={item.id} item={item} />
           ))}
         </div>

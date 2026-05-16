@@ -246,7 +246,7 @@ const alumni_collegeMembers = [
 
 export default function TeamPage() {
   return (
-    <div className="space-y-12">
+    <div id="current-team" className="content-page-calm space-y-12 scroll-mt-24">
       <section
         id="lab-overview"
         aria-labelledby="lab-overview-title"
