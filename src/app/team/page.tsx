@@ -1,7 +1,7 @@
 import { SectionTitle } from '@/components/ui/section-title';
 import { Card, CardContent } from '@/components/ui/card';
 import Image from 'next/image';
-import { Globe } from 'lucide-react';
+import { Globe, Linkedin, BookUser } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import type { Metadata } from 'next';
 import { recruitmentChecklist, recruitmentEmail, recruitmentIntro } from '@/lib/recruitment';
@@ -22,6 +22,49 @@ export const metadata: Metadata = {
   description: `Research group led by ${siteConfig.piFullName}: PI profile, graduate and undergraduate researchers, and alumni.`,
 };
 
+function MemberLinks({ member }: { member: TeamMember }) {
+  return (
+    <motion className="flex flex-wrap gap-x-3 gap-y-2 items-center mt-4">
+      {member.linkedin ? (
+        <Button variant="ghost" size="sm" asChild className="text-muted-foreground hover:text-accent p-1 h-auto">
+          <a
+            href={member.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`LinkedIn profile of ${member.name}`}
+          >
+            <Linkedin size={18} className="mr-1" /> LinkedIn
+          </a>
+        </Button>
+      ) : null}
+      {isValidHttpUrl(member.website) ? (
+        <Button variant="ghost" size="sm" asChild className="text-muted-foreground hover:text-accent p-1 h-auto">
+          <a
+            href={member.website}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Website of ${member.name}`}
+          >
+            <Globe size={18} className="mr-1" /> Website
+          </a>
+        </Button>
+      ) : null}
+      {member.googleScholar ? (
+        <Button variant="ghost" size="sm" asChild className="text-muted-foreground hover:text-accent p-1 h-auto">
+          <a
+            href={member.googleScholar}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Google Scholar of ${member.name}`}
+          >
+            <BookUser size={18} className="mr-1" /> Scholar
+          </a>
+        </Button>
+      ) : null}
+    </div>
+  );
+}
+
 function MemberCard({ member }: { member: TeamMember }) {
   return (
     <Card className="shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col sm:flex-row overflow-hidden border-primary/10">
@@ -41,6 +84,7 @@ function MemberCard({ member }: { member: TeamMember }) {
           Interests: {member.researchInterests.join(', ')}
         </p>
         <p className="text-sm text-foreground/80 mt-3 leading-relaxed">{member.bio}</p>
+        <MemberLinks member={member} />
       </CardContent>
     </Card>
   );

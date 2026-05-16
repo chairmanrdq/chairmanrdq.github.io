@@ -35,6 +35,13 @@ export const publications: Publication[] = [
     abstract:
       'Clustering is a fundamental technique in unsupervised learning. This paper proposes an adaptive density peak clustering algorithm using N-ary Bézier inverse-curve optimization for automatic cluster-center selection, with gamma processing and entropy weighting to reduce complexity. Experiments report gains on AMI, ARI, and FMI versus automatic baselines.',
     keywords: ['Adaptive density clustering', 'Bézier optimization', 'Cluster center selection'],
+    bibtex: `@inproceedings{yang2025adaptive,
+  author    = {Yang, Le and Qi, RuiDong and Zhou, Jian-tao},
+  title     = {An Adaptive Density Peak Clustering Algorithm Based on N-ary B{\\'e}zier Reverse Curve Optimization},
+  booktitle = {Proceedings of the 21st International Conference on Intelligent Computing (ICIC)},
+  year      = {2025},
+  doi       = {10.1007/978-981-96-9884-4_25}
+}`,
   },
   {
     id: 'p2',
@@ -47,6 +54,13 @@ export const publications: Publication[] = [
     abstract:
       'We propose Personalized Hierarchical Topology-Aware Federated Learning (pHTAFed) for privacy-aware QoS prediction, combining network topology paths with hierarchical aggregation. Results on two real-world datasets show improved accuracy over distributed and centralized baselines.',
     keywords: ['QoS prediction', 'Federated learning', 'Web services'],
+    bibtex: `@inproceedings{wu2025phtafed,
+  author    = {Wu, CongRong and Qi, RuiDong and Zhou, Jian-tao},
+  title     = {Personalized Hierarchical Topology-Aware Federated Learning: An Approach for {QoS} Prediction},
+  booktitle = {IEEE International Symposium on Parallel and Distributed Processing with Applications (ISPA)},
+  year      = {2025},
+  doi       = {10.1109/ISPA67752.2025.00193}
+}`,
   },
   {
     id: 'p3',
@@ -59,6 +73,13 @@ export const publications: Publication[] = [
     abstract:
       'GIDC applies contrast-weighted filtering and Gaussian inflection-point analysis on decision-graph γ-curves to stabilize automatic cluster-center detection under noise and smooth densities, improving accuracy and robustness over state-of-the-art methods.',
     keywords: ['Density-based clustering', 'Gaussian fitting', 'Unsupervised learning'],
+    bibtex: `@inproceedings{wang2025gidc,
+  author    = {Wang, YueQi and Qi, RuiDong and Zhou, Jian-tao},
+  title     = {{GIDC}: A Gaussian Inflection-Based Framework for Automatic Density Peak Clustering},
+  booktitle = {IEEE International Symposium on Parallel and Distributed Processing with Applications (ISPA)},
+  year      = {2025},
+  doi       = {10.1109/ISPA67752.2025.00129}
+}`,
   },
 ];
 
@@ -75,7 +96,6 @@ export function filterPublicationsByType(type: string): Publication[] {
   return publications.filter((p) => p.type === type);
 }
 
-/** Tab labels that have at least one paper (plus "All"). */
 export function getPublicationTabCategories(): string[] {
   const used = new Set(publications.map((p) => p.type));
   const ordered = TYPE_ORDER.filter((t) => used.has(t));
@@ -84,6 +104,27 @@ export function getPublicationTabCategories(): string[] {
 
 export function getFeaturedPublications(limit = 3): Publication[] {
   return [...publications].sort((a, b) => b.year - a.year).slice(0, limit);
+}
+
+export interface PublicationYearGroup {
+  year: number;
+  publications: Publication[];
+}
+
+/** Group publications by year (newest year first). */
+export function groupPublicationsByYear(pubs: Publication[]): PublicationYearGroup[] {
+  const byYear = new Map<number, Publication[]>();
+  for (const pub of pubs) {
+    const list = byYear.get(pub.year) ?? [];
+    list.push(pub);
+    byYear.set(pub.year, list);
+  }
+  return [...byYear.entries()]
+    .sort(([a], [b]) => b - a)
+    .map(([year, items]) => ({
+      year,
+      publications: items.sort((a, b) => a.title.localeCompare(b.title)),
+    }));
 }
 
 /** Re-export for pages that import contribution bullets alongside publication helpers. */

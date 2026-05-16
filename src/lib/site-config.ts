@@ -1,4 +1,5 @@
 import { isValidHttpUrl } from '@/lib/utils';
+import { labImage } from '@/lib/media';
 
 /**
  * 全站单一配置：课题组品牌、站点 URL、学术外链。
@@ -49,6 +50,10 @@ export const siteConfig = {
   labTagline:
     'Computing power networks, low-carbon scheduling, and trustworthy service intelligence — theory-grounded, system-validated research.',
 
+  /** 中文站点摘要（用于 metadata keywords / 检索） */
+  labTaglineZh:
+    '算力网络、低碳调度与可信服务智能——理论与系统验证并重的研究团队。',
+
   piShortName: 'Dr. RuiDong Qi',
   piFullName: 'Dr. RuiDong Qi（祁瑞东）',
 
@@ -70,8 +75,7 @@ export const siteConfig = {
 
   contactEmail: 'imucsrdq@163.com',
 
-  piAvatarUrl:
-    'https://raw.githubusercontent.com/chairmanrdq/chairmanrdq.github.io/main/images/rdq2.jpg',
+  piAvatarUrl: labImage('rdq2.jpg'),
 
   piOffice:
     'Room 303, BeiZheng Building, School of Computer Science (School of Software), Inner Mongolia University',

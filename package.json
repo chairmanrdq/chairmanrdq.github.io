@@ -10,6 +10,7 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
+    "sync:images": "node scripts/sync-lab-images.mjs",
     "preview": "npx --yes serve out -l 3000"
   },
   "dependencies": {

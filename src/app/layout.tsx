@@ -10,6 +10,7 @@ import { THEME_STORAGE_KEY } from '@/lib/theme-constants';
 import JsonLd from '@/components/seo/json-ld';
 import ScrollProgressBar from '@/components/layout/scroll-progress-bar';
 import { siteConfig, getCanonicalSiteUrl } from '@/lib/site-config';
+import { absoluteAssetUrl } from '@/lib/media';
 
 const canonical = getCanonicalSiteUrl();
 
@@ -20,6 +21,15 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.piShortName}`,
   },
   description: siteConfig.labTagline,
+  keywords: [
+    'computing power networks',
+    'Inner Mongolia University',
+    'RuiDong Qi',
+    '祁瑞东',
+    'green scheduling',
+    'service intelligence',
+    '算力网络',
+  ],
   verification: {
     google: '9adTvMEmfFATov8HAuYaYB9QK_tOM2trq8dGqcdRvi8',
   },
@@ -30,13 +40,13 @@ export const metadata: Metadata = {
     siteName: siteConfig.institutionLegalName,
     title: siteConfig.piShortName,
     description: siteConfig.labTagline,
-    images: [{ url: siteConfig.piAvatarUrl, alt: siteConfig.piFullName }],
+    images: [{ url: absoluteAssetUrl('/images/rdq2.jpg', canonical), alt: siteConfig.piFullName }],
   },
   twitter: {
     card: 'summary_large_image',
     title: siteConfig.piShortName,
     description: siteConfig.labTagline,
-    images: [siteConfig.piAvatarUrl],
+    images: [absoluteAssetUrl('/images/rdq2.jpg', canonical)],
   },
 };
 
