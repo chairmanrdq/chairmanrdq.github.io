@@ -3,7 +3,9 @@ import { siteConfig } from '@/lib/site-config';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { SectionTitle } from "@/components/ui/section-title";
-import { Mail, Phone, MapPin, Award, BookOpen, Star, Users, Zap, ArrowRight, ChevronRight, Leaf, Cpu, Database, Battery, Cloud, Sparkles, Crown, Github, Linkedin } from 'lucide-react';
+import { Mail, Phone, MapPin, Award, BookOpen, Star, Users, Zap, ArrowRight, ChevronRight, Leaf, Cpu, Database, Battery, Cloud, Sparkles, Crown, Github, Linkedin, Megaphone } from 'lucide-react';
+import { academicHighlights } from '@/lib/news-data';
+import type { AcademicHighlight } from '@/lib/news-data';
 import ImageCarousel from '@/components/home/image-carousel';
 import BrushCalligraphyQuote from '@/components/home/brush-calligraphy-quote';
 import ScrollBlurRevealTitle from '@/components/home/scroll-blur-reveal-title';
@@ -47,63 +49,25 @@ const scholarData = {
     { label: "Teaching & advising", value: "Courses & mentorship", icon: <Users className="h-5 w-5" /> },
     { label: "Projects", value: "Grants & collaborations", icon: <Zap className="h-5 w-5" /> },
   ],
-  news: [
-    { 
-      id: "p", 
-      date: "Selected and updated", 
-      title: "Selected Publications", 
-      description: "Representative papers on clustering, federated QoS prediction, and robust density-peak modeling, with DOI access where available.", 
-      icon: <BookOpen className="h-5 w-5 flex-shrink-0 text-primary" />,
-      badge: "Publications",
-      tone: "primary",
-      link: "/publications",
-      action: "Browse all"
-    },   
-    { 
-      id: "g", 
-      date: "Active portfolio", 
-      title: "Projects & Grants", 
-      description: "Funded projects and industry collaborations on computing-power scheduling, cross-domain orchestration, and low-carbon optimization.", 
-      icon: <Sparkles className="h-5 w-5 flex-shrink-0 text-secondary" />,
-      badge: "Grants",
-      tone: "primary",
-      link: "/projects",
-      action: "View projects"
-    },
-    { 
-      id: "t", 
-      date: "Lab and mentorship", 
-      title: "Lab Team", 
-      description: "Team structure, research tracks, and supervision opportunities for students with strong foundations and clear interests.", 
-      icon: <Users className="h-5 w-5 flex-shrink-0 text-secondary" />,
-      badge: "Students",
-      tone: "primary",
-      link: "/team",
-      action: "Meet the team"
-    }
-    ,
-    {
-      id: "a",
-      date: "2026-04-01",
-      title: "Two Teams from Our University Win Awards in AI+Data Track of the 5th Jiutian·Wutong Cup National Finals",
-      description:
-        "The national finals of the AI+Data Track of the 2026 5th China Mobile Jiutian·Wutong Cup. Our Intelligent Computing Pioneer Team and Neida Meow Meow Team received first and second prizes, respectively.",
-      icon: <Award className="h-5 w-5 flex-shrink-0" />,
-      badge: "Award",
-      tone: "gold",
-      link: "/projects",
-      action: "View projects",
-    }
-    //{ 
-     // id: 3, 
-     // date: "2024-05-20", 
-      //title: "🎓 PhD Recruitment Open", 
-      //description: "Seeking exceptional students passionate about NLP and ML. Join our world-class research team and shape the future of AI.", 
-     // icon: <Users className="h-5 w-5 text-green-500 flex-shrink-0" />,
-     // badge: "Opportunity"
-    //},
-  ],
 };
+
+function highlightIcon(item: AcademicHighlight) {
+  const className = 'h-5 w-5 flex-shrink-0';
+  switch (item.icon) {
+    case 'book':
+      return <BookOpen className={className} />;
+    case 'sparkles':
+      return <Sparkles className={className} />;
+    case 'users':
+      return <Users className={className} />;
+    case 'award':
+      return <Award className={className} />;
+    case 'megaphone':
+      return <Megaphone className={className} />;
+    default:
+      return <Megaphone className={className} />;
+  }
+}
 
 const featuredPublications = [
   {
@@ -486,7 +450,7 @@ export default function Home() {
         </div>
         
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {scholarData.news.map((item, index) => (
+          {academicHighlights.map((item, index) => (
             <Card 
              key={item.id} 
              className="luxury-card tech-frame-ambient group overflow-hidden luxury-hover relative motion-safe:animate-fade-up"
@@ -502,7 +466,7 @@ export default function Home() {
                         : 'text-primary bg-[hsl(var(--primary)/0.10)] border-[hsl(var(--primary)/0.18)]'
                     }`}
                   >
-                    {item.icon}
+                    {highlightIcon(item)}
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
@@ -538,6 +502,14 @@ export default function Home() {
               </CardContent>
             </Card>
           ))}
+        </div>
+        <div className="mt-8 flex justify-center">
+          <Button variant="outline" asChild className="outline-academic">
+            <a href="/news" className="inline-flex items-center gap-2">
+              View all news
+              <ArrowRight className="h-4 w-4" />
+            </a>
+          </Button>
         </div>
       </section>
 
