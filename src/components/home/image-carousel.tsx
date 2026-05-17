@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
 interface ImageCarouselProps {
-    images: { src: string; alt: string; dataAiHint?: string }[];
+    images: { src: string; alt: string; caption?: string; dataAiHint?: string }[];
     interval?: number; // in milliseconds
     className?: string;
 }
@@ -39,8 +39,10 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, interval = 5000, 
     }
 
     const currentAlt = images[currentImageIndex]?.alt ?? 'Lab photo';
+    const currentCaption = images[currentImageIndex]?.caption;
 
     return (
+        <div className="space-y-2">
         <div
             className={cn("relative w-full h-64 md:h-96 overflow-hidden rounded-none shadow-xl group border border-border", className)}
             role="region"
@@ -109,6 +111,12 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, interval = 5000, 
                     </div>
                 </>
             )}
+        </div>
+        {currentCaption ? (
+            <p className="text-center text-sm text-muted-foreground px-2" aria-live="polite">
+                {currentCaption}
+            </p>
+        ) : null}
         </div>
     );
 };
