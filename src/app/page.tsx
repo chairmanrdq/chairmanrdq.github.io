@@ -4,7 +4,7 @@ import { getHomeLabStats } from '@/lib/lab-stats';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { SectionTitle } from "@/components/ui/section-title";
-import { Mail, Phone, MapPin, Award, BookOpen, Star, Users, Zap, ArrowRight, ChevronRight, Leaf, Cpu, Database, Battery, Cloud, Sparkles, Crown, Github, Linkedin, Megaphone } from 'lucide-react';
+import { Mail, MapPin, Award, BookOpen, Star, Users, Zap, ArrowRight, ChevronRight, Leaf, Cpu, Database, Battery, Cloud, Sparkles, Crown, Github, Linkedin, Megaphone } from 'lucide-react';
 import { getLatestNewsHighlight, labQuickLinks } from '@/lib/news-data';
 import type { AcademicHighlight } from '@/lib/news-data';
 import { labGalleryImages } from '@/lib/lab-gallery';
@@ -24,7 +24,6 @@ const scholarData = {
   contact: {
     email: siteConfig.contactEmail,
     office: siteConfig.piOffice,
-    phone: '' as string | undefined,
   },
   academicLinks: getPiAcademicLinks().map((link) => ({
     ...link,
@@ -168,14 +167,6 @@ export default function Home() {
                     {scholarData.contact.email}
                   </a>
                 </div>
-                {scholarData.contact.phone && (
-                  <div className="flex items-center justify-center lg:justify-start gap-3">
-                                      <div className="tech-accent p-2 rounded-lg">
-                    <Phone className="h-4 w-4 text-primary" />
-                   </div>
-                    <span className="text-foreground/90">{scholarData.contact.phone}</span>
-                  </div>
-                )}
                 <div className="flex items-center justify-center lg:justify-start gap-3">
                                     <div className="tech-accent p-2 rounded-lg">
                     <MapPin className="h-4 w-4 text-primary" />
