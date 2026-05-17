@@ -24,6 +24,7 @@ const scholarData = {
   contact: {
     email: siteConfig.contactEmail,
     office: siteConfig.piOffice,
+    phone: '' as string | undefined,
   },
   academicLinks: getPiAcademicLinks().map((link) => ({
     ...link,
