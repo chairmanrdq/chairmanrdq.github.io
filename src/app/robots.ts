@@ -10,6 +10,8 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
+      // Next.js static export RSC payloads (not human-readable pages)
+      disallow: ['/*/index.txt', '/index.txt'],
     },
     sitemap: `${base}/sitemap.xml`,
     host: hostname,
