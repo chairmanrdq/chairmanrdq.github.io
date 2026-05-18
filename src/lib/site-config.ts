@@ -44,6 +44,12 @@ const linkedInUrl = envUrl(
   'https://www.linkedin.com/search/results/all/?keywords=RuiDong%20Qi',
 );
 
+const SEARCH_URL_HINTS = [
+  'scholar.google.com/scholar?',
+  'linkedin.com/search/',
+  'orcid-search',
+] as const;
+
 export const siteConfig = {
   siteUrl,
 
@@ -99,13 +105,47 @@ export function getPiOrcidLinkUrl(): string {
   return getOrcidUrl() ?? siteConfig.academic.orcidSearch;
 }
 
+let academicLinksWarned = false;
+
+/** Dev-only: warn when academic URLs are search pages instead of profile pages. */
+export function warnIfAcademicLinksAreSearchPages(): void {
+  if (process.env.NODE_ENV !== 'development' || academicLinksWarned) return;
+  academicLinksWarned = true;
+  for (const [label, url] of [
+    ['Google Scholar', googleScholarUrl],
+    ['LinkedIn', linkedInUrl],
+    ['ORCID', getPiOrcidLinkUrl()],
+  ] as const) {
+    if (SEARCH_URL_HINTS.some((hint) => url.includes(hint))) {
+      console.warn(
+        `[site-config] ${label} uses a search URL. Set the matching NEXT_PUBLIC_* in .env.local (see .env.example).`,
+      );
+    }
+  }
+}
+
 export type PiAcademicLink = {
   name: string;
   url: string;
 };
 
 /** 首页 / 联系页 / Team PI 卡共用的学术外链 */
+export function getSiteKeywords(): string[] {
+  return [
+    'computing power networks',
+    'Inner Mongolia University',
+    'RuiDong Qi',
+    '祁瑞东',
+    'green scheduling',
+    'service intelligence',
+    siteConfig.labTaglineZh,
+    '算力网络',
+    '低碳调度',
+  ];
+}
+
 export function getPiAcademicLinks(): PiAcademicLink[] {
+  warnIfAcademicLinksAreSearchPages();
   return [
     { name: 'Google Scholar', url: siteConfig.academic.googleScholar },
     { name: 'ORCID', url: getPiOrcidLinkUrl() },

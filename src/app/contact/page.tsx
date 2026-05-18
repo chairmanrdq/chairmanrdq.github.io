@@ -1,9 +1,10 @@
-import { SectionTitle } from "@/components/ui/section-title";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { SectionTitle } from '@/components/ui/section-title';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Mail, Phone, MapPin, Linkedin, Github, BookOpen, Briefcase } from 'lucide-react';
-import Image from "next/image";
+import Image from 'next/image';
 import type { Metadata } from 'next';
 import { siteConfig, getPiAcademicLinks } from '@/lib/site-config';
+import CopyAddressButton from '@/components/contact/copy-address-button';
 
 export const metadata: Metadata = {
   title: 'Contact',
@@ -13,20 +14,24 @@ export const metadata: Metadata = {
 const contactData = {
   name: siteConfig.piFullName,
   position: siteConfig.piPosition,
-  affiliation: "School of Computer Science (School of Software)",
+  affiliation: 'School of Computer Science (School of Software)',
   university: siteConfig.institutionLegalName,
   email: siteConfig.contactEmail,
-  phone: "" as string,
-  office: "Room 303, BeiZheng Building",
-  addressLine1: "235 West University Road",
-  addressLine2: "Saihan District, Hohhot, Inner Mongolia, China",
-  /** OpenStreetMap static preview（内蒙古大学附近）；可换为自建地图嵌入 */
+  phone: '' as string,
+  office: 'Room 303, BeiZheng Building',
+  addressLine1: '235 West University Road',
+  addressLine2: 'Saihan District, Hohhot, Inner Mongolia, China',
   mapPlaceholderUrl:
-    "https://staticmap.openstreetmap.de/staticmap.php?center=40.8183,111.6520&zoom=15&size=800x450&markers=40.8183,111.6520,red-pushpin",
-  dataAiHint: "city map university campus",
+    'https://staticmap.openstreetmap.de/staticmap.php?center=40.8183,111.6520&zoom=15&size=800x450&markers=40.8183,111.6520,red-pushpin',
   officeHours:
-    "Tuesdays & Thursdays, 2:00 PM - 4:00 PM (during term, or by appointment via email)",
+    'Tuesdays & Thursdays, 2:00 PM - 4:00 PM (during term, or by appointment via email)',
 };
+
+const addressLines = [
+  contactData.office,
+  contactData.addressLine1,
+  contactData.addressLine2,
+];
 
 const socialIconMap = {
   'Google Scholar': BookOpen,
@@ -44,80 +49,91 @@ const socialMedia = getPiAcademicLinks().map((link) => ({
 export default function ContactPage() {
   return (
     <div className="content-page-calm space-y-12">
-      <section className="page-section-reveal" style={{ animationDelay: "0ms" }}>
+      <section className="page-section-reveal" style={{ animationDelay: '0ms' }}>
         <SectionTitle>Get in Touch</SectionTitle>
       </section>
 
-      <section className="page-section-reveal" style={{ animationDelay: "90ms" }}>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-        <Card className="lg:col-span-2 shadow-lg border-primary/10">
-          <CardHeader>
-            <CardTitle className="text-2xl text-primary">{contactData.name}</CardTitle>
-            <p className="text-md text-foreground/80">{contactData.position}</p>
-            <p className="text-sm text-foreground/70">{contactData.affiliation}, {contactData.university}</p>
-          </CardHeader>
-          <CardContent className="space-y-5">
-            <div className="flex items-start">
-              <Mail className="h-5 w-5 mr-3 mt-1 text-accent flex-shrink-0" />
-              <div>
-                <h3 className="type-subheading text-foreground/90">Email</h3>
-                <a href={`mailto:${contactData.email}`} className="text-accent hover:underline">{contactData.email}</a>
-              </div>
-            </div>
-            {contactData.phone ? (
+      <section className="page-section-reveal" style={{ animationDelay: '90ms' }}>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+          <Card className="lg:col-span-2 shadow-lg border-primary/10">
+            <CardHeader>
+              <CardTitle className="text-2xl text-primary">{contactData.name}</CardTitle>
+              <p className="text-md text-foreground/80">{contactData.position}</p>
+              <p className="text-sm text-foreground/70">
+                {contactData.affiliation}, {contactData.university}
+              </p>
+            </CardHeader>
+            <CardContent className="space-y-5">
               <div className="flex items-start">
-                <Phone className="h-5 w-5 mr-3 mt-1 text-accent flex-shrink-0" />
+                <Mail className="h-5 w-5 mr-3 mt-1 text-accent flex-shrink-0" />
                 <div>
-                  <h3 className="type-subheading text-foreground/90">Phone</h3>
-                  <p className="text-foreground/90">{contactData.phone}</p>
+                  <h3 className="type-subheading text-foreground/90">Email</h3>
+                  <a href={`mailto:${contactData.email}`} className="text-accent hover:underline">
+                    {contactData.email}
+                  </a>
                 </div>
               </div>
-            ) : null}
-            <div className="flex items-start">
-              <MapPin className="h-5 w-5 mr-3 mt-1 text-accent flex-shrink-0" />
-              <div>
-                <h3 className="type-subheading text-foreground/90">Office Address</h3>
-                <p className="text-foreground/90">{contactData.office}</p>
-                <p className="text-foreground/90">{contactData.addressLine1}</p>
-                <p className="text-foreground/90">{contactData.addressLine2}</p>
-              </div>
-            </div>
-             <div className="flex items-start">
-              <Briefcase className="h-5 w-5 mr-3 mt-1 text-accent flex-shrink-0" />
-              <div>
-                <h3 className="type-subheading text-foreground/90">Office Hours</h3>
-                <p className="text-foreground/90">{contactData.officeHours}</p>
-              </div>
-            </div>
-            {socialMedia.length > 0 ? (
-              <div>
-                <h3 className="type-subheading text-foreground/90 mb-2">Connect Online</h3>
-                <div className="flex space-x-4">
-                  {socialMedia.map((social) => (
-                    <a key={social.name} href={social.url} target="_blank" rel="noopener noreferrer"
-                       aria-label={social.name}
-                       className="text-muted-foreground hover:text-accent transition-colors">
-                      <social.icon size={24} />
-                    </a>
-                  ))}
+              {contactData.phone ? (
+                <div className="flex items-start">
+                  <Phone className="h-5 w-5 mr-3 mt-1 text-accent flex-shrink-0" />
+                  <div>
+                    <h3 className="type-subheading text-foreground/90">Phone</h3>
+                    <p className="text-foreground/90">{contactData.phone}</p>
+                  </div>
+                </div>
+              ) : null}
+              <div className="flex items-start">
+                <MapPin className="h-5 w-5 mr-3 mt-1 text-accent flex-shrink-0" />
+                <div>
+                  <h3 className="type-subheading text-foreground/90">Office Address</h3>
+                  <p className="text-foreground/90">{contactData.office}</p>
+                  <p className="text-foreground/90">{contactData.addressLine1}</p>
+                  <p className="text-foreground/90">{contactData.addressLine2}</p>
+                  <CopyAddressButton lines={addressLines} />
                 </div>
               </div>
-            ) : null}
-          </CardContent>
-        </Card>
+              <div className="flex items-start">
+                <Briefcase className="h-5 w-5 mr-3 mt-1 text-accent flex-shrink-0" />
+                <div>
+                  <h3 className="type-subheading text-foreground/90">Office Hours</h3>
+                  <p className="text-foreground/90">{contactData.officeHours}</p>
+                </div>
+              </div>
+              {socialMedia.length > 0 ? (
+                <div>
+                  <h3 className="type-subheading text-foreground/90 mb-2">Connect Online</h3>
+                  <div className="flex space-x-4">
+                    {socialMedia.map((social) => (
+                      <a
+                        key={social.name}
+                        href={social.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={social.name}
+                        className="text-muted-foreground hover:text-accent transition-colors"
+                      >
+                        <social.icon size={24} />
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              ) : null}
+            </CardContent>
+          </Card>
 
-        <Card className="shadow-lg overflow-hidden border-primary/10">
-          <CardHeader>
-            <CardTitle className="text-xl text-primary">Campus Location</CardTitle>
-          </CardHeader>
-          <CardContent className="p-0">
-            <div className="aspect-video bg-secondary relative">
+          <Card className="shadow-lg overflow-hidden border-primary/10">
+            <CardHeader>
+              <CardTitle className="text-xl text-primary">Campus Location</CardTitle>
+            </CardHeader>
+            <CardContent className="p-0">
+              <div className="aspect-video bg-secondary relative">
                 <Image
-                    src={contactData.mapPlaceholderUrl}
-                    alt="Map showing office location near Inner Mongolia University"
-                    width={800}
-                    height={450}
-                    className="w-full h-full object-cover"
+                  src={contactData.mapPlaceholderUrl}
+                  alt="Map showing office location near Inner Mongolia University"
+                  width={800}
+                  height={450}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
                 />
                 <a
                   href="https://www.openstreetmap.org/?mlat=40.8183&mlon=111.6520#map=15/40.8183/111.6520"
@@ -127,10 +143,10 @@ export default function ContactPage() {
                 >
                   Open in OpenStreetMap
                 </a>
-            </div>
-          </CardContent>
-        </Card>
-      </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
       </section>
     </div>
   );

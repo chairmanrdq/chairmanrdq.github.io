@@ -1,63 +1,71 @@
 import { MetadataRoute } from 'next';
 import { getCanonicalSiteUrl } from '@/lib/site-config';
+import {
+  getDefaultContentDate,
+  getLatestNewsDate,
+  getLatestPublicationDate,
+} from '@/lib/site-dates';
 
 export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = getCanonicalSiteUrl().replace(/\/$/, '');
+  const defaultModified = getDefaultContentDate();
+  const newsModified = getLatestNewsDate() ?? defaultModified;
+  const pubsModified = getLatestPublicationDate();
 
   return [
     {
       url: `${baseUrl}/`,
-      lastModified: new Date(),
+      lastModified: defaultModified,
       changeFrequency: 'monthly',
       priority: 1,
     },
     {
       url: `${baseUrl}/research/`,
-      lastModified: new Date(),
+      lastModified: defaultModified,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/publications/`,
-      lastModified: new Date(),
+      lastModified: pubsModified,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/projects/`,
-      lastModified: new Date(),
+      lastModified: defaultModified,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/news/`,
-      lastModified: new Date(),
+      lastModified: newsModified,
       changeFrequency: 'weekly',
       priority: 0.75,
     },
     {
       url: `${baseUrl}/courses/`,
-      lastModified: new Date(),
+      lastModified: defaultModified,
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
       url: `${baseUrl}/team/`,
-      lastModified: new Date(),
+      lastModified: defaultModified,
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
       url: `${baseUrl}/resources/`,
-      lastModified: new Date(),
+      lastModified: defaultModified,
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
       url: `${baseUrl}/contact/`,
-      lastModified: new Date(),
+      lastModified: defaultModified,
       changeFrequency: 'yearly',
       priority: 0.5,
     },

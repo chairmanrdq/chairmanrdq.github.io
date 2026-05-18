@@ -9,7 +9,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 import { THEME_STORAGE_KEY } from '@/lib/theme-constants';
 import JsonLd from '@/components/seo/json-ld';
 import ScrollProgressBar from '@/components/layout/scroll-progress-bar';
-import { siteConfig, getCanonicalSiteUrl } from '@/lib/site-config';
+import { siteConfig, getCanonicalSiteUrl, getSiteKeywords } from '@/lib/site-config';
 import { absoluteAssetUrl } from '@/lib/media';
 
 const canonical = getCanonicalSiteUrl();
@@ -21,21 +21,19 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.piShortName}`,
   },
   description: siteConfig.labTagline,
-  keywords: [
-    'computing power networks',
-    'Inner Mongolia University',
-    'RuiDong Qi',
-    '祁瑞东',
-    'green scheduling',
-    'service intelligence',
-    '算力网络',
-  ],
+  keywords: getSiteKeywords(),
+  alternates: {
+    types: {
+      'application/rss+xml': [{ url: '/feed.xml', title: `${siteConfig.piShortName} — Lab News` }],
+    },
+  },
   verification: {
     google: '9adTvMEmfFATov8HAuYaYB9QK_tOM2trq8dGqcdRvi8',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
+    alternateLocale: ['zh_CN'],
     url: canonical,
     siteName: siteConfig.institutionLegalName,
     title: siteConfig.piShortName,
@@ -69,6 +67,7 @@ export default function RootLayout({
         )}
       >
         <a href="#main-content" className="skip-to-main">
+          <span className="sr-only">跳到主内容 · </span>
           Skip to main content
         </a>
         <JsonLd />

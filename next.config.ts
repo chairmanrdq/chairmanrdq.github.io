@@ -11,6 +11,7 @@ const nextConfig: NextConfig = {
   // For GitHub Pages project sites, prefix assets and paths with repo name
   basePath: isGithubPages && repoName ? `/${repoName}` : undefined,
   assetPrefix: isGithubPages && repoName ? `/${repoName}/` : undefined,
+  // Static export: no Next image optimizer at runtime; use optimize:images at build.
   images: {
     unoptimized: true,
     remotePatterns: [

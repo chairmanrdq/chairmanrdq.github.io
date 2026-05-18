@@ -79,7 +79,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, interval = 5000, 
                         variant="ghost"
                         size="icon"
                         onClick={goToPrevious}
-                        className="absolute top-1/2 left-2 -translate-y-1/2 z-20 bg-background/50 hover:bg-background/80 text-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full p-2"
+                        className="absolute top-1/2 left-2 -translate-y-1/2 z-20 bg-background/70 hover:bg-background/90 text-foreground opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 rounded-full p-2 min-h-[44px] min-w-[44px]"
                         aria-label="Previous Image"
                     >
                         <ChevronLeft className="h-6 w-6" />
@@ -88,7 +88,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, interval = 5000, 
                         variant="ghost"
                         size="icon"
                         onClick={goToNext}
-                        className="absolute top-1/2 right-2 -translate-y-1/2 z-20 bg-background/50 hover:bg-background/80 text-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full p-2"
+                        className="absolute top-1/2 right-2 -translate-y-1/2 z-20 bg-background/70 hover:bg-background/90 text-foreground opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 rounded-full p-2 min-h-[44px] min-w-[44px]"
                         aria-label="Next Image"
                     >
                         <ChevronRight className="h-6 w-6" />
@@ -98,13 +98,22 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, interval = 5000, 
                         {images.map((_, index) => (
                             <button
                                 key={index}
+                                type="button"
                                 onClick={() => setCurrentImageIndex(index)}
                                 className={cn(
-                                    "h-2 w-2 rounded-full transition-all duration-300",
-                                    index === currentImageIndex ? 'bg-primary w-4' : 'bg-background/50 hover:bg-background/80'
+                                    "flex items-center justify-center min-h-[44px] min-w-[44px] p-2 rounded-full transition-all duration-300",
+                                    index === currentImageIndex ? 'opacity-100' : 'opacity-70 hover:opacity-100'
                                 )}
                                 aria-label={`Go to image ${index + 1}`}
-                            />
+                                aria-current={index === currentImageIndex ? 'true' : undefined}
+                            >
+                                <span
+                                    className={cn(
+                                        "block h-2 rounded-full transition-all duration-300",
+                                        index === currentImageIndex ? 'bg-primary w-4' : 'bg-background/80 w-2'
+                                    )}
+                                />
+                            </button>
                         ))}
                     </div>
                 </>

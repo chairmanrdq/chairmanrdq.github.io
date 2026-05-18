@@ -35,3 +35,6 @@ export const labGalleryImages = [
     alt: 'Research collaboration discussion in the lab',
   },
 ] as const;
+
+/** 首页轮播（精简为 5 张，减轻加载） */
+export const homeGalleryImages = labGalleryImages.slice(0, 5);

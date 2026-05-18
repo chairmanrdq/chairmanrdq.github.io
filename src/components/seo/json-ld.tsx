@@ -1,7 +1,7 @@
 import { siteConfig, getCanonicalSiteUrl, getSameAsUrls } from '@/lib/site-config';
 
 /**
- * Schema.org Person + Organization，增强检索与知识卡片（静态导出友好）。
+ * Schema.org Person + Organization + WebSite（静态导出友好）。
  */
 export default function JsonLd() {
   const url = getCanonicalSiteUrl();
@@ -10,6 +10,15 @@ export default function JsonLd() {
   const graph = {
     '@context': 'https://schema.org',
     '@graph': [
+      {
+        '@type': 'WebSite',
+        '@id': `${url}/#website`,
+        url,
+        name: siteConfig.piShortName,
+        description: siteConfig.labTagline,
+        inLanguage: ['en', 'zh'],
+        publisher: { '@id': `${url}/#org` },
+      },
       {
         '@type': 'Person',
         '@id': `${url}/#pi`,
