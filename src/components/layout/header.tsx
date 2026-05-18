@@ -4,7 +4,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import logoOne from '../../../pic/logo-one.png';
-import { Menu, X, Diamond } from 'lucide-react';
+import { Menu, X, Diamond, type LucideIcon } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
@@ -25,7 +25,7 @@ function NavLink({
 }: {
   href: string;
   label: string;
-  icon: React.ComponentType<{ className?: string }>;
+  icon: LucideIcon;
   pathname: string;
   onNavigate?: () => void;
   className?: string;
