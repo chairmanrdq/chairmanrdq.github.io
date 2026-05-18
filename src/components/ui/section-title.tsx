@@ -11,7 +11,7 @@ export function SectionTitle({ children, id, className }: SectionTitleProps) {
     <h2 
       id={id} 
       className={cn(
-        "type-section-title-gradient", 
+        "type-section-title mb-6 border-b border-border pb-3 md:mb-8 text-foreground",
         className
       )}
     >

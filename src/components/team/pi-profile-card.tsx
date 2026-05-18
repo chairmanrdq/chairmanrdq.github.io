@@ -32,7 +32,7 @@ export default function PiProfileCard() {
   const academicLinks = getPiAcademicLinks();
 
   return (
-    <Card className="shadow-md border-primary/15 lg:col-span-3">
+    <Card className="academic-card lg:col-span-3">
       <CardContent className="p-6">
         <div className="flex flex-col gap-6 md:flex-row md:items-start">
           <div className="flex shrink-0 justify-center md:justify-start">
@@ -41,7 +41,7 @@ export default function PiProfileCard() {
               alt={`Portrait of ${piProfile.name}`}
               width={200}
               height={280}
-              className="h-56 w-40 border-2 border-border object-cover md:h-64 md:w-44"
+              className="h-56 w-40 rounded-lg border border-border object-cover md:h-64 md:w-44"
               priority
             />
           </div>

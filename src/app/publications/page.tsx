@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 
 function PublicationCard({ pub }: { pub: Publication }) {
   return (
-    <Card className="luxury-card shadow-md hover:shadow-lg transition-shadow duration-300 border-primary/10">
+    <Card className="academic-card">
       <CardHeader>
         <CardTitle className="text-primary/90">{pub.title}</CardTitle>
         <CardDescription className="text-sm text-foreground/70 italic">{pub.authors}</CardDescription>
@@ -112,7 +112,7 @@ export default function PublicationsPage() {
     <div className="content-page-calm space-y-12">
       <section className="space-y-6 page-section-reveal" style={{ animationDelay: '0ms' }}>
         <SectionTitle>Publications</SectionTitle>
-        <Card className="luxury-card">
+        <Card className="academic-card">
           <CardContent className="pt-6 space-y-4">
             <h3 className="type-subheading mb-2">Selected Contributions</h3>
             <ul className="list-disc list-inside space-y-2 type-body text-sm">
