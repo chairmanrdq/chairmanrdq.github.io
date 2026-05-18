@@ -7,10 +7,13 @@ import { Download, Link as LinkIcon } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import {
   filterPublicationsByType,
+  getEmptyTabMessage,
   getPublicationTabCategories,
+  getPublicationTabLabel,
   groupPublicationsByYear,
   publications,
   type Publication,
+  type PublicationTabCategory,
 } from '@/lib/publications';
 import { isValidHttpUrl } from '@/lib/utils';
 import CopyBibtexButton from '@/components/publications/copy-bibtex-button';
@@ -78,10 +81,16 @@ function PublicationCard({ pub }: { pub: Publication }) {
   );
 }
 
-function YearGroupedList({ pubs }: { pubs: Publication[] }) {
+function YearGroupedList({
+  pubs,
+  emptyMessage = 'No publications match your search.',
+}: {
+  pubs: Publication[];
+  emptyMessage?: string;
+}) {
   const yearGroups = groupPublicationsByYear(pubs);
   if (yearGroups.length === 0) {
-    return <p className="text-muted-foreground text-center py-8">No publications match your search.</p>;
+    return <p className="text-muted-foreground text-center py-8">{emptyMessage}</p>;
   }
   return (
     <div className="space-y-10">
@@ -101,15 +110,19 @@ function YearGroupedList({ pubs }: { pubs: Publication[] }) {
 
 export default function PublicationsTabs() {
   const tabCategories = getPublicationTabCategories();
-  const [activeTab, setActiveTab] = useState('All');
+  const [activeTab, setActiveTab] = useState<PublicationTabCategory>('All');
   const activePubs = filterPublicationsByType(activeTab);
 
   return (
-    <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+    <Tabs
+      value={activeTab}
+      onValueChange={(value) => setActiveTab(value as PublicationTabCategory)}
+      className="w-full"
+    >
       <TabsList className="flex h-auto w-full flex-wrap justify-start mb-6 gap-2">
         {tabCategories.map((category) => (
           <TabsTrigger key={category} value={category} className="text-xs sm:text-sm">
-            {category}
+            {getPublicationTabLabel(category)}
           </TabsTrigger>
         ))}
       </TabsList>
@@ -117,7 +130,14 @@ export default function PublicationsTabs() {
       <PublicationsSearch publications={activePubs} key={activeTab}>
         {(filtered) => (
           <TabsContent value={activeTab} forceMount className="mt-0">
-            <YearGroupedList pubs={filtered} />
+            <YearGroupedList
+              pubs={filtered}
+              emptyMessage={
+                filtered.length === 0 && activePubs.length > 0
+                  ? 'No publications match your search.'
+                  : getEmptyTabMessage(activeTab)
+              }
+            />
           </TabsContent>
         )}
       </PublicationsSearch>

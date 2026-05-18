@@ -1,3 +1,5 @@
+import { isValidHttpUrl } from '@/lib/utils';
+
 export type PublicationType =
   | 'Conference Paper'
   | 'Journal Article'
@@ -5,6 +7,28 @@ export type PublicationType =
   | 'Preprint'
   | 'Book Chapter'
   | 'Workshop Paper';
+
+/** Publications page tab keys (always shown in the nav bar). */
+export type PublicationTabCategory = 'All' | PublicationType | 'arXiv';
+
+export const PUBLICATION_TAB_CATEGORIES: PublicationTabCategory[] = [
+  'All',
+  'Conference Paper',
+  'Journal Article',
+  'arXiv',
+];
+
+/** Tab labels shown in the UI */
+export const PUBLICATION_TAB_LABELS: Record<PublicationTabCategory, string> = {
+  All: 'All',
+  'Conference Paper': 'Conference Paper',
+  'Journal Article': 'Journal Article',
+  Book: 'Book',
+  Preprint: 'Preprint',
+  'Book Chapter': 'Book Chapter',
+  'Workshop Paper': 'Workshop Paper',
+  arXiv: 'arXiv',
+};
 
 export interface Publication {
   id: string;
@@ -83,23 +107,35 @@ export const publications: Publication[] = [
   },
 ];
 
-const TYPE_ORDER: PublicationType[] = [
-  'Journal Article',
-  'Conference Paper',
-  'Workshop Paper',
-  'Book',
-  'Preprint',
-];
-
-export function filterPublicationsByType(type: string): Publication[] {
-  if (type === 'All') return publications;
-  return publications.filter((p) => p.type === type);
+export function filterPublicationsByType(category: PublicationTabCategory | string): Publication[] {
+  if (category === 'All') return publications;
+  if (category === 'arXiv') {
+    return publications.filter((p) => isValidHttpUrl(p.arxivUrl));
+  }
+  return publications.filter((p) => p.type === category);
 }
 
-export function getPublicationTabCategories(): string[] {
-  const used = new Set(publications.map((p) => p.type));
-  const ordered = TYPE_ORDER.filter((t) => used.has(t));
-  return ['All', ...ordered];
+export function getPublicationTabCategories(): PublicationTabCategory[] {
+  return [...PUBLICATION_TAB_CATEGORIES];
+}
+
+export function getPublicationTabLabel(category: PublicationTabCategory): string {
+  return PUBLICATION_TAB_LABELS[category] ?? category;
+}
+
+export function getEmptyTabMessage(category: PublicationTabCategory): string {
+  switch (category) {
+    case 'Journal Article':
+      return 'No journal articles in the curated list yet.';
+    case 'Conference Paper':
+      return 'No conference papers in this category.';
+    case 'arXiv':
+      return 'No entries with an arXiv link yet.';
+    case 'All':
+      return 'No publications match your search.';
+    default:
+      return `No publications in “${getPublicationTabLabel(category)}” yet.`;
+  }
 }
 
 export function getFeaturedPublications(limit = 3): Publication[] {
