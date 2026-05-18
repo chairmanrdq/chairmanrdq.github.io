@@ -15,7 +15,6 @@ import {
 } from '@/lib/publications';
 import { isValidHttpUrl } from '@/lib/utils';
 import CopyBibtexButton from '@/components/publications/copy-bibtex-button';
-import { labCardSurface } from '@/lib/design-tokens';
 
 export const metadata: Metadata = {
   title: 'Publications',
@@ -24,7 +23,7 @@ export const metadata: Metadata = {
 
 function PublicationCard({ pub }: { pub: Publication }) {
   return (
-    <Card className={labCardSurface}>
+    <Card className="luxury-card shadow-md hover:shadow-lg transition-shadow duration-300 border-primary/10">
       <CardHeader>
         <CardTitle className="text-primary/90">{pub.title}</CardTitle>
         <CardDescription className="text-sm text-foreground/70 italic">{pub.authors}</CardDescription>

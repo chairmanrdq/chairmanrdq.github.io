@@ -16,7 +16,6 @@ import {
   type TeamMember,
 } from '@/lib/team-data';
 import { siteConfig } from '@/lib/site-config';
-import { labCardSurface, labMemberAvatarClass } from '@/lib/design-tokens';
 
 export const metadata: Metadata = {
   title: 'Team',
@@ -68,14 +67,14 @@ function MemberLinks({ member }: { member: TeamMember }) {
 
 function MemberCard({ member }: { member: TeamMember }) {
   return (
-    <Card className={`${labCardSurface} flex flex-col sm:flex-row`}>
-      <div className="flex items-center justify-center bg-secondary/30 p-4 sm:w-1/3 sm:shrink-0">
+    <Card className="shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col sm:flex-row overflow-hidden border-primary/10">
+      <div className="sm:shrink-0 sm:w-1/3 bg-secondary/30 flex items-center justify-center p-4">
         <Image
           src={member.avatarUrl}
           alt={`Photo of ${member.name}`}
           width={220}
-          height={280}
-          className={labMemberAvatarClass}
+          height={220}
+          className="rounded-full border-[6px] border-background shadow-md object-cover aspect-square"
         />
       </div>
       <CardContent className="p-6 flex-grow sm:w-2/3">
@@ -102,7 +101,7 @@ export default function TeamPage() {
       >
         <SectionTitle id="lab-overview-title">Lab Overview</SectionTitle>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <Card className={`${labCardSurface} lg:col-span-2`}>
+          <Card className="shadow-md border-primary/10 lg:col-span-2">
             <CardContent className="p-6">
               <h3 className="type-subheading-lg mb-3">Research Directions</h3>
               <p className="type-body text-sm md:text-base mb-5">{researchOverview}</p>
