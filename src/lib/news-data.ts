@@ -42,6 +42,51 @@ export const newsArticles: NewsArticle[] = [
     badge: 'Award',
     relatedLink: { href: '/team#principal-investigator', label: 'Meet the PI & team' },
   },
+  {
+    id: 'cncc-2025',
+    date: '2025-10-24',
+    title: 'Our Group Participated in the China National Computer Congress (CNCC 2025)',
+    summary:
+      'The lab joined CNCC 2025 for academic exchange on computing power network scheduling, heterogeneous resource orchestration, and cross-domain intelligent dispatching.',
+    content: [
+      'During CNCC 2025, our group engaged with researchers and practitioners on computing power network scheduling, heterogeneous resource orchestration, and cross-domain intelligent dispatching.',
+      'We discussed how user-perceived QoS, green scheduling objectives, and practical deployment constraints shape real-world computing-power systems.',
+      'The congress also offered opportunities to explore collaborations with both industry partners and academic groups aligned with our research agenda.',
+    ],
+    category: 'milestone',
+    badge: 'Conference',
+    relatedLink: { href: '/research', label: 'Research directions' },
+  },
+  {
+    id: 'hpc-china-2025',
+    date: '2025-08-13',
+    title: 'Our Group Participated in CCF HPC China 2025 in Ordos, Inner Mongolia',
+    summary:
+      'At HPC China 2025 we presented work on green computing power scheduling and HPC-oriented optimization, with discussions alongside domestic and international scholars.',
+    content: [
+      'CCF HPC China 2025 was held in Ordos, Inner Mongolia. Our group participated to share progress on green computing power scheduling and high-performance computing optimization.',
+      'We presented research connecting low-carbon scheduling goals with trustworthy service intelligence under heterogeneous, large-scale resource environments.',
+      'The event enabled in-depth exchanges with scholars from China and abroad on HPC systems, orchestration, and industry-relevant deployment scenarios.',
+    ],
+    category: 'milestone',
+    badge: 'HPC China',
+    relatedLink: { href: '/projects', label: 'Related projects' },
+  },
+  {
+    id: 'cncc-2024',
+    date: '2024-10-24',
+    title: 'Our Group Participated in the China National Computer Congress (CNCC 2024)',
+    summary:
+      'CNCC 2024 brought exchanges on computing power networks, green computing, and service computing, with outreach to industry and academic collaborators.',
+    content: [
+      'At CNCC 2024, our group participated in sessions and discussions centered on computing power networks, green computing, and service computing.',
+      'We highlighted how theory-grounded models and system validation can support reliable scheduling and recommendation in practical settings.',
+      'The congress was also a venue to explore new collaborations with industry and academia aligned with the lab’s long-term research themes.',
+    ],
+    category: 'milestone',
+    badge: 'Conference',
+    relatedLink: { href: '/research', label: 'Research directions' },
+  },
 ];
 
 /** 首页「快捷入口」卡片（非新闻） */
@@ -85,18 +130,18 @@ export const labQuickLinks: AcademicHighlight[] = [
 ];
 
 export function getLatestNewsHighlight(): AcademicHighlight | null {
-  const article = newsArticles[0];
+  const article = [...newsArticles].sort((a, b) => b.date.localeCompare(a.date))[0];
   if (!article) return null;
   return {
     id: 'news-teaser',
     date: article.date,
-    title: 'Jiutian·Wutong Cup Finals — Lab Teams Win First & Second Prize',
+    title: article.title,
     description: article.summary,
-    badge: 'News',
-    tone: 'gold',
+    badge: article.badge,
+    tone: article.category === 'award' ? 'gold' : 'primary',
     link: `/news#${article.id}`,
     action: 'Read full story',
-    icon: 'award',
+    icon: article.category === 'award' ? 'award' : 'megaphone',
   };
 }
 

@@ -18,6 +18,9 @@ function categoryIcon(category: NewsArticle['category']) {
   if (category === 'award') {
     return <Award className="h-5 w-5 flex-shrink-0" aria-hidden />;
   }
+  if (category === 'milestone') {
+    return <Megaphone className="h-5 w-5 flex-shrink-0" aria-hidden />;
+  }
   return <Megaphone className="h-5 w-5 flex-shrink-0" aria-hidden />;
 }
 
