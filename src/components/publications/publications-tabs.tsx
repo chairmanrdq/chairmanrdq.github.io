@@ -11,7 +11,6 @@ import {
   getPublicationTabCategories,
   getPublicationTabLabel,
   groupPublicationsByYear,
-  publications,
   type Publication,
   type PublicationTabCategory,
 } from '@/lib/publications';
@@ -141,11 +140,6 @@ export default function PublicationsTabs() {
           </TabsContent>
         )}
       </PublicationsSearch>
-
-      <p className="type-caption text-center mt-6">
-        Showing {publications.length} curated entr{publications.length === 1 ? 'y' : 'ies'} — update{' '}
-        <code className="text-xs">src/lib/publications.ts</code> to add more.
-      </p>
     </Tabs>
   );
 }
