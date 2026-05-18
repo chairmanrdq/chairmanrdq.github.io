@@ -64,7 +64,7 @@ export default function Header() {
               priority
             />
           </div>
-          <span className="font-serif min-w-0 flex-1 truncate text-left text-xs font-bold leading-tight text-foreground sm:text-sm md:text-sm lg:text-base">
+          <span className="font-serif text-gradient-luxury min-w-0 flex-1 truncate text-left text-xs font-bold leading-tight sm:text-sm md:text-sm lg:text-base">
             {siteConfig.piShortName}
           </span>
         </Link>
@@ -84,7 +84,7 @@ export default function Header() {
                   'nav-chip-tech shrink-0 whitespace-nowrap rounded-2xl px-2 text-xs font-medium transition-all duration-300 motion-safe:transition-transform motion-safe:hover:scale-[1.02] motion-safe:active:scale-[0.98] lg:px-3 lg:text-sm',
                   isNavActive(pathname, item.href)
                     ? 'bg-gradient-to-r from-primary/8 via-secondary/8 to-accent/8 text-primary font-semibold hover:from-primary/15 hover:via-secondary/15 hover:to-accent/15 luxury-border'
-                    : 'text-foreground/70 hover:bg-muted hover:text-primary',
+                    : 'text-foreground/70 hover:text-gradient-luxury hover:bg-gradient-to-r hover:from-primary/3 hover:via-secondary/3 hover:to-accent/3',
                 )}
               >
                 <Link
@@ -131,7 +131,7 @@ export default function Header() {
                         priority
                       />
                     </div>
-                    <span className="font-serif min-w-0 flex-1 truncate text-left text-base font-bold leading-tight text-foreground sm:text-lg">
+                    <span className="font-serif text-gradient-luxury min-w-0 flex-1 truncate text-left text-base font-bold leading-tight sm:text-lg">
                       {siteConfig.piShortName}
                     </span>
                   </Link>
@@ -150,7 +150,7 @@ export default function Header() {
                           "nav-chip-tech inline-flex items-center gap-1.5 rounded-2xl px-3 py-3 text-base font-medium transition-all duration-300 motion-safe:transition-transform motion-safe:active:scale-[0.99]",
                           isNavActive(pathname, item.href)
                             ? "bg-gradient-to-r from-primary/8 via-secondary/8 to-accent/8 text-primary font-semibold luxury-border"
-                            : "text-foreground/70 hover:bg-muted hover:text-primary"
+                            : "text-foreground/70 hover:text-gradient-luxury hover:bg-gradient-to-r hover:from-primary/3 hover:via-secondary/3 hover:to-accent/3"
                         )}
                       >
                         <item.icon className="h-4 w-4 shrink-0 opacity-90" aria-hidden strokeWidth={2} />
