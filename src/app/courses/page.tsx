@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { BookOpen, ExternalLink } from 'lucide-react';
 import type { Metadata } from 'next';
 import { siteConfig } from '@/lib/site-config';
+import { courses } from '@/lib/courses-data';
 import { isValidHttpUrl } from '@/lib/utils';
 
 export const metadata: Metadata = {
@@ -11,40 +12,13 @@ export const metadata: Metadata = {
   description: `Courses taught by ${siteConfig.piFullName}, including syllabi and learning resources.`,
 };
 
-const coursesData = [
-  {
-    id: 'cs501',
-    courseName: 'Object-Oriented Analysis and Design',
-    location: 'Room 0212, Excellence Building',
-    term: 'Fall 2025',
-    level: 'Senior undergraduate',
-    description:
-      'Fundamental principles of object-oriented software development: concepts, UML modeling, requirements analysis, design patterns, and medium-scale system design.',
-    syllabusUrl: '',
-    coursePageUrl: '',
-    resources: [] as { name: string; url: string }[],
-  },
-  {
-    id: 'cs305',
-    courseName: 'Software System Analysis and Design',
-    location: 'Room 309, Graduate Student Building',
-    term: 'Spring 2026',
-    level: 'Undergraduate',
-    description:
-      'Structured and object-oriented methods for turning requirements into architectures: UML, MVC/microservices considerations, database and UI design, and agile practices for changing requirements.',
-    syllabusUrl: '',
-    coursePageUrl: '',
-    resources: [] as { name: string; url: string }[],
-  },
-];
-
 export default function CoursesPage() {
   return (
     <div className="content-page-calm space-y-12">
       <section className="space-y-8 page-section-reveal" style={{ animationDelay: '0ms' }}>
         <SectionTitle>Teaching & Courses</SectionTitle>
         <div className="space-y-8">
-          {coursesData.map((course) => {
+          {courses.map((course) => {
             const validResources = course.resources.filter((r) => isValidHttpUrl(r.url));
             return (
               <Card

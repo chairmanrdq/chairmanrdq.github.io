@@ -27,17 +27,30 @@ NEXT_PUBLIC_SITE_URL=https://username.github.io/your-repo-name
 
 ## Content updates
 
+**Primary (edit JSON, then validate & build):**
+
 | Content | File |
 |---------|------|
-| Publications | `src/lib/publications.ts` |
-| News | `src/lib/news-data.ts` |
+| Publications | `content/publications.json` |
+| News & home quick links | `content/news.json` |
+| Projects | `content/projects.json` |
+| Courses | `content/courses.json` |
+
+See **`content/README.md`** (中文维护指南).
+
+**Other:**
+
+| Content | File |
+|---------|------|
 | Team | `src/lib/team-data.ts` |
+| Research themes | `src/lib/research-content.ts` |
 | Site URL & profiles | `.env.local` (see `.env.example`) |
-| Lab images | `npm run sync:images` (from upstream GitHub repo) |
+| Lab images | `public/images/` or `npm run sync:images` |
 
 ## Scripts
 
+- `npm run validate:content` — validate `content/*.json` (runs before build)
 - `npm run sync:images` — download images to `public/images/`
 - `npm run optimize:images` — compress JPEGs (requires `sharp`)
-- `npm run generate:feed` — write `public/feed.xml` for news RSS
+- `npm run generate:feed` — write `public/feed.xml` from `content/news.json`
 - `npm run typecheck` — TypeScript check

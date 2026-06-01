@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack -p 9002",
-    "prebuild": "npm run sync:images && npm run optimize:images && npm run generate:feed",
+    "validate:content": "npx --yes tsx scripts/validate-content.ts",
+    "prebuild": "npm run validate:content && npm run sync:images && npm run optimize:images && npm run generate:feed",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",

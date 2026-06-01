@@ -1,0 +1,26 @@
+{
+  "courses": [
+    {
+      "id": "cs501",
+      "courseName": "Object-Oriented Analysis and Design",
+      "location": "Room 0212, Excellence Building",
+      "term": "Fall 2025",
+      "level": "Senior undergraduate",
+      "description": "Fundamental principles of object-oriented software development: concepts, UML modeling, requirements analysis, design patterns, and medium-scale system design.",
+      "syllabusUrl": "",
+      "coursePageUrl": "",
+      "resources": []
+    },
+    {
+      "id": "cs305",
+      "courseName": "Software System Analysis and Design",
+      "location": "Room 309, Graduate Student Building",
+      "term": "Spring 2026",
+      "level": "Undergraduate",
+      "description": "Structured and object-oriented methods for turning requirements into architectures: UML, MVC/microservices considerations, database and UI design, and agile practices for changing requirements.",
+      "syllabusUrl": "",
+      "coursePageUrl": "",
+      "resources": []
+    }
+  ]
+}

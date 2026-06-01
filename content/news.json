@@ -1,0 +1,96 @@
+{
+  "articles": [
+    {
+      "id": "wutong-cup-2026",
+      "date": "2026-04-01",
+      "title": "Two Teams from Our University Win Awards in AI+Data Track of the 5th Jiutian·Wutong Cup National Finals",
+      "summary": "Our Intelligent Computing Pioneer Team and Neida Meow Meow Team received first and second prizes, respectively, at the national finals of the AI+Data track.",
+      "content": [
+        "The national finals of the AI+Data Track of the 2026 5th China Mobile Jiutian·Wutong Cup brought together top university teams from across the country. Competing teams presented solutions spanning intelligent computing, data analytics, and industry-oriented AI applications.",
+        "Our Intelligent Computing Pioneer Team earned the first prize for their work on computing-power–aware scheduling and deployment-oriented intelligence under realistic resource constraints.",
+        "The Neida Meow Meow Team received the second prize with a strong data-driven pipeline and robust engineering execution in the AI+Data track.",
+        "These results reflect sustained lab effort in computing power networks, service intelligence, and practical system building—congratulations to all participating students and advisors."
+      ],
+      "category": "award",
+      "badge": "Award",
+      "relatedLink": { "href": "/team#principal-investigator", "label": "Meet the PI & team" }
+    },
+    {
+      "id": "cncc-2025",
+      "date": "2025-10-24",
+      "title": "Our Group Participated in the China National Computer Congress (CNCC 2025)",
+      "summary": "The lab joined CNCC 2025 for academic exchange on computing power network scheduling, heterogeneous resource orchestration, and cross-domain intelligent dispatching.",
+      "content": [
+        "During CNCC 2025, our group engaged with researchers and practitioners on computing power network scheduling, heterogeneous resource orchestration, and cross-domain intelligent dispatching.",
+        "We discussed how user-perceived QoS, green scheduling objectives, and practical deployment constraints shape real-world computing-power systems.",
+        "The congress also offered opportunities to explore collaborations with both industry partners and academic groups aligned with our research agenda."
+      ],
+      "category": "milestone",
+      "badge": "Conference",
+      "relatedLink": { "href": "/research", "label": "Research directions" }
+    },
+    {
+      "id": "hpc-china-2025",
+      "date": "2025-08-13",
+      "title": "Our Group Participated in CCF HPC China 2025 in Ordos, Inner Mongolia",
+      "summary": "At HPC China 2025 we presented work on green computing power scheduling and HPC-oriented optimization, with discussions alongside domestic and international scholars.",
+      "content": [
+        "CCF HPC China 2025 was held in Ordos, Inner Mongolia. Our group participated to share progress on green computing power scheduling and high-performance computing optimization.",
+        "We presented research connecting low-carbon scheduling goals with trustworthy service intelligence under heterogeneous, large-scale resource environments.",
+        "The event enabled in-depth exchanges with scholars from China and abroad on HPC systems, orchestration, and industry-relevant deployment scenarios."
+      ],
+      "category": "milestone",
+      "badge": "HPC China",
+      "relatedLink": { "href": "/projects", "label": "Related projects" }
+    },
+    {
+      "id": "cncc-2024",
+      "date": "2024-10-24",
+      "title": "Our Group Participated in the China National Computer Congress (CNCC 2024)",
+      "summary": "CNCC 2024 brought exchanges on computing power networks, green computing, and service computing, with outreach to industry and academic collaborators.",
+      "content": [
+        "At CNCC 2024, our group participated in sessions and discussions centered on computing power networks, green computing, and service computing.",
+        "We highlighted how theory-grounded models and system validation can support reliable scheduling and recommendation in practical settings.",
+        "The congress was also a venue to explore new collaborations with industry and academia aligned with the lab's long-term research themes."
+      ],
+      "category": "milestone",
+      "badge": "Conference",
+      "relatedLink": { "href": "/research", "label": "Research directions" }
+    }
+  ],
+  "labQuickLinks": [
+    {
+      "id": "p",
+      "date": "Selected and updated",
+      "title": "Selected Publications",
+      "description": "Representative papers on clustering, federated QoS prediction, and robust density-peak modeling, with DOI access where available.",
+      "badge": "Publications",
+      "tone": "primary",
+      "link": "/publications",
+      "action": "Browse all",
+      "icon": "book"
+    },
+    {
+      "id": "g",
+      "date": "Active portfolio",
+      "title": "Projects & Grants",
+      "description": "Funded projects and industry collaborations on computing-power scheduling, cross-domain orchestration, and low-carbon optimization.",
+      "badge": "Grants",
+      "tone": "primary",
+      "link": "/projects",
+      "action": "View projects",
+      "icon": "sparkles"
+    },
+    {
+      "id": "t",
+      "date": "Lab and mentorship",
+      "title": "Lab Team",
+      "description": "Team structure, research tracks, and supervision opportunities for students with strong foundations and clear interests.",
+      "badge": "Students",
+      "tone": "primary",
+      "link": "/team",
+      "action": "Meet the team",
+      "icon": "users"
+    }
+  ]
+}
