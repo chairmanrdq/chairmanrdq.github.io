@@ -27,7 +27,7 @@ NEXT_PUBLIC_SITE_URL=https://username.github.io/your-repo-name
 
 ## Content updates
 
-**Primary (edit JSON, then validate & build):**
+**All page content (edit JSON → `npm run validate:content` → build):**
 
 | Content | File |
 |---------|------|
@@ -35,16 +35,19 @@ NEXT_PUBLIC_SITE_URL=https://username.github.io/your-repo-name
 | News & home quick links | `content/news.json` |
 | Projects | `content/projects.json` |
 | Courses | `content/courses.json` |
+| Team | `content/team.json` |
+| Home gallery | `content/gallery.json` |
+| Research themes | `content/research.json` |
+| Resource links | `content/resources.json` |
 
 See **`content/README.md`** (中文维护指南).
 
-**Other:**
+**Config & assets (not in `content/`):**
 
 | Content | File |
 |---------|------|
-| Team | `src/lib/team-data.ts` |
-| Research themes | `src/lib/research-content.ts` |
-| Site URL & profiles | `.env.local` (see `.env.example`) |
+| Site URL, email, PI title, Scholar/ORCID env | `.env.local` + `src/lib/site-config.ts` |
+| Recruitment mailto copy | `src/lib/recruitment.ts` |
 | Lab images | `public/images/` or `npm run sync:images` |
 
 ## Scripts
